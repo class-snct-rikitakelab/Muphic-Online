@@ -59,14 +59,17 @@ var MeasurePrevButton = enchant.Class.create(enchant.Sprite, {
 	// </summary>
 	ontouchend : function(event) {
 		// 小節を1つ前に戻してもらう
-		this._parent._score._drawPrevScore();
+		this._parent._drawPrevScore();
 	},
 
 	// <summary>
 	// 定期処理
 	// </summary>
 	onenterframe : function(event) {
-		if(this._parent._score._nowPlace === 1) {
+		var nowPlace	= this._parent._getNowPlace();
+		var canPlay		= this._parent._getPlayButtonState();
+
+		if(nowPlace === 1) {
 			// 現在表示されている小節が最小値の場合はボタンを押せない状態にする
 			this._setCannotPush();
 		} else {
@@ -74,7 +77,7 @@ var MeasurePrevButton = enchant.Class.create(enchant.Sprite, {
 			this._setCanPush();
 		}
 
-		if(this._parent._playButton._state === "play") {
+		if(canPlay === true) {
 			// 再生状態の際はボタンを押せない状態にする
 			this._setCannotPush();
 		}

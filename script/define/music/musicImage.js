@@ -1,5 +1,10 @@
 // 作曲画面で使うであろう画像の数値や場所などを定義（define）
 
+// 物語作成画面への遷移ボタン画像のデータ定義
+var CHANGE_STORY_BUTTON			= "../image/story/button/change_story.png";
+var CHANGE_STORY_BUTTON_WIDTH	= 100;
+var CHANGE_STORY_BUTTON_HEIGHT	= 100;
+
 // 譜面画像のデータ定義
 var HUMEN						= "../image/music/humen/humen.png";
 var HUMEN_WIDTH					= 792;
@@ -36,6 +41,12 @@ var ANIMAL_BUTTON_OFF			= "../image/music/button/piano_cat_off.png";
 var ANIMAL_BUTTON_ON			= "../image/music/button/piano_cat_on.png";
 var ANIMAL_BUTTON_WIDTH			= 106;
 var ANIMAL_BUTTON_HEIGHT		= 73;
+
+// 削除ボタン画像のデータ定義
+var MODOSU_BUTTON_OFF			= "../image/music/button/modosu_off.png";
+var MODOSU_BUTTON_ON			= "../image/music/button/modosu_on.png";
+var MODOSU_BUTTON_WIDTH			= 106;
+var MODOSU_BUTTON_HEIGHT		= 73;
 
 // 譜面上に配置されるネコ画像のデータ定義
 var PIANO_CAT					= "../image/music/animal/cat.png";

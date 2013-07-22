@@ -7,23 +7,15 @@ var AnimalButton = enchant.Class.create(enchant.Sprite, {
 		enchant.Sprite.call(this, width, height);
 
 		// 以下, このクラスのプロパティ
-		this._state		= "not put";	// ボタンの状態
-		this._pushCount	= 0;			// ボタンが押された回数
-		this._parent	= null;			// このクラスの親にあたるオブジェクト
+		this._isPush	= false;	// ボタンが押されているかどうか
+		this._parent	= null;		// このクラスの親にあたるオブジェクト
 	},
 
 	// <summary>
-	// ボタンを「押されている」状態にする
+	// _isPushプロパティにブーリアン値をセットする
 	// </summary>
-	_setPut : function() {
-		this._state = "put";
-	},
-
-	// <summary>
-	// ボタンを「押されていない」状態にする
-	// </summary>
-	_setNotPut : function() {
-		this._state = "not put";
+	_setIsPush : function(isPush) {
+		this._isPush = isPush;
 	},
 
 	// <summary>
@@ -88,15 +80,28 @@ var AnimalButton = enchant.Class.create(enchant.Sprite, {
 	// ボタンが押された際の処理
 	// </summary>
 	ontouchend : function(event) {
-		// 押した回数をインクリメント
-		this._pushCount++;
+		var canRemoveAnimal	= this._parent._getModosuButtonState();
+		var canPutAnimal	= this._isPush;
+
+		if(canRemoveAnimal === true && canPutAnimal === false) {
+			this._parent._setModosuButtonState(false);
+			canRemoveAnimal = false;
+			this._parent._setModosuButtonImage("off");
+			this._setIsPush(true);
+			canPutAnimal = true;
+			this._setOnImage();
+		} else if(canPutAnimal === true) {
+			this._setIsPush(false);
+			canPutAnimal = false;
+		} else if(canPutAnimal === false) {
+			this._setIsPush(true);
+			canPutAnimal = true;
+		}
 
 		// ボタンを押すごとに状態を変える
-		if(this._pushCount % 2 === 1) {
-			this._setPut();
+		if(canPutAnimal === true) {
 			this._setOnImage();
-		} else if(this._pushCount % 2 === 0) {
-			this._setNotPut();
+		} else if(canPutAnimal === false) {
 			this._setOffImage();
 		}
 	},
@@ -105,10 +110,12 @@ var AnimalButton = enchant.Class.create(enchant.Sprite, {
 	// 定期処理
 	// </summary>
 	onenterframe : function() {
-		if(this._parent._humen._playButton._state === "play") {
+		var canPlay = this._parent._getPlayButtonState();
+
+		if(canPlay === true) {
 			// 再生状態の時はボタンを押せない状態に
 			this._setCannotPush();
-		} else if(this._parent._humen._playButton._state === "not play") {
+		} else if(canPlay === false) {
 			// 再生状態でない時はボタンを押せる状態に
 			this._setCanPush();
 		}

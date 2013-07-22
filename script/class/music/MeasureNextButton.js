@@ -59,14 +59,18 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 	// </summary>
 	ontouchend : function(event) {
 		// 小節を1つ次に進めてもらう
-		this._parent._score._drawNextScore();
+		this._parent._drawNextScore();
 	},
 
 	// <summary>
 	// 定期処理
 	// </summary>
 	onenterframe : function(event) {
-		if(this._parent._score._nowPlace === this._parent._score._measureMax - 2) {
+		var nowPlace	= this._parent._getNowPlace();
+		var measureMax	= this._parent._getMeasureMax();
+		var canPlay		= this._parent._getPlayButtonState();
+
+		if(nowPlace === measureMax - 2) {
 			// 現在表示されている小節が最大値の場合はボタンを押せない状態にする
 			this._setCannotPush();
 		} else {
@@ -74,7 +78,7 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 			this._setCanPush();
 		}
 
-		if(this._parent._playButton._state === "play") {
+		if(canPlay === true) {
 			// 再生状態の際はボタンを押せない状態にする
 			this._setCannotPush();
 		}
