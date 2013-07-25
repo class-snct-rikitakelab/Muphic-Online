@@ -1,11 +1,12 @@
 var PreviewScreen = enchant.Class.create({
 	initialize : function(width, height) {
-		this._frame				= null;
-		this._background		= null;
-		this._weather			= null;
-		this._objects			= new Array();
-		this._objectsCount		= 0;
-		this._parent			= null;
+		this._frame			= null;
+		this._background	= null;
+		this._weather		= null;
+		this._humans		= new Array();
+		this._animals		= new Array();
+		this._items			= new Array();
+		this._parent		= null;
 	},
 
 	_createFrame : function() {
@@ -33,13 +34,37 @@ var PreviewScreen = enchant.Class.create({
 		var image	= objectsInformation[objectString].image;
 		var width	= objectsInformation[objectString].width;
 		var height	= objectsInformation[objectString].height;
+		var type	= objectsInformation[objectString].type;
 
-		this._objects[this._objectsCount]		= new enchant.Sprite(width, height);
-		this._objects[this._objectsCount].image	= core.assets[image];
-		this._objects[this._objectsCount].x		= x;
-		this._objects[this._objectsCount].y		= y;
+		switch(type) {
+			case "human":
+				var index = this._parent._getHumansCount();
 
-		this._objectsCount++;
+				this._humans[index]			= new enchant.Sprite(width, height);
+				this._humans[index].image	= core.assets[image];
+				this._humans[index].x		= x;
+				this._humans[index].y		= y;
+				this._parent._humansCountIncrement();
+				break;
+			case "animal":
+				var index = this._parent._getAnimalsCount();
+				
+				this._animals[index]		= new enchant.Sprite(width, height);
+				this._animals[index].image	= core.assets[image];
+				this._animals[index].x		= x;
+				this._animals[index].y		= y;
+				this._parent._animalsCountIncrement();
+				break;
+			case "item":
+				var index = this._parent._getItemsCount();
+				
+				this._items[index]			= new enchant.Sprite(width, height);
+				this._items[index].image	= core.assets[image];
+				this._items[index].x		= x;
+				this._items[index].y		= y;
+				this._parent._itemsCountIncrement();
+				break;
+		}
 	},
 
 	_setBackgroundImage : function(image) {
@@ -54,8 +79,14 @@ var PreviewScreen = enchant.Class.create({
 		this._showWeather();
 		this._showBackground();
 		this._showFrame();
-		for(var i = 0; i < this._objects.length; i++) {
-			this._showObject(i);
+		for(var i = 0, max = this._animals.length; i < max; i++) {
+			this._showAnimal(i);
+		}
+		for(var i = 0, max = this._humans.length; i < max; i++) {
+			this._showHuman(i);
+		}
+		for(var i = 0, max = this._items.length; i < max; i++) {
+			this._showItem(i);r
 		}
 	},
 
@@ -71,7 +102,15 @@ var PreviewScreen = enchant.Class.create({
 		storyScene.addChild(this._weather);
 	},
 
-	_showObject : function(index) {
-		storyScene.addChild(this._objects[index]);
+	_showHuman : function(index) {
+		storyScene.addChild(this._humans[index]);
+	},
+
+	_showAnimal : function(index) {
+		storyScene.addChild(this._animals[index]);
+	},
+
+	_showItem : function(index) {
+		storyScene.addChild(this._items[index]);
 	},
 })

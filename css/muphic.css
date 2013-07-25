@@ -1,20 +1,13 @@
-body {
-	background-color: gray;
-}
-
-div {
+img {
 	/* アプリの横幅 */
-	width: 1024px;
+	width: 590px;
 	/* アプリの縦幅 */
-	height: 768px;
+	height: 429px;
 	position: absolute;
 	/* アプリ画面を横幅中央に配置 */
 	left: 50%;
-	margin-left: -512px;
+	margin-left: -295%;
 	/* アプリ画面を縦幅中央に配置 */
 	display: table-cell;
 	vertical-align: middle;
-}
-
-iframe {
 }

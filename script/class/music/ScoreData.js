@@ -1,5 +1,5 @@
 // 曲の速さ
-TEMPO_SPEED		= 10;
+TEMPO_SPEED		= 5;
 // 動物が消える速さ(0.0 ~ 1.0)
 FADE_OUT_SPEED	= 0.1;
 
@@ -256,6 +256,30 @@ var ScoreData = enchant.Class.create({
 		return yBoxToScale[y];
 	},
 
+	_checkGapBetweenScale : function(y) {
+		if(286 < y && y < 300) {
+			return true;
+		} else if(342 < y && y < 350) {
+			return true;
+		} else if(390 < y && y < 400) {
+			return true;
+		} else if(440 < y && y < 449) {
+			return true;
+		} else if(489 < y && y < 499) {
+			return true;
+		} else if(539 < y && y < 550) {
+			return true;
+		} else if(590 < y && y < 598) {
+			return true;
+		} else if(638 < y && y < 647) {
+			return true;
+		} else if(687 < y && y < 699) {
+			return true;
+		} else {
+			return false;
+		}
+	},
+
 	// <summary>
 	// 譜面上をクリックされた際にそのx座標値とy座標値を調べる
 	// 有効範囲内ならば小節, 拍, 音階を取得して動物を生成する
@@ -263,6 +287,10 @@ var ScoreData = enchant.Class.create({
 	_checkClickPoint : function(x, y) {
 		if(x >= 128 && x < 849) {
 			if(y >= 300 && y < 692) {
+				if(this._checkGapBetweenScale(y) === true) {
+					return;
+				}
+				
 				var measure	= this._takeClickMeasure(x);
 				var beat	= this._takeClickBeat(x);
 				var scale	= this._takeClickScale(y);

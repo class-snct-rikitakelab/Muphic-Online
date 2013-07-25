@@ -6,33 +6,45 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+		<link rel="stylesheet" type="text/css" href="../css/muphic.css">
+
 		<script type="text/javascript" src="../script/lib/enchant.js"></script>
 
 		<script type="text/javascript" src="../script/index.js"></script>
 
 		<script type="text/javascript" src="../script/define/common/commonImage.js"></script>
+		<script type="text/javascript" src="../script/define/top/topImage.js"></script>
 		<script type="text/javascript" src="../script/define/story/storyImage.js"></script>
 		<script type="text/javascript" src="../script/define/music/musicImage.js"></script>
 		<script type="text/javascript" src="../script/define/music/musicSound.js"></script>
 
+		<script type="text/javascript" src="../script/class/top/TopScreen.js"></script>
+		<script type="text/javascript" src="../script/class/top/TopMediator.js"></script>
+		<script type="text/javascript" src="../script/class/top/StartButton.js"></script>
 		<script type="text/javascript" src="../script/class/story/StoryScreen.js"></script>
+		<script type="text/javascript" src="../script/class/story/StoryMediator.js"></script>
 		<script type="text/javascript" src="../script/class/story/ChangeMusicButton.js"></script>
 		<script type="text/javascript" src="../script/class/story/PreviewScreen.js"></script>
+		<script type="text/javascript" src="../script/class/story/PreviewScreenData.js"></script>
 		<script type="text/javascript" src="../script/class/music/MusicScreen.js"></script>
-		<script type="text/javascript" src="../script/class/music/ChangeStoryButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/MusicMediator.js"></script>
+		<script type="text/javascript" src="../script/class/music/ChangeStoryButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/PlayButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/Humen.js"></script>
 		<script type="text/javascript" src="../script/class/music/Note.js"></script>
 		<script type="text/javascript" src="../script/class/music/ScoreData.js"></script>
 		<script type="text/javascript" src="../script/class/music/Animal.js"></script>
+		<script type="text/javascript" src="../script/class/music/AnimalSign.js"></script>
 		<script type="text/javascript" src="../script/class/music/MeasureNextButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/MeasurePrevButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/AnimalButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/ModosuButton.js"></script>
+		<script type="text/javascript" src="../script/class/music/RemoveSign.js"></script>
 		<script type="text/javascript" src="../script/class/music/Signboard.js"></script>
 
-		<script type="text/javascript" src="../script/function/loading/createLoadingScene.js"></script>
+		<script type="text/javascript" src="../script/function/common/getScreenPoints.js"></script>
+		<script type="text/javascript" src="../script/function/loading/createLoadingScreen.js"></script>
+		<script type="text/javascript" src="../script/function/top/createTopScreen.js"></script>
 		<script type="text/javascript" src="../script/function/story/createStoryScreen.js"></script>
 		<script type="text/javascript" src="../script/function/story/createStoryDataHash.js"></script>
 		<script type="text/javascript" src="../script/function/music/createMusicScreen.js"></script>
@@ -45,6 +57,6 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body onmousemove="getScreenPoints()">
 	</body>
 </html>

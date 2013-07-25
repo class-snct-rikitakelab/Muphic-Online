@@ -48,6 +48,16 @@ var MODOSU_BUTTON_ON			= "../image/music/button/modosu_on.png";
 var MODOSU_BUTTON_WIDTH			= 106;
 var MODOSU_BUTTON_HEIGHT		= 73;
 
+// 削除カーソル画像のデータ定義
+var REMOVE_CURSOR				= "../image/music/remove/remove_cursor.png";
+var REMOVE_CURSOR_WIDTH			= 60;
+var REMOVE_CURSOR_HEIGHT		= 45;
+
+// 削除ボックス画像のデータ定義
+var REMOVE_BOX					= "../image/music/remove/remove_box.png";
+var REMOVE_BOX_WIDTH			= 60;
+var REMOVE_BOX_HEIGHT			= 45;
+
 // 譜面上に配置されるネコ画像のデータ定義
 var PIANO_CAT					= "../image/music/animal/cat.png";
 var PIANO_CAT_WIDTH				= 60;

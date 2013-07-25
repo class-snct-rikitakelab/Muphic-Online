@@ -118,7 +118,5 @@ var createMusicDataHash = function() {
 
 	// animalsDataの中身の定義
 	// Sprint#3の段階ではとりあえずネコだけ定義
-	animalsData["cat"]			= PIANO_CAT;
-	animalsData["catWidth"]		= PIANO_CAT_WIDTH;
-	animalsData["catHeight"]	= PIANO_CAT_HEIGHT;
+	animalsData["cat"]	= {image : PIANO_CAT, width : PIANO_CAT_WIDTH, height : PIANO_CAT_HEIGHT};
 }

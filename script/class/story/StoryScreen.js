@@ -3,25 +3,43 @@ var StoryScreen = enchant.Class.create({
 	// コンストラクタ
 	initialize : function() {
 		// 以下, このクラスのプロパティ
-		this._changeMusicButton	= null;	// 作曲モード遷移ボタンのオブジェクト
-		this._previewScreen		= null;	// プレビューウィンドウのオブジェクト
-		this._parent			= null;	// このクラスの親にあたるオブジェクト
+		this._storyMediator	= null;	// 物語作成画面全体の仲介を担当するオブジェクト
+		this._parent		= null;	// このクラスの親にあたるオブジェクト
 	},
 
-	_createChangeMusicButton : function() {
-		this._changeMusicButton			= new ChangeMusicButton(CHANGE_MUSIC_BUTTON_WIDTH, CHANGE_MUSIC_BUTTON_HEIGHT);
-		this._changeMusicButton.image	= core.assets[CHANGE_MUSIC_BUTTON];
-		this._changeMusicButton.x		= 900;
-		this._changeMusicButton.y		= 660;
+	// <summary>
+	// 物語作成画面全体の仲介を担当するオブジェクトを生成する
+	// </summary>
+	_createStoryMediator : function() {
+		this._storyMediator			= new StoryMediator();
+		this._storyMediator._parent	= this;
+	},
 
-		storyScene.addChild(this._changeMusicButton);
+	// <summary>
+	// 作曲画面への遷移ボタンのオブジェクトを生成して画面に表示する
+	// </summary>
+	_createChangeMusicButton : function() {
+		this._storyMediator._changeMusicButton			= new ChangeMusicButton(CHANGE_MUSIC_BUTTON_WIDTH, CHANGE_MUSIC_BUTTON_HEIGHT);
+		this._storyMediator._changeMusicButton.image	= core.assets[CHANGE_MUSIC_BUTTON];
+		this._storyMediator._changeMusicButton.x		= 900;
+		this._storyMediator._changeMusicButton.y		= 660;
+		this._storyMediator._changeMusicButton._parent	= this._storyMediator;
+		storyScene.addChild(this._storyMediator._changeMusicButton);
 	},
 
 	// <summary>
 	// プレビュー画面のオブジェクトを生成して画面に表示する
 	// </summary>
 	_createPreviewScreen : function() {
-		this._previewScreen			= new PreviewScreen();
-		this._previewScreen._parent	= this;
+		this._storyMediator._previewScreen			= new PreviewScreen();
+		this._storyMediator._previewScreen._parent	= this._storyMediator;
+	},
+
+	// <summary>
+	// プレビュー画面データのオブジェクトを生成して画面に表示する
+	// </summary>
+	_createPreviewScreenData : function() {
+		this._storyMediator._previewScreenData			= new PreviewScreenData();
+		this._storyMediator._previewScreenData._parent	= this._storyMediator;
 	},
 })

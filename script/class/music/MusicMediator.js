@@ -76,6 +76,12 @@ var MusicMediator = enchant.Class.create({
 	},
 
 	// 動物に関する仲介メソッド
+	_resetIsSang : function() {
+		for(var i = 0, max = this._animals.length; i < max; i++) {
+			this._animals[i]._isSang = false;
+		}
+	},
+
 	_animalIndexDecrement : function(index) {
 		this._animals[index]._index--;
 	},
@@ -241,12 +247,40 @@ var MusicMediator = enchant.Class.create({
 		this._scoreData._initializeSignboards();
 	},
 
+	_takeClickMeasure : function(x) {
+		return this._scoreData._takeClickMeasure(x);
+	},
+
+	_takeClickBeat : function(x) {
+		return this._scoreData._takeClickBeat(x);
+	},
+
+	_takeClickScale : function(y) {
+		return this._scoreData._takeClickScale(y);
+	},
+
+	_checkGapBetweenScale : function(y) {
+		return this._scoreData._checkGapBetweenScale(y);
+	},
+
 	_checkClickPoint: function(x, y) {
 		this._scoreData._checkClickPoint(x, y);
 	},
 
 	_getNotesLength : function() {
 		return this._scoreData._notes.length;
+	},
+
+	_getNoteMeasure : function(index) {
+		return this._scoreData._notes[index]._measure;
+	},
+
+	_getNoteBeat : function(index) {
+		return this._scoreData._notes[index]._beat;
+	},
+
+	_getNoteScale : function(index) {
+		return this._scoreData._notes[index]._scale;
 	},
 
 	_getMeasureMax : function() {

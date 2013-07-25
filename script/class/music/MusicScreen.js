@@ -134,11 +134,11 @@ var MusicScreen = enchant.Class.create({
 	// </summary>
 	_createAnimal : function(animalName, measure, beat, scale, walkSpeed, fadeOutSpeed, isSample) {
 		// 動物の画像データを取得
-		var animalImage		= animalsData[animalName];
+		var animalImage		= animalsData[animalName].image;
 		// 動物の画像の横幅を取得
-		var animalWidth		= animalsData[animalName + "Width"];
+		var animalWidth		= animalsData[animalName].width;
 		// 動物の画像の縦幅を取得
-		var animalHeight	= animalsData[animalName + "Height"];
+		var animalHeight	= animalsData[animalName].height;
 		// クリックした拍の場所からx座標値を取得
 		var x				= beatToX[beat];
 		// クリックした音階の場所からy座標値を取得

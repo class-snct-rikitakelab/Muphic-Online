@@ -84,6 +84,8 @@ var PlayButton = enchant.Class.create(enchant.Sprite, {
 	// ボタンが押された際の処理
 	// </summary>
 	ontouchend : function(event) {
+		// すべての動物の「歌ったフラグ」をリセット
+		this._parent._resetIsSang();
 		// 再生状態にセット
 		this._setDoingPlay();
 

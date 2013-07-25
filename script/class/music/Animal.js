@@ -187,6 +187,12 @@ var Animal = enchant.Class.create(enchant.Sprite, {
 	},
 
 	ontouchend : function(event) {
+		var canPlay	= this._parent._getPlayButtonState();
+
+		if(canPlay === true) {
+			// 再生中はreturnで終わり
+			return;
+		}
 		this._checkIsRemove();
 	},
 
