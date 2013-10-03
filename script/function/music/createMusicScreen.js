@@ -1,16 +1,11 @@
 var MEASURE_MAX = 8;
 
-// <summary>
 // 作曲画面のレイアウトなどを生成する
-// </summary>
 var createMusicScreen = function() {
 	// musicSceneにSceneクラスのインスタンスを与える
 	musicScene = new enchant.Scene();
 	// 作曲画面の背景色を24ビットカラーで指定
 	musicScene.backgroundColor = "#FFFCC0";
-
-	// 作曲画面で使用するデータを定義したハッシュデータ群を生成
-	createMusicDataHash();
 
 	// 作曲画面全体のインタフェース(外見)をつかさどるmusicScreenオブジェクト
 	var musicScreen = new MusicScreen();

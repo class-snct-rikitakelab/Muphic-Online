@@ -1,13 +1,3 @@
-img {
-	/* アプリの横幅 */
-	width: 590px;
-	/* アプリの縦幅 */
-	height: 429px;
-	position: absolute;
-	/* アプリ画面を横幅中央に配置 */
-	left: 50%;
-	margin-left: -295%;
-	/* アプリ画面を縦幅中央に配置 */
-	display: table-cell;
-	vertical-align: middle;
+#finger {
+	cursor: url("../image/mouse/cursor_off.png"), default;
 }

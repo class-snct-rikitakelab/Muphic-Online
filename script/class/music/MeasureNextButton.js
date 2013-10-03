@@ -5,70 +5,53 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 	initialize : function(width, height) {
 		// enchant.Spriteクラスのコンストラクタを実行
 		enchant.Sprite.call(this, width, height);
-
 		// 以下, このクラスのプロパティ
-		this._parent		= null;	// このクラスの親にあたるオブジェクト
+		this._parent = null; // このクラスの親にあたるオブジェクト
 	},
 
-	// <summary>
 	// ボタンを押せる状態にする
-	// </summary>
 	_setTouchEnable : function() {
 		this.touchEnabled = true;
 	},
 
-	// <summary>
 	// ボタンを押せない状態にする
-	// </summary>
 	_setTouchDisable : function() {
 		this.touchEnabled = false;
 	},
 
-	// <summary>
 	// ボタンを不透明状態にする
-	// </summary>
 	_setOpacity : function() {
 		this.opacity = 1.0;
 	},
 
-	// <summary>
 	// ボタンを半透明状態にする
-	// </summary>
 	_setTransparent : function() {
 		this.opacity = 0.5;
 	},
 
-	// <summary>
 	// ボタンの全てのステータスを押せる状態に合わせる
-	// </summary>
 	_setCanPush : function() {
 		this._setTouchEnable();
 		this._setOpacity();
 	},
 
-	// <summary>
 	// ボタンの全てのステータスを押せない状態に合わせる
-	// </summary>
 	_setCannotPush : function() {
 		this._setTouchDisable();
 		this._setTransparent();
 	},
 
-	// <summary>
 	// ボタンが押された際の処理
-	// </summary>
 	ontouchend : function(event) {
 		// 小節を1つ次に進めてもらう
 		this._parent._drawNextScore();
 	},
 
-	// <summary>
 	// 定期処理
-	// </summary>
 	onenterframe : function(event) {
-		var nowPlace	= this._parent._getNowPlace();
-		var measureMax	= this._parent._getMeasureMax();
-		var canPlay		= this._parent._getPlayButtonState();
+		var nowPlace = this._parent._getNowPlace();
+		var measureMax = this._parent._getMeasureMax();
+		var canPlay = this._parent._getPlayButtonState();
 
 		if(nowPlace === measureMax - 2) {
 			// 現在表示されている小節が最大値の場合はボタンを押せない状態にする

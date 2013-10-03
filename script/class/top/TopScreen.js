@@ -1,37 +1,35 @@
 var TopScreen = enchant.Class.create({
 	initialize : function() {
-		this._topMediator		= null;	// トップ画面全体の仲介を担当するオブジェクト
-		this._parent			= null;	// このクラスの親にあたるオブジェクト
+		this._topMediator = null; // トップ画面全体の仲介を担当するオブジェクト
+		this._parent = null; // このクラスの親にあたるオブジェクト
 	},
 
-	// <summary>
 	// トップ画面全体の仲介を担当するオブジェクトを生成する
-	// </summary>
 	_createTopMediator : function() {
-		this._topMediator			= new TopMediator();
-		this._topMediator._parent	= this;
+		this._topMediator = new TopMediator();
+		this._topMediator._parent = this;
 	},
 
-	// <summary>
 	// トップ画面全体の背景を生成する
-	// </summary>
 	_createBackground : function() {
-		var background		= new enchant.Sprite(TOP_BACKGROUND_WIDTH, TOP_BACKGROUND_HEIGHT);
-		background.image	= core.assets[TOP_BACKGROUND];
-		background.x		= 0;
-		background.y		= 0;
-		topScene.addChild(background);
+		var path = TOP_BACKGROUND._path;
+		var width = TOP_BACKGROUND._width;
+		var height = TOP_BACKGROUND._height;
+		
+		drawSprite(0, 0, width, height, path, topScene);
 	},
 
-	// <summary>
 	// アプリケーション開始ボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createStartButton : function() {
-		this._topMediator._startButton			= new StartButton(START_BUTTON_WIDTH, START_BUTTON_HEIGHT);
-		this._topMediator._startButton.image	= core.assets[START_BUTTON];
-		this._topMediator._startButton.x		= 630;
-		this._topMediator._startButton.y		= 280;
-		this._topMediator._startButton._parent	= this._topMediator;
+		var path = TOP_STARTBUTTON._path;
+		var width = TOP_STARTBUTTON._width;
+		var height = TOP_STARTBUTTON._height;
+
+		this._topMediator._startButton = new StartButton(width, height);
+		this._topMediator._startButton.image	= core.assets[path];
+		this._topMediator._startButton.x = 630;
+		this._topMediator._startButton.y = 280;
+		this._topMediator._startButton._parent = this._topMediator;
 		topScene.addChild(this._topMediator._startButton);
 	},
 })

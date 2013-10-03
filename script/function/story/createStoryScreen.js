@@ -9,9 +9,6 @@ var createStoryScreen = function() {
 	// musicScreenの親プロパティにmusicSceneを与える
 	storyScreen.parent = storyScene;
 
-	// 物語作成画面で使用するデータを定義したハッシュデータ群を生成
-	createStoryDataHash();
-
 	// 物語作成画面全体の仲介を担当するオブジェクトを生成
 	storyScreen._createStoryMediator();
 	// 作曲モードへの遷移ボタンを生成
@@ -20,18 +17,26 @@ var createStoryScreen = function() {
 	storyScreen._createPreviewScreen();
 	// プレビュー画面データのオブジェクトを生成
 	storyScreen._createPreviewScreenData();
+	// じんぶつイラストボタンのオブジェクトを生成
+	storyScreen._createHumanIllustButton();
+	// どうぶつイラストボタンのオブジェクトを生成
+	storyScreen._createAnimalIllustButton();
+	// あいてむイラストボタンのオブジェクトを生成
+	storyScreen._createItemIllustButton();
+	// はいけいイラストボタンのオブジェクトを生成
+	storyScreen._createBackgroundIllustButton();
 
 	storyScreen._storyMediator._createFrame();
 	storyScreen._storyMediator._createBackground();
 	storyScreen._storyMediator._createWeather();
 
-	storyScreen._storyMediator._setBackgroundImage(RIVER_1);
-	storyScreen._storyMediator._setWeatherImage(SUN);
+	storyScreen._storyMediator._setBackgroundImage(STORY_PREVIEWBACKGROUND_RIVER2._path);
+	storyScreen._storyMediator._setWeatherImage(STORY_PREVIEWWEATHER_SUN._path);
 
-	storyScreen._storyMediator._createObject("manFrontEnjoy", 700, 450);
-	storyScreen._storyMediator._createObject("dogFrontEnjoy", 620, 510);
-	storyScreen._storyMediator._createObject("turtleRightEnjoy", 450, 520);
-	storyScreen._storyMediator._createObject("birdLeftEnjoy", 550, 520);
+	storyScreen._storyMediator._createObject("man", "front", "enjoy", 700, 450);
+	storyScreen._storyMediator._createObject("dog", "front", "enjoy", 620, 510);
+	storyScreen._storyMediator._createObject("turtle", "right", "enjoy", 450, 520);
+	storyScreen._storyMediator._createObject("bird", "left", "enjoy", 550, 520);
 
 	storyScreen._storyMediator._showPreviewScreen();
 }

@@ -1,90 +1,40 @@
-var createLoadingScreen = function(game) {
-	var progress		= 0;
-	var loaded			= 0;
-	var total			= 0;
-	var progressCount	= 0;
+var createLoadingScreen = function() {
+	var loadingScene = new enchant.Scene();
+	loadingScene.backgroundColor = "#FEEC62";
 
-	var loadingScene				= new enchant.Scene();
-	loadingScene.backgroundColor	= "#FEEC62";
+	// "ちょっとまってね"の描画
+	drawLabel(4, 247, 1024, 116, "ちょっとまってね", "gray", "112px", loadingScene);
+	drawLabel(0, 250, 1024, 116, "ちょっとまってね", "black", "112px", loadingScene);
 
-	var waitingLabel		= new enchant.Label();
-	waitingLabel.text		= "ちょっとまってね";
-	waitingLabel.textAlign	= "center";
-	waitingLabel.color		= "black";
-	waitingLabel.font		= "112px Paratino";
-	waitingLabel.width		= 1024;
-	waitingLabel.height		= 116;
-	waitingLabel.x			= (APP_WIDTH - waitingLabel.width) / 2;
-	waitingLabel.y			= 250;
+	// "♪"の描画
+	drawLabel(162, 400, 100, 100, "♪", "#ED1A3D", "96px", loadingScene);
+	drawLabel(262, 400, 100, 100, "♪", "#F15A22", "96px", loadingScene);
+	drawLabel(362, 400, 100, 100, "♪", "#FFD400", "96px", loadingScene);
+	drawLabel(462, 400, 100, 100, "♪", "#008000", "96px", loadingScene);
+	drawLabel(562, 400, 100, 100, "♪", "#0067C0", "96px", loadingScene);
+	drawLabel(662, 400, 100, 100, "♪", "#234794", "96px", loadingScene);
+	drawLabel(762, 400, 100, 100, "♪", "#A757A8", "96px", loadingScene);
 
-	var waitingBackLabel		= new enchant.Label();
-	waitingBackLabel.text		= "ちょっとまってね";
-	waitingBackLabel.textAlign	= "center";
-	waitingBackLabel.color		= "gray";
-	waitingBackLabel.font		= "112px Paratino";
-	waitingBackLabel.width		= 1024;
-	waitingBackLabel.height		= 116;
-	waitingBackLabel.x			= waitingLabel.x + 4;
-	waitingBackLabel.y			= waitingLabel.y - 3;
+	// "じゅんびちゅう"の描画
+	drawLabel(0, 520, 1024, 68, "じゅんびちゅう", "gray", "64px", loadingScene);
 
-	loadingScene.addChild(waitingBackLabel);
-	loadingScene.addChild(waitingLabel);
-
-	var createOnpu = function(color, x, y) {
-		var onpu		= new enchant.Label();
-		onpu.text		= "♪";
-		onpu.textAlign	= "center";
-		onpu.color		= color;
-		onpu.font		= "96px Paratino";
-		onpu.width		= 100;
-		onpu.height		= 100;
-		onpu.x			= x;
-		onpu.y			= y;
-		loadingScene.addChild(onpu);
-	};
-
-	createOnpu("#ED1A3D", 162, (waitingLabel.y + 150));
-	createOnpu("#F15A22", 262, (waitingLabel.y + 150));
-	createOnpu("#FFD400", 362, (waitingLabel.y + 150));
-	createOnpu("#008000", 462, (waitingLabel.y + 150));
-	createOnpu("#0067C0", 562, (waitingLabel.y + 150));
-	createOnpu("#234794", 662, (waitingLabel.y + 150));
-	createOnpu("#A757A8", 762, (waitingLabel.y + 150));
-
-	var loadingLabel		= new enchant.Label();
-	loadingLabel.text		= "じゅんびちゅう";
-	loadingLabel.textAlign	= "center";
-	loadingLabel.color		= "gray";
-	loadingLabel.font		= "64px Paratino";
-	loadingLabel.width		= 1024;
-	loadingLabel.height		= 68;
-	loadingLabel.x			= (APP_WIDTH - loadingLabel.width) / 2;
-	loadingLabel.y			= waitingLabel.y + 270;
-	loadingScene.addChild(loadingLabel);
-
-	var progressLabel		= new enchant.Label();
-	progressLabel.text		= progress + "%";
-	progressLabel.textAlign	= "center";
-	progressLabel.color		= "gray";
-	progressLabel.font		= "64px Paratino";
-	progressLabel.width		= 1024;
-	progressLabel.height	= 68;
-	progressLabel.x			= (APP_WIDTH - progressLabel.width) / 2;
-	progressLabel.y			= waitingLabel.y + 340;
+	// 進行度パーセンテージの描画
+	var progressLabel = new enchant.Label();
+	progressLabel.text = 0 + "%";
+	progressLabel.textAlign = "center";
+	progressLabel.color = "gray";
+	progressLabel.font = "64px Paratino";
+	progressLabel.width = 1024;
+	progressLabel.height = 68;
+	progressLabel.x = 0;
+	progressLabel.y = 590;
 	loadingScene.addChild(progressLabel);
 
-	loadingScene.addEventListener('enterframe', function(event) {
-		if(progressCount % 15 === 0) {
-			progress			+= 10;
-			progressLabel.text	= progress + "%";
-		}
-	});
-
+	// リソースファイルを1つ読み込む度に実行される
 	loadingScene.addEventListener('progress', function(event) {
-		loaded	= event.loaded;
-		total	= event.total;
-		console.log(event.loaded + " / " + event.total);
-		progressCount++;
+		// 進行度表示の更新
+		progressLabel.text = parseInt((event.loaded / event.total) * 100) + "%";
+		console.log(event.loaded + "/" + event.total);
 	});
 
 	loadingScene.addEventListener('load', function(event) {

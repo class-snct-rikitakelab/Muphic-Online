@@ -3,156 +3,173 @@ var MusicScreen = enchant.Class.create({
 	// コンストラクタ
 	initialize : function() {
 		// 以下, このクラスのプロパティ
-		this._musicMediator		= null;	// 作曲画面全体の仲介を担当するオブジェクト
-		this._parent			= null;	// このクラスの親にあたるオブジェクト
+		this._musicMediator = null; // 作曲画面全体の仲介を担当するオブジェクト
+		this._parent = null; // このクラスの親にあたるオブジェクト
 	},
 
-	// <summary>
 	// 作曲画面全体の仲介を担当するオブジェクトを生成する
-	// </summary>
 	_createMusicMediator : function() {
-		this._musicMediator			= new MusicMediator();
-		this._musicMediator._parent	= this;
+		this._musicMediator = new MusicMediator();
+		this._musicMediator._parent = this;
 	},
 
-	// <summary>
 	// 物語作成画面への遷移ボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createChangeStoryButton : function() {
-		this._musicMediator._changeStoryButton			= new ChangeStoryButton(CHANGE_STORY_BUTTON_WIDTH, CHANGE_STORY_BUTTON_HEIGHT);
-		this._musicMediator._changeStoryButton.image	= core.assets[CHANGE_STORY_BUTTON];
-		this._musicMediator._changeStoryButton.x		= 20;
-		this._musicMediator._changeStoryButton.y		= 30;
-		this._musicMediator._changeStoryButton._parent	= this._musicMediator;
+		var path = MUSIC_CHANGESTORYBUTTON._path;
+		var width = MUSIC_CHANGESTORYBUTTON._width;
+		var height = MUSIC_CHANGESTORYBUTTON._height;
+
+		this._musicMediator._changeStoryButton = new ChangeStoryButton(width, height);
+		this._musicMediator._changeStoryButton.image = core.assets[path];
+		this._musicMediator._changeStoryButton.x = 20;
+		this._musicMediator._changeStoryButton.y = 30;
+		this._musicMediator._changeStoryButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._changeStoryButton);
 	},
 
-	// <summary>
 	// 再生ボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createPlayButton : function() {
-		this._musicMediator._playButton			= new PlayButton(PLAY_BUTTON_WIDTH, PLAY_BUTTON_HEIGHT);
-		this._musicMediator._playButton.image	= core.assets[PLAY_BUTTON];
-		this._musicMediator._playButton.x		= 210;
-		this._musicMediator._playButton.y		= 20;
-		this._musicMediator._playButton._parent	= this._musicMediator;
+		var path = MUSIC_PLAYBUTTON._path;
+		var width = MUSIC_PLAYBUTTON._width;
+		var height = MUSIC_PLAYBUTTON._height;
+
+		this._musicMediator._playButton = new PlayButton(width, height);
+		this._musicMediator._playButton.image = core.assets[path];
+		this._musicMediator._playButton.x = 210;
+		this._musicMediator._playButton.y = 20;
+		this._musicMediator._playButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._playButton);
 	},
 
-	// <summary>
 	// 動物ボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createAnimalButton : function() {
-		this._musicMediator._animalButton			= new AnimalButton(ANIMAL_BUTTON_WIDTH, ANIMAL_BUTTON_HEIGHT);
-		this._musicMediator._animalButton.image		= core.assets[ANIMAL_BUTTON_OFF];
-		this._musicMediator._animalButton.x			= 910;
-		this._musicMediator._animalButton.y			= 580;
-		this._musicMediator._animalButton._parent	= this._musicMediator;
+		var path = MUSIC_PIANOCAT_OFF._path;
+		var width = MUSIC_PIANOCAT_OFF._width;
+		var height = MUSIC_PIANOCAT_OFF._height;
+
+		this._musicMediator._animalButton = new AnimalButton(width, height);
+		this._musicMediator._animalButton.image = core.assets[path];
+		this._musicMediator._animalButton.x = 910;
+		this._musicMediator._animalButton.y = 580;
+		this._musicMediator._animalButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._animalButton);
 	},
 
-	// <summary>
 	// 削除ボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createModosuButton : function() {
-		this._musicMediator._modosuButton			= new ModosuButton(MODOSU_BUTTON_WIDTH, MODOSU_BUTTON_HEIGHT);
-		this._musicMediator._modosuButton.image		= core.assets[MODOSU_BUTTON_OFF];
-		this._musicMediator._modosuButton.x			= 910;
-		this._musicMediator._modosuButton.y			= 680;
-		this._musicMediator._modosuButton._parent	= this._musicMediator;
+		var path = MUSIC_REMOVEANIMAL_OFF._path;
+		var width = MUSIC_REMOVEANIMAL_OFF._width;
+		var height = MUSIC_REMOVEANIMAL_OFF._height;
+
+		this._musicMediator._modosuButton = new ModosuButton(width, height);
+		this._musicMediator._modosuButton.image = core.assets[path];
+		this._musicMediator._modosuButton.x = 910;
+		this._musicMediator._modosuButton.y = 680;
+		this._musicMediator._modosuButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._modosuButton);
 	},
 
-	// <summary>
 	// 音階の家のオブジェクトを生成して画面に表示する
-	// </summary>
 	_createScaleHouse : function() {
-		this._musicMediator._scaleHouse			= new enchant.Sprite(SCALE_HOUSE_WIDTH, SCALE_HOUSE_HEIGHT);
-		this._musicMediator._scaleHouse.image	= core.assets[SCALE_HOUSE];
-		this._musicMediator._scaleHouse.x		= 16;
-		this._musicMediator._scaleHouse.y		= 143;
+		var path = MUSIC_SCALEHOUSE._path;
+		var width = MUSIC_SCALEHOUSE._width;
+		var height = MUSIC_SCALEHOUSE._height;
+
+		this._musicMediator._scaleHouse = new enchant.Sprite(width, height);
+		this._musicMediator._scaleHouse.image = core.assets[path];
+		this._musicMediator._scaleHouse.x = 16;
+		this._musicMediator._scaleHouse.y = 143;
 		musicScene.addChild(this._musicMediator._scaleHouse);
 	},
 
+	// 譜面のオブジェクトを生成して画面に表示する
 	_createHumen : function() {
-		this._musicMediator._humen				= new Humen(HUMEN_WIDTH, HUMEN_HEIGHT);
-		this._musicMediator._humen.image		= core.assets[HUMEN];
-		this._musicMediator._humen.x			= (APP_WIDTH / 2) - (HUMEN_WIDTH / 2);
-		this._musicMediator._humen.y			= 186;
-		this._musicMediator._humen._parent		= this._musicMediator;
+		var path = MUSIC_HUMEN._path;
+		var width = MUSIC_HUMEN._width;
+		var height = MUSIC_HUMEN._height;
+
+		this._musicMediator._humen = new Humen(width, height);
+		this._musicMediator._humen.image = core.assets[path];
+		this._musicMediator._humen.x = (APP_WIDTH - width) / 2;
+		this._musicMediator._humen.y = 186;
+		this._musicMediator._humen._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._humen);
 	},
 
-	// <summary>
 	// 小節を1つ次に進めるボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createMeasureNextButton : function() {
-		this._musicMediator._measureNextButton			= new MeasureNextButton(MEASURE_NEXT_BUTTON_WIDTH, MEASURE_NEXT_BUTTON_HEIGHT);
-		this._musicMediator._measureNextButton.image	= core.assets[MEASURE_NEXT_BUTTON];
-		this._musicMediator._measureNextButton.x		= 860;
-		this._musicMediator._measureNextButton.y		= 702;
-		this._musicMediator._measureNextButton._parent	= this._musicMediator;
+		var path = MUSIC_MEASURENEXTBUTTON._path;
+		var width = MUSIC_MEASURENEXTBUTTON._width;
+		var height = MUSIC_MEASURENEXTBUTTON._height;
+
+		this._musicMediator._measureNextButton = new MeasureNextButton(width, height);
+		this._musicMediator._measureNextButton.image = core.assets[path];
+		this._musicMediator._measureNextButton.x = 860;
+		this._musicMediator._measureNextButton.y = 702;
+		this._musicMediator._measureNextButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._measureNextButton);
 	},
 
-	// <summary>
 	// 小節を1つ前に戻すボタンのオブジェクトを生成して画面に表示する
-	// </summary>
 	_createMeasurePrevButton : function() {
-		this._musicMediator._measurePrevButton			= new MeasurePrevButton(MEASURE_PREV_BUTTON_WIDTH, MEASURE_PREV_BUTTON_HEIGHT);
-		this._musicMediator._measurePrevButton.image	= core.assets[MEASURE_PREV_BUTTON];
-		this._musicMediator._measurePrevButton.x		= 130;
-		this._musicMediator._measurePrevButton.y		= 702;
-		this._musicMediator._measurePrevButton._parent	= this._musicMediator;
+		var path = MUSIC_MEASUREPREVBUTTON._path;
+		var width = MUSIC_MEASUREPREVBUTTON._width;
+		var height = MUSIC_MEASUREPREVBUTTON._height;
+
+		this._musicMediator._measurePrevButton = new MeasurePrevButton(width, height);
+		this._musicMediator._measurePrevButton.image = core.assets[path];
+		this._musicMediator._measurePrevButton.x = 130;
+		this._musicMediator._measurePrevButton.y = 702;
+		this._musicMediator._measurePrevButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._measurePrevButton);
 	},
 
-	// <summary>
 	// サインボードのオブジェクトを3つ生成して画面に表示する
-	// </summary>
 	_createSignboards : function() {
+		var path = MUSIC_SIGNBOARD._path;
+		var width = MUSIC_SIGNBOARD._width;
+		var height = MUSIC_SIGNBOARD._height;
+
 		for(var i = 0; i < 3; i++) {
-			this._musicMediator._signboards[i]			= new Signboard(SIGNBOARD_WIDTH, SIGNBOARD_HEIGHT);
-			this._musicMediator._signboards[i].image	= core.assets[SIGNBOARD];
-			this._musicMediator._signboards[i]._parent	= this._musicMediator;
+			this._musicMediator._signboards[i] = new Signboard(width, height);
+			this._musicMediator._signboards[i].image = core.assets[path];
+			this._musicMediator._signboards[i]._parent = this._musicMediator;
 			musicScene.addChild(this._musicMediator._signboards[i]);
 		}
-		this._musicMediator._signboards[0].x			= 354;
-		this._musicMediator._signboards[0].y			= 255;
-		this._musicMediator._signboards[1].x			= 593;
-		this._musicMediator._signboards[1].y			= 255;
-		this._musicMediator._signboards[2].x			= 832;
-		this._musicMediator._signboards[2].y			= 255;
+		this._musicMediator._signboards[0].x = 354;
+		this._musicMediator._signboards[0].y = 255;
+		this._musicMediator._signboards[1].x = 593;
+		this._musicMediator._signboards[1].y = 255;
+		this._musicMediator._signboards[2].x = 832;
+		this._musicMediator._signboards[2].y = 255;
 		for(var i = 0; i < 3; i++) {
 			this._musicMediator._signboards[i]._setSignboardNumber(i + 1);
 			this._musicMediator._signboards[i]._makeSignboardLabel();
 		}
 	},
 
-	// <summary>
 	// 譜面上に動物のオブジェクトを生成して配置し, 画面に表示する
-	// </summary>
 	_createAnimal : function(animalName, measure, beat, scale, walkSpeed, fadeOutSpeed, isSample) {
 		// 動物の画像データを取得
-		var animalImage		= animalsData[animalName].image;
+		var path = MUSIC_ANIMAL[animalName]._path;
 		// 動物の画像の横幅を取得
-		var animalWidth		= animalsData[animalName].width;
+		var width = MUSIC_ANIMAL[animalName]._width;
 		// 動物の画像の縦幅を取得
-		var animalHeight	= animalsData[animalName].height;
+		var height = MUSIC_ANIMAL[animalName]._height;
 		// クリックした拍の場所からx座標値を取得
-		var x				= beatToX[beat];
+		var x = beatToX[beat];
 		// クリックした音階の場所からy座標値を取得
-		var y				= scaleToY[scale];
+		var y = scaleToY[scale];
 
 		var index = this._musicMediator._getAnimalsCount();
 
-		this._musicMediator._animals[index]			= new Animal(animalWidth, animalHeight);
-		this._musicMediator._animals[index].image 	= core.assets[animalImage];
+		this._musicMediator._animals[index] = new Animal(width, height);
+		this._musicMediator._animals[index].image = core.assets[path];
 		// 動物の画像のx座標値を計算
-		this._musicMediator._animals[index].x		= x + 240 * (measure - this._musicMediator._getNowPlace());
+		this._musicMediator._animals[index].x = x + 240 * (measure - this._musicMediator._getNowPlace());
 		// y座標値は別に計算とかしなくてOK
-		this._musicMediator._animals[index].y		= y;
-		this._musicMediator._animals[index]._parent	= this._musicMediator;
+		this._musicMediator._animals[index].y = y;
+		this._musicMediator._animals[index]._parent = this._musicMediator;
 
 		// 動物のカウント数をそのまま動物オブジェクトのインデックスとして登録
 		this._musicMediator._setAnimalIndex(index);
@@ -196,11 +213,9 @@ var MusicScreen = enchant.Class.create({
 		this._musicMediator._animalsCountIncrement();
 	},
 
-	// <summary>
 	// 譜面上の論理的なデータ群を表すオブジェクトを生成
-	// </summary>
 	_createScoreData : function(measureMax, nowPlace) {
-		this._musicMediator._scoreData			= new ScoreData(measureMax, nowPlace);
-		this._musicMediator._scoreData._parent	= this._musicMediator;
+		this._musicMediator._scoreData = new ScoreData(measureMax, nowPlace);
+		this._musicMediator._scoreData._parent = this._musicMediator;
 	},
 })

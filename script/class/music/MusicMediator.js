@@ -1,17 +1,17 @@
 var MusicMediator = enchant.Class.create({
 	initialize : function() {
-		this._changeStoryButton	= null;			// 物語作成画面への遷移ボタンオブジェクト
-		this._playButton		= null;			// 再生ボタンのオブジェクト
-		this._animalButton		= null;			// 動物ボタンのオブジェクト
-		this._modosuButton		= null;			// 削除ボタンのオブジェクト
-		this._scaleHouse		= null;			// 音階の家のオブジェクト
-		this._humen				= null;			// 譜面のオブジェクト
-		this._measureNextButton	= null;			// 小節を1つ次に進めるボタンのオブジェクト
-		this._measurePrevButton	= null;			// 小節を1つ前に戻すボタンのオブジェクト
-		this._signboards		= new Array(3);	// サインボードのオブジェクト(3つ)
-		this._animals			= new Array();	// 譜面上に置かれる動物のオブジェクト(複数)
-		this._scoreData			= null;
-		this._parent			= null;
+		this._changeStoryButton = null; // 物語作成画面への遷移ボタンオブジェクト
+		this._playButton = null; // 再生ボタンのオブジェクト
+		this._animalButton = null; // 動物ボタンのオブジェクト
+		this._modosuButton = null; // 削除ボタンのオブジェクト
+		this._scaleHouse = null; // 音階の家のオブジェクト
+		this._humen = null; // 譜面のオブジェクト
+		this._measureNextButton = null; // 小節を1つ次に進めるボタンのオブジェクト
+		this._measurePrevButton = null; // 小節を1つ前に戻すボタンのオブジェクト
+		this._signboards = new Array(3); // サインボードのオブジェクト(3つ)
+		this._animals = new Array(); // 譜面上に置かれる動物のオブジェクト(複数)
+		this._scoreData = null;
+		this._parent = null;
 	},
 
 	// 再生ボタンに関する仲介メソッド
@@ -263,7 +263,7 @@ var MusicMediator = enchant.Class.create({
 		return this._scoreData._checkGapBetweenScale(y);
 	},
 
-	_checkClickPoint: function(x, y) {
+	_checkClickPoint : function(x, y) {
 		this._scoreData._checkClickPoint(x, y);
 	},
 

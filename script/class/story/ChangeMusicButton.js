@@ -4,6 +4,7 @@ var ChangeMusicButton = enchant.Class.create(enchant.Sprite, {
 		this._parent = null;
 	},
 
+	// クリック時の処理
 	ontouchend : function(event) {
 		core.replaceScene(musicScene);
 	}
