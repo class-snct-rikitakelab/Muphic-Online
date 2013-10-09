@@ -39,4 +39,17 @@ var createStoryScreen = function() {
 	storyScreen._storyMediator._createObject("bird", "left", "enjoy", 550, 520);
 
 	storyScreen._storyMediator._showPreviewScreen();
+
+	// 以下山下担当分のテストコード
+	storyScreen._createPallet();
+	storyScreen._storyMediator._pallet._createManPropertyButton();
+	storyScreen._storyMediator._pallet._createLadyPropertyButton();
+	storyScreen._storyMediator._pallet._createBoyPropertyButton();
+	storyScreen._storyMediator._pallet._createGirlPropertyButton();
+	storyScreen._storyMediator._pallet._createManImages();
+	storyScreen._storyMediator._pallet._createLadyImages();
+	storyScreen._storyMediator._pallet._createBoyImages();
+	storyScreen._storyMediator._pallet._createGirlImages();
+	storyScreen._storyMediator._pallet._manPropertyButton._setIsPush(true);
+	storyScreen._storyMediator._pallet._showManImages();
 }

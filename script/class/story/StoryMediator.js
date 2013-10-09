@@ -7,6 +7,7 @@ var StoryMediator = enchant.Class.create({
 		this._animalIllustButton = null;
 		this._itemIllustButton = null;
 		this._backgroundIllustButton = null;
+		this._pallet = null;
 		this._parent = null;
 	},
 
@@ -38,6 +39,10 @@ var StoryMediator = enchant.Class.create({
 	// はいけいイラストボタンゲッタ
 	_getBackgroundIllustButton : function() {
 		return this._backgroundIllustButton;
+	},
+	// パレットゲッタ
+	_getPallet : function() {
+		return this._pallet;
 	},
 
 	// プレビュー画面に関する仲介メソッド

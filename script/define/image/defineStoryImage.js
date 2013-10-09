@@ -135,6 +135,37 @@ var STORY_PREVIEWOBJECT_TURTLE_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_TURTLE_LEFT_SAD;
 var STORY_PREVIEWOBJECT_TURTLE_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_TURTLE_BACK;
+// パレットの画像
+// パレット本体
+var STORY_PALLET;
+// じんぶつイラストマーク
+var STORY_PALLETILLUST_HUMAN;
+// じんぶつ属性ボタン
+var STORY_PALLETPROPERTY_MAN_OFF;
+var STORY_PALLETPROPERTY_MAN_ON;
+var STORY_PALLETPROPERTY_LADY_OFF;
+var STORY_PALLETPROPERTY_LADY_ON;
+var STORY_PALLETPROPERTY_BOY_OFF;
+var STORY_PALLETPROPERTY_BOY_ON;
+var STORY_PALLETPROPERTY_GIRL_OFF;
+var STORY_PALLETPROPERTY_GIRL_ON;
+// じんぶつ表情マーク
+var STORY_PALLETFACE_MAN_GLAD;
+var STORY_PALLETFACE_MAN_ANGRY;
+var STORY_PALLETFACE_MAN_SAD;
+var STORY_PALLETFACE_MAN_ENJOY;
+var STORY_PALLETFACE_LADY_GLAD;
+var STORY_PALLETFACE_LADY_ANGRY;
+var STORY_PALLETFACE_LADY_SAD;
+var STORY_PALLETFACE_LADY_ENJOY;
+var STORY_PALLETFACE_BOY_GLAD;
+var STORY_PALLETFACE_BOY_ANGRY;
+var STORY_PALLETFACE_BOY_SAD;
+var STORY_PALLETFACE_BOY_ENJOY;
+var STORY_PALLETFACE_GIRL_GLAD;
+var STORY_PALLETFACE_GIRL_ANGRY;
+var STORY_PALLETFACE_GIRL_SAD;
+var STORY_PALLETFACE_GIRL_ENJOY;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
@@ -163,115 +194,146 @@ var defineStoryImage = function() {
 	STORY_PREVIEWWEATHER_MOON = new NormalImage("../image/story/weather/moon.png", 690, 158);
 	// 物語に使用可能なオブジェクト画像データ
 	// 男性
-	STORY_PREVIEWOBJECT_MAN_FRONT_GRAD = new StoryPreviewImage("../image/story/human/man/front/glad.png", 48, 137, "human");
+	STORY_PREVIEWOBJECT_MAN_FRONT_GLAD = new StoryPreviewImage("../image/story/human/man/front/glad.png", 48, 137, "human");
 	STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/man/front/angry.png", 48, 137, "human");
 	STORY_PREVIEWOBJECT_MAN_FRONT_SAD = new StoryPreviewImage("../image/story/human/man/front/sad.png", 48, 137, "human");
 	STORY_PREVIEWOBJECT_MAN_FRONT_ENJOY = new StoryPreviewImage("../image/story/human/man/front/enjoy.png", 48, 137, "human");
-	STORY_PREVIEWOBJECT_MAN_RIGHT_GRAD = new StoryPreviewImage("../image/story/human/man/right/glad.png", 38, 135, "human");
+	STORY_PREVIEWOBJECT_MAN_RIGHT_GLAD = new StoryPreviewImage("../image/story/human/man/right/glad.png", 38, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_RIGHT_ANGRY = new StoryPreviewImage("../image/story/human/man/right/angry.png", 38, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_RIGHT_SAD = new StoryPreviewImage("../image/story/human/man/right/sad.png", 38, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_RIGHT_ENJOY = new StoryPreviewImage("../image/story/human/man/right/enjoy.png", 38, 135, "human");
-	STORY_PREVIEWOBJECT_MAN_LEFT_GRAD = new StoryPreviewImage("../image/story/human/man/left/glad.png", 36, 135, "human");
+	STORY_PREVIEWOBJECT_MAN_LEFT_GLAD = new StoryPreviewImage("../image/story/human/man/left/glad.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_LEFT_ANGRY = new StoryPreviewImage("../image/story/human/man/left/angry.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_LEFT_SAD = new StoryPreviewImage("../image/story/human/man/left/sad.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/man/left/enjoy.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_BACK = new StoryPreviewImage("../image/story/human/man/back/back.png", 46, 136, "human");
 	// 女性
-	STORY_PREVIEWOBJECT_LADY_FRONT_GRAD = new StoryPreviewImage("../image/story/human/lady/front/glad.png", 48, 125, "human");
+	STORY_PREVIEWOBJECT_LADY_FRONT_GLAD = new StoryPreviewImage("../image/story/human/lady/front/glad.png", 48, 125, "human");
 	STORY_PREVIEWOBJECT_LADY_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/lady/front/angry.png", 48, 125, "human");
 	STORY_PREVIEWOBJECT_LADY_FRONT_SAD = new StoryPreviewImage("../image/story/human/lady/front/sad.png", 48, 125, "human");
 	STORY_PREVIEWOBJECT_LADY_FRONT_ENJOY = new StoryPreviewImage("../image/story/human/lady/front/enjoy.png", 48, 125, "human");
-	STORY_PREVIEWOBJECT_LADY_RIGHT_GRAD = new StoryPreviewImage("../image/story/human/lady/right/glad.png", 34, 127, "human");
+	STORY_PREVIEWOBJECT_LADY_RIGHT_GLAD = new StoryPreviewImage("../image/story/human/lady/right/glad.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_RIGHT_ANGRY = new StoryPreviewImage("../image/story/human/lady/right/angry.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_RIGHT_SAD = new StoryPreviewImage("../image/story/human/lady/right/sad.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_RIGHT_ENJOY = new StoryPreviewImage("../image/story/human/lady/right/enjoy.png", 34, 127, "human");
-	STORY_PREVIEWOBJECT_LADY_LEFT_GRAD = new StoryPreviewImage("../image/story/human/lady/left/glad.png", 34, 127, "human");
+	STORY_PREVIEWOBJECT_LADY_LEFT_GLAD = new StoryPreviewImage("../image/story/human/lady/left/glad.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_LEFT_ANGRY = new StoryPreviewImage("../image/story/human/lady/left/angry.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_LEFT_SAD = new StoryPreviewImage("../image/story/human/lady/left/sad.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/lady/left/enjoy.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_BACK = new StoryPreviewImage("../image/story/human/lady/back/back.png", 45, 124, "human");
 	// 男の子
-	STORY_PREVIEWOBJECT_BOY_FRONT_GRAD = new StoryPreviewImage("../image/story/human/boy/front/glad.png", 47, 109, "human");
+	STORY_PREVIEWOBJECT_BOY_FRONT_GLAD = new StoryPreviewImage("../image/story/human/boy/front/glad.png", 47, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/boy/front/angry.png", 47, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_FRONT_SAD = new StoryPreviewImage("../image/story/human/boy/front/sad.png", 47, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_FRONT_ENJOY = new StoryPreviewImage("../image/story/human/boy/front/enjoy.png", 47, 109, "human");
-	STORY_PREVIEWOBJECT_BOY_RIGHT_GRAD = new StoryPreviewImage("../image/story/human/boy/right/glad.png", 32, 109, "human");
+	STORY_PREVIEWOBJECT_BOY_RIGHT_GLAD = new StoryPreviewImage("../image/story/human/boy/right/glad.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_RIGHT_ANGRY = new StoryPreviewImage("../image/story/human/boy/right/angry.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_RIGHT_SAD = new StoryPreviewImage("../image/story/human/boy/right/sad.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_RIGHT_ENJOY = new StoryPreviewImage("../image/story/human/boy/right/enjoy.png", 32, 109, "human");
-	STORY_PREVIEWOBJECT_BOY_LEFT_GRAD = new StoryPreviewImage("../image/story/human/boy/left/glad.png", 32, 109, "human");
+	STORY_PREVIEWOBJECT_BOY_LEFT_GLAD = new StoryPreviewImage("../image/story/human/boy/left/glad.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_LEFT_ANGRY = new StoryPreviewImage("../image/story/human/boy/left/angry.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_LEFT_SAD = new StoryPreviewImage("../image/story/human/boy/left/sad.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/boy/left/enjoy.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_BACK = new StoryPreviewImage("../image/story/human/boy/back/back.png", 45, 109, "human");
 	// 女の子
-	STORY_PREVIEWOBJECT_GIRL_FRONT_GRAD = new StoryPreviewImage("../image/story/human/girl/front/glad.png", 50, 107, "human");
+	STORY_PREVIEWOBJECT_GIRL_FRONT_GLAD = new StoryPreviewImage("../image/story/human/girl/front/glad.png", 50, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/girl/front/angry.png", 50, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_FRONT_SAD = new StoryPreviewImage("../image/story/human/girl/front/sad.png", 50, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_FRONT_ENJOY = new StoryPreviewImage("../image/story/human/girl/front/enjoy.png", 50, 107, "human");
-	STORY_PREVIEWOBJECT_GIRL_RIGHT_GRAD = new StoryPreviewImage("../image/story/human/girl/right/glad.png", 44, 107, "human");
+	STORY_PREVIEWOBJECT_GIRL_RIGHT_GLAD = new StoryPreviewImage("../image/story/human/girl/right/glad.png", 44, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_RIGHT_ANGRY = new StoryPreviewImage("../image/story/human/girl/right/angry.png", 44, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_RIGHT_SAD = new StoryPreviewImage("../image/story/human/girl/right/sad.png", 44, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_RIGHT_ENJOY = new StoryPreviewImage("../image/story/human/girl/right/enjoy.png", 44, 107, "human");
-	STORY_PREVIEWOBJECT_GIRL_LEFT_GRAD = new StoryPreviewImage("../image/story/human/girl/left/glad.png", 43, 107, "human");
+	STORY_PREVIEWOBJECT_GIRL_LEFT_GLAD = new StoryPreviewImage("../image/story/human/girl/left/glad.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_LEFT_ANGRY = new StoryPreviewImage("../image/story/human/girl/left/angry.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_LEFT_SAD = new StoryPreviewImage("../image/story/human/girl/left/sad.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/girl/left/enjoy.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_BACK = new StoryPreviewImage("../image/story/human/girl/back/back.png", 51, 106, "human");
 	// イヌ
-	STORY_PREVIEWOBJECT_DOG_FRONT_GRAD = new StoryPreviewImage("../image/story/animal/dog/front/glad.png", 48, 73, "animal");
+	STORY_PREVIEWOBJECT_DOG_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/dog/front/glad.png", 48, 73, "animal");
 	STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/dog/front/angry.png", 48, 73, "animal");
 	STORY_PREVIEWOBJECT_DOG_FRONT_SAD = new StoryPreviewImage("../image/story/animal/dog/front/sad.png", 48, 73, "animal");
 	STORY_PREVIEWOBJECT_DOG_FRONT_ENJOY = new StoryPreviewImage("../image/story/animal/dog/front/enjoy.png", 48, 73, "animal");
-	STORY_PREVIEWOBJECT_DOG_RIGHT_GRAD = new StoryPreviewImage("../image/story/animal/dog/right/glad.png", 78, 75, "animal");
+	STORY_PREVIEWOBJECT_DOG_RIGHT_GLAD = new StoryPreviewImage("../image/story/animal/dog/right/glad.png", 78, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_RIGHT_ANGRY = new StoryPreviewImage("../image/story/animal/dog/right/angry.png", 78, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_RIGHT_SAD = new StoryPreviewImage("../image/story/animal/dog/right/sad.png", 78, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_RIGHT_ENJOY = new StoryPreviewImage("../image/story/animal/dog/right/enjoy.png", 78, 75, "animal");
-	STORY_PREVIEWOBJECT_DOG_LEFT_GRAD = new StoryPreviewImage("../image/story/animal/dog/left/glad.png", 79, 75, "animal");
+	STORY_PREVIEWOBJECT_DOG_LEFT_GLAD = new StoryPreviewImage("../image/story/animal/dog/left/glad.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_LEFT_ANGRY = new StoryPreviewImage("../image/story/animal/dog/left/angry.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_LEFT_SAD = new StoryPreviewImage("../image/story/animal/dog/left/sad.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/dog/left/enjoy.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_BACK = new StoryPreviewImage("../image/story/animal/dog/back/back.png", 49, 76, "animal");
 	// トリ
-	STORY_PREVIEWOBJECT_BIRD_FRONT_GRAD = new StoryPreviewImage("../image/story/animal/bird/front/glad.png", 43, 48, "animal");
+	STORY_PREVIEWOBJECT_BIRD_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/bird/front/glad.png", 43, 48, "animal");
 	STORY_PREVIEWOBJECT_BIRD_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/bird/front/angry.png", 43, 48, "animal");
 	STORY_PREVIEWOBJECT_BIRD_FRONT_SAD = new StoryPreviewImage("../image/story/animal/bird/front/sad.png", 43, 48, "animal");
 	STORY_PREVIEWOBJECT_BIRD_FRONT_ENJOY = new StoryPreviewImage("../image/story/animal/bird/front/enjoy.png", 43, 48, "animal");
-	STORY_PREVIEWOBJECT_BIRD_RIGHT_GRAD = new StoryPreviewImage("../image/story/animal/bird/right/glad.png", 30, 44, "animal");
+	STORY_PREVIEWOBJECT_BIRD_RIGHT_GLAD = new StoryPreviewImage("../image/story/animal/bird/right/glad.png", 30, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_RIGHT_ANGRY = new StoryPreviewImage("../image/story/animal/bird/right/angry.png", 30, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_RIGHT_SAD = new StoryPreviewImage("../image/story/animal/bird/right/sad.png", 30, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_RIGHT_ENJOY = new StoryPreviewImage("../image/story/animal/bird/right/enjoy.png", 30, 44, "animal");
-	STORY_PREVIEWOBJECT_BIRD_LEFT_GRAD = new StoryPreviewImage("../image/story/animal/bird/left/glad.png", 32, 44, "animal");
+	STORY_PREVIEWOBJECT_BIRD_LEFT_GLAD = new StoryPreviewImage("../image/story/animal/bird/left/glad.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_LEFT_ANGRY = new StoryPreviewImage("../image/story/animal/bird/left/angry.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_LEFT_SAD = new StoryPreviewImage("../image/story/animal/bird/left/sad.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/bird/left/enjoy.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_BACK = new StoryPreviewImage("../image/story/animal/bird/back/back.png", 44, 46, "animal");
 	// クマ
-	STORY_PREVIEWOBJECT_BEAR_FRONT_GRAD = new StoryPreviewImage("../image/story/animal/bear/front/glad.png", 52, 107, "animal");
+	STORY_PREVIEWOBJECT_BEAR_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/bear/front/glad.png", 52, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/bear/front/angry.png", 52, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_FRONT_SAD = new StoryPreviewImage("../image/story/animal/bear/front/sad.png", 52, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_FRONT_ENJOY = new StoryPreviewImage("../image/story/animal/bear/front/enjoy.png", 52, 107, "animal");
-	STORY_PREVIEWOBJECT_BEAR_RIGHT_GRAD = new StoryPreviewImage("../image/story/animal/bear/right/glad.png", 39, 107, "animal");
+	STORY_PREVIEWOBJECT_BEAR_RIGHT_GLAD = new StoryPreviewImage("../image/story/animal/bear/right/glad.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_RIGHT_ANGRY = new StoryPreviewImage("../image/story/animal/bear/right/angry.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_RIGHT_SAD = new StoryPreviewImage("../image/story/animal/bear/right/sad.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_RIGHT_ENJOY = new StoryPreviewImage("../image/story/animal/bear/right/enjoy.png", 39, 107, "animal");
-	STORY_PREVIEWOBJECT_BEAR_LEFT_GRAD = new StoryPreviewImage("../image/story/animal/bear/left/glad.png", 39, 107, "animal");
+	STORY_PREVIEWOBJECT_BEAR_LEFT_GLAD = new StoryPreviewImage("../image/story/animal/bear/left/glad.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_LEFT_ANGRY = new StoryPreviewImage("../image/story/animal/bear/left/angry.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_LEFT_SAD = new StoryPreviewImage("../image/story/animal/bear/left/sad.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/bear/left/enjoy.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_BACK = new StoryPreviewImage("../image/story/animal/bear/back/back.png", 49, 106, "animal");
 	// カメ
-	STORY_PREVIEWOBJECT_TURTLE_FRONT_GRAD = new StoryPreviewImage("../image/story/animal/turtle/front/glad.png", 56, 49, "animal");
+	STORY_PREVIEWOBJECT_TURTLE_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/turtle/front/glad.png", 56, 49, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/turtle/front/angry.png", 56, 49, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_FRONT_SAD = new StoryPreviewImage("../image/story/animal/turtle/front/sad.png", 56, 49, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_FRONT_ENJOY = new StoryPreviewImage("../image/story/animal/turtle/front/enjoy.png", 56, 49, "animal");
-	STORY_PREVIEWOBJECT_TURTLE_RIGHT_GRAD = new StoryPreviewImage("../image/story/animal/turtle/right/glad.png", 74, 41, "animal");
+	STORY_PREVIEWOBJECT_TURTLE_RIGHT_GLAD = new StoryPreviewImage("../image/story/animal/turtle/right/glad.png", 74, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_RIGHT_ANGRY = new StoryPreviewImage("../image/story/animal/turtle/right/angry.png", 74, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_RIGHT_SAD = new StoryPreviewImage("../image/story/animal/turtle/right/sad.png", 74, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_RIGHT_ENJOY = new StoryPreviewImage("../image/story/animal/turtle/right/enjoy.png", 74, 41, "animal");
-	STORY_PREVIEWOBJECT_TURTLE_LEFT_GRAD = new StoryPreviewImage("../image/story/animal/turtle/left/glad.png", 75, 41, "animal");
+	STORY_PREVIEWOBJECT_TURTLE_LEFT_GLAD = new StoryPreviewImage("../image/story/animal/turtle/left/glad.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_ANGRY = new StoryPreviewImage("../image/story/animal/turtle/left/angry.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_SAD = new StoryPreviewImage("../image/story/animal/turtle/left/sad.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/turtle/left/enjoy.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_BACK = new StoryPreviewImage("../image/story/animal/turtle/back/back.png", 53, 48, "animal");
+	// パレットの画像
+	// パレット
+	STORY_PALLET = new NormalImage("../image/story/pallet/pallet.png", 800, 600);
+	// じんぶつイラストマーク
+	STORY_PALLETILLUST_HUMAN = new NormalImage("../image/story/pallet/illust/human.png", 73, 63);
+	// じんぶつ属性ボタン
+	STORY_PALLETPROPERTY_MAN_OFF = new NormalImage("../image/story/pallet/property/man/manOff.png", 87, 77);
+	STORY_PALLETPROPERTY_MAN_ON = new NormalImage("../image/story/pallet/property/man/manOn.png", 87, 77);
+	STORY_PALLETPROPERTY_LADY_OFF = new NormalImage("../image/story/pallet/property/lady/ladyOff.png", 87, 77);
+	STORY_PALLETPROPERTY_LADY_ON = new NormalImage("../image/story/pallet/property/lady/ladyOn.png", 87, 77);
+	STORY_PALLETPROPERTY_BOY_OFF = new NormalImage("../image/story/pallet/property/boy/boyOff.png", 87, 77);
+	STORY_PALLETPROPERTY_BOY_ON = new NormalImage("../image/story/pallet/property/boy/boyOn.png", 87, 77);
+	STORY_PALLETPROPERTY_GIRL_OFF = new NormalImage("../image/story/pallet/property/girl/girlOff.png", 87, 77);
+	STORY_PALLETPROPERTY_GIRL_ON = new NormalImage("../image/story/pallet/property/girl/girlOn.png", 87, 77);
+	// じんぶつ表情マーク
+	STORY_PALLETFACE_MAN_GLAD = new NormalImage("../image/story/pallet/face/man/glad.png", 58, 70);
+	STORY_PALLETFACE_MAN_ANGRY = new NormalImage("../image/story/pallet/face/man/angry.png", 58, 70);
+	STORY_PALLETFACE_MAN_SAD = new NormalImage("../image/story/pallet/face/man/sad.png", 58, 70);
+	STORY_PALLETFACE_MAN_ENJOY = new NormalImage("../image/story/pallet/face/man/enjoy.png", 58, 70);
+	STORY_PALLETFACE_LADY_GLAD = new NormalImage("../image/story/pallet/face/lady/glad.png", 58, 70);
+	STORY_PALLETFACE_LADY_ANGRY = new NormalImage("../image/story/pallet/face/lady/angry.png", 58, 70);
+	STORY_PALLETFACE_LADY_SAD = new NormalImage("../image/story/pallet/face/lady/sad.png", 58, 70);
+	STORY_PALLETFACE_LADY_ENJOY = new NormalImage("../image/story/pallet/face/lady/enjoy.png", 58, 70);
+	STORY_PALLETFACE_BOY_GLAD = new NormalImage("../image/story/pallet/face/boy/glad.png", 58, 70);
+	STORY_PALLETFACE_BOY_ANGRY = new NormalImage("../image/story/pallet/face/boy/angry.png", 58, 70);
+	STORY_PALLETFACE_BOY_SAD = new NormalImage("../image/story/pallet/face/boy/sad.png", 58, 70);
+	STORY_PALLETFACE_BOY_ENJOY = new NormalImage("../image/story/pallet/face/boy/enjoy.png", 58, 70);
+	STORY_PALLETFACE_GIRL_GLAD = new NormalImage("../image/story/pallet/face/girl/glad.png", 58, 70);
+	STORY_PALLETFACE_GIRL_ANGRY = new NormalImage("../image/story/pallet/face/girl/angry.png", 58, 70);
+	STORY_PALLETFACE_GIRL_SAD = new NormalImage("../image/story/pallet/face/girl/sad.png", 58, 70);
+	STORY_PALLETFACE_GIRL_ENJOY = new NormalImage("../image/story/pallet/face/girl/enjoy.png", 58, 70);
 }

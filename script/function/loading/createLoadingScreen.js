@@ -34,7 +34,6 @@ var createLoadingScreen = function() {
 	loadingScene.addEventListener('progress', function(event) {
 		// 進行度表示の更新
 		progressLabel.text = parseInt((event.loaded / event.total) * 100) + "%";
-		console.log(event.loaded + "/" + event.total);
 	});
 
 	loadingScene.addEventListener('load', function(event) {

@@ -62,7 +62,7 @@ var StoryScreen = enchant.Class.create({
 		this._storyMediator._animalIllustButton = new AnimalIllustButton(width, height);
 		this._storyMediator._animalIllustButton.image = core.assets[path];
 		this._storyMediator._animalIllustButton.x = 35;
-		this._storyMediator._animalIllustButton.y = 280;
+		this._storyMediator._animalIllustButton.y = 329;
 		this._storyMediator._animalIllustButton._parent = this._storyMediator;
 		storyScene.addChild(this._storyMediator._animalIllustButton);
 	},
@@ -76,7 +76,7 @@ var StoryScreen = enchant.Class.create({
 		this._storyMediator._itemIllustButton = new ItemIllustButton(width, height);
 		this._storyMediator._itemIllustButton.image = core.assets[path];
 		this._storyMediator._itemIllustButton.x = 35;
-		this._storyMediator._itemIllustButton.y = 360;
+		this._storyMediator._itemIllustButton.y = 458;
 		this._storyMediator._itemIllustButton._parent = this._storyMediator;
 		storyScene.addChild(this._storyMediator._itemIllustButton);
 	},
@@ -90,8 +90,23 @@ var StoryScreen = enchant.Class.create({
 		this._storyMediator._backgroundIllustButton = new BackgroundIllustButton(width, height);
 		this._storyMediator._backgroundIllustButton.image = core.assets[path];
 		this._storyMediator._backgroundIllustButton.x = 35;
-		this._storyMediator._backgroundIllustButton.y = 440;
+		this._storyMediator._backgroundIllustButton.y = 587;
 		this._storyMediator._backgroundIllustButton._parent = this._storyMediator;
 		storyScene.addChild(this._storyMediator._backgroundIllustButton);
+	},
+
+	// 以下山下担当分のテストコード
+	// パレットのオブジェクトを生成して画面に表示する
+	_createPallet : function() {
+		var path = STORY_PALLET._path;
+		var width = STORY_PALLET._width;
+		var height = STORY_PALLET._height;
+
+		this._storyMediator._pallet = new Pallet(width, height);
+		this._storyMediator._pallet.image = core.assets[path];
+		this._storyMediator._pallet.x = (APP_WIDTH - width) / 2;
+		this._storyMediator._pallet.y = (APP_HEIGHT - height) / 2;
+		this._storyMediator._pallet._parent = this._storyMediator;
+		storyScene.addChild(this._storyMediator._pallet);
 	},
 })
