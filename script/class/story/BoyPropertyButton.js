@@ -25,9 +25,9 @@ var BoyPropertyButton = enchant.Class.create(enchant.Sprite, {
 	// ボタンが「押されている」状態の時の色に変更する
 	_setImage : function(imageState) {
 		if(imageState === "on") {
-			this.image = core.assets[STORY_PALLETPROPERTY_BOY_ON._path];
+			this.image = core.assets[STORY_PALETTEPROPERTY_BOY_ON._path];
 		} else if(imageState === "off") {
-			this.image = core.assets[STORY_PALLETPROPERTY_BOY_OFF._path];
+			this.image = core.assets[STORY_PALETTEPROPERTY_BOY_OFF._path];
 		}
 	},
 

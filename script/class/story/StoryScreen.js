@@ -97,16 +97,16 @@ var StoryScreen = enchant.Class.create({
 
 	// 以下山下担当分のテストコード
 	// パレットのオブジェクトを生成して画面に表示する
-	_createPallet : function() {
-		var path = STORY_PALLET._path;
-		var width = STORY_PALLET._width;
-		var height = STORY_PALLET._height;
+	_createPalette : function() {
+		var path = STORY_PALETTE._path;
+		var width = STORY_PALETTE._width;
+		var height = STORY_PALETTE._height;
 
-		this._storyMediator._pallet = new Pallet(width, height);
-		this._storyMediator._pallet.image = core.assets[path];
-		this._storyMediator._pallet.x = (APP_WIDTH - width) / 2;
-		this._storyMediator._pallet.y = (APP_HEIGHT - height) / 2;
-		this._storyMediator._pallet._parent = this._storyMediator;
-		storyScene.addChild(this._storyMediator._pallet);
+		this._storyMediator._palette = new Palette(width, height);
+		this._storyMediator._palette.image = core.assets[path];
+		this._storyMediator._palette.x = (APP_WIDTH - width) / 2;
+		this._storyMediator._palette.y = (APP_HEIGHT - height) / 2;
+		this._storyMediator._palette._parent = this._storyMediator;
+		storyScene.addChild(this._storyMediator._palette);
 	},
 })

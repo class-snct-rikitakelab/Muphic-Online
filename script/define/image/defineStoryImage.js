@@ -137,35 +137,35 @@ var STORY_PREVIEWOBJECT_TURTLE_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_TURTLE_BACK;
 // パレットの画像
 // パレット本体
-var STORY_PALLET;
+var STORY_PALETTE;
 // じんぶつイラストマーク
-var STORY_PALLETILLUST_HUMAN;
+var STORY_PALETTEILLUST_HUMAN;
 // じんぶつ属性ボタン
-var STORY_PALLETPROPERTY_MAN_OFF;
-var STORY_PALLETPROPERTY_MAN_ON;
-var STORY_PALLETPROPERTY_LADY_OFF;
-var STORY_PALLETPROPERTY_LADY_ON;
-var STORY_PALLETPROPERTY_BOY_OFF;
-var STORY_PALLETPROPERTY_BOY_ON;
-var STORY_PALLETPROPERTY_GIRL_OFF;
-var STORY_PALLETPROPERTY_GIRL_ON;
+var STORY_PALETTEPROPERTY_MAN_OFF;
+var STORY_PALETTEPROPERTY_MAN_ON;
+var STORY_PALETTEPROPERTY_LADY_OFF;
+var STORY_PALETTEPROPERTY_LADY_ON;
+var STORY_PALETTEPROPERTY_BOY_OFF;
+var STORY_PALETTEPROPERTY_BOY_ON;
+var STORY_PALETTEPROPERTY_GIRL_OFF;
+var STORY_PALETTEPROPERTY_GIRL_ON;
 // じんぶつ表情マーク
-var STORY_PALLETFACE_MAN_GLAD;
-var STORY_PALLETFACE_MAN_ANGRY;
-var STORY_PALLETFACE_MAN_SAD;
-var STORY_PALLETFACE_MAN_ENJOY;
-var STORY_PALLETFACE_LADY_GLAD;
-var STORY_PALLETFACE_LADY_ANGRY;
-var STORY_PALLETFACE_LADY_SAD;
-var STORY_PALLETFACE_LADY_ENJOY;
-var STORY_PALLETFACE_BOY_GLAD;
-var STORY_PALLETFACE_BOY_ANGRY;
-var STORY_PALLETFACE_BOY_SAD;
-var STORY_PALLETFACE_BOY_ENJOY;
-var STORY_PALLETFACE_GIRL_GLAD;
-var STORY_PALLETFACE_GIRL_ANGRY;
-var STORY_PALLETFACE_GIRL_SAD;
-var STORY_PALLETFACE_GIRL_ENJOY;
+var STORY_PALETTEFACE_MAN_GLAD;
+var STORY_PALETTEFACE_MAN_ANGRY;
+var STORY_PALETTEFACE_MAN_SAD;
+var STORY_PALETTEFACE_MAN_ENJOY;
+var STORY_PALETTEFACE_LADY_GLAD;
+var STORY_PALETTEFACE_LADY_ANGRY;
+var STORY_PALETTEFACE_LADY_SAD;
+var STORY_PALETTEFACE_LADY_ENJOY;
+var STORY_PALETTEFACE_BOY_GLAD;
+var STORY_PALETTEFACE_BOY_ANGRY;
+var STORY_PALETTEFACE_BOY_SAD;
+var STORY_PALETTEFACE_BOY_ENJOY;
+var STORY_PALETTEFACE_GIRL_GLAD;
+var STORY_PALETTEFACE_GIRL_ANGRY;
+var STORY_PALETTEFACE_GIRL_SAD;
+var STORY_PALETTEFACE_GIRL_ENJOY;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
@@ -307,33 +307,33 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_TURTLE_BACK = new StoryPreviewImage("../image/story/animal/turtle/back/back.png", 53, 48, "animal");
 	// パレットの画像
 	// パレット
-	STORY_PALLET = new NormalImage("../image/story/pallet/pallet.png", 800, 600);
+	STORY_PALETTE = new NormalImage("../image/story/palette/palette.png", 800, 600);
 	// じんぶつイラストマーク
-	STORY_PALLETILLUST_HUMAN = new NormalImage("../image/story/pallet/illust/human.png", 73, 63);
+	STORY_PALETTEILLUST_HUMAN = new NormalImage("../image/story/palette/illust/human.png", 73, 63);
 	// じんぶつ属性ボタン
-	STORY_PALLETPROPERTY_MAN_OFF = new NormalImage("../image/story/pallet/property/man/manOff.png", 87, 77);
-	STORY_PALLETPROPERTY_MAN_ON = new NormalImage("../image/story/pallet/property/man/manOn.png", 87, 77);
-	STORY_PALLETPROPERTY_LADY_OFF = new NormalImage("../image/story/pallet/property/lady/ladyOff.png", 87, 77);
-	STORY_PALLETPROPERTY_LADY_ON = new NormalImage("../image/story/pallet/property/lady/ladyOn.png", 87, 77);
-	STORY_PALLETPROPERTY_BOY_OFF = new NormalImage("../image/story/pallet/property/boy/boyOff.png", 87, 77);
-	STORY_PALLETPROPERTY_BOY_ON = new NormalImage("../image/story/pallet/property/boy/boyOn.png", 87, 77);
-	STORY_PALLETPROPERTY_GIRL_OFF = new NormalImage("../image/story/pallet/property/girl/girlOff.png", 87, 77);
-	STORY_PALLETPROPERTY_GIRL_ON = new NormalImage("../image/story/pallet/property/girl/girlOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_LADY_OFF = new NormalImage("../image/story/palette/property/lady/ladyOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_LADY_ON = new NormalImage("../image/story/palette/property/lady/ladyOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_BOY_OFF = new NormalImage("../image/story/palette/property/boy/boyOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_BOY_ON = new NormalImage("../image/story/palette/property/boy/boyOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_GIRL_OFF = new NormalImage("../image/story/palette/property/girl/girlOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_GIRL_ON = new NormalImage("../image/story/palette/property/girl/girlOn.png", 87, 77);
 	// じんぶつ表情マーク
-	STORY_PALLETFACE_MAN_GLAD = new NormalImage("../image/story/pallet/face/man/glad.png", 58, 70);
-	STORY_PALLETFACE_MAN_ANGRY = new NormalImage("../image/story/pallet/face/man/angry.png", 58, 70);
-	STORY_PALLETFACE_MAN_SAD = new NormalImage("../image/story/pallet/face/man/sad.png", 58, 70);
-	STORY_PALLETFACE_MAN_ENJOY = new NormalImage("../image/story/pallet/face/man/enjoy.png", 58, 70);
-	STORY_PALLETFACE_LADY_GLAD = new NormalImage("../image/story/pallet/face/lady/glad.png", 58, 70);
-	STORY_PALLETFACE_LADY_ANGRY = new NormalImage("../image/story/pallet/face/lady/angry.png", 58, 70);
-	STORY_PALLETFACE_LADY_SAD = new NormalImage("../image/story/pallet/face/lady/sad.png", 58, 70);
-	STORY_PALLETFACE_LADY_ENJOY = new NormalImage("../image/story/pallet/face/lady/enjoy.png", 58, 70);
-	STORY_PALLETFACE_BOY_GLAD = new NormalImage("../image/story/pallet/face/boy/glad.png", 58, 70);
-	STORY_PALLETFACE_BOY_ANGRY = new NormalImage("../image/story/pallet/face/boy/angry.png", 58, 70);
-	STORY_PALLETFACE_BOY_SAD = new NormalImage("../image/story/pallet/face/boy/sad.png", 58, 70);
-	STORY_PALLETFACE_BOY_ENJOY = new NormalImage("../image/story/pallet/face/boy/enjoy.png", 58, 70);
-	STORY_PALLETFACE_GIRL_GLAD = new NormalImage("../image/story/pallet/face/girl/glad.png", 58, 70);
-	STORY_PALLETFACE_GIRL_ANGRY = new NormalImage("../image/story/pallet/face/girl/angry.png", 58, 70);
-	STORY_PALLETFACE_GIRL_SAD = new NormalImage("../image/story/pallet/face/girl/sad.png", 58, 70);
-	STORY_PALLETFACE_GIRL_ENJOY = new NormalImage("../image/story/pallet/face/girl/enjoy.png", 58, 70);
+	STORY_PALETTEFACE_MAN_GLAD = new NormalImage("../image/story/palette/face/man/glad.png", 58, 70);
+	STORY_PALETTEFACE_MAN_ANGRY = new NormalImage("../image/story/palette/face/man/angry.png", 58, 70);
+	STORY_PALETTEFACE_MAN_SAD = new NormalImage("../image/story/palette/face/man/sad.png", 58, 70);
+	STORY_PALETTEFACE_MAN_ENJOY = new NormalImage("../image/story/palette/face/man/enjoy.png", 58, 70);
+	STORY_PALETTEFACE_LADY_GLAD = new NormalImage("../image/story/palette/face/lady/glad.png", 58, 70);
+	STORY_PALETTEFACE_LADY_ANGRY = new NormalImage("../image/story/palette/face/lady/angry.png", 58, 70);
+	STORY_PALETTEFACE_LADY_SAD = new NormalImage("../image/story/palette/face/lady/sad.png", 58, 70);
+	STORY_PALETTEFACE_LADY_ENJOY = new NormalImage("../image/story/palette/face/lady/enjoy.png", 58, 70);
+	STORY_PALETTEFACE_BOY_GLAD = new NormalImage("../image/story/palette/face/boy/glad.png", 58, 70);
+	STORY_PALETTEFACE_BOY_ANGRY = new NormalImage("../image/story/palette/face/boy/angry.png", 58, 70);
+	STORY_PALETTEFACE_BOY_SAD = new NormalImage("../image/story/palette/face/boy/sad.png", 58, 70);
+	STORY_PALETTEFACE_BOY_ENJOY = new NormalImage("../image/story/palette/face/boy/enjoy.png", 58, 70);
+	STORY_PALETTEFACE_GIRL_GLAD = new NormalImage("../image/story/palette/face/girl/glad.png", 58, 70);
+	STORY_PALETTEFACE_GIRL_ANGRY = new NormalImage("../image/story/palette/face/girl/angry.png", 58, 70);
+	STORY_PALETTEFACE_GIRL_SAD = new NormalImage("../image/story/palette/face/girl/sad.png", 58, 70);
+	STORY_PALETTEFACE_GIRL_ENJOY = new NormalImage("../image/story/palette/face/girl/enjoy.png", 58, 70);
 }
