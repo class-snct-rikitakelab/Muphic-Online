@@ -37,6 +37,10 @@ var STORY_PREVIEWOBJECT_MAN_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_MAN_LEFT_SAD;
 var STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_MAN_BACK;
+var STORY_PREVIEWOBJECT_MAN_FRONT_FOCUS;
+var STORY_PREVIEWOBJECT_MAN_BACK_FOCUS;
+var STORY_PREVIEWOBJECT_MAN_RIGHT_FOCUS;
+var STORY_PREVIEWOBJECT_MAN_LEFT_FOCUS;
 // 女性
 var STORY_PREVIEWOBJECT_LADY_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_LADY_FRONT_ANGRY;
@@ -51,6 +55,10 @@ var STORY_PREVIEWOBJECT_LADY_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_LADY_LEFT_SAD;
 var STORY_PREVIEWOBJECT_LADY_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_LADY_BACK;
+var STORY_PREVIEWOBJECT_LADY_FRONT_FOCUS;
+var STORY_PREVIEWOBJECT_LADY_BACK_FOCUS;
+var STORY_PREVIEWOBJECT_LADY_RIGHT_FOCUS;
+var STORY_PREVIEWOBJECT_LADY_LEFT_FOCUS;
 // 男の子
 var STORY_PREVIEWOBJECT_BOY_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_BOY_FRONT_ANGRY;
@@ -65,6 +73,10 @@ var STORY_PREVIEWOBJECT_BOY_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_BOY_LEFT_SAD;
 var STORY_PREVIEWOBJECT_BOY_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_BOY_BACK;
+var STORY_PREVIEWOBJECT_BOY_FRONT_FOCUS;
+var STORY_PREVIEWOBJECT_BOY_BACK_FOCUS;
+var STORY_PREVIEWOBJECT_BOY_RIGHT_FOCUS;
+var STORY_PREVIEWOBJECT_BOY_LEFT_FOCUS;
 // 女の子
 var STORY_PREVIEWOBJECT_GIRL_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_GIRL_FRONT_ANGRY;
@@ -79,6 +91,10 @@ var STORY_PREVIEWOBJECT_GIRL_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_GIRL_LEFT_SAD;
 var STORY_PREVIEWOBJECT_GIRL_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_GIRL_BACK;
+var STORY_PREVIEWOBJECT_GIRL_FRONT_FOCUS;
+var STORY_PREVIEWOBJECT_GIRL_BACK_FOCUS;
+var STORY_PREVIEWOBJECT_GIRL_RIGHT_FOCUS;
+var STORY_PREVIEWOBJECT_GIRL_LEFT_FOCUS;
 // イヌ
 var STORY_PREVIEWOBJECT_DOG_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY;
@@ -207,6 +223,10 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_MAN_LEFT_SAD = new StoryPreviewImage("../image/story/human/man/left/sad.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/man/left/enjoy.png", 36, 135, "human");
 	STORY_PREVIEWOBJECT_MAN_BACK = new StoryPreviewImage("../image/story/human/man/back/back.png", 46, 136, "human");
+	STORY_PREVIEWOBJECT_MAN_FRONT_FOCUS = new NormalImage("../image/story/human/man/front/manFrontFocus.png", 48, 137);
+	STORY_PREVIEWOBJECT_MAN_BACK_FOCUS = new NormalImage("../image/story/human/man/back/manBackFocus.png", 46, 136);
+	STORY_PREVIEWOBJECT_MAN_RIGHT_FOCUS = new NormalImage("../image/story/human/man/right/manRightFocus.png", 38, 135);
+	STORY_PREVIEWOBJECT_MAN_LEFT_FOCUS = new NormalImage("../image/story/human/man/left/manLeftFocus.png", 36, 135);
 	// 女性
 	STORY_PREVIEWOBJECT_LADY_FRONT_GLAD = new StoryPreviewImage("../image/story/human/lady/front/glad.png", 48, 125, "human");
 	STORY_PREVIEWOBJECT_LADY_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/lady/front/angry.png", 48, 125, "human");
@@ -221,6 +241,10 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_LADY_LEFT_SAD = new StoryPreviewImage("../image/story/human/lady/left/sad.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/lady/left/enjoy.png", 34, 127, "human");
 	STORY_PREVIEWOBJECT_LADY_BACK = new StoryPreviewImage("../image/story/human/lady/back/back.png", 45, 124, "human");
+	STORY_PREVIEWOBJECT_LADY_FRONT_FOCUS = new NormalImage("../image/story/human/lady/front/ladyFrontFocus.png", 48, 125);
+	STORY_PREVIEWOBJECT_LADY_BACK_FOCUS = new NormalImage("../image/story/human/lady/back/ladyBackFocus.png", 45, 124);
+	STORY_PREVIEWOBJECT_LADY_RIGHT_FOCUS = new NormalImage("../image/story/human/lady/right/ladyRightFocus.png", 34, 127);
+	STORY_PREVIEWOBJECT_LADY_LEFT_FOCUS = new NormalImage("../image/story/human/lady/left/ladyLeftFocus.png", 34, 127);
 	// 男の子
 	STORY_PREVIEWOBJECT_BOY_FRONT_GLAD = new StoryPreviewImage("../image/story/human/boy/front/glad.png", 47, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/boy/front/angry.png", 47, 109, "human");
@@ -235,6 +259,10 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_BOY_LEFT_SAD = new StoryPreviewImage("../image/story/human/boy/left/sad.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/boy/left/enjoy.png", 32, 109, "human");
 	STORY_PREVIEWOBJECT_BOY_BACK = new StoryPreviewImage("../image/story/human/boy/back/back.png", 45, 109, "human");
+	STORY_PREVIEWOBJECT_BOY_FRONT_FOCUS = new NormalImage("../image/story/human/boy/front/boyFrontFocus.png", 47, 109);
+	STORY_PREVIEWOBJECT_BOY_BACK_FOCUS = new NormalImage("../image/story/human/boy/back/boyBackFocus.png", 45, 109);
+	STORY_PREVIEWOBJECT_BOY_RIGHT_FOCUS = new NormalImage("../image/story/human/boy/right/boyRightFocus.png", 32, 109);
+	STORY_PREVIEWOBJECT_BOY_LEFT_FOCUS = new NormalImage("../image/story/human/boy/left/boyLeftFocus.png", 32, 109);
 	// 女の子
 	STORY_PREVIEWOBJECT_GIRL_FRONT_GLAD = new StoryPreviewImage("../image/story/human/girl/front/glad.png", 50, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/girl/front/angry.png", 50, 107, "human");
@@ -249,6 +277,10 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_GIRL_LEFT_SAD = new StoryPreviewImage("../image/story/human/girl/left/sad.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_LEFT_ENJOY = new StoryPreviewImage("../image/story/human/girl/left/enjoy.png", 43, 107, "human");
 	STORY_PREVIEWOBJECT_GIRL_BACK = new StoryPreviewImage("../image/story/human/girl/back/back.png", 51, 106, "human");
+	STORY_PREVIEWOBJECT_GIRL_FRONT_FOCUS = new NormalImage("../image/story/human/girl/front/girlFrontFocus.png", 50, 107);
+	STORY_PREVIEWOBJECT_GIRL_BACK_FOCUS = new NormalImage("../image/story/human/girl/back/girlBackFocus.png", 51, 106);
+	STORY_PREVIEWOBJECT_GIRL_RIGHT_FOCUS = new NormalImage("../image/story/human/girl/right/girlRightFocus.png", 44, 107);
+	STORY_PREVIEWOBJECT_GIRL_LEFT_FOCUS = new NormalImage("../image/story/human/girl/left/girlLeftFocus.png", 43, 107);
 	// イヌ
 	STORY_PREVIEWOBJECT_DOG_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/dog/front/glad.png", 48, 73, "animal");
 	STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/dog/front/angry.png", 48, 73, "animal");

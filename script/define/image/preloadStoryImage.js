@@ -37,6 +37,11 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_MAN_LEFT_SAD._path);
 	core.preload(STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY._path);
 	core.preload(STORY_PREVIEWOBJECT_MAN_BACK._path);
+	core.preload(STORY_PREVIEWOBJECT_MAN_FRONT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_MAN_BACK_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_MAN_RIGHT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_MAN_LEFT_FOCUS._path);
+
 	core.preload(STORY_PREVIEWOBJECT_LADY_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_LADY_FRONT_ANGRY._path);
 	core.preload(STORY_PREVIEWOBJECT_LADY_FRONT_SAD._path);
@@ -50,6 +55,11 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_LADY_LEFT_SAD._path);
 	core.preload(STORY_PREVIEWOBJECT_LADY_LEFT_ENJOY._path);
 	core.preload(STORY_PREVIEWOBJECT_LADY_BACK._path);
+	core.preload(STORY_PREVIEWOBJECT_LADY_FRONT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_LADY_BACK_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_LADY_RIGHT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_LADY_LEFT_FOCUS._path);
+
 	core.preload(STORY_PREVIEWOBJECT_BOY_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_BOY_FRONT_ANGRY._path);
 	core.preload(STORY_PREVIEWOBJECT_BOY_FRONT_SAD._path);
@@ -63,6 +73,11 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_BOY_LEFT_SAD._path);
 	core.preload(STORY_PREVIEWOBJECT_BOY_LEFT_ENJOY._path);
 	core.preload(STORY_PREVIEWOBJECT_BOY_BACK._path);
+	core.preload(STORY_PREVIEWOBJECT_BOY_FRONT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_BOY_BACK_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_BOY_RIGHT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_BOY_LEFT_FOCUS._path);
+
 	core.preload(STORY_PREVIEWOBJECT_GIRL_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_GIRL_FRONT_ANGRY._path);
 	core.preload(STORY_PREVIEWOBJECT_GIRL_FRONT_SAD._path);
@@ -76,6 +91,10 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_GIRL_LEFT_SAD._path);
 	core.preload(STORY_PREVIEWOBJECT_GIRL_LEFT_ENJOY._path);
 	core.preload(STORY_PREVIEWOBJECT_GIRL_BACK._path);
+	core.preload(STORY_PREVIEWOBJECT_GIRL_FRONT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_GIRL_BACK_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_GIRL_RIGHT_FOCUS._path);
+	core.preload(STORY_PREVIEWOBJECT_GIRL_LEFT_FOCUS._path);
 
 	core.preload(STORY_PREVIEWOBJECT_DOG_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY._path);

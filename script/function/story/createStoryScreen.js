@@ -50,6 +50,10 @@ var createStoryScreen = function() {
 	storyScreen._storyMediator._palette._createLadyImages();
 	storyScreen._storyMediator._palette._createBoyImages();
 	storyScreen._storyMediator._palette._createGirlImages();
+	storyScreen._storyMediator._palette._showManPropertyButton();
+	storyScreen._storyMediator._palette._showLadyPropertyButton();
+	storyScreen._storyMediator._palette._showBoyPropertyButton();
+	storyScreen._storyMediator._palette._showGirlPropertyButton();
 	storyScreen._storyMediator._palette._manPropertyButton._setIsPush(true);
 	storyScreen._storyMediator._palette._showManImages();
 }
