@@ -5,55 +5,36 @@ var createStoryScreen = function() {
 	storyScene.backgroundColor = "#FFFCC0";
 
 	// 物語作成画面全体のインタフェース(外見)をつかさどるstoryScreenオブジェクト
-	var storyScreen = new StoryScreen();
-	// musicScreenの親プロパティにmusicSceneを与える
-	storyScreen.parent = storyScene;
+	var storyScreen = new StoryScreen(storyScene);
 
-	// 物語作成画面全体の仲介を担当するオブジェクトを生成
-	storyScreen._createStoryMediator();
-	// 作曲モードへの遷移ボタンを生成
-	storyScreen._createChangeMusicButton();
+	// 作曲画面への遷移ボタンを生成
+	storyScreen._createMusicButton();
 	// プレビュー画面のオブジェクトを生成
 	storyScreen._createPreviewScreen();
-	// プレビュー画面データのオブジェクトを生成
-	storyScreen._createPreviewScreenData();
-	// じんぶつイラストボタンのオブジェクトを生成
-	storyScreen._createHumanIllustButton();
-	// どうぶつイラストボタンのオブジェクトを生成
-	storyScreen._createAnimalIllustButton();
-	// あいてむイラストボタンのオブジェクトを生成
-	storyScreen._createItemIllustButton();
-	// はいけいイラストボタンのオブジェクトを生成
-	storyScreen._createBackgroundIllustButton();
+	// イラストボタンのオブジェクトを生成
+	storyScreen._createIllustButton();
 
-	storyScreen._storyMediator._createFrame();
-	storyScreen._storyMediator._createBackground();
-	storyScreen._storyMediator._createWeather();
+	// 作曲画面への遷移ボタンを表示
+	storyScreen._musicButton._addToStoryScene();
+	// プレビュー画面を表示
+	storyScreen._previewScreen._addToStoryScene();
+	// イラストボタンを表示
+	storyScreen._illustButton._addToStoryScene();
 
-	storyScreen._storyMediator._setBackgroundImage(STORY_PREVIEWBACKGROUND_RIVER2._path);
-	storyScreen._storyMediator._setWeatherImage(STORY_PREVIEWWEATHER_SUN._path);
+	// 背景セット
+	storyScreen._previewScreen._setBackgroundImage(STORY_PREVIEWBACKGROUND_RIVER1._path);
+	// 天気セット
+	storyScreen._previewScreen._setWeatherImage(STORY_PREVIEWWEATHER_MOON._path);
+	// イラストセット
+	storyScreen._previewScreen._createIllust("man", "front", "enjoy", 700, 450);
+	storyScreen._previewScreen._createIllust("dog", "front", "enjoy", 620, 510);
+	storyScreen._previewScreen._createIllust("turtle", "right", "enjoy", 450, 520);
+	storyScreen._previewScreen._createIllust("bird", "left", "enjoy", 550, 520);
 
-	storyScreen._storyMediator._createObject("man", "front", "enjoy", 700, 450);
-	storyScreen._storyMediator._createObject("dog", "front", "enjoy", 620, 510);
-	storyScreen._storyMediator._createObject("turtle", "right", "enjoy", 450, 520);
-	storyScreen._storyMediator._createObject("bird", "left", "enjoy", 550, 520);
-
-	storyScreen._storyMediator._showPreviewScreen();
+	storyScreen._previewScreen._addToStoryScene();
 
 	// 以下山下担当分のテストコード
 	storyScreen._createPalette();
-	storyScreen._storyMediator._palette._createManPropertyButton();
-	storyScreen._storyMediator._palette._createLadyPropertyButton();
-	storyScreen._storyMediator._palette._createBoyPropertyButton();
-	storyScreen._storyMediator._palette._createGirlPropertyButton();
-	storyScreen._storyMediator._palette._createManImages();
-	storyScreen._storyMediator._palette._createLadyImages();
-	storyScreen._storyMediator._palette._createBoyImages();
-	storyScreen._storyMediator._palette._createGirlImages();
-	storyScreen._storyMediator._palette._showManPropertyButton();
-	storyScreen._storyMediator._palette._showLadyPropertyButton();
-	storyScreen._storyMediator._palette._showBoyPropertyButton();
-	storyScreen._storyMediator._palette._showGirlPropertyButton();
-	storyScreen._storyMediator._palette._manPropertyButton._setIsPush(true);
-	storyScreen._storyMediator._palette._showManImages();
+	storyScreen._palette._addToStoryScene();
+	storyScreen._palette._addIllust("man");
 }
