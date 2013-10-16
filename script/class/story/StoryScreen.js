@@ -7,9 +7,6 @@ var StoryScreen = enchant.Class.create({
 		this._previewScreen = null;
 		this._illustButton = null;
 		this._palette = null;
-		this._selectedIllustPath = null;
-		this._selectedIllustWidth = null;
-		this._selectedIllustHeight = null;
 		this._parent = parent;
 	},
 
@@ -49,38 +46,8 @@ var StoryScreen = enchant.Class.create({
 		this._palette._addPropertyButtonToGroup();
 	},
 
-	// 選択された画像のパスをゲット
-	_getSelectedImagePath : function(path) {
-		return this._selectedImagePath;
-	},
-	// 選択された画像の横幅をゲット
-	_getSelectedImageWidth : function(width) {
-		return this._selectedImageWidth;
-	},
-	// 選択された画像の縦幅をゲット
-	_getSelectedImageHeight : function(height) {
-		return this._selectedImageHeight;
-	},
-	// 選択された画像のパスをセット
-	_setSelectedImagePath : function(path) {
-		this._selectedImagePath = path;
-	},
-	// 選択された画像の横幅をセット
-	_setSelectedImageWidth : function(width) {
-		this._selectedImageWidth = width;
-	},
-	// 選択された画像の縦幅をセット
-	_setSelectedImageHeight : function(height) {
-		this._selectedImageHeight = height;
-	},
-
-	// 選択された半透明画像のオブジェクトを生成
-	_createSelectedIllust : function() {
-		var path = this._selectedImagePath;
-		var width = this._selectedImageWidth;
-		var height = this._selectedImageHeight;
-		var x = clientX;
-		var y = clientY;
-		this._previewScreen._createSelectedIllust(path, width, height, x, y)
+	// 選択された半透明画像のオブジェクト生成を子に依頼
+	_createSelectedIllust : function(path, width, height) {
+		this._previewScreen._createSelectedIllust(path, width, height);
 	},
 })

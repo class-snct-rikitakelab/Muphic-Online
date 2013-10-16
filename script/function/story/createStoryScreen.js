@@ -26,10 +26,10 @@ var createStoryScreen = function() {
 	// 天気セット
 	storyScreen._previewScreen._setWeatherImage(STORY_PREVIEWWEATHER_MOON._path);
 	// イラストセット
-	storyScreen._previewScreen._createIllust("man", "front", "enjoy", 700, 450);
-	storyScreen._previewScreen._createIllust("dog", "front", "enjoy", 620, 510);
-	storyScreen._previewScreen._createIllust("turtle", "right", "enjoy", 450, 520);
-	storyScreen._previewScreen._createIllust("bird", "left", "enjoy", 550, 520);
+	storyScreen._previewScreen._createIllust(STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._path, STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._width, STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._height, 700, 450);
+	storyScreen._previewScreen._createIllust(STORY_PREVIEWOBJECT_DOG_FRONT_ENJOY._path, STORY_PREVIEWOBJECT_DOG_FRONT_ENJOY._width, STORY_PREVIEWOBJECT_DOG_FRONT_ENJOY._height, 620, 510);
+	storyScreen._previewScreen._createIllust(STORY_PREVIEWOBJECT_TURTLE_RIGHT_ENJOY._path, STORY_PREVIEWOBJECT_TURTLE_RIGHT_ENJOY._width, STORY_PREVIEWOBJECT_TURTLE_RIGHT_ENJOY._height, 450, 520);
+	storyScreen._previewScreen._createIllust(STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY._path, STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY._width, STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY._height, 550, 520);
 
 	storyScreen._previewScreen._addToStoryScene();
 

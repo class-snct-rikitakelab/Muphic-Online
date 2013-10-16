@@ -13,11 +13,15 @@ var PaletteImage = enchant.Class.create(enchant.Sprite, {
 		this._parent = parent;
 	},
 
+	// 選択された半透明画像のオブジェクト生成を親に依頼
+	_createSelectedIllust : function() {
+		var path = this._imagePath;
+		var width = this.width;
+		var height = this.height;
+		this._parent._createSelectedIllust(path, width, height);
+	},
 	// パレットの削除を親に依頼
 	_removePalette : function() {
-		this._parent._setSelectedImagePath(this._imagePath);
-		this._parent._setSelectedImageWidth(this.width);
-		this._parent._setSelectedImageHeight(this.height);
 		this._parent._removePalette();
 	},
 

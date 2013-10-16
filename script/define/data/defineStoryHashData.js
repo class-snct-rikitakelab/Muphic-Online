@@ -2,6 +2,11 @@
 var previewObject;
 
 var defineStoryHashData = function() {
+	PREVIEWSCREEN_LEFT_X = (APP_WIDTH - 690) / 2;
+	PREVIEWSCREEN_RIGHT_X = (APP_WIDTH - 690) / 2 + 690;
+	PREVIEWSCREEN_TOP_Y = 200;
+	PREVIEWSCREEN_BOTTOM_Y = 660;
+
 	previewObject = new Array(8);
 	previewObject["man"] = new Array(4);
 	previewObject["man"]["front"] = new Array(4);

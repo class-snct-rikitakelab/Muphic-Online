@@ -64,21 +64,8 @@ var Palette = enchant.Class.create(enchant.Group, {
 		this._paletteIllust._removeIllust(illustType);
 	},
 
-	// 選択された画像のパスを親に送る
-	_setSelectedImagePath : function(path) {
-		this._parent._setSelectedImagePath(path);
-	},
-	// 選択された画像の横幅を親に送る
-	_setSelectedImageWidth : function(width) {
-		this._parent._setSelectedImageWidth(width);
-	},
-	// 選択された画像の縦幅を親に送る
-	_setSelectedImageHeight : function(height) {
-		this._parent._setSelectedImageHeight(height);
-	},
-
 	// 選択された半透明画像のオブジェクトを生成
-	_createSelectedIllust: function() {
-		this._parent._createSelectedIllust();
+	_createSelectedIllust: function(path, width, height) {
+		this._parent._createSelectedIllust(path, width, height);
 	},
 })

@@ -20,6 +20,7 @@ var PaletteImageFocus = enchant.Class.create(enchant.Sprite, {
 	// マウスクリック時の処理
 	ontouchend : function() {
 		this._removeFocus();
+		this._parent._createSelectedIllust();
 		this._parent._removePalette();
 	},
 })

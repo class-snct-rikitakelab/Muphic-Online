@@ -37,19 +37,10 @@ var ManIllust = enchant.Class.create(enchant.Group, {
 		}
 	},
 
-	// 選択された画像のパスを親に送る
-	_setSelectedImagePath : function(path) {
-		this._parent._setSelectedImagePath(path);
+	// 選択された半透明画像のオブジェクト生成を親に依頼
+	_createSelectedIllust : function(path, width, height) {
+		this._parent._createSelectedIllust(path, width, height);
 	},
-	// 選択された画像の横幅を親に送る
-	_setSelectedImageWidth : function(width) {
-		this._parent._setSelectedImageWidth(width);
-	},
-	// 選択された画像の縦幅を親に送る
-	_setSelectedImageHeight : function(height) {
-		this._parent._setSelectedImageHeight(height);
-	},
-
 	// パレットの削除を親に依頼
 	_removePalette : function() {
 		this._parent._removeIllust("man");

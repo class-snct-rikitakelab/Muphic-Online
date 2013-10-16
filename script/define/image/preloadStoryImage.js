@@ -1,6 +1,7 @@
 var preloadStoryImage = function() {
 	// 物語作成画面の画像のプリロード
 	core.preload(STORY_CHANGEMUSICBUTTON._path);
+	core.preload(STORY_PREVIEWFRAME._path);
 	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF._path);
 	core.preload(STORY_HUMAN_ILLUSTBUTTON_ON._path);
 	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF._path);
@@ -9,11 +10,6 @@ var preloadStoryImage = function() {
 	core.preload(STORY_ITEM_ILLUSTBUTTON_ON._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON._path);
-
-	core.preload(STORY_LEFT_PREVIEWFRAME._path);
-	core.preload(STORY_RIGHT_PREVIEWFRAME._path);
-	core.preload(STORY_TOP_PREVIEWFRAME._path);
-	core.preload(STORY_BOTTOM_PREVIEWFRAME._path);
 
 	core.preload(STORY_PREVIEWBACKGROUND_EMPTY._path);
 	core.preload(STORY_PREVIEWBACKGROUND_FOREST1._path);
