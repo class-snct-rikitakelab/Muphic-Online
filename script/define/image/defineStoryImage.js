@@ -156,6 +156,7 @@ var STORY_PREVIEWOBJECT_TURTLE_BACK;
 // パレットの画像
 // パレット本体
 var STORY_PALETTE;
+var STORY_PALETTE_CLOSEBUTTON;
 // じんぶつイラストマーク
 var STORY_PALETTEILLUST_HUMAN;
 // じんぶつ属性ボタン
@@ -344,6 +345,7 @@ var defineStoryImage = function() {
 	// パレットの画像
 	// パレット
 	STORY_PALETTE = new NormalImage("../image/story/palette/palette.png", 800, 600);
+	STORY_PALETTE_CLOSEBUTTON = new NormalImage("../image/story/palette/close.png", 83, 44);
 	// じんぶつイラストマーク
 	STORY_PALETTEILLUST_HUMAN = new NormalImage("../image/story/palette/illust/human.png", 73, 63);
 	// じんぶつ属性ボタン

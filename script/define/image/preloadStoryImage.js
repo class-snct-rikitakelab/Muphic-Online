@@ -152,6 +152,7 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_TURTLE_BACK._path);
 
 	core.preload(STORY_PALETTE._path);
+	core.preload(STORY_PALETTE_CLOSEBUTTON._path);
 	core.preload(STORY_PALETTEILLUST_HUMAN._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_ON._path);

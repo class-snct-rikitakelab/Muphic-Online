@@ -68,6 +68,7 @@ var HumanIllustButton = enchant.Class.create(enchant.Sprite, {
 			this._setIsPush(true);
 			this._setImage("on");
 			this._parent._setPushButton("human");
+			this._parent._paletteMakeRequest();
 		} else if(myselfPush === true) {
 			this._setIsPush(false);
 			this._setImage("off");
@@ -76,6 +77,7 @@ var HumanIllustButton = enchant.Class.create(enchant.Sprite, {
 			this._setIsPush(true);
 			this._setImage("on");
 			this._parent._setPushButton("human");
+			this._parent._paletteMakeRequest();
 		}
 	},
 })

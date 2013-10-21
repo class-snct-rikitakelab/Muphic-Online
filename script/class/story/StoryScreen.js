@@ -40,9 +40,11 @@ var StoryScreen = enchant.Class.create({
 	_createPalette : function() {
 		this._palette = new Palette(this);
 		this._palette._createPaletteFrame();
+		this._palette._createCloseButton();
 		this._palette._createPropertyButton();
 		this._palette._createPaletteIllust();
 		this._palette._addPaletteFrameToGroup();
+		this._palette._addCloseButtonToGroup();
 		this._palette._addPropertyButtonToGroup();
 	},
 

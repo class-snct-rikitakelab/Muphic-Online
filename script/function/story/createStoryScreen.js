@@ -34,7 +34,8 @@ var createStoryScreen = function() {
 	storyScreen._previewScreen._addToStoryScene();
 
 	// 以下山下担当分のテストコード
-	storyScreen._createPalette();
+/*	storyScreen._createPalette();
 	storyScreen._palette._addToStoryScene();
 	storyScreen._palette._addIllust("man");
+	*/
 }

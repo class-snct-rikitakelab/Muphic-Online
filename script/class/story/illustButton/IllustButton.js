@@ -78,4 +78,10 @@ var IllustButton = enchant.Class.create({
 	_setPushButton : function(pushButton) {
 		this._pushButton = pushButton;
 	},
+
+	_paletteMakeRequest : function(){
+		this._parent._createPalette();
+		this._parent._palette._addToStoryScene();
+		this._parent._palette._addIllust("man");
+	},
 })
