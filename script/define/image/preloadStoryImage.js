@@ -11,6 +11,16 @@ var preloadStoryImage = function() {
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON._path);
 
+	core.preload(STORY_CHANGEMUSICBUTTON_DARK._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK._path);
+
 	core.preload(STORY_PREVIEWBACKGROUND_EMPTY._path);
 	core.preload(STORY_PREVIEWBACKGROUND_FOREST1._path);
 	core.preload(STORY_PREVIEWBACKGROUND_FOREST2._path);

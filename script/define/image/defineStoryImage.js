@@ -9,6 +9,16 @@ var STORY_ITEM_ILLUSTBUTTON_OFF;
 var STORY_ITEM_ILLUSTBUTTON_ON;
 var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
 var STORY_BACKGROUND_ILLUSTBUTTON_ON;
+// 物語作成画面に必要な画像データ（明るさ-100)
+var STORY_CHANGEMUSICBUTTON_DARK;
+var STORY_HUMAN_ILLUSTBUTTON_OFF_DARK;
+var STORY_HUMAN_ILLUSTBUTTON_ON_DARK;
+var STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK;
+var STORY_ANIMAL_ILLUSTBUTTON_ON_DARK;
+var STORY_ITEM_ILLUSTBUTTON_OFF_DARK;
+var STORY_ITEM_ILLUSTBUTTON_ON_DARK;
+var STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK;
+var STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK;
 // 物語の背景画像データ
 var STORY_PREVIEWBACKGROUND_EMPTY;
 var STORY_PREVIEWBACKGROUND_FOREST1;
@@ -198,6 +208,16 @@ var defineStoryImage = function() {
 	STORY_ITEM_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustrations/itemButtonOn.png", 106, 73);
 	STORY_BACKGROUND_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/backgroundButtonOff.png", 106, 73);
 	STORY_BACKGROUND_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustrations/backgroundButtonOn.png", 106, 73);
+	// 物語作成画面に必要な画像データ(明るさ-100)
+	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicDark.png", 100, 100);
+	STORY_HUMAN_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/humanButtonOffDark.png", 106, 73);
+	STORY_HUMAN_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/humanButtonOnDark.png", 106, 73);
+	STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/animalButtonOffDark.png", 106, 73);
+	STORY_ANIMAL_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/animalButtonOnDark.png", 106, 73);
+	STORY_ITEM_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/itemButtonOffDark.png", 106, 73);
+	STORY_ITEM_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/itemButtonOnDark.png", 106, 73);
+	STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOffDark.png", 106, 73);
+	STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOnDark.png", 106, 73);
 	// 物語の背景画像データ
 	STORY_PREVIEWBACKGROUND_EMPTY = new NormalImage("../image/story/background/empty.png", 690, 460);
 	STORY_PREVIEWBACKGROUND_FOREST1 = new NormalImage("../image/story/background/forest1.png", 690, 460);

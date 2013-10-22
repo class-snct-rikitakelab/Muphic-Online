@@ -80,6 +80,17 @@ var IllustButton = enchant.Class.create({
 	},
 
 	_paletteMakeRequest : function(){
+		this._parent._musicButton._setTouchEnable(false);
+		this._parent._musicButton._setDarkImage(true);
+		this._humanButton._setTouchEnable(false);
+		this._humanButton._setDarkImage(true);
+		this._animalButton._setTouchEnable(false);
+		this._animalButton._setDarkImage(true);
+		this._itemButton._setTouchEnable(false);
+		this._itemButton._setDarkImage(true);
+		this._backgroundButton._setTouchEnable(false);
+		this._backgroundButton._setDarkImage(true);
+
 		this._parent._createPalette();
 		this._parent._palette._addToStoryScene();
 		this._parent._palette._addIllust("man");

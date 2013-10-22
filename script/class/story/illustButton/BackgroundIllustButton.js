@@ -7,6 +7,7 @@ var BackgroundIllustButton = enchant.Class.create(enchant.Sprite, {
 		this.y = y;
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
+		this._canTouch = true;　//　ボタンが押せるかどうか
 		this._parent = parent; // このクラスの親にあたるオブジェクト
 	},
 
@@ -34,6 +35,20 @@ var BackgroundIllustButton = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
+	//ボタンが押せない状態にする
+	_setTouchEnable : function (canTouch) {
+		this._canTouch = canTouch;
+	},
+
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			this.image = core.assets[STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK._path];
+		} else if(isDark === false) {
+			this.image = core.assets[STORY_BACKGROUND_ILLUSTBUTTON_OFF._path];
+		}
+	},
+
 	// ボタンの全てのステータスを押せる状態に合わせる
 	_setCanPush : function() {
 		this._setTouchEnabled(true);
@@ -50,32 +65,34 @@ var BackgroundIllustButton = enchant.Class.create(enchant.Sprite, {
 	ontouchend : function(event) {
 		var myselfPush = this._isPush;
 		var otherPush = this._parent._getPushButton();
-		if(myselfPush === false && otherPush !== null) {
-			switch(otherPush) {
-				case "human":
-					this._parent._getHumanButton()._setIsPush(false);
-					this._parent._getHumanButton()._setImage("off");
-					break;
-				case "animal":
-					this._parent._getAnimalButton()._setIsPush(false);
-					this._parent._getAnimalButton()._setImage("off");
-					break;
-				case "item":
-					this._parent._getItemButton()._setIsPush(false);
-					this._parent._getItemButton()._setImage("off");
-					break;
+		if(this._canTouch === true){
+			if(myselfPush === false && otherPush !== null) {
+				switch(otherPush) {
+					case "human":
+						this._parent._getHumanButton()._setIsPush(false);
+						this._parent._getHumanButton()._setImage("off");
+						break;
+					case "animal":
+						this._parent._getAnimalButton()._setIsPush(false);
+						this._parent._getAnimalButton()._setImage("off");
+						break;
+					case "item":
+						this._parent._getItemButton()._setIsPush(false);
+						this._parent._getItemButton()._setImage("off");
+						break;
+				}
+				this._setIsPush(true);
+				this._setImage("on");
+				this._parent._setPushButton("background");
+			} else if(myselfPush === true) {
+				this._setIsPush(false);
+				this._setImage("off");
+				this._parent._setPushButton(null);
+			} else if(myselfPush === false) {
+				this._setIsPush(true);
+				this._setImage("on");
+				this._parent._setPushButton("background");
 			}
-			this._setIsPush(true);
-			this._setImage("on");
-			this._parent._setPushButton("background");
-		} else if(myselfPush === true) {
-			this._setIsPush(false);
-			this._setImage("off");
-			this._parent._setPushButton(null);
-		} else if(myselfPush === false) {
-			this._setIsPush(true);
-			this._setImage("on");
-			this._parent._setPushButton("background");
 		}
 	},
 })

@@ -9,9 +9,19 @@ var PaletteCloseButton = enchant.Class.create(enchant.Sprite, {
 	},
 
 	ontouchend : function() {
+		this._parent._parent._musicButton._setTouchEnable(true);
+		this._parent._parent._musicButton._setDarkImage(false);
+		this._parent._parent._illustButton._humanButton._setTouchEnable(true);
+		this._parent._parent._illustButton._humanButton._setDarkImage(false);
+		this._parent._parent._illustButton._animalButton._setTouchEnable(true);
+		this._parent._parent._illustButton._animalButton._setDarkImage(false);
+		this._parent._parent._illustButton._itemButton._setTouchEnable(true);
+		this._parent._parent._illustButton._itemButton._setDarkImage(false);
+		this._parent._parent._illustButton._backgroundButton._setTouchEnable(true);
+		this._parent._parent._illustButton._backgroundButton._setDarkImage(false);
 		var property = this._parent._propertyButton._getPushButton();
 		this._parent._removeFromStoryScene();
-			this._parent._paletteIllust._removeIllust(property);
+		this._parent._paletteIllust._removeIllust(property);
 	},
 
 })
