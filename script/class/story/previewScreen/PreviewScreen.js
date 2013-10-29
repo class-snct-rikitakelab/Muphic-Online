@@ -5,6 +5,7 @@ var PreviewScreen = enchant.Class.create({
 		this._weather = null;
 		this._illust = new Array();
 		this._selectedIllust = null;
+		this._removeButton = null;
 		this._parent = parent;
 	},
 	// プレビュー画面のフレームを生成
@@ -35,17 +36,32 @@ var PreviewScreen = enchant.Class.create({
 		this._weather = new PreviewWeather(path, width, height, x, y, this);
 	},
 	// プレビュー画面に配置するイラストを生成
-	_createIllust : function(path, width, height, x, y) {
+	_createIllust : function(imagePath, focusPath, width, height, x, y) {
+		var arrayIndex = this._illust.length;
 		var zIndex = 0;
 		for(var i = 0; i < this._illust.length; i++) {
-			if(x >= this._illust[i].x && x <= this._illust[i].x + this._illust[i].width) {
-				if(y >= this._illust[i].y && y <= this._illust[i].y + this._illust[i].height) {
-					zIndex = this._illust[i]._zIndex + 1;
-				}
+			if(this._isMouseover(x, y, width, height, this._illust[i].x, this._illust[i].y, this._illust[i].width, this._illust[i].height) === true) {
+				zIndex = this._illust[i]._zIndex + 1;
 			}
 		}
-		var newIllust = new PreviewIllust(path, width, height, x, y, zIndex, this);
+		var newIllust = new PreviewIllust(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex, this);
 		this._illust.push(newIllust);
+	},
+	// プレビュー画面に配置するイラストの破棄
+	_destroyIllust : function(index) {
+		for(var i = index + 1; i < this._illust.length; i++) {
+			this._illust[i]._setArrayIndex(i - 1);
+		}
+		this._illust.splice(index, 1);
+	},
+	// 「けす」ボタンを生成
+	_createRemoveButton : function() {
+		var path = STORY_REMOVEBUTTON_OFF._path;
+		var width = STORY_REMOVEBUTTON_OFF._width;
+		var height = STORY_REMOVEBUTTON_OFF._height;
+		var x = 885;
+		var y = 200;
+		this._removeButton = new RemoveButton(path, width, height, x, y, this);
 	},
 
 	// フレームを表示
@@ -66,12 +82,17 @@ var PreviewScreen = enchant.Class.create({
 			this._illust[i]._addToStoryScene();
 		}
 	},
+	// 「けす」ボタンを表示
+	_addRemoveButton : function() {
+		this._removeButton._addToStoryScene();
+	},
 	// プレビュー画面全体を表示
 	_addToStoryScene : function() {
 		this._addWeather();
 		this._addBackground();
-		this._addIllust();
 		this._addFrame();
+		this._addIllust();
+		this._addRemoveButton();
 	},
 
 	// 背景画像をセット
@@ -84,10 +105,14 @@ var PreviewScreen = enchant.Class.create({
 	},
 
 	// 選択された半透明画像のオブジェクトを生成
-	_createSelectedIllust: function(path, width, height) {
+	_createSelectedIllust : function(imagePath, focusPath, width, height) {
 		var x = clientX;
 		var y = clientY;
-		this._selectedIllust = new SelectedImage(path, width, height, x, y, this);
+		this._selectedIllust = new SelectedImage(imagePath, focusPath, width, height, x, y, this);
+	},
+	// 選択された半透明画像のオブジェクトを破棄
+	_destroySelectedIllust : function() {
+		this._selectedIllust = null;
 	},
 	// 選択された半透明画像を物語作成画面へ加える
 	_addSelectedIllustToStoryScene : function() {
@@ -105,4 +130,66 @@ var PreviewScreen = enchant.Class.create({
 	_setSelectedIllustY : function(y) {
 		this._selectedIllust.y = y;
 	},
+
+	// 重なり判定
+	_isMouseover : function(tX, tY, tWidth, tHeight, bX, bY, bWidth, bHeight) {
+		var isMouseover = false;
+		// 左上
+		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 中央上
+		if(tX >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 右上
+		if(tX >= bX && tX <= bX + bWidth) {
+			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+
+		// 左中央
+		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 中央中央
+		if(tX >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 右中央
+		if(tX >= bX && tX <= bX + bWidth) {
+			if(tY >= bY && tY + tHeight <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+
+		// 左下
+		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY >= bY && tY <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 中央下
+		if(tX >= bX && tX + tWidth <= bX + bWidth) {
+			if(tY >= bY && tY <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		// 右下
+		if(tX >= bX && tX <= bX + bWidth) {
+			if(tY >= bY && tY <= bY + bHeight) {
+				isMouseover = true;
+			}
+		}
+		return isMouseover;
+	}
 })

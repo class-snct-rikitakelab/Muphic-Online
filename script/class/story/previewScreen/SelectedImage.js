@@ -1,11 +1,12 @@
 var SelectedImage = enchant.Class.create(enchant.Sprite, {
-	initialize : function(path, width, height, x, y, parent) {
+	initialize : function(imagePath, focusPath, width, height, x, y, parent) {
 		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
+		this.image = core.assets[imagePath];
 		this.x = x;
 		this.y = y;
 		this.opacity = 0.5;
-		this._path = path;
+		this._imagePath = imagePath;
+		this._focusPath = focusPath;
 		this._parent = parent;
 	},
 
@@ -29,12 +30,14 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 
 	// クリック時の処理
 	ontouchend : function(event) {
-		var path = this._path;
+		var imagePath = this._imagePath;
+		var focusPath = this._focusPath;
 		var width = this.width;
 		var height = this.height;
 		var x = event.x;
 		var y = event.y;
-		this._parent._createIllust(path, width, height, x, y);
+		this._parent._createIllust(imagePath, focusPath, width, height, x, y);
 		this._parent._addToStoryScene();
+		this._parent._destroySelectedIllust();
 	},
 })

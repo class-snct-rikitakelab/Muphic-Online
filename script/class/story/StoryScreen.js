@@ -25,6 +25,7 @@ var StoryScreen = enchant.Class.create({
 		this._previewScreen._createFrame();
 		this._previewScreen._createBackground();
 		this._previewScreen._createWeather();
+		this._previewScreen._createRemoveButton();
 	},
 	// イラストボタンのオブジェクトを生成
 	_createIllustButton : function() {
@@ -47,7 +48,7 @@ var StoryScreen = enchant.Class.create({
 	},
 
 	// 選択された半透明画像のオブジェクト生成を子に依頼
-	_createSelectedIllust : function(path, width, height) {
-		this._previewScreen._createSelectedIllust(path, width, height);
+	_createSelectedIllust : function(imagePath, removeFocusPath, width, height) {
+		this._previewScreen._createSelectedIllust(imagePath, removeFocusPath, width, height);
 	},
 })

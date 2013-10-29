@@ -65,7 +65,7 @@ var Palette = enchant.Class.create(enchant.Group, {
 	},
 
 	// 選択された半透明画像のオブジェクトを生成
-	_createSelectedIllust: function(path, width, height) {
-		this._parent._createSelectedIllust(path, width, height);
+	_createSelectedIllust: function(imagePath, removeFocusPath, width, height) {
+		this._parent._createSelectedIllust(imagePath, removeFocusPath, width, height);
 	},
 })

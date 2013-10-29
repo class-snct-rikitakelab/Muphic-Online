@@ -35,25 +35,26 @@ var PreviewFrame = enchant.Class.create(enchant.Sprite, {
 
 	// フレーム処理
 	onenterframe : function() {
-		if(this._parent._selectedIllust === null) {
-			return;
-		}
-		var leftX = PREVIEWSCREEN_LEFT_X;
-		var rightX = PREVIEWSCREEN_RIGHT_X;
-		var topY = PREVIEWSCREEN_TOP_Y;
-		var bottomY = PREVIEWSCREEN_BOTTOM_Y;
-		var leftOffset = 0;
-		var rightOffset = -this._parent._selectedIllust.width;
-		var topOffset = 0;
-		var bottomOffset = -this._parent._selectedIllust.height;
-		var mouseOverX = this._mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
-		var mouseOverY = this._mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
-		if(mouseOverX === true && mouseOverY === true) {
-			this._parent._setSelectedIllustX(clientX);
-			this._parent._setSelectedIllustY(clientY);
-			this._parent._addSelectedIllustToStoryScene();
-		} else {
-			this._parent._removeSelectedIllustFromStoryScene();
+		var selectedIllust = this._parent._selectedIllust;
+		var removeButtonPush = this._parent._removeButton._isPush;
+		if(selectedIllust !== null) {
+			var leftX = PREVIEWSCREEN_LEFT_X;
+			var rightX = PREVIEWSCREEN_RIGHT_X;
+			var topY = PREVIEWSCREEN_TOP_Y;
+			var bottomY = PREVIEWSCREEN_BOTTOM_Y;
+			var leftOffset = 0;
+			var rightOffset = -this._parent._selectedIllust.width;
+			var topOffset = 0;
+			var bottomOffset = -this._parent._selectedIllust.height;
+			var mouseOverX = this._mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
+			var mouseOverY = this._mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
+			if(mouseOverX === true && mouseOverY === true) {
+				this._parent._setSelectedIllustX(clientX);
+				this._parent._setSelectedIllustY(clientY);
+				this._parent._addSelectedIllustToStoryScene();
+			} else {
+				this._parent._removeSelectedIllustFromStoryScene();
+			}
 		}
 	},
 })
