@@ -40,5 +40,8 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 		this._parent._destroySelectedIllust();
 		this._parent._createIllust(imagePath, focusPath, width, height, x, y);
 		this._parent._addOneIllust(this._parent._illust.length - 1);
+		this._parent._setCanPushMusicButton();
+		this._parent._setCanPushAllIllustButton();
+		this._parent._setCanPushRemoveButton();
 	},
 })

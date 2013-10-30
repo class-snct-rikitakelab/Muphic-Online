@@ -4,6 +4,7 @@ var MusicButton = enchant.Class.create(enchant.Sprite, {
 		this.image = core.assets[path];
 		this.x = x;
 		this.y = y;
+		this._canTouch = true;
 		this._parent = parent;
 	},
 
@@ -15,6 +16,20 @@ var MusicButton = enchant.Class.create(enchant.Sprite, {
 	// 物語作成画面から削除する
 	_removeFromStoryScene : function() {
 		storyScene.removeChild(this);
+	},
+
+	//ボタンが押せない状態にする
+	_setTouchEnabled : function (touchEnabled) {
+		this.touchEnabled = touchEnabled;
+	},
+
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			this.image = core.assets[STORY_CHANGEMUSICBUTTON_DARK._path];
+		} else if(isDark === false) {
+			this.image = core.assets[STORY_CHANGEMUSICBUTTON._path];
+		}
 	},
 
 	// 作曲画面へ遷移

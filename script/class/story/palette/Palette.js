@@ -4,6 +4,7 @@ var Palette = enchant.Class.create(enchant.Group, {
 		this._paletteFrame = null;
 		this._propertyButton = null;
 		this._paletteIllust = null;
+		this._closeButton = null;
 		this._parent = parent;
 	},
 
@@ -16,6 +17,18 @@ var Palette = enchant.Class.create(enchant.Group, {
 		var y = (APP_HEIGHT - height) / 2;
 		this._paletteFrame = new PaletteFrame(path, width, height, x, y, this);
 	},
+
+	_createCloseButton : function() {
+		var path = STORY_PALETTE_CLOSEBUTTON._path;
+		var width = STORY_PALETTE_CLOSEBUTTON._width;
+		var height = STORY_PALETTE_CLOSEBUTTON._height;
+		var paletteWidth = STORY_PALETTE._width;
+		var paletteHeight = STORY_PALETTE._height;
+		var x = (APP_WIDTH - paletteWidth) / 2 + paletteWidth - 100;
+		var y = (APP_HEIGHT - paletteHeight) / 2 + paletteHeight - 60;
+		this._closeButton = new PaletteCloseButton(path, width, height, x, y, this);
+	},
+
 	// 属性ボタンのオブジェクトを生成
 	_createPropertyButton : function() {
 		this._propertyButton = new PropertyButton("man", this);
@@ -40,6 +53,10 @@ var Palette = enchant.Class.create(enchant.Group, {
 	// パレットフレームを子ノードとしてパレットグループに追加
 	_addPaletteFrameToGroup : function() {
 		this.addChild(this._paletteFrame);
+	},
+	// とじるボタンを子ノードとしてパレットグループに追加
+	_addCloseButtonToGroup : function() {
+		this.addChild(this._closeButton);
 	},
 	// 属性ボタンを子ノードとしてパレットグループに追加
 	_addPropertyButtonToGroup : function() {

@@ -1,5 +1,6 @@
 var preloadStoryImage = function() {
 	// 物語作成画面の画像のプリロード
+	core.preload(STORY_BACKGROUND._path);
 	core.preload(STORY_CHANGEMUSICBUTTON._path);
 	core.preload(STORY_PREVIEWFRAME._path);
 	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF._path);
@@ -12,6 +13,19 @@ var preloadStoryImage = function() {
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON._path);
 	core.preload(STORY_REMOVEBUTTON_OFF._path);
 	core.preload(STORY_REMOVEBUTTON_ON._path);
+
+	core.preload(STORY_BACKGROUND_DARK._path);
+	core.preload(STORY_CHANGEMUSICBUTTON_DARK._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK._path);
+	core.preload(STORY_REMOVEBUTTON_OFF_DARK._path);
+	core.preload(STORY_REMOVEBUTTON_ON_DARK._path);
 
 	core.preload(STORY_PREVIEWBACKGROUND_EMPTY._path);
 	core.preload(STORY_PREVIEWBACKGROUND_FOREST1._path);
@@ -206,6 +220,7 @@ var preloadStoryImage = function() {
 
 	core.preload(STORY_HUMANPALETTE._path);
 	core.preload(STORY_ANIMALPALETTE._path);
+	core.preload(STORY_PALETTECLOSEBUTTON._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_ON._path);
 	core.preload(STORY_PALETTEPROPERTY_LADY_OFF._path);

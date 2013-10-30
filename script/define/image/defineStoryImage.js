@@ -1,4 +1,5 @@
 // 物語作成画面に必要な画像データ
+var STORY_BACKGROUND;
 var STORY_CHANGEMUSICBUTTON;
 var STORY_PREVIEWFRAME;
 var STORY_HUMAN_ILLUSTBUTTON_OFF;
@@ -11,6 +12,19 @@ var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
 var STORY_BACKGROUND_ILLUSTBUTTON_ON;
 var STORY_REMOVEBUTTON_OFF;
 var STORY_REMOVEBUTTON_ON;
+// 物語作成画面に必要な画像データ（明るさ-100)
+var STORY_BACKGROUND_DARK;
+var STORY_CHANGEMUSICBUTTON_DARK;
+var STORY_HUMAN_ILLUSTBUTTON_OFF_DARK;
+var STORY_HUMAN_ILLUSTBUTTON_ON_DARK;
+var STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK;
+var STORY_ANIMAL_ILLUSTBUTTON_ON_DARK;
+var STORY_ITEM_ILLUSTBUTTON_OFF_DARK;
+var STORY_ITEM_ILLUSTBUTTON_ON_DARK;
+var STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK;
+var STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK;
+var STORY_REMOVEBUTTON_OFF_DARK;
+var STORY_REMOVEBUTTON_ON_DARK;
 // 物語の背景画像データ
 var STORY_PREVIEWBACKGROUND_EMPTY;
 var STORY_PREVIEWBACKGROUND_FOREST1;
@@ -207,6 +221,8 @@ var STORY_PREVIEWOBJECT_TURTLE_LEFT_REMOVEFOCUS;
 // パレット本体
 var STORY_HUMANPALETTE;
 var STORY_ANIMALPALETTE;
+// とじるボタン
+var STORY_PALETTECLOSEBUTTON;
 // じんぶつ属性ボタン
 var STORY_PALETTEPROPERTY_MAN_OFF;
 var STORY_PALETTEPROPERTY_MAN_ON;
@@ -228,6 +244,7 @@ var STORY_PALETTEPROPERTY_TURTLE_ON;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
+	STORY_BACKGROUND = new NormalImage("../image/story/appBackground.png", 1024, 768);
 	STORY_CHANGEMUSICBUTTON = new NormalImage("../image/story/button/changeMusic.png", 100, 100);
 	STORY_PREVIEWFRAME = new NormalImage("../image/story/preview/previewFrame.png", 690, 460);
 	STORY_HUMAN_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/humanButtonOff.png", 106, 73);
@@ -240,6 +257,19 @@ var defineStoryImage = function() {
 	STORY_BACKGROUND_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustrations/backgroundButtonOn.png", 106, 73);
 	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 73);
 	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 73);
+	// 物語作成画面に必要な画像データ(明るさ-100)
+	STORY_BACKGROUND_DARK = new NormalImage("../image/story/appBackgroundDark.png", 1024, 768);
+	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicDark.png", 100, 100);
+	STORY_HUMAN_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/humanButtonOffDark.png", 106, 73);
+	STORY_HUMAN_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/humanButtonOnDark.png", 106, 73);
+	STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/animalButtonOffDark.png", 106, 73);
+	STORY_ANIMAL_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/animalButtonOnDark.png", 106, 73);
+	STORY_ITEM_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/itemButtonOffDark.png", 106, 73);
+	STORY_ITEM_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/itemButtonOnDark.png", 106, 73);
+	STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOffDark.png", 106, 73);
+	STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOnDark.png", 106, 73);
+	STORY_REMOVEBUTTON_OFF_DARK = new NormalImage("../image/story/preview/removeButtonOffDark.png", 106, 73);
+	STORY_REMOVEBUTTON_ON_DARK = new NormalImage("../image/story/preview/removeButtonOnDark.png", 106, 73);
 	// 物語の背景画像データ
 	STORY_PREVIEWBACKGROUND_EMPTY = new NormalImage("../image/story/background/empty.png", 690, 460);
 	STORY_PREVIEWBACKGROUND_FOREST1 = new NormalImage("../image/story/background/forest1.png", 690, 460);
@@ -436,6 +466,8 @@ var defineStoryImage = function() {
 	// パレット
 	STORY_HUMANPALETTE = new NormalImage("../image/story/palette/humanPalette.png", 800, 600);
 	STORY_ANIMALPALETTE = new NormalImage("../image/story/palette/animalPalette.png", 1000, 600);
+	// とじるボタン
+	STORY_PALETTECLOSEBUTTON = new NormalImage("../image/story/palette/close.png", 83, 44);
 	// じんぶつ属性ボタン
 	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 87, 77);

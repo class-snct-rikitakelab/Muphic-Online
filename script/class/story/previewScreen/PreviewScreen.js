@@ -194,5 +194,32 @@ var PreviewScreen = enchant.Class.create({
 			}
 		}
 		return isMouseover;
-	}
+	},
+
+	// 作曲画面への遷移ボタンを押せる状態に
+	_setCanPushMusicButton : function() {
+		this._parent._setCanPushMusicButton();
+	},
+	// 作曲画面への遷移ボタンを押せない状態に
+	_setCannotPushMusicButton : function() {
+		this._parent._setCannotPushMusicButton();
+	},
+	// イラストボタン全体を押せる状態に
+	_setCanPushAllIllustButton : function() {
+		this._parent._setCanPushAllIllustButton();
+	},
+	// イラストボタン全体を押せない状態に
+	_setCannotPushAllIllustButton : function() {
+		this._parent._setCannotPushAllIllustButton();
+	},
+	// 削除ボタンを押せる状態に
+	_setCanPushRemoveButton : function() {
+		this._removeButton._setTouchEnabled(true);
+		this._removeButton._setDarkImage(false);
+	},
+	// 削除ボタンを押せない状態に
+	_setCannotPushRemoveButton : function() {
+		this._removeButton._setTouchEnabled(false);
+		this._removeButton._setDarkImage(true);
+	},
 })

@@ -42,6 +42,23 @@ var RemoveButton = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			if(this.image === core.assets[STORY_REMOVEBUTTON_ON._path]) {
+				this.image = core.assets[STORY_REMOVEBUTTON_ON_DARK._path];
+			} else {
+				this.image = core.assets[STORY_REMOVEBUTTON_OFF_DARK._path];
+			}
+		} else if(isDark === false) {
+			if(this.image === core.assets[STORY_REMOVEBUTTON_ON_DARK._path]) {
+				this.image = core.assets[STORY_REMOVEBUTTON_ON._path];
+			} else {
+				this.image = core.assets[STORY_REMOVEBUTTON_OFF._path];
+			}
+		}
+	},
+
 	// クリック時の処理
 	ontouchend : function() {
 		var myselfPush = this._isPush;
@@ -56,6 +73,10 @@ var RemoveButton = enchant.Class.create(enchant.Sprite, {
 
 	// フレーム処理
 	onenterframe : function() {
+		if(this.image === core.assets[STORY_REMOVEBUTTON_ON_DARK._path] || 
+			this.image === core.assets[STORY_REMOVEBUTTON_OFF_DARK._path]) {
+			return;
+		}
 		var illust = this._parent._illust.length;
 		if(illust > 0) {
 			this._setTouchEnabled(true);

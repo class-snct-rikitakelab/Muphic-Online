@@ -78,4 +78,49 @@ var IllustButton = enchant.Class.create({
 	_setPushButton : function(pushButton) {
 		this._pushButton = pushButton;
 	},
+
+	_paletteMakeRequest : function(paletteType){
+		this._parent._setDarkScreenBackground();
+		this._parent._setCannotPushMusicButton();
+		this._setCannotPushAllIllustButton();
+		this._parent._previewScreen._removeButton._setIsPush(false);
+		this._parent._previewScreen._removeButton._setImage("off");
+		this._parent._setCannotPushRemoveButton();
+
+		switch(paletteType) {
+			case "human":
+				this._parent._createHumanPalette();
+				this._parent._humanPalette._addToStoryScene();
+				this._parent._humanPalette._addIllust("man");
+				break;
+			case "animal":
+				this._parent._createAnimalPalette();
+				this._parent._animalPalette._addToStoryScene();
+				this._parent._animalPalette._addIllust("dog");
+				break;
+		}
+	},
+
+	// イラストボタン全体を押せる状態に
+	_setCanPushAllIllustButton : function() {
+		this._humanButton._setTouchEnabled(true);
+		this._humanButton._setDarkImage(false);
+		this._animalButton._setTouchEnabled(true);
+		this._animalButton._setDarkImage(false);
+		this._itemButton._setTouchEnabled(true);
+		this._itemButton._setDarkImage(false);
+		this._backgroundButton._setTouchEnabled(true);
+		this._backgroundButton._setDarkImage(false);
+	},
+	// イラストボタン全体を押せない状態に
+	_setCannotPushAllIllustButton : function() {
+		this._humanButton._setTouchEnabled(false);
+		this._humanButton._setDarkImage(true);
+		this._animalButton._setTouchEnabled(false);
+		this._animalButton._setDarkImage(true);
+		this._itemButton._setTouchEnabled(false);
+		this._itemButton._setDarkImage(true);
+		this._backgroundButton._setTouchEnabled(false);
+		this._backgroundButton._setDarkImage(true);
+	},
 })

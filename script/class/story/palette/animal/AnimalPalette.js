@@ -4,6 +4,7 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 		this._paletteFrame = null;
 		this._propertyButton = null;
 		this._paletteIllust = null;
+		this._closeButton = null;
 		this._parent = parent;
 	},
 
@@ -36,6 +37,15 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 		this._paletteIllust._createBearIllust();
 		this._paletteIllust._createTurtleIllust();
 	},
+	// とじるボタンのオブジェクトを生成
+	_createCloseButton : function() {
+		var path = STORY_PALETTECLOSEBUTTON._path;
+		var width = STORY_PALETTECLOSEBUTTON._width;
+		var height = STORY_PALETTECLOSEBUTTON._height;
+		var x = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2 + STORY_ANIMALPALETTE._width - 120;
+		var y = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2 + STORY_ANIMALPALETTE._height - 70;
+		this._closeButton = new PaletteCloseButton(path, width, height, x, y, this);
+	},
 
 	// パレットフレームを子ノードとしてパレットグループに追加
 	_addPaletteFrameToGroup : function() {
@@ -44,6 +54,10 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 	// 属性ボタンを子ノードとしてパレットグループに追加
 	_addPropertyButtonToGroup : function() {
 		this.addChild(this._propertyButton);
+	},
+	// とじるボタンを子ノードとしてパレットグループに追加
+	_addCloseButtonToGroup : function() {
+		this.addChild(this._closeButton);
 	},
 
 	// パレット全体を物語作成画面へ加える
@@ -67,5 +81,22 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 	// 選択された半透明画像のオブジェクトを生成
 	_createSelectedIllust: function(imagePath, removeFocusPath, width, height) {
 		this._parent._createSelectedIllust(imagePath, removeFocusPath, width, height);
+	},
+
+	// 画面全体の背景を暗くしない
+	_setNotDarkScreenBackground : function() {
+		this._parent._setNotDarkScreenBackground();
+	},
+	// 作曲画面への遷移ボタンを押せる状態に
+	_setCanPushMusicButton : function() {
+		this._parent._setCanPushMusicButton();
+	},
+	// イラストボタン全体を押せる状態に
+	_setCanPushAllIllustButton : function() {
+		this._parent._setCanPushAllIllustButton();
+	},
+	// 削除ボタンを押せる状態に
+	_setCanPushRemoveButton : function() {
+		this._parent._setCanPushRemoveButton();
 	},
 })
