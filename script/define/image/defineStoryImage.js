@@ -129,6 +129,14 @@ var STORY_PREVIEWOBJECT_DOG_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_DOG_LEFT_SAD;
 var STORY_PREVIEWOBJECT_DOG_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_DOG_BACK;
+var STORY_PREVIEWOBJECT_DOG_FRONT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_DOG_BACK_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_DOG_RIGHT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_DOG_LEFT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_DOG_FRONT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_DOG_BACK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_DOG_RIGHT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_DOG_LEFT_REMOVEFOCUS;
 // トリ
 var STORY_PREVIEWOBJECT_BIRD_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_BIRD_FRONT_ANGRY;
@@ -143,6 +151,14 @@ var STORY_PREVIEWOBJECT_BIRD_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_BIRD_LEFT_SAD;
 var STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_BIRD_BACK;
+var STORY_PREVIEWOBJECT_BIRD_FRONT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_BACK_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_RIGHT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_LEFT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_FRONT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_BACK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_RIGHT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BIRD_LEFT_REMOVEFOCUS;
 // クマ
 var STORY_PREVIEWOBJECT_BEAR_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_BEAR_FRONT_ANGRY;
@@ -157,6 +173,14 @@ var STORY_PREVIEWOBJECT_BEAR_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_BEAR_LEFT_SAD;
 var STORY_PREVIEWOBJECT_BEAR_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_BEAR_BACK;
+var STORY_PREVIEWOBJECT_BEAR_FRONT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_BACK_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_RIGHT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_LEFT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_FRONT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_BACK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_RIGHT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BEAR_LEFT_REMOVEFOCUS;
 // カメ
 var STORY_PREVIEWOBJECT_TURTLE_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_TURTLE_FRONT_ANGRY;
@@ -171,11 +195,18 @@ var STORY_PREVIEWOBJECT_TURTLE_LEFT_ANGRY;
 var STORY_PREVIEWOBJECT_TURTLE_LEFT_SAD;
 var STORY_PREVIEWOBJECT_TURTLE_LEFT_ENJOY;
 var STORY_PREVIEWOBJECT_TURTLE_BACK;
+var STORY_PREVIEWOBJECT_TURTLE_FRONT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_BACK_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_RIGHT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_LEFT_SELECTFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_FRONT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_BACK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_RIGHT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TURTLE_LEFT_REMOVEFOCUS;
 // パレットの画像
 // パレット本体
-var STORY_PALETTE;
-// じんぶつイラストマーク
-var STORY_PALETTEILLUST_HUMAN;
+var STORY_HUMANPALETTE;
+var STORY_ANIMALPALETTE;
 // じんぶつ属性ボタン
 var STORY_PALETTEPROPERTY_MAN_OFF;
 var STORY_PALETTEPROPERTY_MAN_ON;
@@ -185,23 +216,15 @@ var STORY_PALETTEPROPERTY_BOY_OFF;
 var STORY_PALETTEPROPERTY_BOY_ON;
 var STORY_PALETTEPROPERTY_GIRL_OFF;
 var STORY_PALETTEPROPERTY_GIRL_ON;
-// じんぶつ表情マーク
-var STORY_PALETTEFACE_MAN_GLAD;
-var STORY_PALETTEFACE_MAN_ANGRY;
-var STORY_PALETTEFACE_MAN_SAD;
-var STORY_PALETTEFACE_MAN_ENJOY;
-var STORY_PALETTEFACE_LADY_GLAD;
-var STORY_PALETTEFACE_LADY_ANGRY;
-var STORY_PALETTEFACE_LADY_SAD;
-var STORY_PALETTEFACE_LADY_ENJOY;
-var STORY_PALETTEFACE_BOY_GLAD;
-var STORY_PALETTEFACE_BOY_ANGRY;
-var STORY_PALETTEFACE_BOY_SAD;
-var STORY_PALETTEFACE_BOY_ENJOY;
-var STORY_PALETTEFACE_GIRL_GLAD;
-var STORY_PALETTEFACE_GIRL_ANGRY;
-var STORY_PALETTEFACE_GIRL_SAD;
-var STORY_PALETTEFACE_GIRL_ENJOY;
+// どうぶつ属性ボタン
+var STORY_PALETTEPROPERTY_DOG_OFF;
+var STORY_PALETTEPROPERTY_DOG_ON;
+var STORY_PALETTEPROPERTY_BIRD_OFF;
+var STORY_PALETTEPROPERTY_BIRD_ON;
+var STORY_PALETTEPROPERTY_BEAR_OFF;
+var STORY_PALETTEPROPERTY_BEAR_ON;
+var STORY_PALETTEPROPERTY_TURTLE_OFF;
+var STORY_PALETTEPROPERTY_TURTLE_ON;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
@@ -335,6 +358,14 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_DOG_LEFT_SAD = new StoryPreviewImage("../image/story/animal/dog/left/sad.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/dog/left/enjoy.png", 79, 75, "animal");
 	STORY_PREVIEWOBJECT_DOG_BACK = new StoryPreviewImage("../image/story/animal/dog/back/back.png", 49, 76, "animal");
+	STORY_PREVIEWOBJECT_DOG_FRONT_SELECTFOCUS = new NormalImage("../image/story/animal/dog/front/dogFrontSelectFocus.png", 46, 73);
+	STORY_PREVIEWOBJECT_DOG_BACK_SELECTFOCUS = new NormalImage("../image/story/animal/dog/back/dogBackSelectFocus.png", 49, 76);
+	STORY_PREVIEWOBJECT_DOG_RIGHT_SELECTFOCUS = new NormalImage("../image/story/animal/dog/right/dogRightSelectFocus.png", 78, 75);
+	STORY_PREVIEWOBJECT_DOG_LEFT_SELECTFOCUS = new NormalImage("../image/story/animal/dog/left/dogLeftSelectFocus.png", 80, 75);
+	STORY_PREVIEWOBJECT_DOG_FRONT_REMOVEFOCUS = new NormalImage("../image/story/animal/dog/front/dogFrontRemoveFocus.png", 46, 73);
+	STORY_PREVIEWOBJECT_DOG_BACK_REMOVEFOCUS = new NormalImage("../image/story/animal/dog/back/dogBackRemoveFocus.png", 49, 76);
+	STORY_PREVIEWOBJECT_DOG_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/animal/dog/right/dogRightRemoveFocus.png", 78, 75);
+	STORY_PREVIEWOBJECT_DOG_LEFT_REMOVEFOCUS = new NormalImage("../image/story/animal/dog/left/dogLeftRemoveFocus.png", 80, 75);
 	// トリ
 	STORY_PREVIEWOBJECT_BIRD_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/bird/front/glad.png", 43, 48, "animal");
 	STORY_PREVIEWOBJECT_BIRD_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/bird/front/angry.png", 43, 48, "animal");
@@ -349,6 +380,14 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_BIRD_LEFT_SAD = new StoryPreviewImage("../image/story/animal/bird/left/sad.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/bird/left/enjoy.png", 32, 44, "animal");
 	STORY_PREVIEWOBJECT_BIRD_BACK = new StoryPreviewImage("../image/story/animal/bird/back/back.png", 44, 46, "animal");
+	STORY_PREVIEWOBJECT_BIRD_FRONT_SELECTFOCUS = new NormalImage("../image/story/animal/bird/front/birdFrontSelectFocus.png", 43, 48);
+	STORY_PREVIEWOBJECT_BIRD_BACK_SELECTFOCUS = new NormalImage("../image/story/animal/bird/back/birdBackSelectFocus.png", 44, 46);
+	STORY_PREVIEWOBJECT_BIRD_RIGHT_SELECTFOCUS = new NormalImage("../image/story/animal/bird/right/birdRightSelectFocus.png", 30, 44);
+	STORY_PREVIEWOBJECT_BIRD_LEFT_SELECTFOCUS = new NormalImage("../image/story/animal/bird/left/birdLeftSelectFocus.png", 32, 44);
+	STORY_PREVIEWOBJECT_BIRD_FRONT_REMOVEFOCUS = new NormalImage("../image/story/animal/bird/front/birdFrontRemoveFocus.png", 43, 48);
+	STORY_PREVIEWOBJECT_BIRD_BACK_REMOVEFOCUS = new NormalImage("../image/story/animal/bird/back/birdBackRemoveFocus.png", 44, 46);
+	STORY_PREVIEWOBJECT_BIRD_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/animal/bird/right/birdRightRemoveFocus.png", 30, 44);
+	STORY_PREVIEWOBJECT_BIRD_LEFT_REMOVEFOCUS = new NormalImage("../image/story/animal/bird/left/birdLeftRemoveFocus.png", 32, 44);
 	// クマ
 	STORY_PREVIEWOBJECT_BEAR_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/bear/front/glad.png", 52, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/bear/front/angry.png", 52, 107, "animal");
@@ -363,6 +402,14 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_BEAR_LEFT_SAD = new StoryPreviewImage("../image/story/animal/bear/left/sad.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/bear/left/enjoy.png", 39, 107, "animal");
 	STORY_PREVIEWOBJECT_BEAR_BACK = new StoryPreviewImage("../image/story/animal/bear/back/back.png", 49, 106, "animal");
+	STORY_PREVIEWOBJECT_BEAR_FRONT_SELECTFOCUS = new NormalImage("../image/story/animal/bear/front/bearFrontSelectFocus.png", 52, 107);
+	STORY_PREVIEWOBJECT_BEAR_BACK_SELECTFOCUS = new NormalImage("../image/story/animal/bear/back/bearBackSelectFocus.png", 49, 106);
+	STORY_PREVIEWOBJECT_BEAR_RIGHT_SELECTFOCUS = new NormalImage("../image/story/animal/bear/right/bearRightSelectFocus.png", 39, 107);
+	STORY_PREVIEWOBJECT_BEAR_LEFT_SELECTFOCUS = new NormalImage("../image/story/animal/bear/left/bearLeftSelectFocus.png", 39, 107);
+	STORY_PREVIEWOBJECT_BEAR_FRONT_REMOVEFOCUS = new NormalImage("../image/story/animal/bear/front/bearFrontRemoveFocus.png", 52, 107);
+	STORY_PREVIEWOBJECT_BEAR_BACK_REMOVEFOCUS = new NormalImage("../image/story/animal/bear/back/bearBackRemoveFocus.png", 49, 106);
+	STORY_PREVIEWOBJECT_BEAR_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/animal/bear/right/bearRightRemoveFocus.png", 39, 107);
+	STORY_PREVIEWOBJECT_BEAR_LEFT_REMOVEFOCUS = new NormalImage("../image/story/animal/bear/left/bearLeftRemoveFocus.png", 39, 107);
 	// カメ
 	STORY_PREVIEWOBJECT_TURTLE_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/turtle/front/glad.png", 56, 49, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/turtle/front/angry.png", 56, 49, "animal");
@@ -377,11 +424,18 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_SAD = new StoryPreviewImage("../image/story/animal/turtle/left/sad.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_ENJOY = new StoryPreviewImage("../image/story/animal/turtle/left/enjoy.png", 75, 41, "animal");
 	STORY_PREVIEWOBJECT_TURTLE_BACK = new StoryPreviewImage("../image/story/animal/turtle/back/back.png", 53, 48, "animal");
+	STORY_PREVIEWOBJECT_TURTLE_FRONT_SELECTFOCUS = new NormalImage("../image/story/animal/turtle/front/turtleFrontSelectFocus.png", 56, 49);
+	STORY_PREVIEWOBJECT_TURTLE_BACK_SELECTFOCUS = new NormalImage("../image/story/animal/turtle/back/turtleBackSelectFocus.png", 53, 48);
+	STORY_PREVIEWOBJECT_TURTLE_RIGHT_SELECTFOCUS = new NormalImage("../image/story/animal/turtle/right/turtleRightSelectFocus.png", 74, 41);
+	STORY_PREVIEWOBJECT_TURTLE_LEFT_SELECTFOCUS = new NormalImage("../image/story/animal/turtle/left/turtleLeftSelectFocus.png", 75, 41);
+	STORY_PREVIEWOBJECT_TURTLE_FRONT_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/front/turtleFrontRemoveFocus.png", 56, 49);
+	STORY_PREVIEWOBJECT_TURTLE_BACK_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/back/turtleBackRemoveFocus.png", 53, 48);
+	STORY_PREVIEWOBJECT_TURTLE_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/right/turtleRightRemoveFocus.png", 74, 41);
+	STORY_PREVIEWOBJECT_TURTLE_LEFT_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/left/turtleLeftRemoveFocus.png", 75, 41);
 	// パレットの画像
 	// パレット
-	STORY_PALETTE = new NormalImage("../image/story/palette/palette.png", 800, 600);
-	// じんぶつイラストマーク
-	STORY_PALETTEILLUST_HUMAN = new NormalImage("../image/story/palette/illust/human.png", 73, 63);
+	STORY_HUMANPALETTE = new NormalImage("../image/story/palette/humanPalette.png", 800, 600);
+	STORY_ANIMALPALETTE = new NormalImage("../image/story/palette/animalPalette.png", 1000, 600);
 	// じんぶつ属性ボタン
 	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 87, 77);
@@ -391,21 +445,13 @@ var defineStoryImage = function() {
 	STORY_PALETTEPROPERTY_BOY_ON = new NormalImage("../image/story/palette/property/boy/boyOn.png", 87, 77);
 	STORY_PALETTEPROPERTY_GIRL_OFF = new NormalImage("../image/story/palette/property/girl/girlOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_GIRL_ON = new NormalImage("../image/story/palette/property/girl/girlOn.png", 87, 77);
-	// じんぶつ表情マーク
-	STORY_PALETTEFACE_MAN_GLAD = new NormalImage("../image/story/palette/face/man/glad.png", 58, 70);
-	STORY_PALETTEFACE_MAN_ANGRY = new NormalImage("../image/story/palette/face/man/angry.png", 58, 70);
-	STORY_PALETTEFACE_MAN_SAD = new NormalImage("../image/story/palette/face/man/sad.png", 58, 70);
-	STORY_PALETTEFACE_MAN_ENJOY = new NormalImage("../image/story/palette/face/man/enjoy.png", 58, 70);
-	STORY_PALETTEFACE_LADY_GLAD = new NormalImage("../image/story/palette/face/lady/glad.png", 58, 70);
-	STORY_PALETTEFACE_LADY_ANGRY = new NormalImage("../image/story/palette/face/lady/angry.png", 58, 70);
-	STORY_PALETTEFACE_LADY_SAD = new NormalImage("../image/story/palette/face/lady/sad.png", 58, 70);
-	STORY_PALETTEFACE_LADY_ENJOY = new NormalImage("../image/story/palette/face/lady/enjoy.png", 58, 70);
-	STORY_PALETTEFACE_BOY_GLAD = new NormalImage("../image/story/palette/face/boy/glad.png", 58, 70);
-	STORY_PALETTEFACE_BOY_ANGRY = new NormalImage("../image/story/palette/face/boy/angry.png", 58, 70);
-	STORY_PALETTEFACE_BOY_SAD = new NormalImage("../image/story/palette/face/boy/sad.png", 58, 70);
-	STORY_PALETTEFACE_BOY_ENJOY = new NormalImage("../image/story/palette/face/boy/enjoy.png", 58, 70);
-	STORY_PALETTEFACE_GIRL_GLAD = new NormalImage("../image/story/palette/face/girl/glad.png", 58, 70);
-	STORY_PALETTEFACE_GIRL_ANGRY = new NormalImage("../image/story/palette/face/girl/angry.png", 58, 70);
-	STORY_PALETTEFACE_GIRL_SAD = new NormalImage("../image/story/palette/face/girl/sad.png", 58, 70);
-	STORY_PALETTEFACE_GIRL_ENJOY = new NormalImage("../image/story/palette/face/girl/enjoy.png", 58, 70);
+	// どうぶつ属性ボタン
+	STORY_PALETTEPROPERTY_DOG_OFF = new NormalImage("../image/story/palette/property/dog/dogOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_DOG_ON = new NormalImage("../image/story/palette/property/dog/dogOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_BIRD_OFF = new NormalImage("../image/story/palette/property/bird/birdOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_BIRD_ON = new NormalImage("../image/story/palette/property/bird/birdOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_BEAR_OFF = new NormalImage("../image/story/palette/property/bear/bearOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_BEAR_ON = new NormalImage("../image/story/palette/property/bear/bearOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_TURTLE_OFF = new NormalImage("../image/story/palette/property/turtle/turtleOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 87, 77);
 }

@@ -57,10 +57,6 @@ var PreviewIllust = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
-	ontouchend : function() {
-		alert(this._zIndex);
-	},
-
 	// フレーム処理
 	onenterframe : function() {
 		var removeButtonPush = this._parent._removeButton._isPush;
@@ -114,71 +110,5 @@ var PreviewIllust = enchant.Class.create(enchant.Sprite, {
 			}
 		}
 		return isNoOverlap;
-	},
-
-	// 重なり判定
-	_isMouseover : function(tX, tY, tWidth, tHeight, bX, bY, bWidth, bHeight) {
-		var isMouseover = false;
-		// 左上
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 中央上
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 右上
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-
-		// 左中央
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 中央中央
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 右中央
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-
-		// 左下
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 中央下
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 右下
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-
-		if((tX < bX && tX + tWidth > bX + bWidth) || tY < bY && tY + tHeight > bY + bHeight) {
-			isMouseover = false;
-		}
-		return isMouseover;
 	},
 })

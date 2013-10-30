@@ -76,23 +76,26 @@ var PreviewScreen = enchant.Class.create({
 	_addWeather : function() {
 		this._weather._addToStoryScene();
 	},
-	// イラストを表示
-	_addIllust : function() {
+	// イラスト全てを表示
+	_addAllIllust : function() {
 		for(var i = 0; i < this._illust.length; i++) {
 			this._illust[i]._addToStoryScene();
 		}
+	},
+	// イラスト1枚を表示
+	_addOneIllust : function(index) {
+		this._illust[index]._addToStoryScene();
 	},
 	// 「けす」ボタンを表示
 	_addRemoveButton : function() {
 		this._removeButton._addToStoryScene();
 	},
 	// プレビュー画面全体を表示
-	_addToStoryScene : function() {
+	_addPreviewScreen : function() {
 		this._addWeather();
 		this._addBackground();
 		this._addFrame();
-		this._addIllust();
-		this._addRemoveButton();
+		this._addAllIllust();
 	},
 
 	// 背景画像をセット

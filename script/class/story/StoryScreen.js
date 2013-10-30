@@ -6,7 +6,8 @@ var StoryScreen = enchant.Class.create({
 		this._musicButton = null;
 		this._previewScreen = null;
 		this._illustButton = null;
-		this._palette = null;
+		this._humanPalette = null;
+		this._animalPalette = null;
 		this._parent = parent;
 	},
 
@@ -38,13 +39,21 @@ var StoryScreen = enchant.Class.create({
 
 	// 以下山下担当分のテストコード
 	// パレットのオブジェクトを生成して画面に表示する
-	_createPalette : function() {
-		this._palette = new Palette(this);
-		this._palette._createPaletteFrame();
-		this._palette._createPropertyButton();
-		this._palette._createPaletteIllust();
-		this._palette._addPaletteFrameToGroup();
-		this._palette._addPropertyButtonToGroup();
+	_createHumanPalette : function() {
+		this._humanPalette = new HumanPalette(this);
+		this._humanPalette._createPaletteFrame();
+		this._humanPalette._createPropertyButton();
+		this._humanPalette._createPaletteIllust();
+		this._humanPalette._addPaletteFrameToGroup();
+		this._humanPalette._addPropertyButtonToGroup();
+	},
+	_createAnimalPalette : function() {
+		this._animalPalette = new AnimalPalette(this);
+		this._animalPalette._createPaletteFrame();
+		this._animalPalette._createPropertyButton();
+		this._animalPalette._createPaletteIllust();
+		this._animalPalette._addPaletteFrameToGroup();
+		this._animalPalette._addPropertyButtonToGroup();
 	},
 
 	// 選択された半透明画像のオブジェクト生成を子に依頼

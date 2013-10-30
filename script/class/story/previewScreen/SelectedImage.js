@@ -29,15 +29,16 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 	},
 
 	// クリック時の処理
-	ontouchend : function(event) {
+	ontouchend : function() {
 		var imagePath = this._imagePath;
 		var focusPath = this._focusPath;
 		var width = this.width;
 		var height = this.height;
-		var x = event.x;
-		var y = event.y;
-		this._parent._createIllust(imagePath, focusPath, width, height, x, y);
-		this._parent._addToStoryScene();
+		var x = clientX;
+		var y = clientY;
+		this._parent._removeSelectedIllustFromStoryScene();
 		this._parent._destroySelectedIllust();
+		this._parent._createIllust(imagePath, focusPath, width, height, x, y);
+		this._parent._addOneIllust(this._parent._illust.length - 1);
 	},
 })

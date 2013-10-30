@@ -42,10 +42,10 @@ var PreviewFrame = enchant.Class.create(enchant.Sprite, {
 			var rightX = PREVIEWSCREEN_RIGHT_X;
 			var topY = PREVIEWSCREEN_TOP_Y;
 			var bottomY = PREVIEWSCREEN_BOTTOM_Y;
-			var leftOffset = 0;
-			var rightOffset = -this._parent._selectedIllust.width;
-			var topOffset = 0;
-			var bottomOffset = -this._parent._selectedIllust.height;
+			var leftOffset = 10;
+			var rightOffset = -this._parent._selectedIllust.width - 10;
+			var topOffset = 10;
+			var bottomOffset = -this._parent._selectedIllust.height - 10;
 			var mouseOverX = this._mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
 			var mouseOverY = this._mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
 			if(mouseOverX === true && mouseOverY === true) {
