@@ -1,17 +1,16 @@
 var PaletteImage = enchant.Class.create(enchant.Sprite, {
-	initialize : function(imagePath, selectFocusPath, removeFocusPath, width, height, minX, minY, parent) {
+	initialize : function(imagePath, removeFocusPath, width, height, minX, minY, parent) {
 		enchant.Sprite.call(this, width, height);
 		this.image = core.assets[imagePath];
 		this.x = minX;
 		this.y = minY;
+		this.opacity = 0.5;
 		this._imagePath = imagePath;
-		this._selectFocusPath = selectFocusPath;
 		this._removeFocusPath = removeFocusPath;
 		this._minX = minX;
 		this._maxX = minX + this.width;
 		this._minY = minY;
 		this._maxY = minY + this.height;
-		this._focus = new PaletteImageFocus(selectFocusPath, this.width, this.height, this._minX, this._minY, this);
 		this._parent = parent;
 	},
 
@@ -28,16 +27,8 @@ var PaletteImage = enchant.Class.create(enchant.Sprite, {
 		this._parent._removePalette();
 	},
 
-	// フォーカス表示処理
-	_showFocus : function() {
-		storyScene.addChild(this._focus);
-	},
-
-	// フォーカス非表示処理
-	_removeFocus : function() {
-		if(this._focus.scene === storyScene) {
-			storyScene.removeChild(this._focus);
-		}
+	_setOpacity : function(opacity) {
+		this.opacity = opacity;
 	},
 
 	// 引数のx座標値が画像のx座標上にあるかチェック
@@ -58,14 +49,20 @@ var PaletteImage = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
+	// クリック処理
+	ontouchend : function() {
+		this._createSelectedIllust();
+		this._removePalette();
+	},
+
 	// フレーム処理
 	onenterframe : function() {
 		var mouseOverX = this._mouseOverX(clientX);
 		var mouseOverY = this._mouseOverY(clientY);
 		if(mouseOverX === true && mouseOverY === true) {
-			this._showFocus();
+			this._setOpacity(1.0);
 		} else {
-			this._removeFocus();
+			this._setOpacity(0.5);
 		}
 	},
 })

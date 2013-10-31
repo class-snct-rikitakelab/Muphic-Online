@@ -38,12 +38,14 @@ var PreviewScreen = enchant.Class.create({
 	// プレビュー画面に配置するイラストを生成
 	_createIllust : function(imagePath, focusPath, width, height, x, y) {
 		var arrayIndex = this._illust.length;
-		var zIndex = 0;
+		var zIndexMax = -1;
 		for(var i = 0; i < this._illust.length; i++) {
 			if(this._isMouseover(x, y, width, height, this._illust[i].x, this._illust[i].y, this._illust[i].width, this._illust[i].height) === true) {
-				zIndex = this._illust[i]._zIndex + 1;
+				if(zIndexMax < this._illust[i]._zIndex)
+				zIndexMax = this._illust[i]._zIndex;
 			}
 		}
+		var zIndex = zIndexMax + 1;
 		var newIllust = new PreviewIllust(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex, this);
 		this._illust.push(newIllust);
 	},
@@ -137,60 +139,41 @@ var PreviewScreen = enchant.Class.create({
 	// 重なり判定
 	_isMouseover : function(tX, tY, tWidth, tHeight, bX, bY, bWidth, bHeight) {
 		var isMouseover = false;
-		// 左上
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
+		var crossPoint = 0;
+		for(var count = 0; count < 2; count++) {
+			for(var x = tX; x <= tX + tWidth; x += 0.5) {
+				if(x === bX || x === bX + bWidth) {
+					for(var y = bY; y <= bY + bHeight; y += 0.5) {
+						if(y === tY || y === tY + tHeight) {
+							crossPoint++;
+						}
+					}
+				}
 			}
 		}
-		// 中央上
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
+		for(var count = 0; count < 2; count++) {
+			for(var y = tY; y <= tY + tHeight; y += 0.5) {
+				if(y === bY || y === bY + bHeight) {
+					for(var x = bX; x <= bX + bWidth; x += 0.5) {
+						if(x === tX || x === tX + tWidth) {
+							crossPoint++;
+						}
+					}
+				}
 			}
 		}
-		// 右上
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY + tHeight >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
+		if(crossPoint >= 2) {
+			isMouseover = true;
+		} else if(crossPoint === 0) {
+			if(tX > bX && tX + tWidth < bX + bWidth) {
+				if(tY > bY && tY + tHeight < bY + bHeight) {
+					isMouseover = true;
+				}
 			}
-		}
-
-		// 左中央
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 中央中央
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 右中央
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY >= bY && tY + tHeight <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-
-		// 左下
-		if(tX + tWidth >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 中央下
-		if(tX >= bX && tX + tWidth <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
-			}
-		}
-		// 右下
-		if(tX >= bX && tX <= bX + bWidth) {
-			if(tY >= bY && tY <= bY + bHeight) {
-				isMouseover = true;
+			if(bX > tX && bX + bWidth < tX + tWidth) {
+				if(bY > tY && bY + bHeight < tY + tHeight) {
+					isMouseover = true;
+				}
 			}
 		}
 		return isMouseover;

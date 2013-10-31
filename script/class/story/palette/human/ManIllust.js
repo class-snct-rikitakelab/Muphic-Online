@@ -9,25 +9,25 @@ var ManIllust = enchant.Class.create(enchant.Group, {
 	_createManImages : function() {
 		var paletteX = (APP_WIDTH - STORY_HUMANPALETTE._width) / 2;
 		var paletteY = (APP_HEIGHT - STORY_HUMANPALETTE._height) / 2;
-		this._manIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._path, STORY_PREVIEWOBJECT_MAN_FRONT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, paletteX + 42 + 20, paletteY + 200, this);
-		this._manIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[0].x + 72, this._manIllust[0].y, this);
-		this._manIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_MAN_RIGHT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[0].x, this._manIllust[0].y + 150, this);
-		this._manIllust[3] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_GLAD._path, STORY_PREVIEWOBJECT_MAN_LEFT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[0].x + 72, this._manIllust[0].y + 150, this);
+		this._manIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, paletteX + 42 + 20, paletteY + 200, this);
+		this._manIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[0].x + 72, this._manIllust[0].y, this);
+		this._manIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[0].x, this._manIllust[0].y + 150, this);
+		this._manIllust[3] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_GLAD._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[0].x + 72, this._manIllust[0].y + 150, this);
 
-		this._manIllust[4] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_FRONT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[3].x + 112, paletteY + 200, this);
-		this._manIllust[5] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[4].x + 72, this._manIllust[4].y, this);
-		this._manIllust[6] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_RIGHT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[4].x, this._manIllust[4].y + 150, this);
-		this._manIllust[7] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_LEFT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[4].x + 72, this._manIllust[4].y + 150, this);
+		this._manIllust[4] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[3].x + 112, paletteY + 200, this);
+		this._manIllust[5] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[4].x + 72, this._manIllust[4].y, this);
+		this._manIllust[6] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[4].x, this._manIllust[4].y + 150, this);
+		this._manIllust[7] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_ANGRY._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[4].x + 72, this._manIllust[4].y + 150, this);
 
-		this._manIllust[8] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_SAD._path, STORY_PREVIEWOBJECT_MAN_FRONT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[7].x + 112, paletteY + 200, this);
-		this._manIllust[9] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[8].x + 72, this._manIllust[8].y, this);
-		this._manIllust[10] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_SAD._path, STORY_PREVIEWOBJECT_MAN_RIGHT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[8].x, this._manIllust[8].y + 150, this);
-		this._manIllust[11] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_SAD._path, STORY_PREVIEWOBJECT_MAN_LEFT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[8].x + 72, this._manIllust[8].y + 150, this);
+		this._manIllust[8] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_SAD._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[7].x + 112, paletteY + 200, this);
+		this._manIllust[9] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[8].x + 72, this._manIllust[8].y, this);
+		this._manIllust[10] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_SAD._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[8].x, this._manIllust[8].y + 150, this);
+		this._manIllust[11] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_SAD._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[8].x + 72, this._manIllust[8].y + 150, this);
 
-		this._manIllust[12] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_FRONT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[11].x + 112, paletteY + 200, this);
-		this._manIllust[13] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[12].x + 72, this._manIllust[12].y, this);
-		this._manIllust[14] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_RIGHT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[12].x, this._manIllust[12].y + 150, this);
-		this._manIllust[15] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_LEFT_SELECTFOCUS._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[12].x + 72, this._manIllust[12].y + 150, this);
+		this._manIllust[12] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_FRONT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_FRONT_REMOVEFOCUS._path, 48, 137, this._manIllust[11].x + 112, paletteY + 200, this);
+		this._manIllust[13] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_BACK._path, STORY_PREVIEWOBJECT_MAN_BACK_REMOVEFOCUS._path, 46, 136, this._manIllust[12].x + 72, this._manIllust[12].y, this);
+		this._manIllust[14] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_RIGHT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_RIGHT_REMOVEFOCUS._path, 38, 135, this._manIllust[12].x, this._manIllust[12].y + 150, this);
+		this._manIllust[15] = new PaletteImage(STORY_PREVIEWOBJECT_MAN_LEFT_ENJOY._path, STORY_PREVIEWOBJECT_MAN_LEFT_REMOVEFOCUS._path, 36, 135, this._manIllust[12].x + 72, this._manIllust[12].y + 150, this);
 	},
 
 	// お兄さん画像を子ノードとしてパレットイラストグループに追加
