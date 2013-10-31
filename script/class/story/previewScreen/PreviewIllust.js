@@ -57,10 +57,6 @@ var PreviewIllust = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
-	ontouchend : function() {
-		alert(this._zIndex);
-	},
-
 	// フレーム処理
 	onenterframe : function() {
 		var removeButtonPush = this._parent._removeButton._isPush;
