@@ -62,7 +62,7 @@ var PaletteImage = enchant.Class.create(enchant.Sprite, {
 		if(mouseOverX === true && mouseOverY === true) {
 			this._setOpacity(1.0);
 		} else {
-			this._setOpacity(0.5);
+			this._setOpacity(0.3);
 		}
 	},
 })

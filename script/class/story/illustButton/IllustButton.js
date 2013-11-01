@@ -98,6 +98,14 @@ var IllustButton = enchant.Class.create({
 				this._parent._animalPalette._addToStoryScene();
 				this._parent._animalPalette._addIllust("dog");
 				break;
+			case "item":
+				this._parent._createItemPalette();
+				this._parent._itemPalette._addToStoryScene();
+				this._parent._itemPalette._addIllust("food");
+				this._parent._itemPalette._addIllust("fashion");
+				this._parent._itemPalette._addIllust("interior");
+				this._parent._itemPalette._addIllust("goods");
+				break;
 		}
 	},
 

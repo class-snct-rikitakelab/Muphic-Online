@@ -7,8 +7,8 @@ var BearIllust = enchant.Class.create(enchant.Group, {
 
 	// パレットに表示されるクマ画像データの生成
 	_createBearImages : function() {
-		var paletteX = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2;
-		var paletteY = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2;
+		var paletteX = (APP_WIDTH - STORY_PALETTE_1._width) / 2;
+		var paletteY = (APP_HEIGHT - STORY_PALETTE_1._height) / 2;
 		this._bearIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_BEAR_FRONT_GLAD._path, STORY_PREVIEWOBJECT_BEAR_FRONT_REMOVEFOCUS._path, 52, 107, paletteX + 30 + 40, paletteY + 200, this);
 		this._bearIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_BEAR_BACK._path, STORY_PREVIEWOBJECT_BEAR_BACK_REMOVEFOCUS._path, 49, 106, this._bearIllust[0].x + 90, this._bearIllust[0].y, this);
 		this._bearIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_BEAR_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_BEAR_RIGHT_REMOVEFOCUS._path, 39, 107, this._bearIllust[0].x, this._bearIllust[0].y + 150, this);

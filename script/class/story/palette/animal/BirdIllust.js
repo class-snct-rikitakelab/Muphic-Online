@@ -7,8 +7,8 @@ var BirdIllust = enchant.Class.create(enchant.Group, {
 
 	// パレットに表示されるトリ画像データの生成
 	_createBirdImages : function() {
-		var paletteX = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2;
-		var paletteY = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2;
+		var paletteX = (APP_WIDTH - STORY_PALETTE_1._width) / 2;
+		var paletteY = (APP_HEIGHT - STORY_PALETTE_1._height) / 2;
 		this._birdIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_BIRD_FRONT_GLAD._path, STORY_PREVIEWOBJECT_BIRD_FRONT_REMOVEFOCUS._path, 43, 48, paletteX + 30 + 45, paletteY + 200, this);
 		this._birdIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_BIRD_BACK._path, STORY_PREVIEWOBJECT_BIRD_BACK_REMOVEFOCUS._path, 44, 46, this._birdIllust[0].x + 90, this._birdIllust[0].y, this);
 		this._birdIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_BIRD_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_BIRD_RIGHT_REMOVEFOCUS._path, 30, 44, this._birdIllust[0].x + 10, this._birdIllust[0].y + 150, this);

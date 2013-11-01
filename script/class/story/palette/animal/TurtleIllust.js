@@ -7,8 +7,8 @@ var TurtleIllust = enchant.Class.create(enchant.Group, {
 
 	// パレットに表示されるカメ画像データの生成
 	_createTurtleImages : function() {
-		var paletteX = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2;
-		var paletteY = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2;
+		var paletteX = (APP_WIDTH - STORY_PALETTE_1._width) / 2;
+		var paletteY = (APP_HEIGHT - STORY_PALETTE_1._height) / 2;
 		this._turtleIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_TURTLE_FRONT_GLAD._path, STORY_PREVIEWOBJECT_TURTLE_FRONT_REMOVEFOCUS._path, 56, 49, paletteX + 30 + 40, paletteY + 200, this);
 		this._turtleIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_TURTLE_BACK._path, STORY_PREVIEWOBJECT_TURTLE_BACK_REMOVEFOCUS._path, 53, 48, this._turtleIllust[0].x + 90, this._turtleIllust[0].y, this);
 		this._turtleIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_TURTLE_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_TURTLE_RIGHT_REMOVEFOCUS._path, 74, 41, this._turtleIllust[0].x - 10, this._turtleIllust[0].y + 150, this);

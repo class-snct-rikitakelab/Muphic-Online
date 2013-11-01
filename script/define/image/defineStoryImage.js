@@ -41,6 +41,7 @@ var STORY_PREVIEWWEATHER_SUN;
 var STORY_PREVIEWWEATHER_CLOUD;
 var STORY_PREVIEWWEATHER_MOON;
 // 物語に使用可能なオブジェクト画像データ
+// じんぶつイラスト
 // 男性
 var STORY_PREVIEWOBJECT_MAN_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY;
@@ -113,6 +114,7 @@ var STORY_PREVIEWOBJECT_GIRL_FRONT_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_GIRL_BACK_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_GIRL_RIGHT_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_GIRL_LEFT_REMOVEFOCUS;
+// どうぶつイラスト
 // イヌ
 var STORY_PREVIEWOBJECT_DOG_FRONT_GLAD;
 var STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY;
@@ -185,10 +187,116 @@ var STORY_PREVIEWOBJECT_TURTLE_FRONT_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_TURTLE_BACK_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_TURTLE_RIGHT_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_TURTLE_LEFT_REMOVEFOCUS;
+// アイテムサムネイル
+// たべもの
+var STORY_PREVIEWTHUMBNAIL_APPLE;
+var STORY_PREVIEWTHUMBNAIL_DOGFOOD;
+var STORY_PREVIEWTHUMBNAIL_COFFEE;
+var STORY_PREVIEWTHUMBNAIL_FISH;
+var STORY_PREVIEWTHUMBNAIL_NUT;
+var STORY_PREVIEWTHUMBNAIL_ONIGIRI;
+var STORY_PREVIEWTHUMBNAIL_PATTY;
+var STORY_PREVIEWTHUMBNAIL_PUDDING;
+// ファッション
+var STORY_PREVIEWTHUMBNAIL_BAGBLACK;
+var STORY_PREVIEWTHUMBNAIL_BAGRED;
+var STORY_PREVIEWTHUMBNAIL_CAPBLUE;
+var STORY_PREVIEWTHUMBNAIL_CAPGREEN;
+var STORY_PREVIEWTHUMBNAIL_CAPPINK;
+var STORY_PREVIEWTHUMBNAIL_CAPSUMMER;
+var STORY_PREVIEWTHUMBNAIL_CAPYELLOW;
+var STORY_PREVIEWTHUMBNAIL_RIBBON;
+// インテリア
+var STORY_PREVIEWTHUMBNAIL_BOOKSHELF;
+var STORY_PREVIEWTHUMBNAIL_CHAIRLEFT;
+var STORY_PREVIEWTHUMBNAIL_CHAIRRIGHT;
+var STORY_PREVIEWTHUMBNAIL_TABLE;
+var STORY_PREVIEWTHUMBNAIL_CHEST;
+var STORY_PREVIEWTHUMBNAIL_CLOCK;
+var STORY_PREVIEWTHUMBNAIL_DRESSER;
+var STORY_PREVIEWTHUMBNAIL_TELEVISION;
+// グッズ
+var STORY_PREVIEWTHUMBNAIL_BEETLE;
+var STORY_PREVIEWTHUMBNAIL_RABBITDOLL;
+var STORY_PREVIEWTHUMBNAIL_BUTTERFLYNET;
+var STORY_PREVIEWTHUMBNAIL_INSECTCAGE;
+var STORY_PREVIEWTHUMBNAIL_TRUMPET;
+var STORY_PREVIEWTHUMBNAIL_CELLPHONE;
+var STORY_PREVIEWTHUMBNAIL_SOCCERBALL;
+var STORY_PREVIEWTHUMBNAIL_CAR;
+// アイテムイラスト
+// たべもの
+var STORY_PREVIEWOBJECT_APPLE;
+var STORY_PREVIEWOBJECT_DOGFOOD;
+var STORY_PREVIEWOBJECT_COFFEE;
+var STORY_PREVIEWOBJECT_FISH;
+var STORY_PREVIEWOBJECT_NUT;
+var STORY_PREVIEWOBJECT_ONIGIRI;
+var STORY_PREVIEWOBJECT_PATTY;
+var STORY_PREVIEWOBJECT_PUDDING;
+var STORY_PREVIEWOBJECT_APPLE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_DOGFOOD_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_COFFEE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_FISH_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_NUT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_ONIGIRI_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_PATTY_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_PUDDING_REMOVEFOCUS;
+// ファッション
+var STORY_PREVIEWOBJECT_BAGBLACK;
+var STORY_PREVIEWOBJECT_BAGPINK;
+var STORY_PREVIEWOBJECT_CAPBLUE;
+var STORY_PREVIEWOBJECT_CAPGREEN;
+var STORY_PREVIEWOBJECT_CAPPINK;
+var STORY_PREVIEWOBJECT_CAPSUMMER;
+var STORY_PREVIEWOBJECT_CAPYELLOW;
+var STORY_PREVIEWOBJECT_RIBBON;
+var STORY_PREVIEWOBJECT_BAGBLACK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BAGPINK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAPBLUE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAPGREEN_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAPPINK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAPSUMMER_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAPYELLOW_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_RIBBON_REMOVEFOCUS;
+// インテリア
+var STORY_PREVIEWOBJECT_BOOKSHELF;
+var STORY_PREVIEWOBJECT_CHAIRLEFT;
+var STORY_PREVIEWOBJECT_CHAIRRIGHT;
+var STORY_PREVIEWOBJECT_TABLE;
+var STORY_PREVIEWOBJECT_CHEST;
+var STORY_PREVIEWOBJECT_CLOCK;
+var STORY_PREVIEWOBJECT_DRESSER;
+var STORY_PREVIEWOBJECT_TELEVISION;
+var STORY_PREVIEWOBJECT_BOOKSHELF_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CHAIRLEFT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CHAIRRIGHT_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TABLE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CHEST_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CLOCK_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_DRESSER_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TELEVISION_REMOVEFOCUS;
+// グッズ
+var STORY_PREVIEWOBJECT_BEETLE;
+var STORY_PREVIEWOBJECT_RABBITDOLL;
+var STORY_PREVIEWOBJECT_BUTTERFLYNET;
+var STORY_PREVIEWOBJECT_INSECTCAGE;
+var STORY_PREVIEWOBJECT_TRUMPET;
+var STORY_PREVIEWOBJECT_CELLPHONE;
+var STORY_PREVIEWOBJECT_SOCCERBALL;
+var STORY_PREVIEWOBJECT_CAR;
+var STORY_PREVIEWOBJECT_BEETLE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_RABBITDOLL_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_BUTTERFLYNET_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_INSECTCAGE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_TRUMPET_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CELLPHONE_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_SOCCERBALL_REMOVEFOCUS;
+var STORY_PREVIEWOBJECT_CAR_REMOVEFOCUS;
 // パレットの画像
 // パレット本体
-var STORY_HUMANPALETTE;
-var STORY_ANIMALPALETTE;
+var STORY_PALETTE_1;
+var STORY_PALETTE_2;
 // とじるボタン
 var STORY_PALETTECLOSEBUTTON;
 // じんぶつ属性ボタン
@@ -254,6 +362,7 @@ var defineStoryImage = function() {
 	STORY_PREVIEWWEATHER_CLOUD = new NormalImage("../image/story/weather/cloud.png", 690, 158);
 	STORY_PREVIEWWEATHER_MOON = new NormalImage("../image/story/weather/moon.png", 690, 158);
 	// 物語に使用可能なオブジェクト画像データ
+	// じんぶつイラスト
 	// 男性
 	STORY_PREVIEWOBJECT_MAN_FRONT_GLAD = new StoryPreviewImage("../image/story/human/man/front/glad.png", 48, 137, "human");
 	STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY = new StoryPreviewImage("../image/story/human/man/front/angry.png", 48, 137, "human");
@@ -326,6 +435,7 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_GIRL_BACK_REMOVEFOCUS = new NormalImage("../image/story/human/girl/back/girlBackRemoveFocus.png", 51, 106);
 	STORY_PREVIEWOBJECT_GIRL_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/human/girl/right/girlRightRemoveFocus.png", 44, 107);
 	STORY_PREVIEWOBJECT_GIRL_LEFT_REMOVEFOCUS = new NormalImage("../image/story/human/girl/left/girlLeftRemoveFocus.png", 43, 107);
+	// どうぶつイラスト
 	// イヌ
 	STORY_PREVIEWOBJECT_DOG_FRONT_GLAD = new StoryPreviewImage("../image/story/animal/dog/front/glad.png", 48, 73, "animal");
 	STORY_PREVIEWOBJECT_DOG_FRONT_ANGRY = new StoryPreviewImage("../image/story/animal/dog/front/angry.png", 48, 73, "animal");
@@ -398,10 +508,116 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_TURTLE_BACK_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/back/turtleBackRemoveFocus.png", 53, 48);
 	STORY_PREVIEWOBJECT_TURTLE_RIGHT_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/right/turtleRightRemoveFocus.png", 74, 41);
 	STORY_PREVIEWOBJECT_TURTLE_LEFT_REMOVEFOCUS = new NormalImage("../image/story/animal/turtle/left/turtleLeftRemoveFocus.png", 75, 41);
+	// アイテムサムネイル
+	// たべもの
+	STORY_PREVIEWTHUMBNAIL_APPLE = new StoryPreviewImage("../image/story/item/itemThumbnail/food/apple.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_DOGFOOD = new StoryPreviewImage("../image/story/item/itemThumbnail/food/dogFood.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_COFFEE = new StoryPreviewImage("../image/story/item/itemThumbnail/food/coffee.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_FISH = new StoryPreviewImage("../image/story/item/itemThumbnail/food/fish.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_NUT = new StoryPreviewImage("../image/story/item/itemThumbnail/food/nut.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_ONIGIRI = new StoryPreviewImage("../image/story/item/itemThumbnail/food/onigiri.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_PATTY = new StoryPreviewImage("../image/story/item/itemThumbnail/food/patty.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_PUDDING = new StoryPreviewImage("../image/story/item/itemThumbnail/food/pudding.png", 100, 100, "item");
+	// ファッション
+	STORY_PREVIEWTHUMBNAIL_BAGBLACK = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/bagBlack.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_BAGRED = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/bagRed.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAPBLUE = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/capBlue.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAPGREEN = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/capGreen.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAPPINK = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/capPink.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAPSUMMER = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/capSummer.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAPYELLOW = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/capYellow.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_RIBBON = new StoryPreviewImage("../image/story/item/itemThumbnail/fashion/ribbon.png", 100, 100, "item");
+	// インテリア
+	STORY_PREVIEWTHUMBNAIL_BOOKSHELF = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/bookShelf.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CHAIRLEFT = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/chairLeft.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CHAIRRIGHT = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/chairRight.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_TABLE = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/table.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CHEST = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/chest.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CLOCK = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/clock.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_DRESSER = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/dresser.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_TELEVISION = new StoryPreviewImage("../image/story/item/itemThumbnail/interior/television.png", 100, 100, "item");
+	// グッズ
+	STORY_PREVIEWTHUMBNAIL_BEETLE = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/beetle.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_RABBITDOLL = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/rabbitDoll.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_BUTTERFLYNET = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/butterflyNet.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_INSECTCAGE = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/insectCage.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_TRUMPET = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/trumpet.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CELLPHONE = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/cellPhone.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_SOCCERBALL = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/soccerBall.png", 100, 100, "item");
+	STORY_PREVIEWTHUMBNAIL_CAR = new StoryPreviewImage("../image/story/item/itemThumbnail/goods/car.png", 100, 100, "item");
+	// アイテムイラスト
+	// たべもの
+	STORY_PREVIEWOBJECT_APPLE = new StoryPreviewImage("../image/story/item/item/food/apple.png", 30, 35, "item");
+	STORY_PREVIEWOBJECT_DOGFOOD = new StoryPreviewImage("../image/story/item/item/food/dogFood.png", 43, 26, "item");
+	STORY_PREVIEWOBJECT_COFFEE = new StoryPreviewImage("../image/story/item/item/food/coffee.png", 37, 32, "item");
+	STORY_PREVIEWOBJECT_FISH = new StoryPreviewImage("../image/story/item/item/food/fish.png", 42, 22, "item");
+	STORY_PREVIEWOBJECT_NUT = new StoryPreviewImage("../image/story/item/item/food/nut.png", 27, 38, "item");
+	STORY_PREVIEWOBJECT_ONIGIRI = new StoryPreviewImage("../image/story/item/item/food/onigiri.png", 33, 27, "item");
+	STORY_PREVIEWOBJECT_PATTY = new StoryPreviewImage("../image/story/item/item/food/patty.png", 48, 35, "item");
+	STORY_PREVIEWOBJECT_PUDDING = new StoryPreviewImage("../image/story/item/item/food/pudding.png", 45, 37, "item");
+	STORY_PREVIEWOBJECT_APPLE_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/appleRemoveFocus.png", 30, 35);
+	STORY_PREVIEWOBJECT_DOGFOOD_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/dogFoodRemoveFocus.png", 43, 26);
+	STORY_PREVIEWOBJECT_COFFEE_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/coffeeRemoveFocus.png", 37, 32);
+	STORY_PREVIEWOBJECT_FISH_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/fishRemoveFocus.png", 42, 22);
+	STORY_PREVIEWOBJECT_NUT_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/nutRemoveFocus.png", 27, 38);
+	STORY_PREVIEWOBJECT_ONIGIRI_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/onigiriRemoveFocus.png", 33, 27);
+	STORY_PREVIEWOBJECT_PATTY_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/pattyRemoveFocus.png", 48, 35);
+	STORY_PREVIEWOBJECT_PUDDING_REMOVEFOCUS = new NormalImage("../image/story/item/item/food/puddingRemoveFocus.png", 45, 37);
+	// ファッション
+	STORY_PREVIEWOBJECT_BAGBLACK = new StoryPreviewImage("../image/story/item/item/fashion/bagBlack.png", 31, 34, "item");
+	STORY_PREVIEWOBJECT_BAGRED = new StoryPreviewImage("../image/story/item/item/fashion/bagRed.png", 28, 30, "item");
+	STORY_PREVIEWOBJECT_CAPBLUE = new StoryPreviewImage("../image/story/item/item/fashion/capBlue.png", 39, 22, "item");
+	STORY_PREVIEWOBJECT_CAPGREEN = new StoryPreviewImage("../image/story/item/item/fashion/capGreen.png", 38, 23, "item");
+	STORY_PREVIEWOBJECT_CAPPINK = new StoryPreviewImage("../image/story/item/item/fashion/capPink.png", 39, 24, "item");
+	STORY_PREVIEWOBJECT_CAPSUMMER = new StoryPreviewImage("../image/story/item/item/fashion/capSummer.png", 45, 23, "item");
+	STORY_PREVIEWOBJECT_CAPYELLOW = new StoryPreviewImage("../image/story/item/item/fashion/capYellow.png", 42, 23, "item");
+	STORY_PREVIEWOBJECT_RIBBON = new StoryPreviewImage("../image/story/item/item/fashion/ribbon.png", 27, 23, "item");
+	STORY_PREVIEWOBJECT_BAGBLACK_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/bagBlackRemoveFocus.png", 31, 34);
+	STORY_PREVIEWOBJECT_BAGRED_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/bagRedRemoveFocus.png", 28, 30);
+	STORY_PREVIEWOBJECT_CAPBLUE_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/capBlueRemoveFocus.png", 39, 22);
+	STORY_PREVIEWOBJECT_CAPGREEN_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/capGreenRemoveFocus.png", 38, 23);
+	STORY_PREVIEWOBJECT_CAPPINK_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/capPinkRemoveFocus.png", 39, 24);
+	STORY_PREVIEWOBJECT_CAPSUMMER_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/capSummerRemoveFocus.png", 45, 23);
+	STORY_PREVIEWOBJECT_CAPYELLOW_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/capYellowRemoveFocus.png", 42, 23);
+	STORY_PREVIEWOBJECT_RIBBON_REMOVEFOCUS = new NormalImage("../image/story/item/item/fashion/ribbonRemoveFocus.png", 27, 23);
+	// インテリア
+	STORY_PREVIEWOBJECT_BOOKSHELF = new StoryPreviewImage("../image/story/item/item/interior/bookShelf.png", 56, 103, "item");
+	STORY_PREVIEWOBJECT_CHAIRLEFT = new StoryPreviewImage("../image/story/item/item/interior/chairLeft.png", 48, 77, "item");
+	STORY_PREVIEWOBJECT_CHAIRRIGHT = new StoryPreviewImage("../image/story/item/item/interior/chairRight.png", 47, 75, "item");
+	STORY_PREVIEWOBJECT_TABLE = new StoryPreviewImage("../image/story/item/item/interior/table.png", 146, 73, "item");
+	STORY_PREVIEWOBJECT_CHEST = new StoryPreviewImage("../image/story/item/item/interior/chest.png", 60, 115, "item");
+	STORY_PREVIEWOBJECT_CLOCK = new StoryPreviewImage("../image/story/item/item/interior/clock.png", 45, 42, "item");
+	STORY_PREVIEWOBJECT_DRESSER = new StoryPreviewImage("../image/story/item/item/interior/dresser.png", 42, 99, "item");
+	STORY_PREVIEWOBJECT_TELEVISION = new StoryPreviewImage("../image/story/item/item/interior/television.png", 56, 71, "item");
+	STORY_PREVIEWOBJECT_BOOKSHELF_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/bookShelfRemoveFocus.png", 56, 103);
+	STORY_PREVIEWOBJECT_CHAIRLEFT_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/chairLeftRemoveFocus.png", 48, 77);
+	STORY_PREVIEWOBJECT_CHAIRRIGHT_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/chairRightRemoveFocus.png", 47, 75);
+	STORY_PREVIEWOBJECT_TABLE_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/tableRemoveFocus.png", 146, 73);
+	STORY_PREVIEWOBJECT_CHEST_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/chestRemoveFocus.png", 60, 115);
+	STORY_PREVIEWOBJECT_CLOCK_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/clockRemoveFocus.png", 45, 42);
+	STORY_PREVIEWOBJECT_DRESSER_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/dresserRemoveFocus.png", 42, 99);
+	STORY_PREVIEWOBJECT_TELEVISION_REMOVEFOCUS = new NormalImage("../image/story/item/item/interior/televisionRemoveFocus.png", 56, 71);
+	// グッズ
+	STORY_PREVIEWOBJECT_BEETLE = new StoryPreviewImage("../image/story/item/item/goods/beetle.png", 15, 27, "item");
+	STORY_PREVIEWOBJECT_RABBITDOLL = new StoryPreviewImage("../image/story/item/item/goods/rabbitDoll.png", 38, 41, "item");
+	STORY_PREVIEWOBJECT_BUTTERFLYNET = new StoryPreviewImage("../image/story/item/item/goods/butterflyNet.png", 58, 54, "item");
+	STORY_PREVIEWOBJECT_INSECTCAGE = new StoryPreviewImage("../image/story/item/item/goods/insectCage.png", 28, 28, "item");
+	STORY_PREVIEWOBJECT_TRUMPET = new StoryPreviewImage("../image/story/item/item/goods/trumpet.png", 39, 27, "item");
+	STORY_PREVIEWOBJECT_CELLPHONE = new StoryPreviewImage("../image/story/item/item/goods/cellPhone.png", 22, 36, "item");
+	STORY_PREVIEWOBJECT_SOCCERBALL = new StoryPreviewImage("../image/story/item/item/goods/soccerBall.png", 30, 31, "item");
+	STORY_PREVIEWOBJECT_CAR = new StoryPreviewImage("../image/story/item/item/goods/car.png", 153, 113, "item");
+	STORY_PREVIEWOBJECT_BEETLE_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/beetleRemoveFocus.png", 15, 27);
+	STORY_PREVIEWOBJECT_RABBITDOLL_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/rabbitDollRemoveFocus.png", 38, 41);
+	STORY_PREVIEWOBJECT_BUTTERFLYNET_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/butterflyNetRemoveFocus.png", 58, 54);
+	STORY_PREVIEWOBJECT_INSECTCAGE_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/insectCageRemoveFocus.png", 28, 28);
+	STORY_PREVIEWOBJECT_TRUMPET_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/trumpetRemoveFocus.png", 39, 27);
+	STORY_PREVIEWOBJECT_CELLPHONE_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/cellPhoneRemoveFocus.png", 22, 36);
+	STORY_PREVIEWOBJECT_SOCCERBALL_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/soccerBallRemoveFocus.png", 30, 31);
+	STORY_PREVIEWOBJECT_CAR_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/carRemoveFocus.png", 153, 113);
 	// パレットの画像
 	// パレット
-	STORY_HUMANPALETTE = new NormalImage("../image/story/palette/humanPalette.png", 800, 600);
-	STORY_ANIMALPALETTE = new NormalImage("../image/story/palette/animalPalette.png", 1000, 600);
+	STORY_PALETTE_1 = new NormalImage("../image/story/palette/palette1.png", 1000, 600);
+	STORY_PALETTE_2 = new NormalImage("../image/story/palette/palette2.png", 1000, 600);
 	// とじるボタン
 	STORY_PALETTECLOSEBUTTON = new NormalImage("../image/story/palette/close.png", 83, 44);
 	// じんぶつ属性ボタン

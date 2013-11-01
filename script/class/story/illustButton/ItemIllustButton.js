@@ -63,36 +63,6 @@ var ItemIllustButton = enchant.Class.create(enchant.Sprite, {
 
 	// クリック時の処理
 	ontouchend : function(event) {
-		var myselfPush = this._isPush;
-		var otherPush = this._parent._getPushButton();
-		if(this._canTouch === true){
-			if(myselfPush === false && otherPush !== null) {
-				switch(otherPush) {
-					case "human":
-						this._parent._getHumanButton()._setIsPush(false);
-						this._parent._getHumanButton()._setImage("off");
-						break;
-					case "animal":
-						this._parent._getAnimalButton()._setIsPush(false);
-						this._parent._getAnimalButton()._setImage("off");
-						break;
-					case "background":
-						this._parent._getBackgroundButton()._setIsPush(false);
-						this._parent._getBackgroundButton()._setImage("off");
-						break;
-				}
-				this._setIsPush(true);
-				this._setImage("on");
-				this._parent._setPushButton("item");
-			} else if(myselfPush === true) {
-				this._setIsPush(false);
-				this._setImage("off");
-				this._parent._setPushButton(null);
-			} else if(myselfPush === false) {
-				this._setIsPush(true);
-				this._setImage("on");
-				this._parent._setPushButton("item");
-			}
-		}
+		this._parent._paletteMakeRequest("item");
 	},
 })

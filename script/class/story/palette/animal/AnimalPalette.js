@@ -10,9 +10,9 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 
 	// パレットフレームのオブジェクトを生成
 	_createPaletteFrame : function() {
-		var path = STORY_ANIMALPALETTE._path;
-		var width = STORY_ANIMALPALETTE._width;
-		var height = STORY_ANIMALPALETTE._height;
+		var path = STORY_PALETTE_1._path;
+		var width = STORY_PALETTE_1._width;
+		var height = STORY_PALETTE_1._height;
 		var x = (APP_WIDTH - width) / 2;
 		var y = (APP_HEIGHT - height) / 2;
 		this._paletteFrame = new PaletteFrame(path, width, height, x, y, this);
@@ -42,9 +42,9 @@ var AnimalPalette = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTECLOSEBUTTON._path;
 		var width = STORY_PALETTECLOSEBUTTON._width;
 		var height = STORY_PALETTECLOSEBUTTON._height;
-		var x = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2 + STORY_ANIMALPALETTE._width - 120;
-		var y = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2 + STORY_ANIMALPALETTE._height - 70;
-		this._closeButton = new PaletteCloseButton(path, width, height, x, y, this);
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + STORY_PALETTE_1._width - 120;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + STORY_PALETTE_1._height - 65;
+		this._closeButton = new PaletteCloseButton("animal", path, width, height, x, y, this);
 	},
 
 	// パレットフレームを子ノードとしてパレットグループに追加

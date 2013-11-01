@@ -7,8 +7,8 @@ var DogIllust = enchant.Class.create(enchant.Group, {
 
 	// パレットに表示されるイヌ画像データの生成
 	_createDogImages : function() {
-		var paletteX = (APP_WIDTH - STORY_ANIMALPALETTE._width) / 2;
-		var paletteY = (APP_HEIGHT - STORY_ANIMALPALETTE._height) / 2;
+		var paletteX = (APP_WIDTH - STORY_PALETTE_1._width) / 2;
+		var paletteY = (APP_HEIGHT - STORY_PALETTE_1._height) / 2;
 		this._dogIllust[0] = new PaletteImage(STORY_PREVIEWOBJECT_DOG_FRONT_GLAD._path, STORY_PREVIEWOBJECT_DOG_FRONT_REMOVEFOCUS._path, 46, 73, paletteX + 30 + 40, paletteY + 200, this);
 		this._dogIllust[1] = new PaletteImage(STORY_PREVIEWOBJECT_DOG_BACK._path, STORY_PREVIEWOBJECT_DOG_BACK_REMOVEFOCUS._path, 49, 76, this._dogIllust[0].x + 90, this._dogIllust[0].y, this);
 		this._dogIllust[2] = new PaletteImage(STORY_PREVIEWOBJECT_DOG_RIGHT_GLAD._path, STORY_PREVIEWOBJECT_DOG_RIGHT_REMOVEFOCUS._path, 78, 75, this._dogIllust[0].x - 15, this._dogIllust[0].y + 150, this);
