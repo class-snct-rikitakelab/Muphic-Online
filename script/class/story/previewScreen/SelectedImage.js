@@ -34,8 +34,32 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 		var focusPath = this._focusPath;
 		var width = this.width;
 		var height = this.height;
-		var x = clientX;
-		var y = clientY;
+		var x;
+		var y;
+
+		var leftX = PREVIEWSCREEN_LEFT_X;
+		var rightX = PREVIEWSCREEN_RIGHT_X;
+		var topY = PREVIEWSCREEN_TOP_Y;
+		var bottomY = PREVIEWSCREEN_BOTTOM_Y;
+		var leftOffset = 10;
+		var rightOffset = - 10;
+		var topOffset = 10;
+		var bottomOffset = - 10;
+		var selectedIllustWidth = this.width;
+		var selectedIllustHeight = this.height;
+		if((clientX >= rightX + rightOffset - selectedIllustWidth && clientX <= rightX + rightOffset) && (clientY >= bottomY + bottomOffset - selectedIllustHeight && clientY <= bottomY + bottomOffset)) {
+			x = rightX + rightOffset - selectedIllustWidth;
+			y = bottomY + bottomOffset - selectedIllustHeight;
+		} else if(clientY >= bottomY + bottomOffset - selectedIllustHeight && clientY <= bottomY + bottomOffset) {
+			x = clientX;
+			y = bottomY + bottomOffset - selectedIllustHeight;
+		} else if(clientX >= rightX + rightOffset - selectedIllustWidth && clientX <= rightX + rightOffset) {
+			x = rightX + rightOffset - selectedIllustWidth;
+			y = clientY;
+		} else {
+			x = clientX;
+			y = clientY;
+		}
 		this._parent._removeSelectedIllustFromStoryScene();
 		this._parent._destroySelectedIllust();
 		this._parent._createIllust(imagePath, focusPath, width, height, x, y);
@@ -43,5 +67,6 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 		this._parent._setCanPushMusicButton();
 		this._parent._setCanPushAllIllustButton();
 		this._parent._setCanPushRemoveButton();
+		this._parent._setHaveSelectedIllust(false);
 	},
 })

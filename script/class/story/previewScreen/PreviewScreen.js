@@ -5,6 +5,7 @@ var PreviewScreen = enchant.Class.create({
 		this._weather = null;
 		this._illust = new Array();
 		this._selectedIllust = null;
+		this._haveSelectedIllust = false;
 		this._removeButton = null;
 		this._parent = parent;
 	},
@@ -134,6 +135,15 @@ var PreviewScreen = enchant.Class.create({
 	// 選択された半透明画像のy座標をセット
 	_setSelectedIllustY : function(y) {
 		this._selectedIllust.y = y;
+	},
+
+	// プレビュー画面の中に半透明イラストがあるかを示すフラグをゲット
+	_getHaveSelectedIllust : function() {
+		return this._haveSelectedIllust;
+	},
+	// プレビュー画面の中に半透明イラストがあるかを示すフラグをセット
+	_setHaveSelectedIllust : function(haveSelectedIllust) {
+		this._haveSelectedIllust = haveSelectedIllust;
 	},
 
 	// 重なり判定

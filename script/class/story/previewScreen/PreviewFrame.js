@@ -43,17 +43,36 @@ var PreviewFrame = enchant.Class.create(enchant.Sprite, {
 			var topY = PREVIEWSCREEN_TOP_Y;
 			var bottomY = PREVIEWSCREEN_BOTTOM_Y;
 			var leftOffset = 10;
-			var rightOffset = -this._parent._selectedIllust.width - 10;
+			var rightOffset = - 10;
 			var topOffset = 10;
-			var bottomOffset = -this._parent._selectedIllust.height - 10;
+			var bottomOffset = - 10;
 			var mouseOverX = this._mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
 			var mouseOverY = this._mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
 			if(mouseOverX === true && mouseOverY === true) {
-				this._parent._setSelectedIllustX(clientX);
-				this._parent._setSelectedIllustY(clientY);
+				var selectedIllustWidth = this._parent._selectedIllust.width;
+				var selectedIllustHeight = this._parent._selectedIllust.height;
+				if((clientX >= rightX + rightOffset - selectedIllustWidth && clientX <= rightX + rightOffset) && (clientY >= bottomY + bottomOffset - selectedIllustHeight && clientY <= bottomY + bottomOffset)) {
+					this._parent._setSelectedIllustX(rightX + rightOffset - selectedIllustWidth);
+					this._parent._setSelectedIllustY(bottomY + bottomOffset - selectedIllustHeight);
+				} else if(clientY >= bottomY + bottomOffset - selectedIllustHeight && clientY <= bottomY + bottomOffset) {
+					this._parent._setSelectedIllustX(clientX);
+					this._parent._setSelectedIllustY(bottomY + bottomOffset - selectedIllustHeight);
+				} else if(clientX >= rightX + rightOffset - selectedIllustWidth && clientX <= rightX + rightOffset) {
+					this._parent._setSelectedIllustX(rightX + rightOffset - selectedIllustWidth);
+					this._parent._setSelectedIllustY(clientY);
+				} else {
+					this._parent._setSelectedIllustX(clientX);
+					this._parent._setSelectedIllustY(clientY);
+				}
 				this._parent._addSelectedIllustToStoryScene();
+				this._parent._setHaveSelectedIllust(true);
 			} else {
-				this._parent._removeSelectedIllustFromStoryScene();
+				var haveSelectedIllust = this._parent._getHaveSelectedIllust();
+				if(haveSelectedIllust === true) {
+					this._parent._addSelectedIllustToStoryScene();
+				} else {
+					this._parent._removeSelectedIllustFromStoryScene();
+				}
 			}
 		}
 	},
