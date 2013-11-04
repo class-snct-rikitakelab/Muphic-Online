@@ -31,15 +31,6 @@ var ItemIllustButton = enchant.Class.create(enchant.Sprite, {
 		this._canTouch = canTouch;
 	},
 
-	// ボタンが「押されている」状態の時の色に変更する
-	_setImage : function(imageState) {
-		if(imageState === "on") {
-			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON_ON._path];
-		} else if(imageState === "off") {
-			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON_OFF._path];
-		}
-	},
-
 	//　ボタンが押せない（暗い）状態の色に変更する
 	_setDarkImage : function(isDark) {
 		if(isDark === true) {

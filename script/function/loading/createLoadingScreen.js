@@ -2,33 +2,6 @@ var createLoadingScreen = function() {
 	var loadingScene = new enchant.Scene();
 	loadingScene.backgroundColor = "#FEEC62";
 
-	var sprite = new enchant.Sprite(590, 429);
-	enchant.Core.instance.load("../image/loading/nowLoading.png", function() {
-		sprite.image = core.assets["../image/loading/nowLoading.png"];
-		sprite.x = (APP_WIDTH - 590) / 2;
-		sprite.y = (APP_HEIGHT - 429) / 2;
-		loadingScene.addChild(sprite);
-	});
-
-	/*
-	// リソースファイルを1つ読み込む度に実行される
-	loadingScene.addEventListener('progress', function(event) {
-		// 進行度表示の更新
-		progressLabel.text = parseInt((event.loaded / event.total) * 100) + "%";
-	});
-	*/
-
-	loadingScene.addEventListener('load', function(event) {
-		var core = enchant.Core.instance;
-		core.removeScene(core.loadingScene);
-		core.dispatchEvent(event);
-	});
-
-	return loadingScene;
-	/*
-	var loadingScene = new enchant.Scene();
-	loadingScene.backgroundColor = "#FEEC62";
-
 	// "ちょっとまってね"の描画
 	drawLabel(4, 247, 1024, 116, "ちょっとまってね", "gray", "112px", loadingScene);
 	drawLabel(0, 250, 1024, 116, "ちょっとまってね", "black", "112px", loadingScene);
@@ -70,5 +43,4 @@ var createLoadingScreen = function() {
 	});
 
 	return loadingScene;
-	*/
 }

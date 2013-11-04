@@ -7,7 +7,6 @@ var preloadStoryImage = function() {
 	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF._path);
 	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF._path);
-	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON._path);
 	core.preload(STORY_REMOVEBUTTON_OFF._path);
 	core.preload(STORY_REMOVEBUTTON_ON._path);
 
@@ -17,24 +16,8 @@ var preloadStoryImage = function() {
 	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK._path);
 	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF_DARK._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK._path);
-	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK._path);
 	core.preload(STORY_REMOVEBUTTON_OFF_DARK._path);
 	core.preload(STORY_REMOVEBUTTON_ON_DARK._path);
-
-	core.preload(STORY_PREVIEWBACKGROUND_EMPTY._path);
-	core.preload(STORY_PREVIEWBACKGROUND_FOREST1._path);
-	core.preload(STORY_PREVIEWBACKGROUND_FOREST2._path);
-	core.preload(STORY_PREVIEWBACKGROUND_RIVER1._path);
-	core.preload(STORY_PREVIEWBACKGROUND_RIVER2._path);
-	core.preload(STORY_PREVIEWBACKGROUND_TOWN1._path);
-	core.preload(STORY_PREVIEWBACKGROUND_TOWN2._path);
-	core.preload(STORY_PREVIEWBACKGROUND_HOUSE1._path);
-	core.preload(STORY_PREVIEWBACKGROUND_HOUSE2._path);
-
-	core.preload(STORY_PREVIEWWEATHER_EMPTY._path);
-	core.preload(STORY_PREVIEWWEATHER_SUN._path);
-	core.preload(STORY_PREVIEWWEATHER_CLOUD._path);
-	core.preload(STORY_PREVIEWWEATHER_MOON._path);
 
 	core.preload(STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY._path);
@@ -284,8 +267,48 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PREVIEWOBJECT_SOCCERBALL_REMOVEFOCUS._path);
 	core.preload(STORY_PREVIEWOBJECT_CAR_REMOVEFOCUS._path);
 
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_2._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_1._path);
+	core.preload(STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_2._path);
+
+	core.preload(STORY_PREVIEWBACKGROUND_EMPTY._path);
+	core.preload(STORY_PREVIEWBACKGROUND_FOREST_1._path);
+	core.preload(STORY_PREVIEWBACKGROUND_FOREST_2._path);
+	core.preload(STORY_PREVIEWBACKGROUND_RIVER_1._path);
+	core.preload(STORY_PREVIEWBACKGROUND_RIVER_2._path);
+	core.preload(STORY_PREVIEWBACKGROUND_TOWN_1._path);
+	core.preload(STORY_PREVIEWBACKGROUND_TOWN_2._path);
+	core.preload(STORY_PREVIEWBACKGROUND_HOUSE_1._path);
+	core.preload(STORY_PREVIEWBACKGROUND_HOUSE_2._path);
+	core.preload(STORY_PREVIEWWEATHER_EMPTY._path);
+	core.preload(STORY_PREVIEWWEATHER_SUNNY._path);
+	core.preload(STORY_PREVIEWWEATHER_CLOUD._path);
+	core.preload(STORY_PREVIEWWEATHER_NIGHT._path);
+
 	core.preload(STORY_PALETTE_1._path);
 	core.preload(STORY_PALETTE_2._path);
+	core.preload(STORY_PALETTE_3._path);
 	core.preload(STORY_PALETTECLOSEBUTTON._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_ON._path);
@@ -303,4 +326,10 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PALETTEPROPERTY_BEAR_ON._path);
 	core.preload(STORY_PALETTEPROPERTY_TURTLE_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_TURTLE_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_SUNNY_OFF._path);
+	core.preload(STORY_PALETTEPROPERTY_SUNNY_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_CLOUD_OFF._path);
+	core.preload(STORY_PALETTEPROPERTY_CLOUD_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_NIGHT_OFF._path);
+	core.preload(STORY_PALETTEPROPERTY_NIGHT_ON._path);
 }

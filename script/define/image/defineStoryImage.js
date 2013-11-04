@@ -6,7 +6,6 @@ var STORY_HUMAN_ILLUSTBUTTON_OFF;
 var STORY_ANIMAL_ILLUSTBUTTON_OFF;
 var STORY_ITEM_ILLUSTBUTTON_OFF;
 var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
-var STORY_BACKGROUND_ILLUSTBUTTON_ON;
 var STORY_REMOVEBUTTON_OFF;
 var STORY_REMOVEBUTTON_ON;
 // 物語作成画面に必要な画像データ（明るさ-100)
@@ -16,24 +15,8 @@ var STORY_HUMAN_ILLUSTBUTTON_OFF_DARK;
 var STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK;
 var STORY_ITEM_ILLUSTBUTTON_OFF_DARK;
 var STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK;
-var STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK;
 var STORY_REMOVEBUTTON_OFF_DARK;
 var STORY_REMOVEBUTTON_ON_DARK;
-// 物語の背景画像データ
-var STORY_PREVIEWBACKGROUND_EMPTY;
-var STORY_PREVIEWBACKGROUND_FOREST1;
-var STORY_PREVIEWBACKGROUND_FOREST2;
-var STORY_PREVIEWBACKGROUND_RIVER1;
-var STORY_PREVIEWBACKGROUND_RIVER2;
-var STORY_PREVIEWBACKGROUND_TOWN1;
-var STORY_PREVIEWBACKGROUND_TOWN2;
-var STORY_PREVIEWBACKGROUND_HOUSE1;
-var STORY_PREVIEWBACKGROUND_HOUSE2;
-// 物語の天気画像データ
-var STORY_PREVIEWWEATHER_EMPTY;
-var STORY_PREVIEWWEATHER_SUN;
-var STORY_PREVIEWWEATHER_CLOUD;
-var STORY_PREVIEWWEATHER_MOON;
 // 物語に使用可能なオブジェクト画像データ
 // じんぶつイラスト
 // 男性
@@ -287,10 +270,55 @@ var STORY_PREVIEWOBJECT_TRUMPET_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_CELLPHONE_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_SOCCERBALL_REMOVEFOCUS;
 var STORY_PREVIEWOBJECT_CAR_REMOVEFOCUS;
+// 背景サムネイル
+// 晴れ
+var STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_1;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_2;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_1;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_2;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_1;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_2;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_1;
+var STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_2;
+// 曇り
+var STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_1;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_2;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_1;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_2;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_1;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_2;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_1;
+var STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_2;
+// 夜
+var STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_1;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_2;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_1;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_2;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_1;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_2;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_1;
+var STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_2;
+// 背景イラスト
+// 物語の背景画像データ
+var STORY_PREVIEWBACKGROUND_EMPTY;
+var STORY_PREVIEWBACKGROUND_FOREST_1;
+var STORY_PREVIEWBACKGROUND_FOREST_2;
+var STORY_PREVIEWBACKGROUND_RIVER_1;
+var STORY_PREVIEWBACKGROUND_RIVER_2;
+var STORY_PREVIEWBACKGROUND_TOWN_1;
+var STORY_PREVIEWBACKGROUND_TOWN_2;
+var STORY_PREVIEWBACKGROUND_HOUSE_1;
+var STORY_PREVIEWBACKGROUND_HOUSE_2;
+// 物語の天気画像データ
+var STORY_PREVIEWWEATHER_EMPTY;
+var STORY_PREVIEWWEATHER_SUNNY;
+var STORY_PREVIEWWEATHER_CLOUD;
+var STORY_PREVIEWWEATHER_NIGHT;
 // パレットの画像
 // パレット本体
 var STORY_PALETTE_1;
 var STORY_PALETTE_2;
+var STORY_PALETTE_3;
 // とじるボタン
 var STORY_PALETTECLOSEBUTTON;
 // じんぶつ属性ボタン
@@ -311,6 +339,13 @@ var STORY_PALETTEPROPERTY_BEAR_OFF;
 var STORY_PALETTEPROPERTY_BEAR_ON;
 var STORY_PALETTEPROPERTY_TURTLE_OFF;
 var STORY_PALETTEPROPERTY_TURTLE_ON;
+// 背景属性ボタン
+var STORY_PALETTEPROPERTY_SUNNY_OFF;
+var STORY_PALETTEPROPERTY_SUNNY_ON;
+var STORY_PALETTEPROPERTY_CLOUD_OFF;
+var STORY_PALETTEPROPERTY_CLOUD_ON;
+var STORY_PALETTEPROPERTY_NIGHT_OFF;
+var STORY_PALETTEPROPERTY_NIGHT_ON;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
@@ -321,7 +356,6 @@ var defineStoryImage = function() {
 	STORY_ANIMAL_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/animalButtonOff.png", 106, 73);
 	STORY_ITEM_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/itemButtonOff.png", 106, 73);
 	STORY_BACKGROUND_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/backgroundButtonOff.png", 106, 73);
-	STORY_BACKGROUND_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustrations/backgroundButtonOn.png", 106, 73);
 	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 73);
 	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 73);
 	// 物語作成画面に必要な画像データ(明るさ-100)
@@ -334,24 +368,8 @@ var defineStoryImage = function() {
 	STORY_ITEM_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/itemButtonOffDark.png", 106, 73);
 	STORY_ITEM_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/itemButtonOnDark.png", 106, 73);
 	STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOffDark.png", 106, 73);
-	STORY_BACKGROUND_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOnDark.png", 106, 73);
 	STORY_REMOVEBUTTON_OFF_DARK = new NormalImage("../image/story/preview/removeButtonOffDark.png", 106, 73);
 	STORY_REMOVEBUTTON_ON_DARK = new NormalImage("../image/story/preview/removeButtonOnDark.png", 106, 73);
-	// 物語の背景画像データ
-	STORY_PREVIEWBACKGROUND_EMPTY = new NormalImage("../image/story/background/empty.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_FOREST1 = new NormalImage("../image/story/background/forest1.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_FOREST2 = new NormalImage("../image/story/background/forest2.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_RIVER1 = new NormalImage("../image/story/background/river1.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_RIVER2 = new NormalImage("../image/story/background/river2.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_TOWN1 = new NormalImage("../image/story/background/town1.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_TOWN2 = new NormalImage("../image/story/background/town2.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_HOUSE1 = new NormalImage("../image/story/background/house1.png", 690, 460);
-	STORY_PREVIEWBACKGROUND_HOUSE2 = new NormalImage("../image/story/background/house2.png", 690, 460);
-	// 物語の天気画像データ
-	STORY_PREVIEWWEATHER_EMPTY = new NormalImage("../image/story/weather/empty.png", 690, 158);
-	STORY_PREVIEWWEATHER_SUN = new NormalImage("../image/story/weather/sun.png", 690, 158);
-	STORY_PREVIEWWEATHER_CLOUD = new NormalImage("../image/story/weather/cloud.png", 690, 158);
-	STORY_PREVIEWWEATHER_MOON = new NormalImage("../image/story/weather/moon.png", 690, 158);
 	// 物語に使用可能なオブジェクト画像データ
 	// じんぶつイラスト
 	// 男性
@@ -605,10 +623,55 @@ var defineStoryImage = function() {
 	STORY_PREVIEWOBJECT_CELLPHONE_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/cellPhoneRemoveFocus.png", 22, 36);
 	STORY_PREVIEWOBJECT_SOCCERBALL_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/soccerBallRemoveFocus.png", 30, 31);
 	STORY_PREVIEWOBJECT_CAR_REMOVEFOCUS = new NormalImage("../image/story/item/item/goods/carRemoveFocus.png", 153, 113);
+	// 背景サムネイル
+	// 晴れ
+	STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_1 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/forest1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_FOREST_2 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/forest2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_1 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/river1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_RIVER_2 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/river2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_1 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/town1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_TOWN_2 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/town2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_1 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/house1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_SUNNY_HOUSE_2 = new NormalImage("../image/story/background/backgroundThumbnail/sunny/house2.png", 200, 133);
+	// 曇り
+	STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_1 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/forest1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_FOREST_2 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/forest2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_1 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/river1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_RIVER_2 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/river2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_1 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/town1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_TOWN_2 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/town2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_1 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/house1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_CLOUD_HOUSE_2 = new NormalImage("../image/story/background/backgroundThumbnail/cloud/house2.png", 200, 133);
+	// 夜
+	STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_1 = new NormalImage("../image/story/background/backgroundThumbnail/night/forest1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_FOREST_2 = new NormalImage("../image/story/background/backgroundThumbnail/night/forest2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_1 = new NormalImage("../image/story/background/backgroundThumbnail/night/river1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_RIVER_2 = new NormalImage("../image/story/background/backgroundThumbnail/night/river2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_1 = new NormalImage("../image/story/background/backgroundThumbnail/night/town1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_TOWN_2 = new NormalImage("../image/story/background/backgroundThumbnail/night/town2.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_1 = new NormalImage("../image/story/background/backgroundThumbnail/night/house1.png", 200, 133);
+	STORY_PREVIEWTHUMBNAIL_NIGHT_HOUSE_2 = new NormalImage("../image/story/background/backgroundThumbnail/night/house2.png", 200, 133);
+	// 背景イラスト
+	// 物語の背景画像データ
+	STORY_PREVIEWBACKGROUND_EMPTY = new NormalImage("../image/story/background/empty.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_FOREST_1 = new NormalImage("../image/story/background/forest1.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_FOREST_2 = new NormalImage("../image/story/background/forest2.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_RIVER_1 = new NormalImage("../image/story/background/river1.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_RIVER_2 = new NormalImage("../image/story/background/river2.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_TOWN_1 = new NormalImage("../image/story/background/town1.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_TOWN_2 = new NormalImage("../image/story/background/town2.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_HOUSE_1 = new NormalImage("../image/story/background/house1.png", 690, 460);
+	STORY_PREVIEWBACKGROUND_HOUSE_2 = new NormalImage("../image/story/background/house2.png", 690, 460);
+	// 物語の天気画像データ
+	STORY_PREVIEWWEATHER_EMPTY = new NormalImage("../image/story/weather/empty.png", 690, 158);
+	STORY_PREVIEWWEATHER_SUNNY = new NormalImage("../image/story/weather/sunny.png", 690, 158);
+	STORY_PREVIEWWEATHER_CLOUD = new NormalImage("../image/story/weather/cloud.png", 690, 158);
+	STORY_PREVIEWWEATHER_NIGHT = new NormalImage("../image/story/weather/night.png", 690, 158);
 	// パレットの画像
 	// パレット
 	STORY_PALETTE_1 = new NormalImage("../image/story/palette/palette1.png", 1000, 600);
 	STORY_PALETTE_2 = new NormalImage("../image/story/palette/palette2.png", 1000, 600);
+	STORY_PALETTE_3 = new NormalImage("../image/story/palette/palette3.png", 1000, 600);
 	// とじるボタン
 	STORY_PALETTECLOSEBUTTON = new NormalImage("../image/story/palette/close.png", 83, 44);
 	// じんぶつ属性ボタン
@@ -629,4 +692,11 @@ var defineStoryImage = function() {
 	STORY_PALETTEPROPERTY_BEAR_ON = new NormalImage("../image/story/palette/property/bear/bearOn.png", 87, 77);
 	STORY_PALETTEPROPERTY_TURTLE_OFF = new NormalImage("../image/story/palette/property/turtle/turtleOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 87, 77);
+	// 背景属性ボタン
+	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 68, 60);
+	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 68, 60);
+	STORY_PALETTEPROPERTY_CLOUD_OFF = new NormalImage("../image/story/palette/property/cloud/cloudOff.png", 68, 60);
+	STORY_PALETTEPROPERTY_CLOUD_ON = new NormalImage("../image/story/palette/property/cloud/cloudOn.png", 68, 60);
+	STORY_PALETTEPROPERTY_NIGHT_OFF = new NormalImage("../image/story/palette/property/night/nightOff.png", 68, 60);
+	STORY_PALETTEPROPERTY_NIGHT_ON = new NormalImage("../image/story/palette/property/night/nightOn.png", 68, 60);
 }

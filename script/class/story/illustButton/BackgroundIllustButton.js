@@ -26,15 +26,6 @@ var BackgroundIllustButton = enchant.Class.create(enchant.Sprite, {
 		this.opacity = opacity;
 	},
 
-	// ボタンが「押されている」状態の時の色に変更する
-	_setImage : function(imageState) {
-		if(imageState === "on") {
-			this.image = core.assets[STORY_BACKGROUND_ILLUSTBUTTON_ON._path];
-		} else if(imageState === "off") {
-			this.image = core.assets[STORY_BACKGROUND_ILLUSTBUTTON_OFF._path];
-		}
-	},
-
 	//ボタンが押せない状態にする
 	_setTouchEnable : function (canTouch) {
 		this._canTouch = canTouch;
@@ -63,36 +54,6 @@ var BackgroundIllustButton = enchant.Class.create(enchant.Sprite, {
 
 	// クリック時の処理
 	ontouchend : function(event) {
-		var myselfPush = this._isPush;
-		var otherPush = this._parent._getPushButton();
-		if(this._canTouch === true){
-			if(myselfPush === false && otherPush !== null) {
-				switch(otherPush) {
-					case "human":
-						this._parent._getHumanButton()._setIsPush(false);
-						this._parent._getHumanButton()._setImage("off");
-						break;
-					case "animal":
-						this._parent._getAnimalButton()._setIsPush(false);
-						this._parent._getAnimalButton()._setImage("off");
-						break;
-					case "item":
-						this._parent._getItemButton()._setIsPush(false);
-						this._parent._getItemButton()._setImage("off");
-						break;
-				}
-				this._setIsPush(true);
-				this._setImage("on");
-				this._parent._setPushButton("background");
-			} else if(myselfPush === true) {
-				this._setIsPush(false);
-				this._setImage("off");
-				this._parent._setPushButton(null);
-			} else if(myselfPush === false) {
-				this._setIsPush(true);
-				this._setImage("on");
-				this._parent._setPushButton("background");
-			}
-		}
+		this._parent._paletteMakeRequest("background");
 	},
 })

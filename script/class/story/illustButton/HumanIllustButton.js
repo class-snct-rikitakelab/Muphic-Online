@@ -26,15 +26,6 @@ var HumanIllustButton = enchant.Class.create(enchant.Sprite, {
 		this.opacity = opacity;
 	},
 
-	// ボタンが「押されている」状態の時の色に変更する
-	_setImage : function(imageState) {
-		if(imageState === "on") {
-			this.image = core.assets[STORY_HUMAN_ILLUSTBUTTON_ON._path];
-		} else if(imageState === "off") {
-			this.image = core.assets[STORY_HUMAN_ILLUSTBUTTON_OFF._path];
-		}
-	},
-
 	//ボタンが押せない状態にする
 	_setTouchEnable : function (canTouch) {
 		this._canTouch = canTouch;

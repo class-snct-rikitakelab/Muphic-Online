@@ -106,6 +106,11 @@ var IllustButton = enchant.Class.create({
 				this._parent._itemPalette._addIllust("interior");
 				this._parent._itemPalette._addIllust("goods");
 				break;
+			case "background":
+				this._parent._createBackgroundPalette();
+				this._parent._backgroundPalette._addToStoryScene();
+				this._parent._backgroundPalette._addIllust("sunny");
+				break;
 		}
 	},
 

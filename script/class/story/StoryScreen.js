@@ -10,6 +10,7 @@ var StoryScreen = enchant.Class.create({
 		this._humanPalette = null;
 		this._animalPalette = null;
 		this._itemPalette = null;
+		this._backgroundPalette = null;
 		this._parent = parent;
 	},
 
@@ -76,6 +77,25 @@ var StoryScreen = enchant.Class.create({
 		this._itemPalette._createCloseButton();
 		this._itemPalette._addPaletteFrameToGroup();
 		this._itemPalette._addCloseButtonToGroup();
+	},
+	_createBackgroundPalette : function() {
+		this._backgroundPalette = new BackgroundPalette(this);
+		this._backgroundPalette._createPaletteFrame();
+		this._backgroundPalette._createPropertyButton();
+		this._backgroundPalette._createPaletteIllust();
+		this._backgroundPalette._createCloseButton();
+		this._backgroundPalette._addPaletteFrameToGroup();
+		this._backgroundPalette._addPropertyButtonToGroup();
+		this._backgroundPalette._addCloseButtonToGroup();
+	},
+
+	// 背景画像をセット
+	_setBackgroundImage : function(path) {
+		this._previewScreen._setBackgroundImage(path);
+	},
+	// 天気画像をセット
+	_setWeatherImage : function(path) {
+		this._previewScreen._setWeatherImage(path);
 	},
 
 	// 選択された半透明画像のオブジェクト生成を子に依頼
