@@ -13,7 +13,7 @@ var BackgroundPropertyButton =  enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_SUNNY_ON._path;
 		var width = STORY_PALETTEPROPERTY_SUNNY_ON._width;
 		var height = STORY_PALETTEPROPERTY_SUNNY_ON._height;
-		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 300;
+		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 330;
 		var y = (APP_HEIGHT - STORY_PALETTE_3._height) / 2 + 30;
 		this._sunnyPropertyButton = new SunnyPropertyButton(path, width, height, x, y, this);
 	},
@@ -22,7 +22,7 @@ var BackgroundPropertyButton =  enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_CLOUD_OFF._path;
 		var width = STORY_PALETTEPROPERTY_CLOUD_OFF._width;
 		var height = STORY_PALETTEPROPERTY_CLOUD_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 300 + 166;
+		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 330 + 127;
 		var y = (APP_HEIGHT - STORY_PALETTE_3._height) / 2 + 30;
 		this._cloudPropertyButton = new CloudPropertyButton(path, width, height, x, y, this);
 	},
@@ -31,7 +31,7 @@ var BackgroundPropertyButton =  enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_NIGHT_OFF._path;
 		var width = STORY_PALETTEPROPERTY_NIGHT_OFF._width;
 		var height = STORY_PALETTEPROPERTY_NIGHT_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 300 + 332;
+		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 330 + 254;
 		var y = (APP_HEIGHT - STORY_PALETTE_3._height) / 2 + 30;
 		this._nightPropertyButton = new NightPropertyButton(path, width, height, x, y, this);
 	},

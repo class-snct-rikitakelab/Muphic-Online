@@ -693,10 +693,10 @@ var defineStoryImage = function() {
 	STORY_PALETTEPROPERTY_TURTLE_OFF = new NormalImage("../image/story/palette/property/turtle/turtleOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 87, 77);
 	// 背景属性ボタン
-	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 68, 60);
-	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 68, 60);
-	STORY_PALETTEPROPERTY_CLOUD_OFF = new NormalImage("../image/story/palette/property/cloud/cloudOff.png", 68, 60);
-	STORY_PALETTEPROPERTY_CLOUD_ON = new NormalImage("../image/story/palette/property/cloud/cloudOn.png", 68, 60);
-	STORY_PALETTEPROPERTY_NIGHT_OFF = new NormalImage("../image/story/palette/property/night/nightOff.png", 68, 60);
-	STORY_PALETTEPROPERTY_NIGHT_ON = new NormalImage("../image/story/palette/property/night/nightOn.png", 68, 60);
+	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_CLOUD_OFF = new NormalImage("../image/story/palette/property/cloud/cloudOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_CLOUD_ON = new NormalImage("../image/story/palette/property/cloud/cloudOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_NIGHT_OFF = new NormalImage("../image/story/palette/property/night/nightOff.png", 87, 77);
+	STORY_PALETTEPROPERTY_NIGHT_ON = new NormalImage("../image/story/palette/property/night/nightOn.png", 87, 77);
 }
