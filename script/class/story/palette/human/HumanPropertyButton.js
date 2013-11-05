@@ -15,7 +15,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_MAN_ON._width;
 		var height = STORY_PALETTEPROPERTY_MAN_ON._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._manPropertyButton = new ManPropertyButton(path, width, height, x, y, this);
 	},
 	// お姉さん属性ボタンのオブジェクトを生成
@@ -24,7 +24,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_LADY_OFF._width;
 		var height = STORY_PALETTEPROPERTY_LADY_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 107;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._ladyPropertyButton = new LadyPropertyButton(path, width, height, x, y, this);
 	},
 	// 男の子属性ボタンのオブジェクトを生成
@@ -33,7 +33,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_BOY_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BOY_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 214;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._boyPropertyButton = new BoyPropertyButton(path, width, height, x, y, this);
 	},
 	// 女の子属性ボタンのオブジェクトを生成
@@ -42,7 +42,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_GIRL_OFF._width;
 		var height = STORY_PALETTEPROPERTY_GIRL_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 321;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._girlPropertyButton = new GirlPropertyButton(path, width, height, x, y, this);
 	},
 

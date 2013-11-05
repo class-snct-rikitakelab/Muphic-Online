@@ -15,7 +15,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_DOG_ON._width;
 		var height = STORY_PALETTEPROPERTY_DOG_ON._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._dogPropertyButton = new DogPropertyButton(path, width, height, x, y, this);
 	},
 	// トリ属性ボタンのオブジェクトを生成
@@ -24,7 +24,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_BIRD_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BIRD_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 107;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._birdPropertyButton = new BirdPropertyButton(path, width, height, x, y, this);
 	},
 	// クマ属性ボタンのオブジェクトを生成
@@ -33,7 +33,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_BEAR_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BEAR_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 214;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._bearPropertyButton = new BearPropertyButton(path, width, height, x, y, this);
 	},
 	// カメ属性ボタンのオブジェクトを生成
@@ -42,7 +42,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var width = STORY_PALETTEPROPERTY_TURTLE_OFF._width;
 		var height = STORY_PALETTEPROPERTY_TURTLE_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 321;
-		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 20;
+		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._turtlePropertyButton = new TurtlePropertyButton(path, width, height, x, y, this);
 	},
 

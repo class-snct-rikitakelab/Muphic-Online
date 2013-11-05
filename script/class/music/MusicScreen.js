@@ -50,7 +50,7 @@ var MusicScreen = enchant.Class.create({
 		this._musicMediator._animalButton = new AnimalButton(width, height);
 		this._musicMediator._animalButton.image = core.assets[path];
 		this._musicMediator._animalButton.x = 910;
-		this._musicMediator._animalButton.y = 580;
+		this._musicMediator._animalButton.y = 286;
 		this._musicMediator._animalButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._animalButton);
 	},
@@ -64,7 +64,7 @@ var MusicScreen = enchant.Class.create({
 		this._musicMediator._modosuButton = new ModosuButton(width, height);
 		this._musicMediator._modosuButton.image = core.assets[path];
 		this._musicMediator._modosuButton.x = 910;
-		this._musicMediator._modosuButton.y = 680;
+		this._musicMediator._modosuButton.y = 376;
 		this._musicMediator._modosuButton._parent = this._musicMediator;
 		musicScene.addChild(this._musicMediator._modosuButton);
 	},
