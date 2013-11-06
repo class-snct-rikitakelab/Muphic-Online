@@ -14,7 +14,7 @@ var IllustButton = enchant.Class.create({
 		var width = STORY_HUMAN_ILLUSTBUTTON_OFF._width;
 		var height = STORY_HUMAN_ILLUSTBUTTON_OFF._height;
 		var x = 35;
-		var y = 200;
+		var y = 329;
 		this._humanButton = new HumanIllustButton(path, width, height, x, y, this);
 	},
 	// 「どうぶつ」イラストボタンを生成
@@ -23,7 +23,7 @@ var IllustButton = enchant.Class.create({
 		var width = STORY_ANIMAL_ILLUSTBUTTON_OFF._width;
 		var height = STORY_ANIMAL_ILLUSTBUTTON_OFF._height;
 		var x = 35;
-		var y = 329;
+		var y = 458;
 		this._animalButton = new AnimalIllustButton(path, width, height, x, y, this);
 	},
 	// 「あいてむ」イラストボタンを生成
@@ -32,7 +32,7 @@ var IllustButton = enchant.Class.create({
 		var width = STORY_ITEM_ILLUSTBUTTON_OFF._width;
 		var height = STORY_ITEM_ILLUSTBUTTON_OFF._height;
 		var x = 35;
-		var y = 458;
+		var y = 587;
 		this._itemButton = new ItemIllustButton(path, width, height, x, y, this);
 	},
 	// 「はいけい」イラストボタンを生成
@@ -41,7 +41,7 @@ var IllustButton = enchant.Class.create({
 		var width = STORY_BACKGROUND_ILLUSTBUTTON_OFF._width;
 		var height = STORY_BACKGROUND_ILLUSTBUTTON_OFF._height;
 		var x = 35;
-		var y = 587;
+		var y = 200;
 		this._backgroundButton = new BackgroundIllustButton(path, width, height, x, y, this);
 	},
 
