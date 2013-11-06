@@ -34,9 +34,9 @@ var ItemIllustButton = enchant.Class.create(enchant.Sprite, {
 	//　ボタンが押せない（暗い）状態の色に変更する
 	_setDarkImage : function(isDark) {
 		if(isDark === true) {
-			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON_OFF_DARK._path];
+			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON_DARK._path];
 		} else if(isDark === false) {
-			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON_OFF._path];
+			this.image = core.assets[STORY_ITEM_ILLUSTBUTTON._path];
 		}
 	},
 

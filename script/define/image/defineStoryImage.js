@@ -2,19 +2,19 @@
 var STORY_BACKGROUND;
 var STORY_CHANGEMUSICBUTTON;
 var STORY_PREVIEWFRAME;
-var STORY_HUMAN_ILLUSTBUTTON_OFF;
-var STORY_ANIMAL_ILLUSTBUTTON_OFF;
-var STORY_ITEM_ILLUSTBUTTON_OFF;
-var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
+var STORY_HUMAN_ILLUSTBUTTON;
+var STORY_ANIMAL_ILLUSTBUTTON;
+var STORY_ITEM_ILLUSTBUTTON;
+var STORY_BACKGROUND_ILLUSTBUTTON;
 var STORY_REMOVEBUTTON_OFF;
 var STORY_REMOVEBUTTON_ON;
 // 物語作成画面に必要な画像データ（明るさ-100)
 var STORY_BACKGROUND_DARK;
 var STORY_CHANGEMUSICBUTTON_DARK;
-var STORY_HUMAN_ILLUSTBUTTON_OFF_DARK;
-var STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK;
-var STORY_ITEM_ILLUSTBUTTON_OFF_DARK;
-var STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK;
+var STORY_HUMAN_ILLUSTBUTTON_DARK;
+var STORY_ANIMAL_ILLUSTBUTTON_DARK;
+var STORY_ITEM_ILLUSTBUTTON_DARK;
+var STORY_BACKGROUND_ILLUSTBUTTON_DARK;
 var STORY_REMOVEBUTTON_OFF_DARK;
 var STORY_REMOVEBUTTON_ON_DARK;
 // 物語に使用可能なオブジェクト画像データ
@@ -352,24 +352,21 @@ var defineStoryImage = function() {
 	STORY_BACKGROUND = new NormalImage("../image/story/appBackground.png", 1024, 768);
 	STORY_CHANGEMUSICBUTTON = new NormalImage("../image/story/button/changeMusic.png", 100, 100);
 	STORY_PREVIEWFRAME = new NormalImage("../image/story/preview/previewFrame.png", 690, 460);
-	STORY_HUMAN_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/humanButtonOff.png", 106, 73);
-	STORY_ANIMAL_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/animalButtonOff.png", 106, 73);
-	STORY_ITEM_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/itemButtonOff.png", 106, 73);
-	STORY_BACKGROUND_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustrations/backgroundButtonOff.png", 106, 73);
-	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 73);
-	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 73);
+	STORY_HUMAN_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/humanButton.png", 106, 72);
+	STORY_ANIMAL_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/animalButton.png", 106, 72);
+	STORY_ITEM_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/itemButton.png", 106, 72);
+	STORY_BACKGROUND_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/backgroundButton.png", 106, 72);
+	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 72);
+	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 72);
 	// 物語作成画面に必要な画像データ(明るさ-100)
 	STORY_BACKGROUND_DARK = new NormalImage("../image/story/appBackgroundDark.png", 1024, 768);
 	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicDark.png", 100, 100);
-	STORY_HUMAN_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/humanButtonOffDark.png", 106, 73);
-	STORY_HUMAN_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/humanButtonOnDark.png", 106, 73);
-	STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/animalButtonOffDark.png", 106, 73);
-	STORY_ANIMAL_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/animalButtonOnDark.png", 106, 73);
-	STORY_ITEM_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/itemButtonOffDark.png", 106, 73);
-	STORY_ITEM_ILLUSTBUTTON_ON_DARK = new NormalImage("../image/story/illustrations/itemButtonOnDark.png", 106, 73);
-	STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK = new NormalImage("../image/story/illustrations/backgroundButtonOffDark.png", 106, 73);
-	STORY_REMOVEBUTTON_OFF_DARK = new NormalImage("../image/story/preview/removeButtonOffDark.png", 106, 73);
-	STORY_REMOVEBUTTON_ON_DARK = new NormalImage("../image/story/preview/removeButtonOnDark.png", 106, 73);
+	STORY_HUMAN_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/humanButtonDark.png", 106, 72);
+	STORY_ANIMAL_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/animalButtonDark.png", 106, 72);
+	STORY_ITEM_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/itemButtonDark.png", 106, 72);
+	STORY_BACKGROUND_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/backgroundButtonDark.png", 106, 72);
+	STORY_REMOVEBUTTON_OFF_DARK = new NormalImage("../image/story/preview/removeButtonOffDark.png", 106, 72);
+	STORY_REMOVEBUTTON_ON_DARK = new NormalImage("../image/story/preview/removeButtonOnDark.png", 106, 72);
 	// 物語に使用可能なオブジェクト画像データ
 	// じんぶつイラスト
 	// 男性

@@ -3,19 +3,19 @@ var preloadStoryImage = function() {
 	core.preload(STORY_BACKGROUND._path);
 	core.preload(STORY_CHANGEMUSICBUTTON._path);
 	core.preload(STORY_PREVIEWFRAME._path);
-	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF._path);
-	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF._path);
-	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF._path);
-	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON._path);
 	core.preload(STORY_REMOVEBUTTON_OFF._path);
 	core.preload(STORY_REMOVEBUTTON_ON._path);
 
 	core.preload(STORY_BACKGROUND_DARK._path);
 	core.preload(STORY_CHANGEMUSICBUTTON_DARK._path);
-	core.preload(STORY_HUMAN_ILLUSTBUTTON_OFF_DARK._path);
-	core.preload(STORY_ANIMAL_ILLUSTBUTTON_OFF_DARK._path);
-	core.preload(STORY_ITEM_ILLUSTBUTTON_OFF_DARK._path);
-	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_OFF_DARK._path);
+	core.preload(STORY_HUMAN_ILLUSTBUTTON_DARK._path);
+	core.preload(STORY_ANIMAL_ILLUSTBUTTON_DARK._path);
+	core.preload(STORY_ITEM_ILLUSTBUTTON_DARK._path);
+	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_DARK._path);
 	core.preload(STORY_REMOVEBUTTON_OFF_DARK._path);
 	core.preload(STORY_REMOVEBUTTON_ON_DARK._path);
 
