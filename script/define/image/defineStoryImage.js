@@ -330,21 +330,29 @@ var STORY_PALETTECLOSEBUTTON_ON;
 // じんぶつ属性ボタン
 var STORY_PALETTEPROPERTY_MAN_OFF;
 var STORY_PALETTEPROPERTY_MAN_ON;
+var STORY_PALETTEPROPERTY_MAN_PUSH;
 var STORY_PALETTEPROPERTY_LADY_OFF;
 var STORY_PALETTEPROPERTY_LADY_ON;
+var STORY_PALETTEPROPERTY_LADY_PUSH;
 var STORY_PALETTEPROPERTY_BOY_OFF;
 var STORY_PALETTEPROPERTY_BOY_ON;
+var STORY_PALETTEPROPERTY_BOY_PUSH;
 var STORY_PALETTEPROPERTY_GIRL_OFF;
 var STORY_PALETTEPROPERTY_GIRL_ON;
+var STORY_PALETTEPROPERTY_GIRL_PUSH;
 // どうぶつ属性ボタン
 var STORY_PALETTEPROPERTY_DOG_OFF;
 var STORY_PALETTEPROPERTY_DOG_ON;
+var STORY_PALETTEPROPERTY_DOG_PUSH;
 var STORY_PALETTEPROPERTY_BIRD_OFF;
 var STORY_PALETTEPROPERTY_BIRD_ON;
+var STORY_PALETTEPROPERTY_BIRD_PUSH;
 var STORY_PALETTEPROPERTY_BEAR_OFF;
 var STORY_PALETTEPROPERTY_BEAR_ON;
+var STORY_PALETTEPROPERTY_BEAR_PUSH;
 var STORY_PALETTEPROPERTY_TURTLE_OFF;
 var STORY_PALETTEPROPERTY_TURTLE_ON;
+var STORY_PALETTEPROPERTY_TURTLE_PUSH;
 // 背景属性ボタン
 var STORY_PALETTEPROPERTY_SUNNY_OFF;
 var STORY_PALETTEPROPERTY_SUNNY_ON;
@@ -684,23 +692,31 @@ var defineStoryImage = function() {
 	STORY_PALETTECLOSEBUTTON_OFF = new NormalImage("../image/story/palette/closeButtonOff.png", 83, 44);
 	STORY_PALETTECLOSEBUTTON_ON = new NormalImage("../image/story/palette/closeButtonOn.png", 83, 44);
 	// じんぶつ属性ボタン
-	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_LADY_OFF = new NormalImage("../image/story/palette/property/lady/ladyOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_LADY_ON = new NormalImage("../image/story/palette/property/lady/ladyOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_BOY_OFF = new NormalImage("../image/story/palette/property/boy/boyOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_BOY_ON = new NormalImage("../image/story/palette/property/boy/boyOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_GIRL_OFF = new NormalImage("../image/story/palette/property/girl/girlOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_GIRL_ON = new NormalImage("../image/story/palette/property/girl/girlOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_MAN_PUSH = new NormalImage("../image/story/palette/property/man/manPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_LADY_OFF = new NormalImage("../image/story/palette/property/lady/ladyOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_LADY_ON = new NormalImage("../image/story/palette/property/lady/ladyOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_LADY_PUSH = new NormalImage("../image/story/palette/property/lady/ladyPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_BOY_OFF = new NormalImage("../image/story/palette/property/boy/boyOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_BOY_ON = new NormalImage("../image/story/palette/property/boy/boyOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_BOY_PUSH = new NormalImage("../image/story/palette/property/boy/boyPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_GIRL_OFF = new NormalImage("../image/story/palette/property/girl/girlOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_GIRL_ON = new NormalImage("../image/story/palette/property/girl/girlOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_GIRL_PUSH = new NormalImage("../image/story/palette/property/girl/girlPush.png", 86, 76);
 	// どうぶつ属性ボタン
-	STORY_PALETTEPROPERTY_DOG_OFF = new NormalImage("../image/story/palette/property/dog/dogOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_DOG_ON = new NormalImage("../image/story/palette/property/dog/dogOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_BIRD_OFF = new NormalImage("../image/story/palette/property/bird/birdOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_BIRD_ON = new NormalImage("../image/story/palette/property/bird/birdOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_BEAR_OFF = new NormalImage("../image/story/palette/property/bear/bearOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_BEAR_ON = new NormalImage("../image/story/palette/property/bear/bearOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_TURTLE_OFF = new NormalImage("../image/story/palette/property/turtle/turtleOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_DOG_OFF = new NormalImage("../image/story/palette/property/dog/dogOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_DOG_ON = new NormalImage("../image/story/palette/property/dog/dogOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_DOG_PUSH = new NormalImage("../image/story/palette/property/dog/dogPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_BIRD_OFF = new NormalImage("../image/story/palette/property/bird/birdOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_BIRD_ON = new NormalImage("../image/story/palette/property/bird/birdOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_BIRD_PUSH = new NormalImage("../image/story/palette/property/bird/birdPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_BEAR_OFF = new NormalImage("../image/story/palette/property/bear/bearOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_BEAR_ON = new NormalImage("../image/story/palette/property/bear/bearOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_BEAR_PUSH = new NormalImage("../image/story/palette/property/bear/bearPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_TURTLE_OFF = new NormalImage("../image/story/palette/property/turtle/turtleOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_TURTLE_PUSH = new NormalImage("../image/story/palette/property/turtle/turtlePush.png", 86, 76);
 	// 背景属性ボタン
 	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 87, 77);

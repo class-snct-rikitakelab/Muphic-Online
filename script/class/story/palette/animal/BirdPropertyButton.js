@@ -25,11 +25,19 @@ var BirdPropertyButton = enchant.Class.create(enchant.Sprite, {
 		this.opacity = opacity;
 	},
 
-	// ボタンが「押されている」状態の時の色に変更する
-	_setImage : function(imageState) {
-		if(imageState === "on") {
+	// On, Off時の画像切り替え
+	_setOnOffImage : function(state) {
+		if(state === "on") {
 			this.image = core.assets[STORY_PALETTEPROPERTY_BIRD_ON._path];
-		} else if(imageState === "off") {
+		} else {
+			this.image = core.assets[STORY_PALETTEPROPERTY_BIRD_OFF._path];
+		}
+	},
+	// 押下, 非押下時の画像切り替え
+	_setPushImage : function(state) {
+		if(state === "push") {
+			this.image = core.assets[STORY_PALETTEPROPERTY_BIRD_PUSH._path];
+		} else {
 			this.image = core.assets[STORY_PALETTEPROPERTY_BIRD_OFF._path];
 		}
 	},
@@ -54,21 +62,38 @@ var BirdPropertyButton = enchant.Class.create(enchant.Sprite, {
 			switch(otherPush) {
 				case "dog":
 					this._parent._getDogPropertyButton()._setIsPush(false);
-					this._parent._getDogPropertyButton()._setImage("off");
+					this._parent._getDogPropertyButton()._setOnOffImage("off");
 					this._parent._requestRemoveIllust("dog");
 				case "bear":
 					this._parent._getBearPropertyButton()._setIsPush(false);
-					this._parent._getBearPropertyButton()._setImage("off");
+					this._parent._getBearPropertyButton()._setOnOffImage("off");
 					this._parent._requestRemoveIllust("bear");
 				case "turtle":
 					this._parent._getTurtlePropertyButton()._setIsPush(false);
-					this._parent._getTurtlePropertyButton()._setImage("off");
+					this._parent._getTurtlePropertyButton()._setOnOffImage("off");
 					this._parent._requestRemoveIllust("turtle");
 			}
 			this._setIsPush(true);
-			this._setImage("on");
+			this._setPushImage("push");
 			this._parent._setPushButton("bird");
 			this._parent._requestAddIllust("bird");
+		}
+	},
+
+	// フレーム処理
+	onenterframe : function() {
+		if(this._isPush === false) {
+			var leftX = this.x;
+			var rightX = this.x + this.width;
+			var topY = this.y;
+			var bottomY = this.y + this.height;
+			var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+			var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+			if(mOverX === true && mOverY === true) {
+				this._setOnOffImage("on");
+			} else {
+				this._setOnOffImage("off");
+			}
 		}
 	},
 })

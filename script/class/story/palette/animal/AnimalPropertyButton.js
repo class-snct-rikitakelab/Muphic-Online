@@ -11,12 +11,13 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 
 	// イヌ属性ボタンのオブジェクトを生成
 	_createDogPropertyButton : function() {
-		var path = STORY_PALETTEPROPERTY_DOG_ON._path;
-		var width = STORY_PALETTEPROPERTY_DOG_ON._width;
-		var height = STORY_PALETTEPROPERTY_DOG_ON._height;
+		var path = STORY_PALETTEPROPERTY_DOG_PUSH._path;
+		var width = STORY_PALETTEPROPERTY_DOG_PUSH._width;
+		var height = STORY_PALETTEPROPERTY_DOG_PUSH._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._dogPropertyButton = new DogPropertyButton(path, width, height, x, y, this);
+		this._dogPropertyButton._setIsPush(true);
 	},
 	// トリ属性ボタンのオブジェクトを生成
 	_createBirdPropertyButton : function() {

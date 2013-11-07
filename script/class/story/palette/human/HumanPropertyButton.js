@@ -11,12 +11,13 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 
 	// お兄さん属性ボタンのオブジェクトを生成
 	_createManPropertyButton : function() {
-		var path = STORY_PALETTEPROPERTY_MAN_ON._path;
-		var width = STORY_PALETTEPROPERTY_MAN_ON._width;
-		var height = STORY_PALETTEPROPERTY_MAN_ON._height;
+		var path = STORY_PALETTEPROPERTY_MAN_PUSH._path;
+		var width = STORY_PALETTEPROPERTY_MAN_PUSH._width;
+		var height = STORY_PALETTEPROPERTY_MAN_PUSH._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._manPropertyButton = new ManPropertyButton(path, width, height, x, y, this);
+		this._manPropertyButton._setIsPush(true);
 	},
 	// お姉さん属性ボタンのオブジェクトを生成
 	_createLadyPropertyButton : function() {
