@@ -1,11 +1,16 @@
 // 物語作成画面に必要な画像データ
 var STORY_BACKGROUND;
-var STORY_CHANGEMUSICBUTTON;
+var STORY_CHANGEMUSICBUTTON_OFF;
+var STORY_CHANGEMUSICBUTTON_ON;
 var STORY_PREVIEWFRAME;
-var STORY_HUMAN_ILLUSTBUTTON;
-var STORY_ANIMAL_ILLUSTBUTTON;
-var STORY_ITEM_ILLUSTBUTTON;
-var STORY_BACKGROUND_ILLUSTBUTTON;
+var STORY_HUMAN_ILLUSTBUTTON_OFF;
+var STORY_HUMAN_ILLUSTBUTTON_ON;
+var STORY_ANIMAL_ILLUSTBUTTON_OFF;
+var STORY_ANIMAL_ILLUSTBUTTON_ON;
+var STORY_ITEM_ILLUSTBUTTON_OFF;
+var STORY_ITEM_ILLUSTBUTTON_ON;
+var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
+var STORY_BACKGROUND_ILLUSTBUTTON_ON;
 var STORY_REMOVEBUTTON_OFF;
 var STORY_REMOVEBUTTON_ON;
 // 物語作成画面に必要な画像データ（明るさ-100)
@@ -350,17 +355,22 @@ var STORY_PALETTEPROPERTY_NIGHT_ON;
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
 	STORY_BACKGROUND = new NormalImage("../image/story/appBackground.png", 1024, 768);
-	STORY_CHANGEMUSICBUTTON = new NormalImage("../image/story/button/changeMusic.png", 100, 100);
+	STORY_CHANGEMUSICBUTTON_OFF = new NormalImage("../image/story/button/changeMusicButtonOff.png", 100, 100);
+	STORY_CHANGEMUSICBUTTON_ON = new NormalImage("../image/story/button/changeMusicButtonOn.png", 100, 100);
 	STORY_PREVIEWFRAME = new NormalImage("../image/story/preview/previewFrame.png", 690, 460);
-	STORY_HUMAN_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/humanButton.png", 106, 72);
-	STORY_ANIMAL_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/animalButton.png", 106, 72);
-	STORY_ITEM_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/itemButton.png", 106, 72);
-	STORY_BACKGROUND_ILLUSTBUTTON = new NormalImage("../image/story/illustButton/backgroundButton.png", 106, 72);
+	STORY_HUMAN_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustButton/humanButtonOff.png", 106, 72);
+	STORY_HUMAN_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustButton/humanButtonOn.png", 106, 72);
+	STORY_ANIMAL_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustButton/animalButtonOff.png", 106, 72);
+	STORY_ANIMAL_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustButton/animalButtonOn.png", 106, 72);
+	STORY_ITEM_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustButton/itemButtonOff.png", 106, 72);
+	STORY_ITEM_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustButton/itemButtonOn.png", 106, 72);
+	STORY_BACKGROUND_ILLUSTBUTTON_OFF = new NormalImage("../image/story/illustButton/backgroundButtonOff.png", 106, 72);
+	STORY_BACKGROUND_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustButton/backgroundButtonOn.png", 106, 72);
 	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 72);
 	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 72);
 	// 物語作成画面に必要な画像データ(明るさ-100)
 	STORY_BACKGROUND_DARK = new NormalImage("../image/story/appBackgroundDark.png", 1024, 768);
-	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicDark.png", 100, 100);
+	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicButtonDark.png", 100, 100);
 	STORY_HUMAN_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/humanButtonDark.png", 106, 72);
 	STORY_ANIMAL_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/animalButtonDark.png", 106, 72);
 	STORY_ITEM_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/itemButtonDark.png", 106, 72);

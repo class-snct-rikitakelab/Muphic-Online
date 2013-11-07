@@ -25,9 +25,9 @@ var StoryScreen = enchant.Class.create({
 	},
 	// 作曲画面への遷移ボタンのオブジェクトを生成
 	_createMusicButton : function() {
-		var path = STORY_CHANGEMUSICBUTTON._path;
-		var width = STORY_CHANGEMUSICBUTTON._width;
-		var height = STORY_CHANGEMUSICBUTTON._height;
+		var path = STORY_CHANGEMUSICBUTTON_OFF._path;
+		var width = STORY_CHANGEMUSICBUTTON_OFF._width;
+		var height = STORY_CHANGEMUSICBUTTON_OFF._height;
 		var x = 20;
 		var y = 30;
 		this._musicButton = new MusicButton(path, width, height, x, y, this);
