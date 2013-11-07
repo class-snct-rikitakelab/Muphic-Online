@@ -52,16 +52,18 @@ var MusicButton = enchant.Class.create(enchant.Sprite, {
 
 	// フレーム処理
 	onenterframe : function() {
-		var leftX = this.x;
-		var rightX = this.x + this.width;
-		var topY = this.y;
-		var bottomY = this.y + this.height;
-		var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
-		var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
-		if(mOverX === true && mOverY === true) {
-			this._setOnOffImage("on");
-		} else {
-			this._setOnOffImage("off");
+		if(this.touchEnabled === true) {
+			var leftX = this.x;
+			var rightX = this.x + this.width;
+			var topY = this.y;
+			var bottomY = this.y + this.height;
+			var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+			var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+			if(mOverX === true && mOverY === true) {
+				this._setOnOffImage("on");
+			} else {
+				this._setOnOffImage("off");
+			}
 		}
 	},
 })

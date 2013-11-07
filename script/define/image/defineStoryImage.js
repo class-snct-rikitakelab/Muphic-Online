@@ -325,7 +325,8 @@ var STORY_PALETTE_1;
 var STORY_PALETTE_2;
 var STORY_PALETTE_3;
 // とじるボタン
-var STORY_PALETTECLOSEBUTTON;
+var STORY_PALETTECLOSEBUTTON_OFF;
+var STORY_PALETTECLOSEBUTTON_ON;
 // じんぶつ属性ボタン
 var STORY_PALETTEPROPERTY_MAN_OFF;
 var STORY_PALETTEPROPERTY_MAN_ON;
@@ -680,7 +681,8 @@ var defineStoryImage = function() {
 	STORY_PALETTE_2 = new NormalImage("../image/story/palette/palette2.png", 1000, 600);
 	STORY_PALETTE_3 = new NormalImage("../image/story/palette/palette3.png", 1000, 600);
 	// とじるボタン
-	STORY_PALETTECLOSEBUTTON = new NormalImage("../image/story/palette/close.png", 83, 44);
+	STORY_PALETTECLOSEBUTTON_OFF = new NormalImage("../image/story/palette/closeButtonOff.png", 83, 44);
+	STORY_PALETTECLOSEBUTTON_ON = new NormalImage("../image/story/palette/closeButtonOn.png", 83, 44);
 	// じんぶつ属性ボタン
 	STORY_PALETTEPROPERTY_MAN_OFF = new NormalImage("../image/story/palette/property/man/manOff.png", 87, 77);
 	STORY_PALETTEPROPERTY_MAN_ON = new NormalImage("../image/story/palette/property/man/manOn.png", 87, 77);

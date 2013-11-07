@@ -39,9 +39,9 @@ var HumanPalette = enchant.Class.create(enchant.Group, {
 	},
 	// とじるボタンのオブジェクトを生成
 	_createCloseButton : function() {
-		var path = STORY_PALETTECLOSEBUTTON._path;
-		var width = STORY_PALETTECLOSEBUTTON._width;
-		var height = STORY_PALETTECLOSEBUTTON._height;
+		var path = STORY_PALETTECLOSEBUTTON_OFF._path;
+		var width = STORY_PALETTECLOSEBUTTON_OFF._width;
+		var height = STORY_PALETTECLOSEBUTTON_OFF._height;
 		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + STORY_PALETTE_1._width - 120;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + STORY_PALETTE_1._height - 65;
 		this._closeButton = new PaletteCloseButton("human", path, width, height, x, y, this);

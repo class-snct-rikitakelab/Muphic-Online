@@ -314,7 +314,8 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PALETTE_1._path);
 	core.preload(STORY_PALETTE_2._path);
 	core.preload(STORY_PALETTE_3._path);
-	core.preload(STORY_PALETTECLOSEBUTTON._path);
+	core.preload(STORY_PALETTECLOSEBUTTON_OFF._path);
+	core.preload(STORY_PALETTECLOSEBUTTON_ON._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_MAN_ON._path);
 	core.preload(STORY_PALETTEPROPERTY_LADY_OFF._path);
