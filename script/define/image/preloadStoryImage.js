@@ -14,6 +14,7 @@ var preloadStoryImage = function() {
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_ON._path);
 	core.preload(STORY_REMOVEBUTTON_OFF._path);
 	core.preload(STORY_REMOVEBUTTON_ON._path);
+	core.preload(STORY_REMOVEBUTTON_PUSH._path);
 
 	core.preload(STORY_BACKGROUND_DARK._path);
 	core.preload(STORY_CHANGEMUSICBUTTON_DARK._path);
@@ -21,8 +22,7 @@ var preloadStoryImage = function() {
 	core.preload(STORY_ANIMAL_ILLUSTBUTTON_DARK._path);
 	core.preload(STORY_ITEM_ILLUSTBUTTON_DARK._path);
 	core.preload(STORY_BACKGROUND_ILLUSTBUTTON_DARK._path);
-	core.preload(STORY_REMOVEBUTTON_OFF_DARK._path);
-	core.preload(STORY_REMOVEBUTTON_ON_DARK._path);
+	core.preload(STORY_REMOVEBUTTON_DARK._path);
 
 	core.preload(STORY_PREVIEWOBJECT_MAN_FRONT_GLAD._path);
 	core.preload(STORY_PREVIEWOBJECT_MAN_FRONT_ANGRY._path);
@@ -342,8 +342,11 @@ var preloadStoryImage = function() {
 	core.preload(STORY_PALETTEPROPERTY_TURTLE_PUSH._path);
 	core.preload(STORY_PALETTEPROPERTY_SUNNY_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_SUNNY_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_SUNNY_PUSH._path);
 	core.preload(STORY_PALETTEPROPERTY_CLOUD_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_CLOUD_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_CLOUD_PUSH._path);
 	core.preload(STORY_PALETTEPROPERTY_NIGHT_OFF._path);
 	core.preload(STORY_PALETTEPROPERTY_NIGHT_ON._path);
+	core.preload(STORY_PALETTEPROPERTY_NIGHT_PUSH._path);
 }

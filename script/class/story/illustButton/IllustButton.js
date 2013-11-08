@@ -84,7 +84,7 @@ var IllustButton = enchant.Class.create({
 		this._parent._setCannotPushMusicButton();
 		this._setCannotPushAllIllustButton();
 		this._parent._previewScreen._removeButton._setIsPush(false);
-		this._parent._previewScreen._removeButton._setImage("off");
+		this._parent._previewScreen._removeButton._setDarkImage(true);
 		this._parent._setCannotPushRemoveButton();
 
 		switch(paletteType) {

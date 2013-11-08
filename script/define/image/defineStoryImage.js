@@ -13,6 +13,7 @@ var STORY_BACKGROUND_ILLUSTBUTTON_OFF;
 var STORY_BACKGROUND_ILLUSTBUTTON_ON;
 var STORY_REMOVEBUTTON_OFF;
 var STORY_REMOVEBUTTON_ON;
+var STORY_REMOVEBUTTON_PUSH;
 // 物語作成画面に必要な画像データ（明るさ-100)
 var STORY_BACKGROUND_DARK;
 var STORY_CHANGEMUSICBUTTON_DARK;
@@ -20,8 +21,7 @@ var STORY_HUMAN_ILLUSTBUTTON_DARK;
 var STORY_ANIMAL_ILLUSTBUTTON_DARK;
 var STORY_ITEM_ILLUSTBUTTON_DARK;
 var STORY_BACKGROUND_ILLUSTBUTTON_DARK;
-var STORY_REMOVEBUTTON_OFF_DARK;
-var STORY_REMOVEBUTTON_ON_DARK;
+var STORY_REMOVEBUTTON_DARK;
 // 物語に使用可能なオブジェクト画像データ
 // じんぶつイラスト
 // 男性
@@ -356,10 +356,13 @@ var STORY_PALETTEPROPERTY_TURTLE_PUSH;
 // 背景属性ボタン
 var STORY_PALETTEPROPERTY_SUNNY_OFF;
 var STORY_PALETTEPROPERTY_SUNNY_ON;
+var STORY_PALETTEPROPERTY_SUNNY_PUSH;
 var STORY_PALETTEPROPERTY_CLOUD_OFF;
 var STORY_PALETTEPROPERTY_CLOUD_ON;
+var STORY_PALETTEPROPERTY_CLOUD_PUSH;
 var STORY_PALETTEPROPERTY_NIGHT_OFF;
 var STORY_PALETTEPROPERTY_NIGHT_ON;
+var STORY_PALETTEPROPERTY_NIGHT_PUSH;
 
 var defineStoryImage = function() {
 	// 物語作成画面に必要な画像データ
@@ -377,6 +380,7 @@ var defineStoryImage = function() {
 	STORY_BACKGROUND_ILLUSTBUTTON_ON = new NormalImage("../image/story/illustButton/backgroundButtonOn.png", 106, 72);
 	STORY_REMOVEBUTTON_OFF = new NormalImage("../image/story/preview/removeButtonOff.png", 106, 72);
 	STORY_REMOVEBUTTON_ON = new NormalImage("../image/story/preview/removeButtonOn.png", 106, 72);
+	STORY_REMOVEBUTTON_PUSH = new NormalImage("../image/story/preview/removeButtonPush.png", 106, 72);
 	// 物語作成画面に必要な画像データ(明るさ-100)
 	STORY_BACKGROUND_DARK = new NormalImage("../image/story/appBackgroundDark.png", 1024, 768);
 	STORY_CHANGEMUSICBUTTON_DARK = new NormalImage("../image/story/button/changeMusicButtonDark.png", 100, 100);
@@ -384,8 +388,7 @@ var defineStoryImage = function() {
 	STORY_ANIMAL_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/animalButtonDark.png", 106, 72);
 	STORY_ITEM_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/itemButtonDark.png", 106, 72);
 	STORY_BACKGROUND_ILLUSTBUTTON_DARK = new NormalImage("../image/story/illustButton/backgroundButtonDark.png", 106, 72);
-	STORY_REMOVEBUTTON_OFF_DARK = new NormalImage("../image/story/preview/removeButtonOffDark.png", 106, 72);
-	STORY_REMOVEBUTTON_ON_DARK = new NormalImage("../image/story/preview/removeButtonOnDark.png", 106, 72);
+	STORY_REMOVEBUTTON_DARK = new NormalImage("../image/story/preview/removeButtonDark.png", 106, 72);
 	// 物語に使用可能なオブジェクト画像データ
 	// じんぶつイラスト
 	// 男性
@@ -718,10 +721,13 @@ var defineStoryImage = function() {
 	STORY_PALETTEPROPERTY_TURTLE_ON = new NormalImage("../image/story/palette/property/turtle/turtleOn.png", 86, 76);
 	STORY_PALETTEPROPERTY_TURTLE_PUSH = new NormalImage("../image/story/palette/property/turtle/turtlePush.png", 86, 76);
 	// 背景属性ボタン
-	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_CLOUD_OFF = new NormalImage("../image/story/palette/property/cloud/cloudOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_CLOUD_ON = new NormalImage("../image/story/palette/property/cloud/cloudOn.png", 87, 77);
-	STORY_PALETTEPROPERTY_NIGHT_OFF = new NormalImage("../image/story/palette/property/night/nightOff.png", 87, 77);
-	STORY_PALETTEPROPERTY_NIGHT_ON = new NormalImage("../image/story/palette/property/night/nightOn.png", 87, 77);
+	STORY_PALETTEPROPERTY_SUNNY_OFF = new NormalImage("../image/story/palette/property/sunny/sunnyOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_SUNNY_ON = new NormalImage("../image/story/palette/property/sunny/sunnyOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_SUNNY_PUSH = new NormalImage("../image/story/palette/property/sunny/sunnyPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_CLOUD_OFF = new NormalImage("../image/story/palette/property/cloud/cloudOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_CLOUD_ON = new NormalImage("../image/story/palette/property/cloud/cloudOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_CLOUD_PUSH = new NormalImage("../image/story/palette/property/cloud/cloudPush.png", 86, 76);
+	STORY_PALETTEPROPERTY_NIGHT_OFF = new NormalImage("../image/story/palette/property/night/nightOff.png", 86, 76);
+	STORY_PALETTEPROPERTY_NIGHT_ON = new NormalImage("../image/story/palette/property/night/nightOn.png", 86, 76);
+	STORY_PALETTEPROPERTY_NIGHT_PUSH = new NormalImage("../image/story/palette/property/night/nightPush.png", 86, 76);
 }

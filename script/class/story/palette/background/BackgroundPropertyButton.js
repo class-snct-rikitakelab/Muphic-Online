@@ -10,12 +10,13 @@ var BackgroundPropertyButton =  enchant.Class.create(enchant.Group, {
 
 	// 晴れ属性ボタンのオブジェクトを生成
 	_createSunnyPropertyButton : function() {
-		var path = STORY_PALETTEPROPERTY_SUNNY_ON._path;
-		var width = STORY_PALETTEPROPERTY_SUNNY_ON._width;
-		var height = STORY_PALETTEPROPERTY_SUNNY_ON._height;
+		var path = STORY_PALETTEPROPERTY_SUNNY_PUSH._path;
+		var width = STORY_PALETTEPROPERTY_SUNNY_PUSH._width;
+		var height = STORY_PALETTEPROPERTY_SUNNY_PUSH._height;
 		var x = (APP_WIDTH - STORY_PALETTE_3._width) / 2 + 330;
 		var y = (APP_HEIGHT - STORY_PALETTE_3._height) / 2 + 30;
 		this._sunnyPropertyButton = new SunnyPropertyButton(path, width, height, x, y, this);
+		this._sunnyPropertyButton._setIsPush(true);
 	},
 	// 雲り属性ボタンのオブジェクトを生成
 	_createCloudPropertyButton : function() {
