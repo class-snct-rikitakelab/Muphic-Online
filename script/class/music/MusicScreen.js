@@ -98,9 +98,9 @@ var MusicScreen = enchant.Class.create({
 
 	// 小節を1つ次に進めるボタンのオブジェクトを生成して画面に表示する
 	_createMeasureNextButton : function() {
-		var path = MUSIC_MEASURENEXTBUTTON._path;
-		var width = MUSIC_MEASURENEXTBUTTON._width;
-		var height = MUSIC_MEASURENEXTBUTTON._height;
+		var path = MUSIC_NEXTBUTTON_OFF._path;
+		var width = MUSIC_NEXTBUTTON_OFF._width;
+		var height = MUSIC_NEXTBUTTON_OFF._height;
 
 		this._musicMediator._measureNextButton = new MeasureNextButton(width, height);
 		this._musicMediator._measureNextButton.image = core.assets[path];
@@ -112,9 +112,9 @@ var MusicScreen = enchant.Class.create({
 
 	// 小節を1つ前に戻すボタンのオブジェクトを生成して画面に表示する
 	_createMeasurePrevButton : function() {
-		var path = MUSIC_MEASUREPREVBUTTON._path;
-		var width = MUSIC_MEASUREPREVBUTTON._width;
-		var height = MUSIC_MEASUREPREVBUTTON._height;
+		var path = MUSIC_PREVBUTTON_OFF._path;
+		var width = MUSIC_PREVBUTTON_OFF._width;
+		var height = MUSIC_PREVBUTTON_OFF._height;
 
 		this._musicMediator._measurePrevButton = new MeasurePrevButton(width, height);
 		this._musicMediator._measurePrevButton.image = core.assets[path];

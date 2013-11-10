@@ -41,6 +41,15 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 		this._setTransparent();
 	},
 
+	// On, Off時の画像切り替え
+	_setOnOffImage : function(state) {
+		if(state === "on") {
+			this.image = core.assets[MUSIC_NEXTBUTTON_ON._path];
+		} else {
+			this.image = core.assets[MUSIC_NEXTBUTTON_OFF._path];
+		}
+	},
+
 	// ボタンが押された際の処理
 	ontouchend : function(event) {
 		// 小節を1つ次に進めてもらう
@@ -55,6 +64,7 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 
 		if(nowPlace === measureMax - 2) {
 			// 現在表示されている小節が最大値の場合はボタンを押せない状態にする
+			this._setOnOffImage("off");
 			this._setCannotPush();
 		} else {
 			// 上記以外の場合は常にボタンを押せる状態にする
@@ -64,6 +74,20 @@ var MeasureNextButton = enchant.Class.create(enchant.Sprite, {
 		if(canPlay === true) {
 			// 再生状態の際はボタンを押せない状態にする
 			this._setCannotPush();
+		} else {
+			if(nowPlace < measureMax - 2) {
+				var leftX = this.x;
+				var rightX = this.x + this.width;
+				var topY = this.y;
+				var bottomY = this.y + this.height;
+				var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+				var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+				if(mOverX === true && mOverY === true) {
+					this._setOnOffImage("on");
+				} else {
+					this._setOnOffImage("off");
+				}
+			}
 		}
 	},
 })

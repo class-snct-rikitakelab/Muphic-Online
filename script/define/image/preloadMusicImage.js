@@ -7,8 +7,10 @@ var preloadMusicImage = function() {
 	core.preload(MUSIC_SIGNBOARD._path);
 	core.preload(MUSIC_PLAYBUTTON_OFF._path);
 	core.preload(MUSIC_PLAYBUTTON_ON._path);
-	core.preload(MUSIC_MEASURENEXTBUTTON._path);
-	core.preload(MUSIC_MEASUREPREVBUTTON._path);
+	core.preload(MUSIC_NEXTBUTTON_OFF._path);
+	core.preload(MUSIC_NEXTBUTTON_ON._path);
+	core.preload(MUSIC_PREVBUTTON_OFF._path);
+	core.preload(MUSIC_PREVBUTTON_ON._path);
 	core.preload(MUSIC_PIANOCAT_OFF._path);
 	core.preload(MUSIC_PIANOCAT_ON._path);
 	core.preload(MUSIC_PIANOCAT_PUSH._path);
