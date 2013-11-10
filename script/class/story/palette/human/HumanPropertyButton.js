@@ -14,7 +14,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_MAN_PUSH._path;
 		var width = STORY_PALETTEPROPERTY_MAN_PUSH._width;
 		var height = STORY_PALETTEPROPERTY_MAN_PUSH._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._manPropertyButton = new ManPropertyButton(path, width, height, x, y, this);
 		this._manPropertyButton._setIsPush(true);
@@ -24,7 +24,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_LADY_OFF._path;
 		var width = STORY_PALETTEPROPERTY_LADY_OFF._width;
 		var height = STORY_PALETTEPROPERTY_LADY_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 107;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 106;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._ladyPropertyButton = new LadyPropertyButton(path, width, height, x, y, this);
 	},
@@ -33,7 +33,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_BOY_OFF._path;
 		var width = STORY_PALETTEPROPERTY_BOY_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BOY_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 214;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 212;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._boyPropertyButton = new BoyPropertyButton(path, width, height, x, y, this);
 	},
@@ -42,7 +42,7 @@ var HumanPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_GIRL_OFF._path;
 		var width = STORY_PALETTEPROPERTY_GIRL_OFF._width;
 		var height = STORY_PALETTEPROPERTY_GIRL_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 321;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 318;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._girlPropertyButton = new GirlPropertyButton(path, width, height, x, y, this);
 	},

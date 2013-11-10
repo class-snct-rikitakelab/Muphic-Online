@@ -14,7 +14,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_DOG_PUSH._path;
 		var width = STORY_PALETTEPROPERTY_DOG_PUSH._width;
 		var height = STORY_PALETTEPROPERTY_DOG_PUSH._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._dogPropertyButton = new DogPropertyButton(path, width, height, x, y, this);
 		this._dogPropertyButton._setIsPush(true);
@@ -24,7 +24,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_BIRD_OFF._path;
 		var width = STORY_PALETTEPROPERTY_BIRD_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BIRD_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 107;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 106;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._birdPropertyButton = new BirdPropertyButton(path, width, height, x, y, this);
 	},
@@ -33,7 +33,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_BEAR_OFF._path;
 		var width = STORY_PALETTEPROPERTY_BEAR_OFF._width;
 		var height = STORY_PALETTEPROPERTY_BEAR_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 214;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 212;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._bearPropertyButton = new BearPropertyButton(path, width, height, x, y, this);
 	},
@@ -42,7 +42,7 @@ var AnimalPropertyButton = enchant.Class.create(enchant.Group, {
 		var path = STORY_PALETTEPROPERTY_TURTLE_OFF._path;
 		var width = STORY_PALETTEPROPERTY_TURTLE_OFF._width;
 		var height = STORY_PALETTEPROPERTY_TURTLE_OFF._height;
-		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 301 + 321;
+		var x = (APP_WIDTH - STORY_PALETTE_1._width) / 2 + 298 + 318;
 		var y = (APP_HEIGHT - STORY_PALETTE_1._height) / 2 + 30;
 		this._turtlePropertyButton = new TurtlePropertyButton(path, width, height, x, y, this);
 	},
