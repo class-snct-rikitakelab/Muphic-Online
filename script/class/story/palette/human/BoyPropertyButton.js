@@ -1,28 +1,13 @@
-var BoyPropertyButton = enchant.Class.create(enchant.Sprite, {
+var BoyPropertyButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		// enchant.Spriteクラスのコンストラクタを実行
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
-		this._parent = parent; // このクラスの親にあたるオブジェクト
 	},
 
 	// _isPushプロパティにブーリアン値をセットする
 	_setIsPush : function(isPush) {
 		this._isPush = isPush;
-	},
-
-	// touchEnabledプロパティにブーリアン値をセットする
-	_setTouchEnabled : function(touchEnabled) {
-		this.touchEnabled = touchEnabled;
-	},
-
-	// opacityプロパティのブーリアン値をセットする
-	_setOpacity : function(opacity) {
-		this.opacity = opacity;
 	},
 
 	// On, Off時の画像切り替え
@@ -40,18 +25,6 @@ var BoyPropertyButton = enchant.Class.create(enchant.Sprite, {
 		} else {
 			this.image = core.assets[STORY_PALETTEPROPERTY_BOY_OFF._path];
 		}
-	},
-
-	// ボタンの全てのステータスを押せる状態に合わせる
-	_setCanPush : function() {
-		this._setTouchEnabled(true);
-		this._setOpacity(1.0);
-	},
-
-	// ボタンの全てのステータスを押せない状態に合わせる
-	_setCannotPush : function() {
-		this._setTouchEnabled(false);
-		this._setOpacity(0.5);
 	},
 
 	// クリック時の処理
