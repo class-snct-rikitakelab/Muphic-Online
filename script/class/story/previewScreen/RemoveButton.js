@@ -1,13 +1,9 @@
-var RemoveButton = enchant.Class.create(enchant.Sprite, {
+var RemoveButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
 		this._touchButton = false; // ボタンをクリックしたかどうか
-		this._parent = parent; // このクラスの親にあたるオブジェクト
 	},
 
 	// _isPushプロパティにブーリアン値をセットする
@@ -18,25 +14,6 @@ var RemoveButton = enchant.Class.create(enchant.Sprite, {
 	// _touchButtonプロパティにブーリアン値をセットする
 	_setTouchButton : function(touchButton) {
 		this._touchButton = touchButton;
-	},
-
-	// touchEnabledプロパティにブーリアン値をセットする
-	_setTouchEnabled : function(touchEnabled) {
-		this.touchEnabled = touchEnabled;
-	},
-
-	// opacityプロパティのブーリアン値をセットする
-	_setOpacity : function(opacity) {
-		this.opacity = opacity;
-	},
-
-	// 物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-	// 物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
 	},
 
 	// On, Off時の画像切り替え
