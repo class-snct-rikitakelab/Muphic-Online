@@ -1,23 +1,10 @@
-var PreviewBackground = enchant.Class.create(enchant.Sprite, {
+var PreviewBackground = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
-		this._parent = parent;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 	},
 
 	// 画像をセット
 	_setBackgroundImage : function(path) {
 		this.image = core.assets[path];
-	},
-
-	// 物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-	// 物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
 	},
 })

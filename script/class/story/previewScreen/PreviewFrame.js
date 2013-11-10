@@ -1,36 +1,6 @@
-var PreviewFrame = enchant.Class.create(enchant.Sprite, {
+var PreviewFrame = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
-		this._parent = parent;
-	},
-
-	// フレーム全体を物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-	// フレーム全体を物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
-	},
-
-	// 引数のx座標値が画像のx座標上にあるかチェック
-	_mouseOverX : function(x, leftX, rightX, leftOffset, rightOffset) {
-		if(leftX + leftOffset <= x && x <= rightX + rightOffset) {
-			return true;
-		} else {
-			return false;
-		}
-	},
-	// 引数のy座標値が画像のy座標上にあるかチェック
-	_mouseOverY : function(y, topY, bottomY, topOffset, bottomOffset) {
-		if(topY + topOffset <= y && y <= bottomY + bottomOffset) {
-			return true;
-		} else {
-			return false;
-		}
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 	},
 
 	// フレーム処理
@@ -46,9 +16,9 @@ var PreviewFrame = enchant.Class.create(enchant.Sprite, {
 			var rightOffset = - 10;
 			var topOffset = 10;
 			var bottomOffset = - 10;
-			var mouseOverX = this._mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
-			var mouseOverY = this._mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
-			if(mouseOverX === true && mouseOverY === true) {
+			var mOverX = mouseOverX(clientX, leftX, rightX, leftOffset, rightOffset);
+			var mOverY = mouseOverY(clientY, topY, bottomY, topOffset, bottomOffset);
+			if(mOverX === true && mOverY === true) {
 				var selectedIllustWidth = this._parent._selectedIllust.width;
 				var selectedIllustHeight = this._parent._selectedIllust.height;
 				if((clientX >= rightX + rightOffset - selectedIllustWidth && clientX <= rightX + rightOffset) && (clientY >= bottomY + bottomOffset - selectedIllustHeight && clientY <= bottomY + bottomOffset)) {
