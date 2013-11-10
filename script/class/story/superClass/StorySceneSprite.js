@@ -9,6 +9,14 @@ var StorySceneSprite = enchant.Class.create(enchant.Sprite, {
 	},
 
 	// enchant.Spriteクラスのプロパティセッタ
+	// x座標をセット
+	_setX : function(x) {
+		this.x = x;
+	},
+	// y座標をセット
+	_setY : function(y) {
+		this.y = y;
+	},
 	// touchEnabledプロパティにブーリアン値をセットする
 	_setTouchEnabled : function(touchEnabled) {
 		this.touchEnabled = touchEnabled;

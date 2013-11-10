@@ -1,31 +1,10 @@
-var SelectedImage = enchant.Class.create(enchant.Sprite, {
+var SelectedImage = enchant.Class.create(StorySceneSprite, {
 	initialize : function(imagePath, focusPath, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[imagePath];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, imagePath, width, height, x, y, parent);
 		this.opacity = 0.5;
+		// 以下, このクラスのプロパティ
 		this._imagePath = imagePath;
 		this._focusPath = focusPath;
-		this._parent = parent;
-	},
-
-	// x座標をセット
-	_setX : function(x) {
-		this.x = x;
-	},
-	// y座標をセット
-	_setY : function(y) {
-		this.y = y;
-	},
-
-	// 半透明画像を物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-	// 半透明画像を物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
 	},
 
 	// クリック時の処理
@@ -36,7 +15,6 @@ var SelectedImage = enchant.Class.create(enchant.Sprite, {
 		var height = this.height;
 		var x;
 		var y;
-
 		var leftX = PREVIEWSCREEN_LEFT_X;
 		var rightX = PREVIEWSCREEN_RIGHT_X;
 		var topY = PREVIEWSCREEN_TOP_Y;
