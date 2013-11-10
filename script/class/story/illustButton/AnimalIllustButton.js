@@ -1,26 +1,13 @@
-var AnimalIllustButton = enchant.Class.create(enchant.Sprite, {
+var AnimalIllustButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		// enchant.Spriteクラスのコンストラクタを実行
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
-		this._parent = parent; // このクラスの親にあたるオブジェクト
 	},
 
 	// _isPushプロパティにブーリアン値をセットする
 	_setIsPush : function(isPush) {
 		this._isPush = isPush;
-	},
-	// touchEnabledプロパティにブーリアン値をセットする
-	_setTouchEnabled : function(touchEnabled) {
-		this.touchEnabled = touchEnabled;
-	},
-	// opacityプロパティのブーリアン値をセットする
-	_setOpacity : function(opacity) {
-		this.opacity = opacity;
 	},
 
 	// On, Off時の画像切り替え
