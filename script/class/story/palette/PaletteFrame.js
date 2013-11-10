@@ -1,9 +1,5 @@
-var PaletteFrame = enchant.Class.create(enchant.Sprite, {
+var PaletteFrame = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
-		this._parent = parent;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 	},
 })
