@@ -29,9 +29,9 @@ var MusicScreen = enchant.Class.create({
 
 	// 再生ボタンのオブジェクトを生成して画面に表示する
 	_createPlayButton : function() {
-		var path = MUSIC_PLAYBUTTON._path;
-		var width = MUSIC_PLAYBUTTON._width;
-		var height = MUSIC_PLAYBUTTON._height;
+		var path = MUSIC_PLAYBUTTON_OFF._path;
+		var width = MUSIC_PLAYBUTTON_OFF._width;
+		var height = MUSIC_PLAYBUTTON_OFF._height;
 
 		this._musicMediator._playButton = new PlayButton(width, height);
 		this._musicMediator._playButton.image = core.assets[path];

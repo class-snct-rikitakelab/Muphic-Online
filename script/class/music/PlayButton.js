@@ -61,11 +61,21 @@ var PlayButton = enchant.Class.create(enchant.Sprite, {
 		this._setTransparent();
 	},
 
+	// On, Off時の画像切り替え
+	_setOnOffImage : function(state) {
+		if(state === "on") {
+			this.image = core.assets[MUSIC_PLAYBUTTON_ON._path];
+		} else {
+			this.image = core.assets[MUSIC_PLAYBUTTON_OFF._path];
+		}
+	},
+
 	// クリック時の処理
 	ontouchend : function(event) {
 		// すべての動物の「歌ったフラグ」をリセット
 		this._parent._resetIsSang();
 		// 再生状態にセット
+		this._setOnOffImage("off");
 		this._setDoingPlay();
 
 		// すべての動物のx座標値とy座標値をそれぞれ絶対的な数値にセットし直す
@@ -82,12 +92,22 @@ var PlayButton = enchant.Class.create(enchant.Sprite, {
 	onenterframe : function(event) {
 		var canPlay = this._isPush;
 		var animalsCount = this._parent._getAnimalsCount();
-
 		if(canPlay === false) {
 			if(animalsCount === 0) {
 				this._setCannotPush();
 			} else if(animalsCount >= 1) {
 				this._setCanPush();
+				var leftX = this.x;
+				var rightX = this.x + this.width;
+				var topY = this.y;
+				var bottomY = this.y + this.height;
+				var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+				var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+				if(mOverX === true && mOverY === true) {
+					this._setOnOffImage("on");
+				} else {
+					this._setOnOffImage("off");
+				}
 			}
 		}
 	},
