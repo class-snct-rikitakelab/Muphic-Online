@@ -1,11 +1,8 @@
-var PaletteCloseButton = enchant.Class.create(enchant.Sprite, {
+var PaletteCloseButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(paletteType, path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
+		// 以下, このクラスのプロパティ
 		this._paletteType = paletteType;
-		this._parent = parent;
 	},
 
 	// On, Off時の画像切り替え
