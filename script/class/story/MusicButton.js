@@ -1,25 +1,6 @@
-var MusicButton = enchant.Class.create(enchant.Sprite, {
+var MusicButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
-		this._parent = parent;
-	},
-
-	// 物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-
-	// 物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
-	},
-
-	//ボタンが押せない状態にする
-	_setTouchEnabled : function (touchEnabled) {
-		this.touchEnabled = touchEnabled;
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 	},
 
 	// On, Off時の画像切り替え
@@ -30,7 +11,6 @@ var MusicButton = enchant.Class.create(enchant.Sprite, {
 			this.image = core.assets[STORY_CHANGEMUSICBUTTON_OFF._path];
 		}
 	},
-
 	//　ボタンが押せない（暗い）状態の色に変更する
 	_setDarkImage : function(isDark) {
 		if(isDark === true) {
@@ -49,7 +29,6 @@ var MusicButton = enchant.Class.create(enchant.Sprite, {
 	ontouchend : function() {
 		this._moveToMusicScene();
 	},
-
 	// フレーム処理
 	onenterframe : function() {
 		if(this.touchEnabled === true) {
