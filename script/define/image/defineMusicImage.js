@@ -1,5 +1,6 @@
 // 作曲画面に必要な画像データ
-var MUSIC_CHANGESTORYBUTTON;
+var MUSIC_CHANGESTORYBUTTON_OFF;
+var MUSIC_CHANGESTORYBUTTON_ON;
 var MUSIC_HUMEN;
 var MUSIC_SCALEHOUSE;
 var MUSIC_SIGNBOARD;
@@ -16,7 +17,8 @@ var MUSIC_ANIMAL;
 
 var defineMusicImage = function() {
 	// 作曲画面に必要な画像データ
-	MUSIC_CHANGESTORYBUTTON = new NormalImage("../image/music/button/changeStory.png", 100, 100);
+	MUSIC_CHANGESTORYBUTTON_OFF = new NormalImage("../image/music/button/changeStoryButtonOff.png", 100, 100);
+	MUSIC_CHANGESTORYBUTTON_ON = new NormalImage("../image/music/button/changeStoryButtonOn.png", 100, 100);
 	MUSIC_HUMEN = new NormalImage("../image/music/humen/humen.png", 792, 564);
 	MUSIC_SCALEHOUSE = new NormalImage("../image/music/humen/house.png", 90, 613);
 	MUSIC_SIGNBOARD = new NormalImage("../image/music/humen/signboard.png", 33, 434);
