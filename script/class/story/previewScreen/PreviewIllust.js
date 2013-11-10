@@ -1,27 +1,15 @@
-var PreviewIllust = enchant.Class.create(enchant.Sprite, {
+var PreviewIllust = enchant.Class.create(StorySceneSprite, {
 	initialize : function(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[imagePath];
-		this.x = x;
-		this.y = y;
+		StorySceneSprite.call(this, imagePath, width, height, x, y, parent);
+		// 以下, このクラスのプロパティ
 		this._arrayIndex = arrayIndex;
 		this._zIndex = zIndex;
 		this._focus = new PreviewIllustRemoveFocus(focusPath, this.width, this.height, this.x, this.y, this);
-		this._parent = parent;
 	},
 
 	// 配列のインデックスをセット
 	_setArrayIndex : function(arrayIndex) {
 		this._arrayIndex = arrayIndex;
-	},
-
-	// 物語作成画面へ加える
-	_addToStoryScene : function() {
-		storyScene.addChild(this);
-	},
-	// 物語作成画面から削除する
-	_removeFromStoryScene : function() {
-		storyScene.removeChild(this);
 	},
 
 	// プレビュー画面に配置するイラストの破棄
@@ -40,23 +28,6 @@ var PreviewIllust = enchant.Class.create(enchant.Sprite, {
 		}
 	},
 
-	// 引数のx座標値が画像のx座標上にあるかチェック
-	_mouseOverX : function(x, leftX, rightX, leftOffset, rightOffset) {
-		if(leftX + leftOffset <= x && x <= rightX + rightOffset) {
-			return true;
-		} else {
-			return false;
-		}
-	},
-	// 引数のy座標値が画像のy座標上にあるかチェック
-	_mouseOverY : function(y, topY, bottomY, topOffset, bottomOffset) {
-		if(topY + topOffset <= y && y <= bottomY + bottomOffset) {
-			return true;
-		} else {
-			return false;
-		}
-	},
-
 	// フレーム処理
 	onenterframe : function() {
 		var removeButtonPush = this._parent._removeButton._isPush;
@@ -67,9 +38,9 @@ var PreviewIllust = enchant.Class.create(enchant.Sprite, {
 		var myselfRightX = this.x + this.width;
 		var myselfTopY = this.y;
 		var myselfBottomY = this.y + this.height;
-		var mouseOverX = this._mouseOverX(clientX, myselfLeftX, myselfRightX, 0, 0);
-		var mouseOverY = this._mouseOverY(clientY, myselfTopY, myselfBottomY, 0, 0);
-		if(mouseOverX === true && mouseOverY === true) {
+		var mOverX = mouseOverX(clientX, myselfLeftX, myselfRightX, 0, 0);
+		var mOverY = mouseOverY(clientY, myselfTopY, myselfBottomY, 0, 0);
+		if(mOverX === true && mOverY === true) {
 			var illust = this._parent._illust;
 			var overlapIllustIndex = new Array();
 			for(var i = 0; i < this._parent._illust.length; i++) {

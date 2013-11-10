@@ -1,15 +1,6 @@
-var PreviewIllustRemoveFocus = enchant.Class.create(enchant.Sprite, {
+var PreviewIllustRemoveFocus = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
-		enchant.Sprite.call(this, width, height);
-		this.image = core.assets[path];
-		this.x = x;
-		this.y = y;
-		this._parent = parent;
-	},
-
-	// フォーカスを非表示
-	_removeFocus : function() {
-		storyScene.removeChild(this);
+		StorySceneSprite.call(this, path, width, height, x, y, parent);
 	},
 
 	// パレットの削除を親に依頼
@@ -19,7 +10,7 @@ var PreviewIllustRemoveFocus = enchant.Class.create(enchant.Sprite, {
 
 	// マウスクリック時の処理
 	ontouchend : function() {
-		this._removeFocus();
+		this._removeFromStoryScene();
 		this._parent._removeFromStoryScene();
 		this._parent._destroyIllust();
 	},
