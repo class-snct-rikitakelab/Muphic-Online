@@ -34,9 +34,11 @@ var MusicMediator = enchant.Class.create({
 
 	_setAnimalButtonImage : function(imageString) {
 		if(imageString === "off") {
-			this._animalButton._setOffImage();
+			this._animalButton._setOnOffImage("off");
 		} else if(imageString === "on") {
-			this._animalButton._setOnImage();
+			this._animalButton._setOnOffImage("on");
+		} else if(imageString === "push") {
+			this._animalButton._setPushImage("push");
 		}
 	},
 
@@ -51,9 +53,11 @@ var MusicMediator = enchant.Class.create({
 
 	_setModosuButtonImage : function(imageString) {
 		if(imageString === "off") {
-			this._modosuButton._setOffImage();
+			this._modosuButton._setOnOffImage("off");
 		} else if(imageString === "on") {
-			this._modosuButton._setOnImage();
+			this._modosuButton._setOnOffImage("on");
+		} else if(imageString === "push") {
+			this._modosuButton._setPushImage("push");
 		}
 	},
 

@@ -11,8 +11,10 @@ var preloadMusicImage = function() {
 	core.preload(MUSIC_MEASUREPREVBUTTON._path);
 	core.preload(MUSIC_PIANOCAT_OFF._path);
 	core.preload(MUSIC_PIANOCAT_ON._path);
+	core.preload(MUSIC_PIANOCAT_PUSH._path);
 	core.preload(MUSIC_REMOVEANIMAL_OFF._path);
 	core.preload(MUSIC_REMOVEANIMAL_ON._path);
+	core.preload(MUSIC_REMOVEANIMAL_PUSH._path);
 	core.preload(MUSIC_REMOVECURSOR._path);
 	core.preload(MUSIC_REMOVEBOX._path);
 	core.preload(MUSIC_ANIMAL["cat"]._path);

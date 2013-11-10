@@ -5,12 +5,18 @@ var ModosuButton = enchant.Class.create(enchant.Sprite, {
 		enchant.Sprite.call(this, width, height);
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
+		this._touchButton = false; // ボタンをクリックしたかどうか
 		this._parent = null; // このクラスの親にあたるオブジェクト
 	},
 
 	// _isPushプロパティにブーリアン値をセットする
 	_setIsPush : function(isPush) {
 		this._isPush = isPush;
+	},
+
+	// _touchButtonプロパティにブーリアン値をセットする
+	_setTouchButton : function(touchButton) {
+		this._touchButton = touchButton;
 	},
 
 	// ボタンを押せる状態にする
@@ -33,16 +39,6 @@ var ModosuButton = enchant.Class.create(enchant.Sprite, {
 		this.opacity = 0.5;
 	},
 
-	// ボタンが「押されている」状態の時の色に変更する
-	_setOnImage : function() {
-		this.image = core.assets[MUSIC_REMOVEANIMAL_ON._path];
-	},
-
-	// ボタンが「押されていない」状態の時の色に変更する
-	_setOffImage : function() {
-		this.image = core.assets[MUSIC_REMOVEANIMAL_OFF._path];
-	},
-
 	// ボタンの全てのステータスを押せる状態に合わせる
 	_setCanPush : function() {
 		this._setTouchEnable();
@@ -53,6 +49,23 @@ var ModosuButton = enchant.Class.create(enchant.Sprite, {
 	_setCannotPush : function() {
 		this._setTouchDisable();
 		this._setTransparent();
+	},
+
+	// On, Off時の画像切り替え
+	_setOnOffImage : function(state) {
+		if(state === "on") {
+			this.image = core.assets[MUSIC_REMOVEANIMAL_ON._path];
+		} else {
+			this.image = core.assets[MUSIC_REMOVEANIMAL_OFF._path];
+		}
+	},
+	// 押下, 非押下時の画像切り替え
+	_setPushImage : function(state) {
+		if(state === "push") {
+			this.image = core.assets[MUSIC_REMOVEANIMAL_PUSH._path];
+		} else {
+			this.image = core.assets[MUSIC_REMOVEANIMAL_OFF._path];
+		}
 	},
 
 	// クリック時の処理
@@ -66,7 +79,6 @@ var ModosuButton = enchant.Class.create(enchant.Sprite, {
 			this._parent._setAnimalButtonImage("off");
 			this._setIsPush(true);
 			canRemoveAnimal = true;
-			this._setOnImage();
 		} else if(canRemoveAnimal === true) {
 			this._setIsPush(false);
 			canRemoveAnimal = false;
@@ -77,22 +89,41 @@ var ModosuButton = enchant.Class.create(enchant.Sprite, {
 
 		// ボタンを押すごとに状態を変える
 		if(canRemoveAnimal === true) {
-			this._setOnImage();
+			this._setPushImage("push");
 		} else if(canRemoveAnimal === false) {
-			this._setOffImage();
+			this._setOnOffImage("off");
 		}
+		this._setTouchButton(true);
 	},
 
 	// 定期処理
 	onenterframe : function() {
 		var canPlay = this._parent._getPlayButtonState();
-
 		if(canPlay === true) {
 			// 再生状態の時はボタンを押せない状態に
+			this._setOnOffImage("off");
 			this._setCannotPush();
 		} else if(canPlay === false) {
 			// 再生状態でない時はボタンを押せる状態に
 			this._setCanPush();
+			var leftX = this.x;
+			var rightX = this.x + this.width;
+			var topY = this.y;
+			var bottomY = this.y + this.height;
+			var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+			var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+			if(mOverX === true && mOverY === true) {
+				if(this._touchButton === false) {
+					this._setOnOffImage("on");
+				}
+			} else {
+				if(this._isPush === true) {
+					this._setPushImage("push");
+				} else {
+					this._setOnOffImage("off");
+				}
+				this._setTouchButton(false);
+			}
 		}
 	}
 })

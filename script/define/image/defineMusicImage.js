@@ -10,8 +10,10 @@ var MUSIC_MEASURENEXTBUTTON;
 var MUSIC_MEASUREPREVBUTTON;
 var MUSIC_PIANOCAT_OFF;
 var MUSIC_PIANOCAT_ON;
+var MUSIC_PIANOCAT_PUSH;
 var MUSIC_REMOVEANIMAL_OFF;
 var MUSIC_REMOVEANIMAL_ON;
+var MUSIC_REMOVEANIMAL_PUSH;
 var MUSIC_REMOVECURSOR;
 var MUSIC_REMOVEBOX;
 var MUSIC_ANIMAL;
@@ -27,10 +29,12 @@ var defineMusicImage = function() {
 	MUSIC_PLAYBUTTON_ON = new NormalImage("../image/music/button/playButtonOn.png", 110, 106);
 	MUSIC_MEASURENEXTBUTTON = new NormalImage("../image/music/button/next.png", 35, 41);
 	MUSIC_MEASUREPREVBUTTON = new NormalImage("../image/music/button/prev.png", 35, 41);
-	MUSIC_PIANOCAT_OFF = new NormalImage("../image/music/button/pianoCatOff.png", 106, 73);
-	MUSIC_PIANOCAT_ON = new NormalImage("../image/music/button/pianoCatOn.png", 106, 73);
-	MUSIC_REMOVEANIMAL_OFF = new NormalImage("../image/music/button/removeOff.png", 106, 73);
-	MUSIC_REMOVEANIMAL_ON = new NormalImage("../image/music/button/removeOn.png", 106, 73);
+	MUSIC_PIANOCAT_OFF = new NormalImage("../image/music/button/pianoCatOff.png", 106, 72);
+	MUSIC_PIANOCAT_ON = new NormalImage("../image/music/button/pianoCatOn.png", 106, 72);
+	MUSIC_PIANOCAT_PUSH = new NormalImage("../image/music/button/pianoCatPush.png", 106, 72);
+	MUSIC_REMOVEANIMAL_OFF = new NormalImage("../image/music/button/removeButtonOff.png", 106, 72);
+	MUSIC_REMOVEANIMAL_ON = new NormalImage("../image/music/button/removeButtonOn.png", 106, 72);
+	MUSIC_REMOVEANIMAL_PUSH = new NormalImage("../image/music/button/removeButtonPush.png", 106, 72);
 	MUSIC_REMOVECURSOR = new NormalImage("../image/music/remove/removeCursor.png", 60, 45);
 	MUSIC_REMOVEBOX = new NormalImage("../image/music/remove/removeBox.png", 60, 45);
 
