@@ -1,19 +1,12 @@
-var BackgroundPaletteImage = enchant.Class.create(enchant.Sprite, {
-	initialize : function(backgroundPath, weatherPath, thumbnailPath, imageWidth, imageHeight, thumbnailWidth, thumbnailHeight, minX, minY, parent) {
-		enchant.Sprite.call(this, thumbnailWidth, thumbnailHeight);
-		this.image = core.assets[thumbnailPath];
-		this.x = minX;
-		this.y = minY;
+var BackgroundPaletteImage = enchant.Class.create(StorySceneSprite, {
+	initialize : function(backgroundPath, weatherPath, thumbnailPath, imageWidth, imageHeight, thumbnailWidth, thumbnailHeight, x, y, parent) {
+		StorySceneSprite.call(this, thumbnailPath, thumbnailWidth, thumbnailHeight, x, y, parent);
 		this.opacity = 0.5;
+		// 以下, このクラスのプロパティ
 		this._backgroundPath = backgroundPath;
 		this._weatherPath = weatherPath;
 		this._imageWidth = imageWidth;
 		this._imageHeight = imageHeight;
-		this._minX = minX;
-		this._maxX = minX + this.width;
-		this._minY = minY;
-		this._maxY = minY + this.height;
-		this._parent = parent;
 	},
 
 	// 画面全体の背景を暗くしない
@@ -46,28 +39,6 @@ var BackgroundPaletteImage = enchant.Class.create(enchant.Sprite, {
 		this._parent._removePalette();
 	},
 
-	_setOpacity : function(opacity) {
-		this.opacity = opacity;
-	},
-
-	// 引数のx座標値が画像のx座標上にあるかチェック
-	_mouseOverX : function(x) {
-		if(this._minX <= x && x <= this._maxX) {
-			return true;
-		} else {
-			return false;
-		}
-	},
-
-	// 引数のy座標値が画像のy座標上にあるかチェック
-	_mouseOverY : function(y) {
-		if(this._minY <= y && y <= this._maxY) {
-			return true;
-		} else {
-			return false;
-		}
-	},
-
 	// クリック処理
 	ontouchend : function() {
 		this._setNotDarkScreenBackground();
@@ -81,9 +52,13 @@ var BackgroundPaletteImage = enchant.Class.create(enchant.Sprite, {
 
 	// フレーム処理
 	onenterframe : function() {
-		var mouseOverX = this._mouseOverX(clientX);
-		var mouseOverY = this._mouseOverY(clientY);
-		if(mouseOverX === true && mouseOverY === true) {
+		var leftX = this.x;
+		var rightX = this.x + this.width;
+		var topY = this.y;
+		var bottomY = this.y + this.height;
+		var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
+		var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
+		if(mOverX === true && mOverY === true) {
 			this._setOpacity(1.0);
 		} else {
 			this._setOpacity(0.3);
