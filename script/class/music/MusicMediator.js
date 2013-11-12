@@ -1,6 +1,6 @@
 var MusicMediator = enchant.Class.create({
 	initialize : function() {
-		this._changeStoryButton = null; // 物語作成画面への遷移ボタンオブジェクト
+		this._storyButton = null; // 物語作成画面への遷移ボタンオブジェクト
 		this._playButton = null; // 再生ボタンのオブジェクト
 		this._animalButton = null; // 動物ボタンのオブジェクト
 		this._modosuButton = null; // 削除ボタンのオブジェクト

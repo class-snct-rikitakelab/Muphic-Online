@@ -1,9 +1,10 @@
 // 作曲画面に必要な画像データ
+var MUSIC_BACKGROUND;
 var MUSIC_CHANGESTORYBUTTON_OFF;
 var MUSIC_CHANGESTORYBUTTON_ON;
 var MUSIC_HUMEN;
 var MUSIC_SCALEHOUSE;
-var MUSIC_SIGNBOARD;
+var MUSIC_MEASUREBOARD;
 var MUSIC_PLAYBUTTON_OFF;
 var MUSIC_PLAYBUTTON_ON;
 var MUSIC_NEXTBUTTON_OFF;
@@ -22,11 +23,12 @@ var MUSIC_ANIMAL;
 
 var defineMusicImage = function() {
 	// 作曲画面に必要な画像データ
+	MUSIC_BACKGROUND = new NormalImage("../image/music/background/background.png", 1024, 768);
 	MUSIC_CHANGESTORYBUTTON_OFF = new NormalImage("../image/music/button/changeStoryButtonOff.png", 100, 100);
 	MUSIC_CHANGESTORYBUTTON_ON = new NormalImage("../image/music/button/changeStoryButtonOn.png", 100, 100);
-	MUSIC_HUMEN = new NormalImage("../image/music/humen/humen.png", 792, 564);
+	MUSIC_HUMEN = new NormalImage("../image/music/humen/humen.png", 791, 513);
 	MUSIC_SCALEHOUSE = new NormalImage("../image/music/humen/house.png", 90, 613);
-	MUSIC_SIGNBOARD = new NormalImage("../image/music/humen/signboard.png", 33, 434);
+	MUSIC_MEASUREBOARD = new NormalImage("../image/music/humen/measureBoard.png", 33, 434);
 	MUSIC_PLAYBUTTON_OFF = new NormalImage("../image/music/button/playButtonOff.png", 110, 106);
 	MUSIC_PLAYBUTTON_ON = new NormalImage("../image/music/button/playButtonOn.png", 110, 106);
 	MUSIC_NEXTBUTTON_OFF = new NormalImage("../image/music/button/nextButtonOff.png", 36, 42);

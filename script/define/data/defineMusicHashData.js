@@ -37,14 +37,14 @@ var defineMusicHashData = function() {
 	yToScale[646] = "C4";
 
 	// scaleToYの中身の定義
-	scaleToY["C5"] = 300;
-	scaleToY["B4"] = 349;
-	scaleToY["A4"] = 399;
-	scaleToY["G4"] = 448;
-	scaleToY["F4"] = 498;
-	scaleToY["E4"] = 549;
-	scaleToY["D4"] = 597;
-	scaleToY["C4"] = 646;
+	scaleToY["C5"] = 249;
+	scaleToY["B4"] = 298; // +49
+	scaleToY["A4"] = 348; // +50
+	scaleToY["G4"] = 397; // +49
+	scaleToY["F4"] = 447; // +50
+	scaleToY["E4"] = 498; // +51
+	scaleToY["D4"] = 546; // +48
+	scaleToY["C4"] = 595; // +49
 
 	// xToBeatの中身の定義
 	xToBeat[128] = 1;
@@ -61,10 +61,10 @@ var defineMusicHashData = function() {
 	xToBeat[788] = 4;
 
 	// beatToXの中身の定義
-	beatToX[1] = 128;
-	beatToX[2] = 188;
-	beatToX[3] = 248;
-	beatToX[4] = 308;
+	beatToX[1] = 11;
+	beatToX[2] = 71;
+	beatToX[3] = 131;
+	beatToX[4] = 191;
 
 	// xBoxToBeatの中身の定義
 	for(var i = 0; i < 3; i++) {

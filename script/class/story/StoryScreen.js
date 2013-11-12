@@ -21,7 +21,7 @@ var StoryScreen = enchant.Class.create({
 		var height = STORY_BACKGROUND._height;
 		var x = 0;
 		var y = 0;
-		this._screenBackground = new ScreenBackground(path, width, height, x, y, this);
+		this._screenBackground = new StoryScreenBackground(path, width, height, x, y, this);
 	},
 	// 作曲画面への遷移ボタンのオブジェクトを生成
 	_createMusicButton : function() {

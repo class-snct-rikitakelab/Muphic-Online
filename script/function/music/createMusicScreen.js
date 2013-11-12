@@ -1,40 +1,58 @@
-var MEASURE_MAX = 8;
-
 // 作曲画面のレイアウトなどを生成する
 var createMusicScreen = function() {
 	// musicSceneにSceneクラスのインスタンスを与える
 	musicScene = new enchant.Scene();
-	// 作曲画面の背景色を24ビットカラーで指定
-	musicScene.backgroundColor = "#FFFCC0";
 
 	// 作曲画面全体のインタフェース(外見)をつかさどるmusicScreenオブジェクト
-	var musicScreen = new MusicScreen();
-	// musicScreenの親プロパティにmusicSceneを与える
-	musicScreen.parent = musicScene;
+	var musicScreen = new MusicScreen(musicScene);
 
-	// 作曲画面全体の仲介を担当するオブジェクトを生成
-	musicScreen._createMusicMediator();
+	// 画面全体の背景を生成
+	musicScreen._createScreenBackground();
 	// 物語作成画面への遷移ボタンを生成
-	musicScreen._createChangeStoryButton();
-	// 再生ボタンを生成
-	musicScreen._createPlayButton();
-	// 動物ボタン(ネコボタン)を生成
-	musicScreen._createAnimalButton();
-	// 削除ボタンを生成
-	musicScreen._createModosuButton();
-	// 音階を表す家を生成
-	musicScreen._createScaleHouse();
+	musicScreen._createStoryButton();
 	// 譜面を生成
 	musicScreen._createHumen();
-	// 小節を1つ次に進めるボタンを生成
-	musicScreen._createMeasureNextButton();
-	// 小節を1つ前に戻すボタンを生成
-	musicScreen._createMeasurePrevButton();
-	// 譜面上で小節番号を表示するサインボードを生成
-	musicScreen._createSignboards();
-	// 譜面の論理的なデータや処理をつかさどるオブジェクトを生成
-	musicScreen._createScoreData(MEASURE_MAX, 1);
+	// 小節操作オブジェクトを生成
+	musicScreen._humen._createMeasureController();
+	// スコアシートオブジェクトを生成
+	musicScreen._humen._createScoreSheet();
 
-	// 譜面の初期化
-	musicScreen._musicMediator._initializeScore();
+	musicScreen._humen._createNote("cat", 1, 1, "C4");
+	musicScreen._humen._createNote("cat", 1, 2, "C4");
+	musicScreen._humen._createNote("cat", 1, 3, "D4");
+	musicScreen._humen._createNote("cat", 1, 4, "D4");
+	musicScreen._humen._createNote("cat", 2, 1, "E4");
+	musicScreen._humen._createNote("cat", 2, 2, "E4");
+	musicScreen._humen._createNote("cat", 2, 3, "F4");
+	musicScreen._humen._createNote("cat", 2, 4, "F4");
+	musicScreen._humen._createNote("cat", 3, 1, "G4");
+	musicScreen._humen._createNote("cat", 3, 2, "G4");
+	musicScreen._humen._createNote("cat", 3, 3, "A4");
+	musicScreen._humen._createNote("cat", 3, 4, "A4");
+	musicScreen._humen._createNote("cat", 4, 1, "B4");
+	musicScreen._humen._createNote("cat", 4, 2, "B4");
+	musicScreen._humen._createNote("cat", 4, 3, "C5");
+	musicScreen._humen._createNote("cat", 4, 4, "C5");
+	musicScreen._humen._createNote("cat", 5, 1, "C4");
+	musicScreen._humen._createNote("cat", 5, 2, "C4");
+	musicScreen._humen._createNote("cat", 5, 3, "D4");
+	musicScreen._humen._createNote("cat", 5, 4, "D4");
+	musicScreen._humen._createNote("cat", 6, 1, "E4");
+	musicScreen._humen._createNote("cat", 6, 2, "E4");
+	musicScreen._humen._createNote("cat", 6, 3, "F4");
+	musicScreen._humen._createNote("cat", 6, 4, "F4");
+	musicScreen._humen._createNote("cat", 7, 1, "G4");
+	musicScreen._humen._createNote("cat", 7, 2, "G4");
+	musicScreen._humen._createNote("cat", 7, 3, "A4");
+	musicScreen._humen._createNote("cat", 7, 4, "A4");
+	musicScreen._humen._createNote("cat", 8, 1, "B4");
+	musicScreen._humen._createNote("cat", 8, 2, "B4");
+	musicScreen._humen._createNote("cat", 8, 3, "C5");
+	musicScreen._humen._createNote("cat", 8, 4, "C5");
+
+	musicScreen._humen._removeMeasureNote(4);
+	musicScreen._humen._removeMeasureNote(5);
+	musicScreen._humen._removeMeasureNote(6);
+	musicScreen._humen._removeMeasureNote(7);
+	musicScreen._humen._removeMeasureNote(8);
 }

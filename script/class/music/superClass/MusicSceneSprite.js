@@ -9,6 +9,10 @@ var MusicSceneSprite = enchant.Class.create(enchant.Sprite, {
 	},
 
 	// enchant.Spriteクラスのプロパティセッタ
+	// imageプロパティをセット
+	_setImage : function(path) {
+		this.image = core.assets[path];
+	},
 	// x座標をセット
 	_setX : function(x) {
 		this.x = x;

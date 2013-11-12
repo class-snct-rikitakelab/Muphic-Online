@@ -1,32 +1,49 @@
-// 作曲画面の見た目(インタフェース)を統括するクラス
 var MusicScreen = enchant.Class.create({
 	// コンストラクタ
 	initialize : function() {
 		// 以下, このクラスのプロパティ
-		this._musicMediator = null; // 作曲画面全体の仲介を担当するオブジェクト
-		this._parent = null; // このクラスの親にあたるオブジェクト
+		this._screenBackground = null;
+		this._storyButton = null;
+		this._humen = null;
+		this._parent = null;
 	},
 
-	// 作曲画面全体の仲介を担当するオブジェクトを生成する
-	_createMusicMediator : function() {
-		this._musicMediator = new MusicMediator();
-		this._musicMediator._parent = this;
+	// 画面全体の背景のオブジェクトを生成
+	_createScreenBackground : function() {
+		var path = MUSIC_BACKGROUND._path;
+		var width = MUSIC_BACKGROUND._width;
+		var height = MUSIC_BACKGROUND._height;
+		var x = 0;
+		var y = 0;
+		this._screenBackground = new MusicScreenBackground(path, width, height, x, y, this);
+		this._screenBackground._addToMusicScene();
 	},
-
-	// 物語作成画面への遷移ボタンのオブジェクトを生成して画面に表示する
-	_createChangeStoryButton : function() {
+	// 物語作成画面への遷移ボタンのオブジェクトを生成
+	_createStoryButton : function() {
 		var path = MUSIC_CHANGESTORYBUTTON_OFF._path;
 		var width = MUSIC_CHANGESTORYBUTTON_OFF._width;
 		var height = MUSIC_CHANGESTORYBUTTON_OFF._height;
-
-		this._musicMediator._changeStoryButton = new ChangeStoryButton(width, height);
-		this._musicMediator._changeStoryButton.image = core.assets[path];
-		this._musicMediator._changeStoryButton.x = 20;
-		this._musicMediator._changeStoryButton.y = 30;
-		this._musicMediator._changeStoryButton._parent = this._musicMediator;
-		musicScene.addChild(this._musicMediator._changeStoryButton);
+		var x = 20;
+		var y = 30;
+		this._storyButton = new StoryButton(path, width, height, x, y, parent);
+		this._storyButton._addToMusicScene();
+	},
+	// 譜面のオブジェクトを生成
+	_createHumen : function() {
+		var path = MUSIC_HUMEN._path;
+		var width = MUSIC_HUMEN._width;
+		var height = MUSIC_HUMEN._height;
+		var x = (APP_WIDTH - width) / 2;
+		var y = 186;
+		this._humen = new Humen(path, width, height, x, y, parent);
+		this._humen._addToMusicScene();
+	},
+	// 小節操作オブジェクトを生成
+	_createMeasureController : function() {
+		this._humen._createMeasureController();
 	},
 
+	/*
 	// 再生ボタンのオブジェクトを生成して画面に表示する
 	_createPlayButton : function() {
 		var path = MUSIC_PLAYBUTTON_OFF._path;
@@ -81,48 +98,7 @@ var MusicScreen = enchant.Class.create({
 		this._musicMediator._scaleHouse.y = 143;
 		musicScene.addChild(this._musicMediator._scaleHouse);
 	},
-
-	// 譜面のオブジェクトを生成して画面に表示する
-	_createHumen : function() {
-		var path = MUSIC_HUMEN._path;
-		var width = MUSIC_HUMEN._width;
-		var height = MUSIC_HUMEN._height;
-
-		this._musicMediator._humen = new Humen(width, height);
-		this._musicMediator._humen.image = core.assets[path];
-		this._musicMediator._humen.x = (APP_WIDTH - width) / 2;
-		this._musicMediator._humen.y = 186;
-		this._musicMediator._humen._parent = this._musicMediator;
-		musicScene.addChild(this._musicMediator._humen);
-	},
-
-	// 小節を1つ次に進めるボタンのオブジェクトを生成して画面に表示する
-	_createMeasureNextButton : function() {
-		var path = MUSIC_NEXTBUTTON_OFF._path;
-		var width = MUSIC_NEXTBUTTON_OFF._width;
-		var height = MUSIC_NEXTBUTTON_OFF._height;
-
-		this._musicMediator._measureNextButton = new MeasureNextButton(width, height);
-		this._musicMediator._measureNextButton.image = core.assets[path];
-		this._musicMediator._measureNextButton.x = 860;
-		this._musicMediator._measureNextButton.y = 702;
-		this._musicMediator._measureNextButton._parent = this._musicMediator;
-		musicScene.addChild(this._musicMediator._measureNextButton);
-	},
-
-	// 小節を1つ前に戻すボタンのオブジェクトを生成して画面に表示する
-	_createMeasurePrevButton : function() {
-		var path = MUSIC_PREVBUTTON_OFF._path;
-		var width = MUSIC_PREVBUTTON_OFF._width;
-		var height = MUSIC_PREVBUTTON_OFF._height;
-
-		this._musicMediator._measurePrevButton = new MeasurePrevButton(width, height);
-		this._musicMediator._measurePrevButton.image = core.assets[path];
-		this._musicMediator._measurePrevButton.x = 130;
-		this._musicMediator._measurePrevButton.y = 702;
-		this._musicMediator._measurePrevButton._parent = this._musicMediator;
-		musicScene.addChild(this._musicMediator._measurePrevButton);
-	},
+	*/
 
 	// サインボードのオブジェクトを3つ生成して画面に表示する
 	_createSignboards : function() {
