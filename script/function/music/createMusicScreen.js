@@ -13,9 +13,11 @@ var createMusicScreen = function() {
 	// 譜面を生成
 	musicScreen._createHumen();
 	// 小節操作オブジェクトを生成
-	musicScreen._humen._createMeasureController();
+	musicScreen._createMeasureController();
 	// スコアシートオブジェクトを生成
-	musicScreen._humen._createScoreSheet();
+	musicScreen._createScoreSheet();
+	// 音符ボタン操作オブジェクトを生成
+	musicScreen._createNoteButtonController();
 
 	musicScreen._humen._createNote("cat", 1, 1, "C4");
 	musicScreen._humen._createNote("cat", 1, 2, "C4");

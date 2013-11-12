@@ -10,6 +10,8 @@ var scaleToY = new Array();
 var xToBeat = new Array();
 // 拍からx座標値を取得できるハッシュテーブル
 var beatToX = new Array();
+// 譜面上のマス目のx座標値から小節を取得できるハッシュテーブル
+var xBoxToMeasure = new Array();
 // 譜面上のマス目のx座標値から拍を取得できるハッシュテーブル
 var xBoxToBeat = new Array();
 // 譜面上のマス目のy座標値から音階を取得できるハッシュテーブル
@@ -37,14 +39,14 @@ var defineMusicHashData = function() {
 	yToScale[646] = "C4";
 
 	// scaleToYの中身の定義
-	scaleToY["C5"] = 249;
-	scaleToY["B4"] = 298; // +49
-	scaleToY["A4"] = 348; // +50
-	scaleToY["G4"] = 397; // +49
-	scaleToY["F4"] = 447; // +50
-	scaleToY["E4"] = 498; // +51
-	scaleToY["D4"] = 546; // +48
-	scaleToY["C4"] = 595; // +49
+	scaleToY["C5"] = 0;
+	scaleToY["B4"] = 49; // +49
+	scaleToY["A4"] = 99; // +50
+	scaleToY["G4"] = 148; // +49
+	scaleToY["F4"] = 198; // +50
+	scaleToY["E4"] = 249; // +51
+	scaleToY["D4"] = 297; // +48
+	scaleToY["C4"] = 346; // +49
 
 	// xToBeatの中身の定義
 	xToBeat[128] = 1;
@@ -61,56 +63,78 @@ var defineMusicHashData = function() {
 	xToBeat[788] = 4;
 
 	// beatToXの中身の定義
-	beatToX[1] = 11;
-	beatToX[2] = 71;
-	beatToX[3] = 131;
-	beatToX[4] = 191;
+	beatToX[1] = 0;
+	beatToX[2] = 60;
+	beatToX[3] = 120;
+	beatToX[4] = 180;
+
+	// xBoxToMeasureの中身の定義
+	for(var i = 0; i < 3; i++) {
+		for(var j = 129; j < 189; j += 0.5) {
+			xBoxToMeasure[j + (240 * i)] = i;
+		}
+	}
+	for(var i = 0; i < 3; i++) {
+		for(var j = 189; j < 249; j += 0.5) {
+			xBoxToMeasure[j + (240 * i)] = i;
+		}
+	}
+	for(var i = 0; i < 3; i++) {
+		for(var j = 249; j < 309; j += 0.5) {
+			xBoxToMeasure[j + (240 * i)] = i;
+		}
+	}
+	for(var i = 0; i < 3; i++) {
+		for(var j = 309; j < 369; j += 0.5) {
+			xBoxToMeasure[j + (240 * i)] = i;
+		}
+	}
 
 	// xBoxToBeatの中身の定義
 	for(var i = 0; i < 3; i++) {
-		for(var j = 128; j < 188; j += 0.5) {
+		for(var j = 129; j < 189; j += 0.5) {
 			xBoxToBeat[j + (240 * i)] = 1;
 		}
 	}
 	for(var i = 0; i < 3; i++) {
-		for(var j = 188; j < 248; j += 0.5) {
+		for(var j = 189; j < 249; j += 0.5) {
 			xBoxToBeat[j + (240 * i)] = 2;
 		}
 	}
 	for(var i = 0; i < 3; i++) {
-		for(var j = 248; j < 308; j += 0.5) {
+		for(var j = 249; j < 309; j += 0.5) {
 			xBoxToBeat[j + (240 * i)] = 3;
 		}
 	}
 	for(var i = 0; i < 3; i++) {
-		for(var j = 308; j < 368; j += 0.5) {
+		for(var j = 309; j < 369; j += 0.5) {
 			xBoxToBeat[j + (240 * i)] = 4;
 		}
 	}
 
 	// yBoxToScaleの中身の定義
-	for(var i = 300; i < 349; i++) {
+	for(var i = 250; i < 299; i++) {
 		yBoxToScale[i] = "C5";
 	}
-	for(var i = 349; i < 399; i++) {
+	for(var i = 299; i < 349; i++) {
 		yBoxToScale[i] = "B4";
 	}
-	for(var i = 399; i < 448; i++) {
+	for(var i = 349; i < 398; i++) {
 		yBoxToScale[i] = "A4";
 	}
-	for(var i = 448; i < 498; i++) {
+	for(var i = 398; i < 448; i++) {
 		yBoxToScale[i] = "G4";
 	}
-	for(var i = 498; i < 549; i++) {
+	for(var i = 448; i < 499; i++) {
 		yBoxToScale[i] = "F4";
 	}
-	for(var i = 549; i < 597; i++) {
+	for(var i = 499; i < 547; i++) {
 		yBoxToScale[i] = "E4";
 	}
-	for(var i = 597; i < 646; i++) {
+	for(var i = 547; i < 596; i++) {
 		yBoxToScale[i] = "D4";
 	}
-	for(var i = 646; i < 692; i++) {
+	for(var i = 596; i < 638; i++) {
 		yBoxToScale[i] = "C4";
 	}
 }

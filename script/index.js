@@ -19,6 +19,7 @@ window.onload = function() {
 	// coreにCoreクラスのインスタンスを与える
 	// 引数にはアプリケーションの横幅と縦幅を与える
 	core = new enchant.Core(APP_WIDTH, APP_HEIGHT);
+	core.fps = 60;
 
 	// ロード画面の指定
 	core.loadingScene = createLoadingScreen();

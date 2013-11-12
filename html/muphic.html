@@ -42,7 +42,7 @@
 		<script type="text/javascript" src="../script/class/story/previewScreen/PreviewIllust.js"></script>
 		<script type="text/javascript" src="../script/class/story/previewScreen/SelectedImage.js"></script>
 		<script type="text/javascript" src="../script/class/story/previewScreen/PreviewIllustRemoveFocus.js"></script>
-		<script type="text/javascript" src="../script/class/story/previewScreen/RemoveButton.js"></script>
+		<script type="text/javascript" src="../script/class/story/previewScreen/StoryRemoveButton.js"></script>
 		<script type="text/javascript" src="../script/class/story/illustButton/IllustButton.js"></script>
 		<script type="text/javascript" src="../script/class/story/illustButton/HumanIllustButton.js"></script>
 		<script type="text/javascript" src="../script/class/story/illustButton/AnimalIllustButton.js"></script>
@@ -97,27 +97,39 @@
 		<script type="text/javascript" src="../script/class/music/MusicScreenBackground.js"></script>
 		<script type="text/javascript" src="../script/class/music/StoryButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/PlayButton.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/Humen.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/ScoreSheet.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/Measure.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/Beat.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/Scale.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/humen/Note.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/MeasureController.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/NextButton.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/PrevButton.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/MeasureBoard.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/MeasureNumber.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/nextButtonState/HasNextState.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/nextButtonState/NonNextState.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/prevButtonState/HasPrevState.js"></script>
-		<script type="text/javascript" src="../script/class/music/humen/measureControl/prevButtonState/NonPrevState.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/Humen.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/ScoreSheet.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/Measure.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/Note.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/NoteRemoveFocus.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/humenState/SelectPianoState.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/humenState/SelectRemoveState.js"></script>
+		<script type="text/javascript" src="../script/class/music/humen/humenState/NonSelectState.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/MeasureController.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/NextButton.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/PrevButton.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/MeasureBoard.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/MeasureNumber.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/nextButtonState/HasNextState.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/nextButtonState/NonNextState.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/prevButtonState/HasPrevState.js"></script>
+		<script type="text/javascript" src="../script/class/music/measureControl/prevButtonState/NonPrevState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/NoteButtonController.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/PianoButton.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/MusicRemoveButton.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/pianoButtonState/SwitchedOnPianoState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/pianoButtonState/SwitchedOffPianoState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/pianoButtonState/PushPianoState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/pianoButtonState/NonPushPianoState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/musicRemoveButtonState/SwitchedOnRemoveState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/musicRemoveButtonState/SwitchedOffRemoveState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/musicRemoveButtonState/PushRemoveState.js"></script>
+		<script type="text/javascript" src="../script/class/music/noteButton/musicRemoveButtonState/NonPushRemoveState.js"></script>
 		<script type="text/javascript" src="../script/class/music/ScoreData.js"></script>
 		<script type="text/javascript" src="../script/class/music/Animal.js"></script>
 		<script type="text/javascript" src="../script/class/music/AnimalSign.js"></script>
 		<script type="text/javascript" src="../script/class/music/AnimalButton.js"></script>
 		<script type="text/javascript" src="../script/class/music/ModosuButton.js"></script>
-		<script type="text/javascript" src="../script/class/music/RemoveSign.js"></script>
 
 		<script type="text/javascript" src="../script/function/common/getScreenPoints.js"></script>
 		<script type="text/javascript" src="../script/function/common/drawLabel.js"></script>

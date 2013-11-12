@@ -64,7 +64,7 @@ var PreviewScreen = enchant.Class.create({
 		var height = STORY_REMOVEBUTTON_OFF._height;
 		var x = 885;
 		var y = 200;
-		this._removeButton = new RemoveButton(path, width, height, x, y, this);
+		this._removeButton = new StoryRemoveButton(path, width, height, x, y, this);
 	},
 
 	// フレームを表示

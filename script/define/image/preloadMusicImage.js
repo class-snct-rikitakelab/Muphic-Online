@@ -12,13 +12,13 @@ var preloadMusicImage = function() {
 	core.preload(MUSIC_NEXTBUTTON_ON._path);
 	core.preload(MUSIC_PREVBUTTON_OFF._path);
 	core.preload(MUSIC_PREVBUTTON_ON._path);
-	core.preload(MUSIC_PIANOCAT_OFF._path);
-	core.preload(MUSIC_PIANOCAT_ON._path);
-	core.preload(MUSIC_PIANOCAT_PUSH._path);
-	core.preload(MUSIC_REMOVEANIMAL_OFF._path);
-	core.preload(MUSIC_REMOVEANIMAL_ON._path);
-	core.preload(MUSIC_REMOVEANIMAL_PUSH._path);
-	core.preload(MUSIC_REMOVECURSOR._path);
-	core.preload(MUSIC_REMOVEBOX._path);
+	core.preload(MUSIC_PIANOBUTTON_OFF._path);
+	core.preload(MUSIC_PIANOBUTTON_ON._path);
+	core.preload(MUSIC_PIANOBUTTON_PUSH._path);
+	core.preload(MUSIC_REMOVEBUTTON_OFF._path);
+	core.preload(MUSIC_REMOVEBUTTON_ON._path);
+	core.preload(MUSIC_REMOVEBUTTON_PUSH._path);
+	core.preload(MUSIC_REMOVEFOCUS_LIGHT._path);
+	core.preload(MUSIC_REMOVEFOCUS_DEEP._path);
 	core.preload(MUSIC_ANIMAL["cat"]._path);
 }

@@ -4,8 +4,12 @@ var State = enchant.Class.create({
 		this._parent = parent;
 	},
 
-	// 各ステート時の振る舞い(要オーバーライド)
-	_stateBehavior : function() {
+	// クリック時の振る舞い(要オーバーライド)
+	_touchEndBehavior : function() {
+		// override!
+	},
+	// フレーム処理の振る舞い(要オーバーライド)
+	_frameBehavior : function() {
 		// override!
 	},
 })
