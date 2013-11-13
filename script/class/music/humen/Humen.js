@@ -43,6 +43,10 @@ var Humen = enchant.Class.create(MusicSceneSprite, {
 	_createNote : function(animal, measure, beat, scale) {
 		this._scoreSheet._createNote(animal, measure, beat, scale);
 	},
+	// 音符を破棄
+	_destroyNote : function(measure, beat, scale) {
+		this._scoreSheet._destroyNote(measure, beat, scale);
+	},
 	// 引数のパラメータを持つ音符があるかどうか
 	_checkNote : function(measure, beat, scale) {
 		return this._scoreSheet._checkNote(measure, beat, scale);

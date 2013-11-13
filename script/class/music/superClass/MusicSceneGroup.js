@@ -19,7 +19,7 @@ var MusicSceneGroup = enchant.Class.create(enchant.Group, {
 		this.addChild(object);
 	},
 	// このグループからオブジェクトを消す
-	_removeToGroup : function(object) {
+	_removeFromGroup : function(object) {
 		this.removeChild(object);
 	},
 })

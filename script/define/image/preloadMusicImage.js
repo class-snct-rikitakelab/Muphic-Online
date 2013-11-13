@@ -4,7 +4,6 @@ var preloadMusicImage = function() {
 	core.preload(MUSIC_CHANGESTORYBUTTON_OFF._path);
 	core.preload(MUSIC_CHANGESTORYBUTTON_ON._path);
 	core.preload(MUSIC_HUMEN._path);
-	core.preload(MUSIC_SCALEHOUSE._path);
 	core.preload(MUSIC_MEASUREBOARD._path);
 	core.preload(MUSIC_PLAYBUTTON_OFF._path);
 	core.preload(MUSIC_PLAYBUTTON_ON._path);

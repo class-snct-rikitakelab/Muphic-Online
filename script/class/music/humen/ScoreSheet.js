@@ -34,6 +34,10 @@ var ScoreSheet = enchant.Class.create(MusicSceneGroup, {
 	_createNote : function(animal, measure, beat, scale) {
 		this._measure[measure - 1]._createNote(animal, measure, beat, scale);
 	},
+	// 音符を破棄
+	_destroyNote : function(measure, beat, scale) {
+		this._measure[measure - 1]._destroyNote(beat, scale);
+	},
 	// 引数のパラメータを持つ音符があるかどうか
 	_checkNote : function(measure, beat, scale) {
 		return this._measure[measure - 1]._checkNote(beat, scale);

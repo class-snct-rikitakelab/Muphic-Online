@@ -27,7 +27,6 @@ var defineMusicImage = function() {
 	MUSIC_CHANGESTORYBUTTON_OFF = new NormalImage("../image/music/button/changeStoryButtonOff.png", 100, 100);
 	MUSIC_CHANGESTORYBUTTON_ON = new NormalImage("../image/music/button/changeStoryButtonOn.png", 100, 100);
 	MUSIC_HUMEN = new NormalImage("../image/music/humen/newHumen.png", 900, 514);
-	MUSIC_SCALEHOUSE = new NormalImage("../image/music/humen/house.png", 90, 613);
 	MUSIC_MEASUREBOARD = new NormalImage("../image/music/humen/measureBoard.png", 33, 434);
 	MUSIC_PLAYBUTTON_OFF = new NormalImage("../image/music/button/playButtonOff.png", 110, 106);
 	MUSIC_PLAYBUTTON_ON = new NormalImage("../image/music/button/playButtonOn.png", 110, 106);
