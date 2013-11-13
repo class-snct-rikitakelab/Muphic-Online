@@ -2,6 +2,7 @@ var MeasureBoard = enchant.Class.create(MusicSceneSprite, {
 	// コンストラクタ
 	initialize : function(measureNumber, path, width, height, x, y, parent) {
 		MusicSceneSprite.call(this, path, width, height, x, y, parent);
+		this._setTouchEnabled(false);
 		// 以下, このクラスのプロパティ
 		this._measureNumber = null;
 	},

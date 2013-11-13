@@ -41,6 +41,22 @@ var NoteButtonController = enchant.Class.create({
 		return this._removeButton;
 	},
 
+	// 子メソッド
+	_setPlayingPianoButtonState : function() {
+		this._pianoButton._setBeforePlayingState(this._pianoButton._state);
+		this._pianoButton._setState(new PlayingPianoButtonState(this._pianoButton));
+	},
+	_setNonPlayingPianoButtonState : function() {
+		this._pianoButton._setState(this._pianoButton._beforePlayingState);
+	},
+	_setPlayingMusicRemoveButtonState : function() {
+		this._removeButton._setBeforePlayingState(this._removeButton._state);
+		this._removeButton._setState(new PlayingMusicRemoveButtonState(this._removeButton));
+	},
+	_setNonPlayingMusicRemoveButtonState : function() {
+		this._removeButton._setState(this._removeButton._beforePlayingState);
+	},
+
 	// 親メソッド
 	// 選択なしステートセッタ
 	_setNonSelectState : function() {

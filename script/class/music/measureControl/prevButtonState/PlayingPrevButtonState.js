@@ -1,4 +1,4 @@
-var NonNextState = enchant.Class.create(State, {
+var PlayingPrevButtonState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
 		State.call(this, parent);

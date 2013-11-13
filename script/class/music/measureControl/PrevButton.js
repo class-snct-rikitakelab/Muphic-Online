@@ -4,11 +4,15 @@ var PrevButton = enchant.Class.create(MusicSceneSprite, {
 		MusicSceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
 		this._state = new NonPrevState(this);
+		this._beforePlayingState = null;
 	},
 
 	// ステートセッタ
 	_setState : function(state) {
 		this._state = state;
+	},
+	_setBeforePlayingState : function(state) {
+		this._beforePlayingState = state;
 	},
 
 	// On, Off時の画像切り替え
@@ -41,9 +45,9 @@ var PrevButton = enchant.Class.create(MusicSceneSprite, {
 	_setMeasureNumber : function(number1, number2, number3) {
 		this._parent._setMeasureNumber(number1, number2, number3);
 	},
-	// 楽譜全体を1小節前に戻す
-	_scrollScoreSheetPrev : function() {
-		this._parent._scrollScoreSheetPrev();
+	// 楽譜全体を前に戻す
+	_scrollScoreSheetPrev : function(measure) {
+		this._parent._scrollScoreSheetPrev(measure);
 	},
 	// 指定した小節の音符全体を加える
 	_addMeasureNote : function(measure) {

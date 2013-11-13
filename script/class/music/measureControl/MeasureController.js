@@ -73,22 +73,6 @@ var MeasureController = enchant.Class.create({
 	_setStartMeasure : function(startMeasure) {
 		this._startMeasure = startMeasure;
 	},
-	// 譜めくりボタンのステートセッタ
-	_setNextButtonState : function(hasNextMeasure) {
-		if(hasNextMeasure) {
-			this._nextButton._setState(new HasNextState(this._nextButton));
-		} else {
-			this._nextButton._setState(new NonNextState(this._nextButton));
-		}
-	},
-	// 譜戻しボタンのステートセッタ
-	_setPrevButtonState : function(hasPrevMeasure) {
-		if(hasPrevMeasure) {
-			this._prevButton._setState(new HasPrevState(this._prevButton));
-		} else {
-			this._prevButton._setState(new NonPrevState(this._prevButton));
-		}
-	},
 
 	// これ以上小節を譜めくり出来るか
 	_checkHasNextMeasure : function() {
@@ -107,13 +91,13 @@ var MeasureController = enchant.Class.create({
 		}
 	},
 
-	// 楽譜全体を1小節次に進める
-	_scrollScoreSheetNext : function() {
-		this._parent._scrollScoreSheetNext();
+	// 楽譜全体を次に進める
+	_scrollScoreSheetNext : function(measure) {
+		this._parent._scrollScoreSheetNext(measure);
 	},
-	// 楽譜全体を1小節前に戻す
-	_scrollScoreSheetPrev : function() {
-		this._parent._scrollScoreSheetPrev();
+	// 楽譜全体を前に戻す
+	_scrollScoreSheetPrev : function(measure) {
+		this._parent._scrollScoreSheetPrev(measure);
 	},
 	// 指定した小節の音符全体を加える
 	_addMeasureNote : function(measure) {
@@ -122,5 +106,40 @@ var MeasureController = enchant.Class.create({
 	// 指定した小節の音符全体を消す
 	_removeMeasureNote : function(measure) {
 		this._parent._removeMeasureNote(measure);
+	},
+
+	// 譜めくりボタンのステートセッタ
+	_setNextButtonState : function(hasNextMeasure) {
+		if(hasNextMeasure) {
+			this._nextButton._setState(new HasNextState(this._nextButton));
+		} else {
+			this._nextButton._setState(new NonNextState(this._nextButton));
+		}
+	},
+	// 譜めくりボタンの再生ステートセッタ
+	_setPlayingNextButtonState : function() {
+		this._nextButton._setBeforePlayingState(this._nextButton._state);
+		this._nextButton._setState(new PlayingNextButtonState(this._nextButton));
+	},
+	// 譜めくりボタンの非再生ステートセッタ
+	_setNonPlayingNextButtonState : function() {
+		this._nextButton._setState(this._nextButton._beforePlayingState);
+	},
+	// 譜戻しボタンのステートセッタ
+	_setPrevButtonState : function(hasPrevMeasure) {
+		if(hasPrevMeasure) {
+			this._prevButton._setState(new HasPrevState(this._prevButton));
+		} else {
+			this._prevButton._setState(new NonPrevState(this._prevButton));
+		}
+	},
+	// 譜戻しボタンの再生ステートセッタ
+	_setPlayingPrevButtonState : function() {
+		this._prevButton._setBeforePlayingState(this._prevButton._state);
+		this._prevButton._setState(new PlayingPrevButtonState(this._prevButton));
+	},
+	// 譜戻しボタンの非再生ステートセッタ
+	_setNonPlayingPrevButtonState : function() {
+		this._prevButton._setState(this._prevButton._beforePlayingState);
 	},
 })

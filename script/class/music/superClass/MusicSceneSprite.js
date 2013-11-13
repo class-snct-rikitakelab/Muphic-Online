@@ -29,6 +29,10 @@ var MusicSceneSprite = enchant.Class.create(enchant.Sprite, {
 	_setOpacity : function(opacity) {
 		this.opacity = opacity;
 	},
+	// visibleプロパティのブーリアン値をセットする
+	_setVisible : function(visible) {
+		this.visible = visible;
+	},
 
 	// 作曲画面へ加える
 	_addToMusicScene : function() {

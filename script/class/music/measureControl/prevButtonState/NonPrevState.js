@@ -7,7 +7,7 @@ var NonPrevState = enchant.Class.create(State, {
 	_touchEndBehavior : function(oldStartMeasure, newStartMeasure) {
 		this._parent._setStartMeasure(newStartMeasure);
 		this._parent._setMeasureNumber(newStartMeasure, newStartMeasure + 1, newStartMeasure + 2);
-		this._parent._scrollScoreSheetPrev();
+		this._parent._scrollScoreSheetPrev(1);
 		this._parent._removeMeasureNote(oldStartMeasure + 2);
 		this._parent._addMeasureNote(newStartMeasure);
 		var hasNextMeasure = this._parent._checkHasNextMeasure();

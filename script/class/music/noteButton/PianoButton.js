@@ -5,6 +5,7 @@ var PianoButton = enchant.Class.create(MusicSceneSprite, {
 		// 以下, このクラスのプロパティ
 		this._isPush = false; // ボタンが押されているかどうか
 		this._state = new NonPushPianoState(this);
+		this._beforePlayingState = null;
 	},
 
 	// _isPushプロパティゲッタ
@@ -15,9 +16,12 @@ var PianoButton = enchant.Class.create(MusicSceneSprite, {
 	_setIsPush : function(isPush) {
 		this._isPush = isPush;
 	},
-	// _stateプロパティセッタ
+	// ステートセッタ
 	_setState : function(state) {
 		this._state = state;
+	},
+	_setBeforePlayingState : function(state) {
+		this._beforePlayingState = state;
 	},
 
 	// On, Off時の画像切り替え

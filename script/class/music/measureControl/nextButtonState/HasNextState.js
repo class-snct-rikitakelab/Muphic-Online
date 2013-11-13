@@ -7,7 +7,7 @@ var HasNextState = enchant.Class.create(State, {
 	_touchEndBehavior : function(oldStartMeasure, newStartMeasure) {
 		this._parent._setStartMeasure(newStartMeasure);
 		this._parent._setMeasureNumber(newStartMeasure, newStartMeasure + 1, newStartMeasure + 2);
-		this._parent._scrollScoreSheetNext();
+		this._parent._scrollScoreSheetNext(1);
 		this._parent._removeMeasureNote(oldStartMeasure);
 		this._parent._addMeasureNote(newStartMeasure + 2);
 		var hasNextMeasure = this._parent._checkHasNextMeasure();

@@ -1,15 +1,14 @@
-var NonNextState = enchant.Class.create(State, {
+var PlayingMusicRemoveButtonState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
 		State.call(this, parent);
 	},
 
-	_touchEndBehavior : function(oldStartMeasure, newStartMeasure) {
+	_touchEndBehavior : function() {
 
 	},
 
 	_frameBehavior : function() {
-		this._parent._setOnOffImage("off");
 		this._parent._setTouchEnabled(false);
 		this._parent._setOpacity(0.5);
 	},

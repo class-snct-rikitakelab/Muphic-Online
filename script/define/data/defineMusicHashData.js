@@ -134,7 +134,7 @@ var defineMusicHashData = function() {
 	for(var i = 547; i < 596; i++) {
 		yBoxToScale[i] = "D4";
 	}
-	for(var i = 596; i < 638; i++) {
+	for(var i = 596; i < 639; i++) {
 		yBoxToScale[i] = "C4";
 	}
 }

@@ -1,4 +1,5 @@
-var NOTE_MAX = 32;
+var BEAT_MAX = 4;
+var BEAT_WIDTH = 60;
 
 var Measure = enchant.Class.create(MusicSceneGroup, {
 	initialize : function(number, x, y, parent) {
@@ -7,52 +8,54 @@ var Measure = enchant.Class.create(MusicSceneGroup, {
 		this.y = y;
 		// 以下, このクラスのプロパティ
 		this._number = number;
-		this._note = new Array();
+		this._beat = new Array(BEAT_MAX);
+		this._noteCount = 0;
+		// 初期化メソッド
+		this._assignBeat();
+		this._addBeatToGroup();
+	},
+
+	// 拍プロパティを割り当てる
+	_assignBeat : function() {
+		for(var number = 1; number <= this._beat.length; number++) {
+			var x = BEAT_WIDTH * (number - 1);
+			var y = 0;
+			this._beat[number - 1] = new Beat(number, x, y, this);
+		}
+	},
+	// 拍プロパティを自分自身へ子ノードとして追加
+	_addBeatToGroup : function() {
+		for(var number = 1; number <= this._beat.length; number++) {
+			this._addToGroup(this._beat[number - 1]);
+		}
 	},
 
 	// 新しい音符を作る
 	_createNote : function(animal, measure, beat, scale) {
-		var path = MUSIC_ANIMAL[animal]._path;
-		var width = MUSIC_ANIMAL[animal]._width;
-		var height = MUSIC_ANIMAL[animal]._height;
-		var x = beatToX[beat];
-		var y = scaleToY[scale];
-		var sound = scaleToSound[scale];
-		var index = this._note.length;
-		this._note.push(new Note(path, width, height, x, y, index, measure, beat, scale, sound, this));
-		this._addToGroup(this._note[index]);
+		this._beat[beat - 1]._createNote(animal, measure, beat, scale);
+		this._noteCount++;
 	},
 	// 音符を破棄
 	_destroyNote : function(beat, scale) {
-		for(var i = 0; i < this._note.length; i++) {
-			var index = i;
-			var eBeat = equalBeat(beat, this._note[index]._beat);
-			var eScale = equalScale(scale, this._note[index]._scale);
-			if(eBeat && eScale) {
-				this._removeFromGroup(this._note[index]);
-				this._spliceNote(index);
-				break;
-			}
-		}
+		this._beat[beat - 1]._destroyNote(scale);
+		this._noteCount--;
 	},
 	// 引数のパラメータを持つ音符があるかどうか
 	_checkNote : function(beat, scale) {
-		var isExist = false;
-		for(var i = 0; i < this._note.length; i++) {
-			var eBeat = equalBeat(beat, this._note[i]._beat);
-			var eScale = equalScale(scale, this._note[i]._scale);
-			if(eBeat && eScale) {
-				isExist = true;
-				break;
-			}
-		}
-		return isExist;
+		return this._beat[beat - 1]._checkNote(scale);
 	},
-	// 引数のインデックスの音符を詰める
-	_spliceNote : function(index) {
-		for(var i = index + 1; i < this._note.length; i++) {
-			this._note[i]._setIndex(i - 1);
+
+	// 子メソッド
+	// 音符への再生ステートセッタ
+	_setPlayingNoteState : function() {
+		for(var number = 1; number <= this._beat.length; number++) {
+			this._beat[number - 1]._setPlayingNoteState();
 		}
-		this._note.splice(index, 1);
+	},
+	// 音符への再生ステートセッタ
+	_setNonPlayingNoteState : function() {
+		for(var number = 1; number <= this._beat.length; number++) {
+			this._beat[number - 1]._setNonPlayingNoteState();
+		}
 	},
 })

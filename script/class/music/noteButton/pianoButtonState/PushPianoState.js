@@ -13,6 +13,8 @@ var PushPianoState = enchant.Class.create(State, {
 	},
 
 	_frameBehavior : function() {
+		this._parent._setTouchEnabled(true);
+		this._parent._setOpacity(1.0);
 		var leftX = this._parent.x;
 		var rightX = this._parent.x + this._parent.width;
 		var topY = this._parent.y;

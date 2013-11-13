@@ -30,7 +30,7 @@ var MusicScreen = enchant.Class.create({
 		var height = MUSIC_CHANGESTORYBUTTON_OFF._height;
 		var x = STORYBUTTON_X;
 		var y = STORYBUTTON_Y;
-		this._storyButton = new StoryButton(path, width, height, x, y, parent);
+		this._storyButton = new StoryButton(path, width, height, x, y, this);
 		this._storyButton._addToMusicScene();
 	},
 	// 譜面のオブジェクトを生成
@@ -40,12 +40,16 @@ var MusicScreen = enchant.Class.create({
 		var height = MUSIC_HUMEN._height;
 		var x = HUMEN_X;
 		var y = HUMEN_Y;
-		this._humen = new Humen(path, width, height, x, y, parent);
+		this._humen = new Humen(path, width, height, x, y, this);
 		this._humen._addToMusicScene();
 	},
 	// スコアシートオブジェクトを生成
 	_createScoreSheet : function() {
 		this._humen._createScoreSheet();
+	},
+	// 再生ボタンオブジェクトを生成
+	_createPlayButton : function() {
+		this._humen._createPlayButton();
 	},
 	// 小節操作オブジェクトを生成
 	_createMeasureController : function() {
@@ -54,5 +58,15 @@ var MusicScreen = enchant.Class.create({
 	// 音符ボタン操作オブジェクトを生成
 	_createNoteButtonController : function() {
 		this._humen._createNoteButtonController();
+	},
+
+	// 子メソッド
+	// 物語作成画面遷移ボタンへの再生ステートセッタ
+	_setPlayingStoryButtonState : function() {
+		this._storyButton._setPlayingStoryButtonState();
+	},
+	// 物語作成画面遷移ボタンへの非再生ステートセッタ
+	_setNonPlayingStoryButtonState : function() {
+		this._storyButton._setNonPlayingStoryButtonState();
 	},
 })

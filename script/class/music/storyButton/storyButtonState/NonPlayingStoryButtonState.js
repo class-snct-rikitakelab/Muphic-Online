@@ -1,15 +1,11 @@
-var SwitchedOnPianoState = enchant.Class.create(State, {
+var NonPlayingStoryButtonState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
 		State.call(this, parent);
 	},
 
-	_touchEndBehavior : function(otherButton) {
-		this._parent._setIsPush(true);
-		this._parent._setState(new SwitchedOffPianoState(this._parent));
-		this._parent._setNonSelectState();
-		otherButton._setIsPush(false);
-		otherButton._setState(new NonPushRemoveState(otherButton));
+	_touchEndBehavior : function() {
+		this._parent._moveToStoryScene();
 	},
 
 	_frameBehavior : function() {
@@ -22,9 +18,9 @@ var SwitchedOnPianoState = enchant.Class.create(State, {
 		var mOverX = mouseOverX(clientX, leftX, rightX, 0, 0);
 		var mOverY = mouseOverY(clientY, topY, bottomY, 0, 0);
 		if(mOverX === true && mOverY === true) {
-			this._parent._setPushImage("push");
+			this._parent._setOnOffImage("on");
 		} else {
-			this._parent._setState(new PushPianoState(this._parent));
+			this._parent._setOnOffImage("off");
 		}
 	},
 })

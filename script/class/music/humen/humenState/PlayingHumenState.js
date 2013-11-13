@@ -1,7 +1,7 @@
-var NonSelectState = enchant.Class.create(State, {
+var PlayingHumenState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
-		this._parent = parent;
+		State.call(this, parent);
 	},
 
 	_touchEndBehavior : function() {

@@ -5,6 +5,15 @@ var MusicSceneGroup = enchant.Class.create(enchant.Group, {
 		this._parent = parent;
 	},
 
+	// x座標をセット
+	_setX : function(x) {
+		this.x = x;
+	},
+	// y座標をセット
+	_setY : function(y) {
+		this.y = y;
+	},
+
 	// グループ全体を作曲画面へ加える
 	_addToMusicScene : function() {
 		musicScene.addChild(this);
