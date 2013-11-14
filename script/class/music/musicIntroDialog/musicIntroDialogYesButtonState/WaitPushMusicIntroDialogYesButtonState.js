@@ -5,6 +5,7 @@ var WaitPushMusicIntroDialogYesButtonState = enchant.Class.create(State, {
 	},
 
 	_touchEndBehavior : function() {
+		this._parent._setRemoveDialog();
 		this._parent._removeDialog();
 	},
 

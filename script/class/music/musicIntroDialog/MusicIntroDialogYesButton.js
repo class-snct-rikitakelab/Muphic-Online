@@ -30,4 +30,7 @@ var MusicIntroDialogYesButton = enchant.Class.create(MusicSceneSprite, {
 	_removeDialog : function() {
 		this._parent._removeFromMusicScene();
 	},
+	_setRemoveDialog : function() {
+		this._parent._setRemoveDialog();
+	},
 })

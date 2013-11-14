@@ -70,7 +70,21 @@ var MusicScreen = enchant.Class.create({
 		this._humen._createNoteButtonController();
 	},
 
+	// ダイアログ削除状態にセッティング
+	_setRemoveDialog : function() {
+		this._setNonPlayingBackgroundState();
+		this._setNonPlayingStoryButtonState();
+		this._setNonSelectHumenState();
+		this._setNonPlayingPlayButtonState();
+		this._setNextButtonState(true);
+		this._setPrevButtonState(false);
+	},
+
 	// 子メソッド
+	// 画面全体の背景への非再生ステートセッタ
+	_setNonPlayingBackgroundState : function() {
+		this._screenBackground._setNonPlayingBackgroundState();
+	},
 	// 物語作成画面遷移ボタンへの再生ステートセッタ
 	_setPlayingStoryButtonState : function() {
 		this._storyButton._setPlayingStoryButtonState();
@@ -78,5 +92,21 @@ var MusicScreen = enchant.Class.create({
 	// 物語作成画面遷移ボタンへの非再生ステートセッタ
 	_setNonPlayingStoryButtonState : function() {
 		this._storyButton._setNonPlayingStoryButtonState();
+	},
+	// 譜面への選択なしステートセッタ
+	_setNonSelectHumenState : function() {
+		this._humen._setNonSelectState();
+	},
+	// 再生ボタンへの非再生ステートセッタ
+	_setNonPlayingPlayButtonState : function() {
+		this._humen._setNonPlayingPlayButtonState();
+	},
+	// 譜めくりボタンのステートセッタ
+	_setNextButtonState : function(hasNextMeasure) {
+		this._humen._setNextButtonState(hasNextMeasure);
+	},
+	// 譜戻しボタンのステートセッタ
+	_setPrevButtonState : function(hasPrevMeasure) {
+		this._humen._setPrevButtonState(hasPrevMeasure);
 	},
 })

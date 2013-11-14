@@ -35,4 +35,9 @@ var MusicIntroDialog = enchant.Class.create(MusicSceneGroup, {
 		this._yesButton = new MusicIntroDialogYesButton(path, width, height, x, y, this);
 		this._addToGroup(this._yesButton);
 	},
+
+	// 親メソッド
+	_setRemoveDialog : function() {
+		this._parent._setRemoveDialog();
+	},
 })

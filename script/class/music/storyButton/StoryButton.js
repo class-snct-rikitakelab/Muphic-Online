@@ -2,7 +2,7 @@ var StoryButton = enchant.Class.create(MusicSceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
 		MusicSceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
-		this._state = new NonPlayingStoryButtonState(this);
+		this._state = new DarknessState(this);
 	},
 
 	// On, Off時の画像切り替え
@@ -11,6 +11,14 @@ var StoryButton = enchant.Class.create(MusicSceneSprite, {
 			this.image = core.assets[MUSIC_CHANGESTORYBUTTON_ON._path];
 		} else {
 			this.image = core.assets[MUSIC_CHANGESTORYBUTTON_OFF._path];
+		}
+	},
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			this.image = core.assets[MUSIC_CHANGESTORYBUTTON_DARK._path];
+		} else if(isDark === false) {
+			this.image = core.assets[MUSIC_CHANGESTORYBUTTON._path];
 		}
 	},
 

@@ -3,7 +3,7 @@ var NextButton = enchant.Class.create(MusicSceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
 		MusicSceneSprite.call(this, path, width, height, x, y, parent);
 		// 以下, このクラスのプロパティ
-		this._state = new HasNextState(this);
+		this._state = new DarknessState(this);
 		this._beforePlayingState = null;
 	},
 
@@ -20,6 +20,14 @@ var NextButton = enchant.Class.create(MusicSceneSprite, {
 		if(state === "on") {
 			this.image = core.assets[MUSIC_NEXTBUTTON_ON._path];
 		} else {
+			this.image = core.assets[MUSIC_NEXTBUTTON_OFF._path];
+		}
+	},
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			this.image = core.assets[MUSIC_NEXTBUTTON_DARK._path];
+		} else if(isDark === false) {
 			this.image = core.assets[MUSIC_NEXTBUTTON_OFF._path];
 		}
 	},

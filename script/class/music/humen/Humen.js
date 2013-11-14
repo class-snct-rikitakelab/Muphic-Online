@@ -14,7 +14,7 @@ var Humen = enchant.Class.create(MusicSceneSprite, {
 		this._noteButtonController = null;
 		this._beforePlayingStartMeasure = null;
 		this._noteCount = 0;
-		this._state = new NonSelectState(this);
+		this._state = new DarknessState(this);
 		this._beforePlayingState = null;
 	},
 
@@ -131,6 +131,15 @@ var Humen = enchant.Class.create(MusicSceneSprite, {
 		this._setNonPlayingMusicRemoveButtonState();
 	},
 
+	//　ボタンが押せない（暗い）状態の色に変更する
+	_setDarkImage : function(isDark) {
+		if(isDark === true) {
+			this.image = core.assets[MUSIC_HUMEN_DARK._path];
+		} else if(isDark === false) {
+			this.image = core.assets[MUSIC_HUMEN._path];
+		}
+	},
+
 	// クリック時の処理
 	ontouchend : function() {
 		this._state._touchEndBehavior();
@@ -210,6 +219,10 @@ var Humen = enchant.Class.create(MusicSceneSprite, {
 	_setNonPlayingNoteState : function() {
 		this._scoreSheet._setNonPlayingNoteState();
 	},
+	// 譜めくりボタンのステートセッタ
+	_setNextButtonState : function(hasNextMeasure) {
+		this._measureController._setNextButtonState(hasNextMeasure);
+	},
 	// 譜めくりボタンへの再生ステートセッタ
 	_setPlayingNextButtonState : function() {
 		this._measureController._setPlayingNextButtonState();
@@ -217,6 +230,10 @@ var Humen = enchant.Class.create(MusicSceneSprite, {
 	// 譜めくりボタンへの非再生ステートセッタ
 	_setNonPlayingNextButtonState : function() {
 		this._measureController._setNonPlayingNextButtonState();
+	},
+	// 譜戻しボタンのステートセッタ
+	_setPrevButtonState : function(hasPrevMeasure) {
+		this._measureController._setPrevButtonState(hasPrevMeasure);
 	},
 	// 譜戻しボタンへの再生ステートセッタ
 	_setPlayingPrevButtonState : function() {
