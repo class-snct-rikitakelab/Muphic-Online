@@ -2,6 +2,8 @@ var STORYBUTTON_X = 20;
 var STORYBUTTON_Y = 30;
 var HUMEN_X = 10;
 var HUMEN_Y = 186;
+var INTRODIALOG_X = 192;
+var INTRODIALOG_Y = 213;
 
 var MusicScreen = enchant.Class.create({
 	// コンストラクタ
@@ -10,6 +12,7 @@ var MusicScreen = enchant.Class.create({
 		this._screenBackground = null;
 		this._storyButton = null;
 		this._humen = null;
+		this._introDialog = null;
 		this._parent = null;
 	},
 
@@ -42,6 +45,13 @@ var MusicScreen = enchant.Class.create({
 		var y = HUMEN_Y;
 		this._humen = new Humen(path, width, height, x, y, this);
 		this._humen._addToMusicScene();
+	},
+	// 導入ダイアログを生成
+	_createIntroDialog : function() {
+		var x = INTRODIALOG_X;
+		var y = INTRODIALOG_Y;
+		this._introDialog = new MusicIntroDialog(x, y, this);
+		this._introDialog._addToMusicScene();
 	},
 	// スコアシートオブジェクトを生成
 	_createScoreSheet : function() {

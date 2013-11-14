@@ -20,6 +20,8 @@ var createMusicScreen = function() {
 	musicScreen._createScoreSheet();
 	// 音符ボタン操作オブジェクトを生成
 	musicScreen._createNoteButtonController();
+	// 導入ダイアログを生成
+	musicScreen._createIntroDialog();
 
 	musicScreen._humen._removeMeasureNote(4);
 	musicScreen._humen._removeMeasureNote(5);
