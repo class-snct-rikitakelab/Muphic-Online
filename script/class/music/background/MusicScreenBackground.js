@@ -1,9 +1,7 @@
-var MusicScreenBackground = enchant.Class.create(MusicSceneSprite, {
+var MusicScreenBackground = enchant.Class.create(MusicSceneSpriteHasState, {
 	// コンストラクタ
 	initialize : function(path, width, height, x, y, parent) {
-		MusicSceneSprite.call(this, path, width, height, x, y, parent);
-		// 以下, このクラスのプロパティ
-		this._state = new DarknessState(this);
+		MusicSceneSpriteHasState.call(this, path, width, height, x, y, parent);
 	},
 
 	//　ボタンが押せない（暗い）状態の色に変更する
@@ -18,13 +16,5 @@ var MusicScreenBackground = enchant.Class.create(MusicSceneSprite, {
 	// フレーム処理
 	onenterframe : function() {
 		this._state._frameBehavior();
-	},
-
-	// 各種ステートセッタ
-	_setState : function(state) {
-		this._state = state;
-	},
-	_setNonPlayingBackgroundState : function() {
-		this._setState(new NonPlayingBackgroundState(this));
 	},
 })

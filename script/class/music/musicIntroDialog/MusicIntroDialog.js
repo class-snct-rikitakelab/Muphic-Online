@@ -10,6 +10,7 @@ var MusicIntroDialog = enchant.Class.create(MusicSceneGroup, {
 		// 以下, このクラスのプロパティ
 		this._dialogFrame = null;
 		this._yesButton = null;
+		this._yesButtonStateController = null;
 		// 初期化メソッド
 		this._createDialogFrame();
 		this._createYesButton();
@@ -33,11 +34,21 @@ var MusicIntroDialog = enchant.Class.create(MusicSceneGroup, {
 		var x = YESBUTTON_X;
 		var y = YESBUTTON_Y;
 		this._yesButton = new MusicIntroDialogYesButton(path, width, height, x, y, this);
+		this._yesButtonStateController = new MusicIntroDialogYesButtonStateController(this);
+		this._yesButton._setStateController(this._yesButtonStateController);
+		this._yesButtonStateController._setObject(this._yesButton);
+		this._setWaitPushYesButtonState();
 		this._addToGroup(this._yesButton);
 	},
 
 	// 親メソッド
 	_setRemoveDialog : function() {
 		this._parent._setRemoveDialog();
+	},
+
+	// 子メソッド
+	// 「はい」ボタンへのステートセッタ
+	_setWaitPushYesButtonState : function() {
+		this._yesButtonStateController._setWaitPushState();
 	},
 })

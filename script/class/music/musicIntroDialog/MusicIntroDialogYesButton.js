@@ -1,9 +1,7 @@
-var MusicIntroDialogYesButton = enchant.Class.create(MusicSceneSprite, {
+var MusicIntroDialogYesButton = enchant.Class.create(MusicSceneSpriteHasState, {
 	// コンストラクタ
 	initialize : function(path, width, height, x, y, parent) {
-		MusicSceneSprite.call(this, path, width, height, x, y, parent);
-		// 以下, このクラスのプロパティ
-		this._state = new WaitPushMusicIntroDialogYesButtonState(this);
+		MusicSceneSpriteHasState.call(this, path, width, height, x, y, parent);
 	},
 
 	// On, Off時の画像切り替え

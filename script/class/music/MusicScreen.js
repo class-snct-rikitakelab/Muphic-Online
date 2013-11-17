@@ -10,8 +10,11 @@ var MusicScreen = enchant.Class.create({
 	initialize : function() {
 		// 以下, このクラスのプロパティ
 		this._screenBackground = null;
+		this._screenBackgroundStateController = null;
 		this._storyButton = null;
+		this._storyButtonStateController = null;
 		this._humen = null;
+		this._humenStateController = null;
 		this._introDialog = null;
 		this._parent = null;
 	},
@@ -24,6 +27,10 @@ var MusicScreen = enchant.Class.create({
 		var x = 0;
 		var y = 0;
 		this._screenBackground = new MusicScreenBackground(path, width, height, x, y, this);
+		this._screenBackgroundStateController = new MusicScreenBackgroundStateController(this);
+		this._screenBackground._setStateController(this._screenBackgroundStateController);
+		this._screenBackgroundStateController._setObject(this._screenBackground);
+		this._setDarknessBackgroundState();
 		this._screenBackground._addToMusicScene();
 	},
 	// 物語作成画面への遷移ボタンのオブジェクトを生成
@@ -34,6 +41,10 @@ var MusicScreen = enchant.Class.create({
 		var x = STORYBUTTON_X;
 		var y = STORYBUTTON_Y;
 		this._storyButton = new StoryButton(path, width, height, x, y, this);
+		this._storyButtonStateController = new StoryButtonStateController(this);
+		this._storyButton._setStateController(this._storyButtonStateController);
+		this._storyButtonStateController._setObject(this._storyButton);
+		this._setDarknessStoryButtonState();
 		this._storyButton._addToMusicScene();
 	},
 	// 譜面のオブジェクトを生成
@@ -44,6 +55,10 @@ var MusicScreen = enchant.Class.create({
 		var x = HUMEN_X;
 		var y = HUMEN_Y;
 		this._humen = new Humen(path, width, height, x, y, this);
+		this._humenStateController = new HumenStateController(this);
+		this._humen._setStateController(this._humenStateController);
+		this._humenStateController._setObject(this._humen);
+		this._setDarknessHumenState();
 		this._humen._addToMusicScene();
 	},
 	// 導入ダイアログを生成
@@ -78,35 +93,70 @@ var MusicScreen = enchant.Class.create({
 		this._setNonPlayingPlayButtonState();
 		this._setNextButtonState(true);
 		this._setPrevButtonState(false);
+		this._setDefaultMeasureBoardState();
+		this._setNonPushPianoButtonState();
+		this._setNonPushRemoveButtonState();
 	},
 
 	// 子メソッド
-	// 画面全体の背景への非再生ステートセッタ
+	// 画面全体の背景へのステートセッタ
+	_setDarknessBackgroundState : function() {
+		this._screenBackgroundStateController._setDarknessState();
+	},
 	_setNonPlayingBackgroundState : function() {
-		this._screenBackground._setNonPlayingBackgroundState();
+		this._screenBackgroundStateController._setNonPlayingState();
 	},
-	// 物語作成画面遷移ボタンへの再生ステートセッタ
+	// 物語作成画面への遷移ボタンへのステートセッタ
+	_setDarknessStoryButtonState : function() {
+		this._storyButtonStateController._setDarknessState();
+	},
 	_setPlayingStoryButtonState : function() {
-		this._storyButton._setPlayingStoryButtonState();
+		this._storyButtonStateController._setPlayingState();
 	},
-	// 物語作成画面遷移ボタンへの非再生ステートセッタ
 	_setNonPlayingStoryButtonState : function() {
-		this._storyButton._setNonPlayingStoryButtonState();
+		this._storyButtonStateController._setNonPlayingState();
 	},
-	// 譜面への選択なしステートセッタ
+	// 譜面へのステートセッタ
+	_setDarknessHumenState : function() {
+		this._humenStateController._setDarknessState();
+	},
 	_setNonSelectHumenState : function() {
-		this._humen._setNonSelectState();
+		this._humenStateController._setNonSelectState();
 	},
-	// 再生ボタンへの非再生ステートセッタ
+	_setSelectPianoHumenState : function() {
+		this._humenStateController._setSelectPianoState();
+	},
+	_setSelectRemoveHumenState : function() {
+		this._humenStateController._setSelectRemoveState();
+	},
+	_setNonPlayingHumenState : function() {
+		this._humenStateController._setNonPlayingState();
+	},
+	_setPlayingHumenState : function() {
+		this._humenStateController._setPlayingState();
+	},
+	// 再生ボタンへのステートセッタ
 	_setNonPlayingPlayButtonState : function() {
 		this._humen._setNonPlayingPlayButtonState();
 	},
-	// 譜めくりボタンのステートセッタ
+	// 譜めくりボタンへのステートセッタ
 	_setNextButtonState : function(hasNextMeasure) {
 		this._humen._setNextButtonState(hasNextMeasure);
 	},
-	// 譜戻しボタンのステートセッタ
+	// 譜戻しボタンへのステートセッタ
 	_setPrevButtonState : function(hasPrevMeasure) {
 		this._humen._setPrevButtonState(hasPrevMeasure);
+	},
+	// 小節ボードへのステートセッタ
+	_setDefaultMeasureBoardState : function() {
+		this._humen._setDefaultMeasureBoardState();
+	},
+	// ピアノボタンへのステートセッタ
+	_setNonPushPianoButtonState : function() {
+		this._humen._setNonPushPianoButtonState();
+	},
+	// 削除ボタンへのステートセッタ
+	_setNonPushRemoveButtonState : function() {
+		this._humen._setNonPushRemoveButtonState();
 	},
 })

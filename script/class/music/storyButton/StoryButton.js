@@ -1,8 +1,6 @@
-var StoryButton = enchant.Class.create(MusicSceneSprite, {
+var StoryButton = enchant.Class.create(MusicSceneSpriteHasState, {
 	initialize : function(path, width, height, x, y, parent) {
-		MusicSceneSprite.call(this, path, width, height, x, y, parent);
-		// 以下, このクラスのプロパティ
-		this._state = new DarknessState(this);
+		MusicSceneSpriteHasState.call(this, path, width, height, x, y, parent);
 	},
 
 	// On, Off時の画像切り替え
@@ -34,19 +32,5 @@ var StoryButton = enchant.Class.create(MusicSceneSprite, {
 	// フレーム処理
 	onenterframe : function(event) {
 		this._state._frameBehavior();
-	},
-
-	// 各種ステートセッタ
-	// ステートセッタ
-	_setState : function(state) {
-		this._state = state;
-	},
-	// 非再生ステートセッタ
-	_setNonPlayingStoryButtonState : function() {
-		this._setState(new NonPlayingStoryButtonState(this));
-	},
-	// 再生ステートセッタ
-	_setPlayingStoryButtonState : function() {
-		this._setState(new PlayingStoryButtonState(this));
 	},
 })

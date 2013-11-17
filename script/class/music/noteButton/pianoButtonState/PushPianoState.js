@@ -2,6 +2,9 @@ var PushPianoState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
 		State.call(this, parent);
+		// 初期化メソッド
+		this._parent._setTouchEnabled(true);
+		this._parent._setOpacity(1.0);
 	},
 
 	_touchEndBehavior : function(otherButton) {
@@ -13,8 +16,6 @@ var PushPianoState = enchant.Class.create(State, {
 	},
 
 	_frameBehavior : function() {
-		this._parent._setTouchEnabled(true);
-		this._parent._setOpacity(1.0);
 		var leftX = this._parent.x;
 		var rightX = this._parent.x + this._parent.width;
 		var topY = this._parent.y;

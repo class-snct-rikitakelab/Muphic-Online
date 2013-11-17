@@ -7,7 +7,9 @@ var NoteButtonController = enchant.Class.create({
 	// コンストラクタ
 	initialize : function(parent) {
 		this._pianoButton = null;
+		this._pianoButtonStateController = null;
 		this._removeButton = null;
+		this._removeButtonStateController = null;
 		this._parent = parent;
 	},
 
@@ -19,6 +21,10 @@ var NoteButtonController = enchant.Class.create({
 		var x = PIANOBUTTON_X;
 		var y = PIANOBUTTON_Y;
 		this._pianoButton = new PianoButton(path, width, height, x, y, this);
+		this._pianoButtonStateController = new PianoButtonStateController(this);
+		this._pianoButton._setStateController(this._pianoButtonStateController);
+		this._pianoButtonStateController._setObject(this._pianoButton);
+		this._setDarknessPianoButtonState();
 		this._pianoButton._addToMusicScene();
 	},
 	// 削除ボタンのオブジェクトを生成
@@ -29,6 +35,10 @@ var NoteButtonController = enchant.Class.create({
 		var x = REMOVEBUTTON_X;
 		var y = REMOVEBUTTON_Y;
 		this._removeButton = new MusicRemoveButton(path, width, height, x, y, this);
+		this._removeButtonStateController = new MusicRemoveButtonStateController(this);
+		this._removeButton._setStateController(this._removeButtonStateController);
+		this._removeButtonStateController._setObject(this._removeButton);
+		this._setDarknessRemoveButtonState();
 		this._removeButton._addToMusicScene();
 	},
 
@@ -42,32 +52,45 @@ var NoteButtonController = enchant.Class.create({
 	},
 
 	// 子メソッド
-	_setPlayingPianoButtonState : function() {
-		this._pianoButton._setBeforePlayingState(this._pianoButton._state);
-		this._pianoButton._setState(new PlayingPianoButtonState(this._pianoButton));
+	// ピアノボタンへのステートセッタ
+	_setDarknessPianoButtonState : function() {
+		this._pianoButtonStateController._setDarknessState();
+	},
+	_setNonPushPianoButtonState : function() {
+		this._pianoButtonStateController._setNonPushState();
 	},
 	_setNonPlayingPianoButtonState : function() {
-		this._pianoButton._setState(this._pianoButton._beforePlayingState);
+		this._pianoButtonStateController._setNonPlayingState();
 	},
-	_setPlayingMusicRemoveButtonState : function() {
-		this._removeButton._setBeforePlayingState(this._removeButton._state);
-		this._removeButton._setState(new PlayingMusicRemoveButtonState(this._removeButton));
+	_setPlayingPianoButtonState : function() {
+		this._pianoButtonStateController._setPlayingState();
 	},
-	_setNonPlayingMusicRemoveButtonState : function() {
-		this._removeButton._setState(this._removeButton._beforePlayingState);
+	// 削除ボタンへのステートセッタ
+	_setDarknessRemoveButtonState : function() {
+		this._removeButtonStateController._setDarknessState();
 	},
+	_setNonPushRemoveButtonState : function() {
+		this._removeButtonStateController._setNonPushState();
+	},
+	_setNonPlayingRemoveButtonState : function() {
+		this._removeButtonStateController._setNonPlayingState();
+	},
+	_setPlayingRemoveButtonState : function() {
+		this._removeButtonStateController._setPlayingState();
+	},
+
 
 	// 親メソッド
 	// 選択なしステートセッタ
-	_setNonSelectState : function() {
-		this._parent._setNonSelectState();
+	_setNonSelectHumenState : function() {
+		this._parent._setNonSelectHumenState();
 	},
 	// ピアノ選択ステートセッタ
-	_setSelectPianoState : function() {
-		this._parent._setSelectPianoState();
+	_setSelectPianoHumenState : function() {
+		this._parent._setSelectPianoHumenState();
 	},
 	// 削除選択ステートセッタ
-	_setSelectRemoveState : function() {
-		this._parent._setSelectRemoveState();
+	_setSelectRemoveHumenState : function() {
+		this._parent._setSelectRemoveHumenState();
 	},
 })

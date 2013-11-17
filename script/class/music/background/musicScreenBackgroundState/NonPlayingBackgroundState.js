@@ -2,6 +2,8 @@ var NonPlayingBackgroundState = enchant.Class.create(State, {
 	// コンストラクタ
 	initialize : function(parent) {
 		State.call(this, parent);
+		// 初期化メソッド
+		this._parent._setDarkImage(false);
 	},
 
 	_touchEndBehavior : function() {
@@ -9,6 +11,6 @@ var NonPlayingBackgroundState = enchant.Class.create(State, {
 	},
 
 	_frameBehavior : function() {
-		this._parent._setDarkImage(false);
+
 	},
 })
