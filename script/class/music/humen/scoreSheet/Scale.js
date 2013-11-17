@@ -28,6 +28,7 @@ var Scale = enchant.Class.create(MusicSceneGroup, {
 	_destroyNote : function() {
 		this._removeFromGroup(this._note);
 		this._note = null;
+		this._noteStateController = null;
 	},
 	// 引数のパラメータを持つ音符があるかどうか
 	_checkNote : function() {

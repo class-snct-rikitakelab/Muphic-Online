@@ -100,10 +100,6 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		var startMeasure = this._measureController._getStartMeasure();
 		this._beforePlayingStartMeasure = startMeasure;
 		this._measureController._setMeasureNumber(1, 2, 3);
-		for(var i = 0; i < MEASURE_MAX; i++) {
-			this._addMeasureNote(i + 1);
-		}
-		this._scrollScoreSheetPrev(startMeasure - 1);
 		this._setPlayingStoryButtonState();
 		this._setPlayingHumenState();
 		this._setPlayingPlayButtonState();
@@ -113,6 +109,10 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		this._setPlayingPrevButtonState();
 		this._setPlayingPianoButtonState();
 		this._setPlayingRemoveButtonState();
+		for(var i = 0; i < MEASURE_MAX; i++) {
+			this._addMeasureNote(i + 1);
+		}
+		this._scrollScoreSheetPrev(startMeasure - 1);
 	},
 	// 再生終了セッティング
 	_setPlayed : function() {

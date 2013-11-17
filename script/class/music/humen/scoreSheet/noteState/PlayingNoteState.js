@@ -13,6 +13,8 @@ var PlayingNoteState = enchant.Class.create(State, {
 		this._moveX = MEASURE_WIDTH * measure + BEAT_WIDTH * beat;
 		this._jumpY = this._parent.y;
 		this._walkCount = 0;
+		// 初期化メソッド
+		this._hideNote();
 	},
 
 	_touchEndBehavior : function() {
