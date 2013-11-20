@@ -21,7 +21,6 @@ var Scale = enchant.Class.create(MusicSceneGroup, {
 		this._note._setStateController(this._noteStateController);
 		this._noteStateController._setObject(this._note);
 		this._setNonPlayingNoteState();
-		this._note._play();
 		this._addToGroup(this._note);
 	},
 	// 音符を破棄

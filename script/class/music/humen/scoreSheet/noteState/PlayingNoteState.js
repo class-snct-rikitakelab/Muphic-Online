@@ -1,5 +1,5 @@
 var JUMP_HIGH = 3;
-var JUMP_CYCLE = 8;
+var JUMP_CYCLE = 5;
 var HOUSE_X = 250;
 var APPEAR_LINE_X = 960;
 

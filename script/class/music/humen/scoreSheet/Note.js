@@ -9,19 +9,30 @@ var Note = enchant.Class.create(MusicSceneSpriteHasState, {
 		this._beat = beat;
 		this._scale = scale;
 		this._sound = sound;
-		this._voice = null;
 		// 初期化メソッド
+		this._play();
 		this._setTouchEnabled(false);
-		this._assignVoice();
 	},
 
-	// 音色を指定
-	_assignVoice : function() {
-		this._voice = core.assets[this._sound].clone();
-	},
 	// 音色を再生
 	_play : function() {
-		this._voice.play();
+		// 再生中でない音声ファイルを探す
+		for(var i = 0; i < 4; i++) {
+			// 再生中でない音声ファイルが見つかったら
+			if(!PIANO[this._scale][i]._isPlaying) {
+				// 状態を再生中にして
+				PIANO[this._scale][i]._isPlaying = true;
+				// 音声を再生
+				core.assets[PIANO[this._scale][i]._path].play();
+				// 一定時間後に再生状態をリセット
+				var self = this;
+				setTimeout(function() {
+					PIANO[self._scale][i]._isPlaying = false;
+				}, 1000);
+				// 探すの終了
+				break;
+			}
+		}
 	},
 
 	// クリック時の処理

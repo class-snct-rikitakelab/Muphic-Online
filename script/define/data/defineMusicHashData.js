@@ -1,5 +1,7 @@
 // 以下のハッシュテーブルはすべてグローバル変数として利用可能
 
+// 音声データオブジェクト
+var scaleToVoice = new Array();
 // 音階から音源を取得できるハッシュテーブル
 var scaleToSound = new Array();
 // y座標値から音階を取得できるハッシュテーブル
@@ -18,16 +20,6 @@ var xBoxToBeat = new Array();
 var yBoxToScale = new Array();
 
 var defineMusicHashData = function() {
-	// scaleToSoundの中身の定義
-	scaleToSound["C4"] = PIANO_C4._path;
-	scaleToSound["D4"] = PIANO_D4._path;
-	scaleToSound["E4"] = PIANO_E4._path;
-	scaleToSound["F4"] = PIANO_F4._path;
-	scaleToSound["G4"] = PIANO_G4._path;
-	scaleToSound["A4"] = PIANO_A4._path;
-	scaleToSound["B4"] = PIANO_B4._path;
-	scaleToSound["C5"] = PIANO_C5._path;
-
 	// yToScaleの中身の定義
 	yToScale[300] = "C5";
 	yToScale[349] = "B4";
