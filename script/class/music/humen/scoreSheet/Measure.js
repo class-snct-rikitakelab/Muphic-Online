@@ -47,15 +47,15 @@ var Measure = enchant.Class.create(MusicSceneGroup, {
 
 	// 子メソッド
 	// 音符への再生ステートセッタ
-	_setPlayingNoteState : function() {
+	_setPNoteState : function() {
 		for(var number = 1; number <= this._beat.length; number++) {
-			this._beat[number - 1]._setPlayingNoteState();
+			this._beat[number - 1]._setPNoteState();
 		}
 	},
 	// 音符への再生ステートセッタ
-	_setNonPlayingNoteState : function() {
+	_setNPNoteState : function() {
 		for(var number = 1; number <= this._beat.length; number++) {
-			this._beat[number - 1]._setNonPlayingNoteState();
+			this._beat[number - 1]._setNPNoteState();
 		}
 	},
 })

@@ -10,10 +10,10 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		// 以下, このクラスのプロパティ
 		this._scoreSheet = null;
 		this._scoreSheetStateController = null;
-		this._playButton = null;
-		this._playButtonStateController = null;
+		this._playBtn = null;
+		this._playBtnStateController = null;
 		this._measureController = null;
-		this._noteButtonController = null;
+		this._noteBtnController = null;
 		this._beforePlayingStartMeasure = null;
 		this._noteCount = 0;
 	},
@@ -26,36 +26,36 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		this._scoreSheetStateController = new ScoreSheetStateController(this);
 		this._scoreSheet._setStateController(this._scoreSheetStateController);
 		this._scoreSheetStateController._setObject(this._scoreSheet);
-		this._setNonPlayingScoreSheetState();
+		this._setNPScoreSheetState();
 		this._scoreSheet._addToMusicScene();
 	},
 	// 再生ボタンオブジェクトを生成
-	_createPlayButton : function() {
+	_createPlayBtn : function() {
 		var path = MUSIC_PLAYBUTTON_OFF._path;
 		var width = MUSIC_PLAYBUTTON_OFF._width;
 		var height = MUSIC_PLAYBUTTON_OFF._height;
 		var x = PLAYBUTTON_X;
 		var y = PLAYBUTTON_Y;
-		this._playButton = new PlayButton(path, width, height, x, y, this);
-		this._playButtonStateController = new PlayButtonStateController(this);
-		this._playButton._setStateController(this._playButtonStateController);
-		this._playButtonStateController._setObject(this._playButton);
-		this._setDarknessPlayButtonState();
-		this._playButton._addToMusicScene();
+		this._playBtn = new PlayBtn(path, width, height, x, y, this);
+		this._playBtnStateController = new PlayBtnStateController(this);
+		this._playBtn._setStateController(this._playBtnStateController);
+		this._playBtnStateController._setObject(this._playBtn);
+		this._setDarknessPlayBtnState();
+		this._playBtn._addToMusicScene();
 	},
 	// 小節操作オブジェクトを生成
 	_createMeasureController : function() {
 		this._measureController = new MeasureController(this);
-		this._measureController._createNextButton();
-		this._measureController._createPrevButton();
+		this._measureController._createNextBtn();
+		this._measureController._createPrevBtn();
 		this._measureController._createMeasureBoard();
 		this._measureController._createMeasureNumber(1, 2, 3);
 	},
 	// 音符ボタン操作オブジェクトを生成
-	_createNoteButtonController : function() {
-		this._noteButtonController = new NoteButtonController(this);
-		this._noteButtonController._createPianoButton();
-		this._noteButtonController._createRemoveButton();
+	_createNoteBtnController : function() {
+		this._noteBtnController = new NoteBtnController(this);
+		this._noteBtnController._createPianoBtn();
+		this._noteBtnController._createRemoveBtn();
 	},
 
 	// 音符個数ゲッタ
@@ -100,15 +100,15 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		var startMeasure = this._measureController._getStartMeasure();
 		this._beforePlayingStartMeasure = startMeasure;
 		this._measureController._setMeasureNumber(1, 2, 3);
-		this._setPlayingStoryButtonState();
-		this._setPlayingHumenState();
-		this._setPlayingPlayButtonState();
-		this._setPlayingScoreSheetState();
-		this._setPlayingNoteState();
-		this._setPlayingNextButtonState();
-		this._setPlayingPrevButtonState();
-		this._setPlayingPianoButtonState();
-		this._setPlayingRemoveButtonState();
+		this._setPStoryBtnState();
+		this._setPHumenState();
+		this._setPPlayBtnState();
+		this._setPScoreSheetState();
+		this._setPNoteState();
+		this._setPNextBtnState();
+		this._setPPrevBtnState();
+		this._setPPianoBtnState();
+		this._setPRemoveBtnState();
 		for(var i = 0; i < MEASURE_MAX; i++) {
 			this._addMeasureNote(i + 1);
 		}
@@ -128,15 +128,15 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 				this._removeMeasureNote(i + 1);
 			}
 		}
-		this._setNonPlayingStoryButtonState();
-		this._setNonPlayingHumenState();
-		this._setNonPlayingPlayButtonState();
-		this._setNonPlayingScoreSheetState();
-		this._setNonPlayingNoteState();
-		this._setNonPlayingNextButtonState();
-		this._setNonPlayingPrevButtonState();
-		this._setNonPlayingPianoButtonState();
-		this._setNonPlayingRemoveButtonState();
+		this._setNPStoryBtnState();
+		this._setNPHumenState();
+		this._setNPPlayBtnState();
+		this._setNPScoreSheetState();
+		this._setNPNoteState();
+		this._setNPNextBtnState();
+		this._setNPPrevBtnState();
+		this._setNPPianoBtnState();
+		this._setNPRemoveBtnState();
 	},
 
 	//　ボタンが押せない（暗い）状態の色に変更する
@@ -160,15 +160,15 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 
 	// 親メソッド
 	// 物語作成画面への遷移ボタンへのステートセッタ
-	_setPlayingStoryButtonState : function() {
-		this._parent._setPlayingStoryButtonState();
+	_setPStoryBtnState : function() {
+		this._parent._setPStoryBtnState();
 	},
-	_setNonPlayingStoryButtonState : function() {
-		this._parent._setNonPlayingStoryButtonState();
+	_setNPStoryBtnState : function() {
+		this._parent._setNPStoryBtnState();
 	},
 	// 譜面へのステートセッタ
-	_setNonSelectHumenState : function() {
-		this._parent._setNonSelectHumenState();
+	_setNSelectHumenState : function() {
+		this._parent._setNSelectHumenState();
 	},
 	_setSelectPianoHumenState : function() {
 		this._parent._setSelectPianoHumenState();
@@ -176,11 +176,11 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 	_setSelectRemoveHumenState : function() {
 		this._parent._setSelectRemoveHumenState();
 	},
-	_setNonPlayingHumenState : function() {
-		this._parent._setNonPlayingHumenState();
+	_setNPHumenState : function() {
+		this._parent._setNPHumenState();
 	},
-	_setPlayingHumenState : function() {
-		this._parent._setPlayingHumenState();
+	_setPHumenState : function() {
+		this._parent._setPHumenState();
 	},
 
 	//　子メソッド
@@ -189,71 +189,71 @@ var Humen = enchant.Class.create(MusicSceneSpriteHasState, {
 		return this._measureController._getStartMeasure();
 	},
 	// 再生ボタンへのステートセッタ
-	_setDarknessPlayButtonState : function() {
-		this._playButtonStateController._setDarknessState();
+	_setDarknessPlayBtnState : function() {
+		this._playBtnStateController._setDarknessState();
 	},
-	_setNonPlayingPlayButtonState : function() {
-		this._playButtonStateController._setNonPlayingState();
+	_setNPPlayBtnState : function() {
+		this._playBtnStateController._setNPState();
 	},
-	_setPlayingPlayButtonState : function() {
-		this._playButtonStateController._setPlayingState();
+	_setPPlayBtnState : function() {
+		this._playBtnStateController._setPState();
 	},
 	// スコアシートへのステートセッタ
-	_setNonPlayingScoreSheetState : function() {
-		this._scoreSheetStateController._setNonPlayingState();
+	_setNPScoreSheetState : function() {
+		this._scoreSheetStateController._setNPState();
 	},
-	_setPlayingScoreSheetState : function() {
-		this._scoreSheetStateController._setPlayingState();
+	_setPScoreSheetState : function() {
+		this._scoreSheetStateController._setPState();
 	},
 	// 音符へのステートセッタ
-	_setNonPlayingNoteState : function() {
-		this._scoreSheet._setNonPlayingNoteState();
+	_setNPNoteState : function() {
+		this._scoreSheet._setNPNoteState();
 	},
-	_setPlayingNoteState : function() {
-		this._scoreSheet._setPlayingNoteState();
+	_setPNoteState : function() {
+		this._scoreSheet._setPNoteState();
 	},
 	// 譜めくりボタンへのステートセッタ
-	_setNextButtonState : function(hasNextMeasure) {
-		this._measureController._setNextButtonState(hasNextMeasure);
+	_setNextBtnState : function(hasNextMeasure) {
+		this._measureController._setNextBtnState(hasNextMeasure);
 	},
-	_setNonPlayingNextButtonState : function() {
-		this._measureController._setNonPlayingNextButtonState();
+	_setNPNextBtnState : function() {
+		this._measureController._setNPNextBtnState();
 	},
-	_setPlayingNextButtonState : function() {
-		this._measureController._setPlayingNextButtonState();
+	_setPNextBtnState : function() {
+		this._measureController._setPNextBtnState();
 	},
 	// 譜戻しボタンへのステートセッタ
-	_setPrevButtonState : function(hasPrevMeasure) {
-		this._measureController._setPrevButtonState(hasPrevMeasure);
+	_setPrevBtnState : function(hasPrevMeasure) {
+		this._measureController._setPrevBtnState(hasPrevMeasure);
 	},
-	_setNonPlayingPrevButtonState : function() {
-		this._measureController._setNonPlayingPrevButtonState();
+	_setNPPrevBtnState : function() {
+		this._measureController._setNPPrevBtnState();
 	},
-	_setPlayingPrevButtonState : function() {
-		this._measureController._setPlayingPrevButtonState();
+	_setPPrevBtnState : function() {
+		this._measureController._setPPrevBtnState();
 	},
 	// 小節ボードへのステートセッタ
 	_setDefaultMeasureBoardState : function() {
 		this._measureController._setDefaultMeasureBoardState();
 	},
 	// ピアノボタンへのステートセッタ
-	_setNonPushPianoButtonState : function() {
-		this._noteButtonController._setNonPushPianoButtonState();
+	_setNPushPianoBtnState : function() {
+		this._noteBtnController._setNPushPianoBtnState();
 	},
-	_setNonPlayingPianoButtonState : function() {
-		this._noteButtonController._setNonPlayingPianoButtonState();
+	_setNPPianoBtnState : function() {
+		this._noteBtnController._setNPPianoBtnState();
 	},
-	_setPlayingPianoButtonState : function() {
-		this._noteButtonController._setPlayingPianoButtonState();
+	_setPPianoBtnState : function() {
+		this._noteBtnController._setPPianoBtnState();
 	},
 	// 削除ボタンへのステートセッタ
-	_setNonPushRemoveButtonState : function() {
-		this._noteButtonController._setNonPushRemoveButtonState();
+	_setNPushRemoveBtnState : function() {
+		this._noteBtnController._setNPushRemoveBtnState();
 	},
-	_setNonPlayingRemoveButtonState : function() {
-		this._noteButtonController._setNonPlayingRemoveButtonState();
+	_setNPRemoveBtnState : function() {
+		this._noteBtnController._setNPRemoveBtnState();
 	},
-	_setPlayingRemoveButtonState : function() {
-		this._noteButtonController._setPlayingRemoveButtonState();
+	_setPRemoveBtnState : function() {
+		this._noteBtnController._setPRemoveBtnState();
 	},
 })

@@ -52,25 +52,25 @@ var Beat = enchant.Class.create(MusicSceneGroup, {
 
 	// 子メソッド
 	// 音符への再生ステートセッタ
-	_setPlayingNoteState : function() {
-		this._scale["C5"]._setPlayingNoteState();
-		this._scale["B4"]._setPlayingNoteState();
-		this._scale["A4"]._setPlayingNoteState();
-		this._scale["G4"]._setPlayingNoteState();
-		this._scale["F4"]._setPlayingNoteState();
-		this._scale["E4"]._setPlayingNoteState();
-		this._scale["D4"]._setPlayingNoteState();
-		this._scale["C4"]._setPlayingNoteState();
+	_setPNoteState : function() {
+		this._scale["C5"]._setPNoteState();
+		this._scale["B4"]._setPNoteState();
+		this._scale["A4"]._setPNoteState();
+		this._scale["G4"]._setPNoteState();
+		this._scale["F4"]._setPNoteState();
+		this._scale["E4"]._setPNoteState();
+		this._scale["D4"]._setPNoteState();
+		this._scale["C4"]._setPNoteState();
 	},
 	// 音符への非再生ステートセッタ
-	_setNonPlayingNoteState : function() {
-		this._scale["C5"]._setNonPlayingNoteState();
-		this._scale["B4"]._setNonPlayingNoteState();
-		this._scale["A4"]._setNonPlayingNoteState();
-		this._scale["G4"]._setNonPlayingNoteState();
-		this._scale["F4"]._setNonPlayingNoteState();
-		this._scale["E4"]._setNonPlayingNoteState();
-		this._scale["D4"]._setNonPlayingNoteState();
-		this._scale["C4"]._setNonPlayingNoteState();
+	_setNPNoteState : function() {
+		this._scale["C5"]._setNPNoteState();
+		this._scale["B4"]._setNPNoteState();
+		this._scale["A4"]._setNPNoteState();
+		this._scale["G4"]._setNPNoteState();
+		this._scale["F4"]._setNPNoteState();
+		this._scale["E4"]._setNPNoteState();
+		this._scale["D4"]._setNPNoteState();
+		this._scale["C4"]._setNPNoteState();
 	},
 })

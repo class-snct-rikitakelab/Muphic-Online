@@ -20,7 +20,7 @@ var Scale = enchant.Class.create(MusicSceneGroup, {
 		this._noteStateController = new NoteStateController(this);
 		this._note._setStateController(this._noteStateController);
 		this._noteStateController._setObject(this._note);
-		this._setNonPlayingNoteState();
+		this._setNPNoteState();
 		this._addToGroup(this._note);
 	},
 	// 音符を破棄
@@ -39,15 +39,15 @@ var Scale = enchant.Class.create(MusicSceneGroup, {
 	},
 
 	// 音符への再生ステートセッタ
-	_setPlayingNoteState : function() {
+	_setPNoteState : function() {
 		if(this._note !== null) {
-			this._noteStateController._setPlayingState();
+			this._noteStateController._setPState();
 		}
 	},
 	// 音符への非再生ステートセッタ
-	_setNonPlayingNoteState : function() {
+	_setNPNoteState : function() {
 		if(this._note !== null) {
-			this._noteStateController._setNonPlayingState();
+			this._noteStateController._setNPState();
 			this._note._setX(this._note._homeX);
 			this._note._setY(this._note._homeY);
 			this._note._setOpacity(1.0);

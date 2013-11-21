@@ -80,15 +80,15 @@ var ScoreSheet = enchant.Class.create(MusicSceneGroupHasState, {
 
 	// 子メソッド
 	// 音符への再生ステートセッタ
-	_setPlayingNoteState : function() {
+	_setPNoteState : function() {
 		for(var number = 1; number <= this._measure.length; number++) {
-			this._measure[number - 1]._setPlayingNoteState();
+			this._measure[number - 1]._setPNoteState();
 		}
 	},
 	// 音符への非再生ステートセッタ
-	_setNonPlayingNoteState : function() {
+	_setNPNoteState : function() {
 		for(var number = 1; number <= this._measure.length; number++) {
-			this._measure[number - 1]._setNonPlayingNoteState();
+			this._measure[number - 1]._setNPNoteState();
 		}
 	},
 

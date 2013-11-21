@@ -9,17 +9,17 @@ var createMusicScreen = function() {
 	// 画面全体の背景を生成
 	musicScreen._createScreenBackground();
 	// 物語作成画面への遷移ボタンを生成
-	musicScreen._createStoryButton();
+	musicScreen._createStoryBtn();
 	// 譜面を生成
 	musicScreen._createHumen();
 	// 再生ボタンを生成
-	musicScreen._createPlayButton();
+	musicScreen._createPlayBtn();
 	// 小節操作オブジェクトを生成
 	musicScreen._createMeasureController();
 	// スコアシートオブジェクトを生成
 	musicScreen._createScoreSheet();
 	// 音符ボタン操作オブジェクトを生成
-	musicScreen._createNoteButtonController();
+	musicScreen._createNoteBtnController();
 	// 導入ダイアログを生成
 	musicScreen._createIntroDialog();
 

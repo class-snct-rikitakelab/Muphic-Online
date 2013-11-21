@@ -7,10 +7,10 @@ var NoteStateController = enchant.Class.create(StateController, {
 	_setFadeOutState : function() {
 		this._object._setState(new FadeOutNoteState(this._object));
 	},
-	_setNonPlayingState : function() {
-		this._object._setState(new NonPlayingNoteState(this._object));
+	_setNPState : function() {
+		this._object._setState(new NPNoteState(this._object));
 	},
-	_setPlayingState : function() {
-		this._object._setState(new PlayingNoteState(this._object));
+	_setPState : function() {
+		this._object._setState(new PNoteState(this._object));
 	},
 })

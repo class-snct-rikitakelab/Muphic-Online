@@ -7,10 +7,10 @@ var MEASUREBOARD_Y = [ 204, 204, 204 ];
 
 var MeasureController = enchant.Class.create({
 	initialize : function(parent) {
-		this._nextButton = null;
-		this._nextButtonStateController = null;
-		this._prevButton = null;
-		this._prevButtonStateController = null;
+		this._nextBtn = null;
+		this._nextBtnStateController = null;
+		this._prevBtn = null;
+		this._prevBtnStateController = null;
 		this._measureBoard = new Array(3);
 		this._measureBoardStateController = new Array(3);
 		this._startMeasure = 1;
@@ -18,32 +18,32 @@ var MeasureController = enchant.Class.create({
 	},
 
 	// 譜めくりボタンのオブジェクトを生成
-	_createNextButton : function() {
+	_createNextBtn : function() {
 		var path = MUSIC_NEXTBUTTON_OFF._path;
 		var width = MUSIC_NEXTBUTTON_OFF._width;
 		var height = MUSIC_NEXTBUTTON_OFF._height;
 		var x = NEXTBUTTON_X;
 		var y = NEXTBUTTON_Y;
-		this._nextButton = new NextButton(path, width, height, x, y, this);
-		this._nextButtonStateController = new NextButtonStateController(this);
-		this._nextButton._setStateController(this._nextButtonStateController);
-		this._nextButtonStateController._setObject(this._nextButton);
-		this._setDarknessNextButtonState();
-		this._nextButton._addToMusicScene();
+		this._nextBtn = new NextBtn(path, width, height, x, y, this);
+		this._nextBtnStateController = new NextBtnStateController(this);
+		this._nextBtn._setStateController(this._nextBtnStateController);
+		this._nextBtnStateController._setObject(this._nextBtn);
+		this._setDarknessNextBtnState();
+		this._nextBtn._addToMusicScene();
 	},
 	// 譜戻しボタンのオブジェクトを生成
-	_createPrevButton : function() {
+	_createPrevBtn : function() {
 		var path = MUSIC_PREVBUTTON_OFF._path;
 		var width = MUSIC_PREVBUTTON_OFF._width;
 		var height = MUSIC_PREVBUTTON_OFF._height;
 		var x = PREVBUTTON_X;
 		var y = PREVBUTTON_Y;
-		this._prevButton = new PrevButton(path, width, height, x, y, this);
-		this._prevButtonStateController = new PrevButtonStateController(this);
-		this._prevButton._setStateController(this._prevButtonStateController);
-		this._prevButtonStateController._setObject(this._prevButton);
-		this._setDarknessPrevButtonState();
-		this._prevButton._addToMusicScene();
+		this._prevBtn = new PrevBtn(path, width, height, x, y, this);
+		this._prevBtnStateController = new PrevBtnStateController(this);
+		this._prevBtn._setStateController(this._prevBtnStateController);
+		this._prevBtnStateController._setObject(this._prevBtn);
+		this._setDarknessPrevBtnState();
+		this._prevBtn._addToMusicScene();
 	},
 	// 小節ボードのオブジェクトを生成
 	_createMeasureBoard : function() {
@@ -125,37 +125,37 @@ var MeasureController = enchant.Class.create({
 		}
 	},
 	// 譜めくりボタンへのステートセッタ
-	_setDarknessNextButtonState : function() {
-		this._nextButtonStateController._setDarknessState();
+	_setDarknessNextBtnState : function() {
+		this._nextBtnStateController._setDarknessState();
 	},
-	_setNextButtonState : function(hasNextMeasure) {
+	_setNextBtnState : function(hasNextMeasure) {
 		if(hasNextMeasure) {
-			this._nextButtonStateController._setHasNextState();
+			this._nextBtnStateController._setHasNextState();
 		} else {
-			this._nextButtonStateController._setNonNextState();
+			this._nextBtnStateController._setNNextState();
 		}
 	},
-	_setNonPlayingNextButtonState : function() {
-		this._nextButtonStateController._setNonPlayingState();
+	_setNPNextBtnState : function() {
+		this._nextBtnStateController._setNPState();
 	},
-	_setPlayingNextButtonState : function() {
-		this._nextButtonStateController._setPlayingState();
+	_setPNextBtnState : function() {
+		this._nextBtnStateController._setPState();
 	},
 	// 譜戻しボタンへのステートセッタ
-	_setDarknessPrevButtonState : function() {
-		this._prevButtonStateController._setDarknessState();
+	_setDarknessPrevBtnState : function() {
+		this._prevBtnStateController._setDarknessState();
 	},
-	_setPrevButtonState : function(hasPrevMeasure) {
+	_setPrevBtnState : function(hasPrevMeasure) {
 		if(hasPrevMeasure) {
-			this._prevButtonStateController._setHasPrevState();
+			this._prevBtnStateController._setHasPrevState();
 		} else {
-			this._prevButtonStateController._setNonPrevState();
+			this._prevBtnStateController._setNPrevState();
 		}
 	},
-	_setNonPlayingPrevButtonState : function() {
-		this._prevButtonStateController._setNonPlayingState();
+	_setNPPrevBtnState : function() {
+		this._prevBtnStateController._setNPState();
 	},
-	_setPlayingPrevButtonState : function() {
-		this._prevButtonStateController._setPlayingState();
+	_setPPrevBtnState : function() {
+		this._prevBtnStateController._setPState();
 	},
 })
