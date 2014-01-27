@@ -50,11 +50,6 @@ var PreviewScreen = enchant.Class.create({
 		var newIllust = new PreviewIllust(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex, this);
 		this._illust.push(newIllust);
 	},
-	// 読み込んだイラストを生成
-	_createLoadIllust : function(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex) {
-		var newIllust = new PreviewIllust(imagePath, focusPath, width, height, x, y, arrayIndex, zIndex, this);
-		this._illust.push(newIllust);
-	},
 	// プレビュー画面に配置するイラストの破棄
 	_destroyIllust : function(index) {
 		for(var i = index + 1; i < this._illust.length; i++) {
