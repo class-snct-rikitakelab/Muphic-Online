@@ -1,0 +1,4 @@
+#app {
+	cursor: url("../image/mouse/cursor.png"), url("../image/mouse/cursor.cur"), default;
+	margin: 0;
+}
