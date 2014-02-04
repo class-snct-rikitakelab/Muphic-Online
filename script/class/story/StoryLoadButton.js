@@ -1,5 +1,6 @@
 var parentPointer = null;
 
+/*
 socket.on('selectStoryBackground', function(doc) {
 	var backgroundImagePath = doc.background_image_path;
 	var weatherImagePath = doc.weather_image_path;
@@ -25,6 +26,7 @@ socket.on('selectStoryIllust', function(docs) {
 	}
 	parentPointer._previewScreen._addAllIllust();
 });
+*/
 
 var StoryLoadButton = enchant.Class.create(StorySceneSprite, {
 	initialize : function(path, width, height, x, y, parent) {
